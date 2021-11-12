@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_3" id="3816F7B6-FE7A-DDAD-3E37-FFD4314F896E" name="Tranche in a synthetic securitisation without SSPE being a deposit">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-11 13:44:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Tranche in a synthetic securitisation without SSPE being a Deposit is a Tranch in a synthetic securitisation without SSPE that is a Deposit (acting as a collateral).]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="false"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="false"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="false"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="false"/>
+</engineerTo>
+<typeID>A0CBE5B5-15E4-B4F0-F88E-E83729225A42</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>88C7D5A0-5282-0FAE-F06C-8B05FD2B7694</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>TRNCH_SYNTHTC_SCRTSTN_WTHT_SSPE_DPST</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Securitisation identifier" id="27A1D498-8DE4-F25B-2781-2B258C3CDD01">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-11 13:47:22 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each security.]]></comment>
+<generatorID>83FD2842-82E2-69EE-BDF1-70B65CD27EE2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<referedAttribute>8C46B590-97C8-C3A8-8009-8F3DBF6024D8</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>SCRTSTN_ID</preferredAbbreviation>
+</Attribute>
+<Attribute name="Deposit Instrument identifier" id="F350306B-E545-E586-FC0F-8C1753F9426F">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-02 09:00:00 UTC</createdTime>
+<comment><![CDATA[The instrument identifier of the involved deposit.]]></comment>
+<generatorID>8C0F374F-AB55-7C9D-0BC8-95A3E8570D36</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<referedAttribute>F7859051-3E5A-9707-1E2B-67B4383135E4</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>DPST_INSTRMNT_ID</preferredAbbreviation>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="17AB6E3D-E87C-4B9D-9887-6C603B72E79E" name="Tranch in a synthetic securitisation without SSPE being a Deposit PK">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-11 13:47:22 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>27A1D498-8DE4-F25B-2781-2B258C3CDD01</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

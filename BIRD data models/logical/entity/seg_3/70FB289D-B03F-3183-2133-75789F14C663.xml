@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_3" id="70FB289D-B03F-3183-2133-75789F14C663" name="Rating system">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-12 12:57:52 UTC</createdTime>
+<commentInRDBMS><![CDATA[A (Credit) Rating system is a system that evaluates the the creditworthiness of a borrower in general terms or with respect to a particular debt or financial obligation [based on https://www.investopedia.com/terms/c/creditrating.asp].]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<typeID>6E05D22A-D6DB-0396-42A2-4B1DB49EB60E</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>RTNG_SYSTM</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Rating agency name" id="2DF56884-6689-48F6-12A4-A3655E39122C">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-12 13:26:45 UTC</createdTime>
+<comment><![CDATA[The rating agency's name.]]></comment>
+<generatorID>F4E1D496-F2F8-9756-7B84-DED95D53BF71</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<referedAttribute>E25EE4CF-AA08-7537-6AEF-5D6EDE1C06D9</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RTNG_AGNCY_NM</preferredAbbreviation>
+</Attribute>
+<Attribute name="Rating system name" id="F63C3864-115A-97D4-FC33-9977C667E63A">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-12 12:58:07 UTC</createdTime>
+<comment><![CDATA[The rating system's name.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RTNG_SYSTM_NM</preferredAbbreviation>
+</Attribute>
+<Attribute name="Rating system type by nature (Grade vs. Numeric)" id="C316C895-3941-AEAD-53DC-F0E4989A106F">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-12 12:58:17 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different rating systems by nature, like grade based or numeric rating systems.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>1FA07E1E-D9B6-848D-3994-82C9E3284E5A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RTNG_SYSTM_TYP_BY_NTR</preferredAbbreviation>
+</Attribute>
+<Attribute name="Rating system type by target (Issue vs. Issuer based)" id="394D323E-C516-53BA-E142-F8081C57494D">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-12 12:58:39 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different rating systems by target type, like issue based or issuer based rating systems.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>436AFE26-8093-AB5E-9934-2AED0E5C8233</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RTNG_SYSTM_TYP_BY_TRGT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Short term credit assessment indicator" id="504EBDDC-E3B3-11BF-286E-27EF50756214">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-12 13:07:22 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if a rating system is a short term credit assessment or not.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>54301F61-3AE9-86F6-4FB8-4FC82C8B44B8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>SHRT_TRM_CRDT_ASSSSMNT_INDCTR</preferredAbbreviation>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="82D96B0F-72FC-D603-0126-B14E364B13F1" name="Rating system PK">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-12 12:58:16 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F63C3864-115A-97D4-FC33-9977C667E63A</attributeRef>
+<attributeRef>2DF56884-6689-48F6-12A4-A3655E39122C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

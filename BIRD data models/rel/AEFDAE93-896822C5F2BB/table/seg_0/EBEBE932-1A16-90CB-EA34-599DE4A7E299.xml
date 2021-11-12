@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EBEBE932-1A16-90CB-EA34-599DE4A7E299" name="CRDT_FCLTY_ENTTY_RL_ASSGNMNT">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Credit facility Entity role assignment is the combination of a Credit facility and an Entity role that indicates which Entity role is assigned to which Credit facility.]]></commentInRDBMS>
+<generatorID>A8BCC194-C8A1-AAEE-9AD3-70384DA5B8FD</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>321D792E-206D-B597-68BE-AFF9E9EBC387</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PRTY_ID" id="7FCD6815-E4E8-82B2-0E8E-38C669FB48BF">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[The party identifier of the involved organisation.]]></comment>
+<generatorID>7B6A00F4-FE2E-4800-0AAA-1A96382FA9CA</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9F4F9B3B-4470-C2F8-893F-72CC04D68E82" referredColumn="7FCD6815-E4E8-82B2-0E8E-38C669FB48BF"/>
+</associations>
+</Column>
+<Column name="PRTY_RL_TYP" id="7BC352FE-F1AB-2695-541A-CB3DF9460A1B">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 14:08:08 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>fb47f404-bef8-4d54-adfc-044f1ea3be3e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9F4F9B3B-4470-C2F8-893F-72CC04D68E82" referredColumn="DA51743D-77BA-9D4B-5853-000570CABB91"/>
+</associations>
+</Column>
+<Column name="CRDT_FCLTY_ID" id="4C678FE0-EAB7-AA2A-9A70-2143A671A646">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each credit facility.]]></comment>
+<generatorID>14130159-F5D9-8C01-DCE4-387639091721</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7386AC88-2FB5-8082-04BA-D758C799C6E2" referredColumn="23554AC7-761C-6FFC-FBCD-156CFC3D8E39"/>
+</associations>
+</Column>
+<Column name="CRDT_FCLTY_ENTTY_RL_ASSGNMNT_TYP" id="7416AD4D-ECDE-2AA6-0DB4-B1D487079958">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between assignment between a credit facility and a creditor, debtor or servicer.]]></comment>
+<generatorID>C4F9E9B7-CBAF-7F6B-5F5F-58EF8A550B56</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>3A3CAEE3-1628-B664-55E6-A471C84BEE17</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="91F2C30D-A9AE-825C-EEB3-E2525F67C37D" name="CRDT_FCLTY_ENTTY_RL_ASSGNMNT__IDX">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:58:04 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7FCD6815-E4E8-82B2-0E8E-38C669FB48BF"/>
+<colUsage columnID="4C678FE0-EAB7-AA2A-9A70-2143A671A646"/>
+<colUsage columnID="7BC352FE-F1AB-2695-541A-CB3DF9460A1B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CD9E134F-0304-7A23-9BFE-5CCE25466AB9" name="CRDT_FCLTY_ENTTY_RL_ASSGNMNT_CRDT_FCLTY_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<generatorID>CDE405AC-22EA-6D70-EADA-DB5CF921752A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C678FE0-EAB7-AA2A-9A70-2143A671A646"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AA35AE6D-8FC3-EB02-6745-107FF8FEB13F" name="CRDT_FCLTY_ENTTY_RL_ASSGNMNT_ENTTY_RL_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 14:08:08 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7FCD6815-E4E8-82B2-0E8E-38C669FB48BF"/>
+<colUsage columnID="7BC352FE-F1AB-2695-541A-CB3DF9460A1B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

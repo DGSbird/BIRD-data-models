@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8B7EA5A2-343B-CAE4-6ACE-819F2DF6683D" name="Credit_facility_Collateral_received_instrument_assignment">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Credit facility Collateral received instrument assignment is the combination of a Credit facility and a Collateral received instrument that indicates which Credit facility is protected by which Collateral received instrument.]]></commentInRDBMS>
+<generatorID>3D3DF7D3-3E55-EC90-1D66-B8ACC991B4AD</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>8901219F-AB49-127E-838D-9EE79906B11E</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Credit_facility_identifier" id="B998DF05-CAC5-4C51-BD2F-721037CAE36A">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each credit facility.]]></comment>
+<generatorID>112C7DE8-39E8-9E52-3094-B3501698BEA7</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="56F44864-0959-1397-75BC-DE67C4B280C9" referredColumn="1370AB45-65B5-57CE-D05C-757AF0C14370"/>
+</associations>
+</Column>
+<Column name="Collateral_received_Instrument_role_type" id="4F115DEC-BB37-CEBD-545E-72135C724FE2">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The collateral received instrument role.]]></comment>
+<generatorID>ECC68592-E6FB-18E2-7AA8-5AFCF6B91FCA</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>b40f9459-45be-4124-a8d9-92057161e6d8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="381F61A7-79A6-29FB-734F-CDFA7D13ED9B" referredColumn="6C94B7DD-E55D-727A-F8AF-2CF2E00C2645"/>
+</associations>
+</Column>
+<Column name="Collateral_received_Instrument_identifier" id="24C72317-70E9-5D84-EDFC-48A9B0579D98">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The instrument identifier of the involved collateral received instrument.]]></comment>
+<generatorID>F1588043-545C-2800-B811-B02BE0D33F9F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="381F61A7-79A6-29FB-734F-CDFA7D13ED9B" referredColumn="4ABEC67C-AE32-F48B-8B22-01DD2DFBBA76"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="175A7F43-7193-425B-9767-FCC29B0766E9" name="Credit_facility_Collateral_received_instrument_assignment_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>2B45524D-A9AF-8EF9-A5AB-445FE53FF9AF</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B998DF05-CAC5-4C51-BD2F-721037CAE36A"/>
+<colUsage columnID="4F115DEC-BB37-CEBD-545E-72135C724FE2"/>
+<colUsage columnID="24C72317-70E9-5D84-EDFC-48A9B0579D98"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B5820C0F-00C8-D7FF-8196-F7EA55BE6D10" name="Credit_facility_Collateral_received_instrument_assignment_Abstract_instrument_role_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>6F444CE9-26D6-55DC-41C4-B7DDF841A378</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F115DEC-BB37-CEBD-545E-72135C724FE2"/>
+<colUsage columnID="24C72317-70E9-5D84-EDFC-48A9B0579D98"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B7EAB41C-45BE-8704-42B6-D5737F02DDE0" name="Credit_facility_Collateral_received_instrument_assignment_Credit_facility_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>C91AA0EB-6B53-2D42-15CF-6AD21580172A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B998DF05-CAC5-4C51-BD2F-721037CAE36A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

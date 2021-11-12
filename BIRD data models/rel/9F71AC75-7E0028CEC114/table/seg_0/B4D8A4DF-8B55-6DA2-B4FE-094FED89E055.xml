@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B4D8A4DF-8B55-6DA2-B4FE-094FED89E055" name="Linked_enterprise">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Linked enterprise is a combination of a Central bank and private sector company and a Central bank and private sector company that indicates which Central bank and private sector company is linked to which Central bank and private sector company in the sense of Commission Recommendation 2003/361/EC.
+
+Commission Recommendation 2003/361/EC, Annex, Title I Definition of micro, small and medium-sized enterprises adopted by the commission, Article 3 Types of enterprise taken into consideration in calculating staff numbers and financial amounts:
+...
+3. ‘Linked enterprises’ are enterprises which have any of the following relationships with each other:
+(a) an enterprise has a majority of the shareholders' or members' voting rights in another enterprise;
+(b) an enterprise has the right to appoint or remove a majority of the members of the administrative, management or supervisory body of another enterprise;
+(c) an enterprise has the right to exercise a dominant influence over another enterprise pursuant to a contract entered
+into with that enterprise or to a provision in its memorandum or articles of association;
+(d) an enterprise, which is a shareholder in or member of another enterprise, controls alone, pursuant to an agreement with other shareholders in or members of that enterprise, a majority of shareholders' or members' voting rights in that enterprise.
+There is a presumption that no dominant influence exists if the investors listed in the second subparagraph of paragraph 2 are not involving themselves directly or indirectly in the management of the enterprise in question, without prejudice to their rights as stakeholders.
+Enterprises having any of the relationships described in the first subparagraph through one or more other enterprises, or any one of the investors mentioned in paragraph 2, are also considered to be linked.
+Enterprises which have one or other of such relationships through a natural person or group of natural persons acting jointly are also considered linked enterprises if they engage in their activity or in part of their activity in the same relevant market or in adjacent markets.
+An ‘adjacent market’ is considered to be the market for a product or service situated directly upstream or downstream of the relevant market.]]></commentInRDBMS>
+<generatorID>37968742-5377-688E-6FDC-0D3CEA5E7033</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>7A67499C-0479-82E2-9F82-A693B748701D</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Party_identifier" id="492DD5A0-26D4-37D9-985D-4B362BCB1D78">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:28 UTC</createdTime>
+<comment><![CDATA[An identifier that uniquely identifies a party.]]></comment>
+<generatorID>B73BA6C9-5D8F-F70D-65FB-577FEF3F43B2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="44342B90-3DFD-282E-A632-591DB0A41A69" referredColumn="A86D2F4A-E5C6-5E1F-3F4E-9A52BF44C834"/>
+</associations>
+</Column>
+<Column name="Linked_enterprise_Party_identifier" id="C294A33D-6FFB-1184-7033-B6EC24E5D50E">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:28 UTC</createdTime>
+<comment><![CDATA[The party identifier of the involved linked enterprise.]]></comment>
+<generatorID>0BEA7DBD-A645-9AED-3B1C-C49A7627DF32</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="04695020-6F13-68F5-F763-BE70782F4417" referredColumn="A86D2F4A-E5C6-5E1F-3F4E-9A52BF44C834"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B82CC9E4-4D4A-9D86-C6BF-EA783D380556" name="Linked_enterprise_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:28 UTC</createdTime>
+<generatorID>419EA970-B1FC-A5A4-9459-1A1CE52451E4</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="492DD5A0-26D4-37D9-985D-4B362BCB1D78"/>
+<colUsage columnID="C294A33D-6FFB-1184-7033-B6EC24E5D50E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5D98025F-18F4-18B1-3674-2557944C4A2A" name="Linked_enterprise_Party_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:29 UTC</createdTime>
+<generatorID>F93FDDA3-4D15-6674-2AD8-2A544395AD8D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="492DD5A0-26D4-37D9-985D-4B362BCB1D78"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AFA11364-A359-81CE-B7CA-679B6DAE0EDB" name="Linked_enterprise_Party_FKv2">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:29 UTC</createdTime>
+<generatorID>2AA5D36A-3CB7-AF32-2791-0D50590FF31C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C294A33D-6FFB-1184-7033-B6EC24E5D50E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

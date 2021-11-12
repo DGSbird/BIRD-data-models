@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_4" id="6EF4BE21-6C9F-ECE1-8AAD-4381A86750B5" name="Tax liability">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-12 15:08:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Tax liability according to IAS 1.54(n);  IAS 12.5; CRR, Article 4(1)(108).]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="false"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="false"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="false"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="false"/>
+</engineerTo>
+<typeID>33380944-8442-174B-069A-88F99EEEC3DC</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>BA9F2869-8376-3D78-0C4A-19BCEB888390</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>TX_LBLTY</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Tax liability type" id="B2E8AFDF-97BA-1F9E-EABD-098B78D6DE9E">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-16 19:48:21 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between current and deferred tax liabilities.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>B29D9637-E98F-C2B4-13CF-C85288AA6FB4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>TX_LBLTY_TYP</preferredAbbreviation>
+</Attribute>
+<Attribute name="Held for sale indicator" id="F1544614-A669-A80A-0D4B-B9C5BDF1ECF5">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-02 20:22:46 UTC</createdTime>
+<comment><![CDATA[A variable indicating the Non-current assets and instruments in disposal groups classified as held for sale in accordance with IFRS5. Is not applicable under national GAAP based on BAD.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>9FC05F6E-0558-F79E-96CA-F05753F58262</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>HFS_INDCTR</preferredAbbreviation>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7465D83C-DC9F-A210-1AE8-87C397E7CAB7" name="Tax liability PK">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-02 20:22:48 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B2E8AFDF-97BA-1F9E-EABD-098B78D6DE9E</attributeRef>
+<attributeRef>F1544614-A669-A80A-0D4B-B9C5BDF1ECF5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

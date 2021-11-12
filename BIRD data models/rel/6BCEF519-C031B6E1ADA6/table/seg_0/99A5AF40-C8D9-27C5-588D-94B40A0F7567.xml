@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="99A5AF40-C8D9-27C5-588D-94B40A0F7567" name="CRDT_TRNSFR_OTHR_SCRTSTN_CVRD_BND_PRGRM">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Credit transfer other than Securitisation and Covered bond program is a Securitisation and other credit transfer that is not a Securitisation or a Covered bond program.]]></commentInRDBMS>
+<generatorID>99A8FAFD-054C-C867-FE11-69640A2ACE80</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>A0CBE5B5-15E4-B4F0-F88E-E83729225A42</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CRDT_TRNSFR_OTHR_SCRTSTN_CVRD_BND_PRGRM_ID" id="993B82DB-B06A-23BE-54AE-87BA812FBDA5">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each credit transfer other than securitisation and covered bond program.]]></comment>
+<generatorID>A4A883B9-35EE-25DC-EAA5-B777A039E8D7</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ASST_PL_ID" id="97408028-3D6B-FC43-0A78-1471C73903F7">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each asset pool.]]></comment>
+<generatorID>999DD98E-8BB7-6693-8930-5F5D214909C6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6507FA1D-0EF8-58A8-127D-E2C88172E62B" referredColumn="BD8A8EEB-7F51-0197-B5A8-CE0320439CAE"/>
+</associations>
+</Column>
+<Column name="SCRTSN_OTHR_CRDT_TRNSFR_TYP" id="29CDA824-F295-2875-9787-6EEAC37018D3">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of securitisations and other credit transfer, like securitisation and covered bond programs.]]></comment>
+<generatorID>3C408DB4-16B3-AC5F-6B25-5D6CEA4FB459</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>40F9B794-48DF-E81D-AC04-11D1F47355F1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BDFC15A7-768F-8455-D3DF-40FD510560BC" name="CRDT_TRNSFR_OTHR_SCRTSTN_CVRD_BND_PRGRM_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<generatorID>B13C71E5-613B-1160-5A8F-340AC7D24C02</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="993B82DB-B06A-23BE-54AE-87BA812FBDA5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A027D6B8-5BDD-8FE8-5BAE-01FF3C1AE4B9" name="CRDT_TRNSFR_OTHR_SCRTSTN_CVRD_BND_PRGRM_ASST_PL_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<generatorID>50A6CD8F-0739-EA14-B589-23EBE3BAAADC</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="97408028-3D6B-FC43-0A78-1471C73903F7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_4" id="440398C3-B369-BCF2-7C8B-0A6ED64AF366" name="Instrument Protection arrangement assignment">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-16 09:23:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[An Instrument Protection arrangement assignment is the combination of an Instrument and a Protection arrangement that indicates which Instrument is related to which Protection arrangement.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<typeID>B00C49F8-7AB8-0344-2390-66F8B305696A</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>INSTRMNT_PRTCN_ARRNGMNT_ASSGNMNT</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Instrument identifier" id="778C1692-63E3-47E6-78F0-8F2FCE0C9D16">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-16 09:24:54 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>40254AA0-2E36-DCD5-F031-4473656CCBFF</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<referedAttribute>F7859051-3E5A-9707-1E2B-67B4383135E4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>INSTRMNT_ID</preferredAbbreviation>
+</Attribute>
+<Attribute name="Protection arrangement identifier" id="F55E6305-B28B-A73E-136B-BC588701AC16">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-16 09:24:15 UTC</createdTime>
+<comment><![CDATA[An identifier to univocally identify each protection arragement.]]></comment>
+<generatorID>64461156-06AA-66A6-3A48-1314EF2A6F7B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<referedAttribute>B772CA3E-1140-EDD3-27D8-070B7A23B0A6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>PRTCTN_ARRNGMNT_ID</preferredAbbreviation>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BA8B178D-625C-2083-272F-2F0A117E7EB9" name="Instrument Protection arrangement assignment PK">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-16 09:24:15 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F55E6305-B28B-A73E-136B-BC588701AC16</attributeRef>
+<attributeRef>778C1692-63E3-47E6-78F0-8F2FCE0C9D16</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

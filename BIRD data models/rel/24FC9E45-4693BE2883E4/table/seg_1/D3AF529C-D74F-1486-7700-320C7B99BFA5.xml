@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="D3AF529C-D74F-1486-7700-320C7B99BFA5" name="Repurchase_agreement_component">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Repurchase agreement component is a component of a (Reverse) Repurchase agreement, i.e. either a cash leg or a security leg.]]></commentInRDBMS>
+<generatorID>C231ED66-3962-9C00-AE08-B830072D03A6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Repurchase_component_type" id="65C91F82-E7D5-7C3B-95DE-CFAE8982C220">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between the security and the cash leg.]]></comment>
+<generatorID>27585DB5-6962-A183-079A-C86D83A39F17</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>B4EC1EB6-B4CF-3F87-6349-5C54D23FD2B2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Repurchase_agreement_Instrument_identifier" id="0F54D743-6F0C-19C8-496F-1ADD2A9D0278">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The instrument identifier of the involved repurchase agreement.]]></comment>
+<generatorID>4B2BD8B9-0938-780C-E83B-EFB7F7879C3D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="42E72CAA-CF04-AE8E-9453-8A9D64EE4C01" referredColumn="71AC1C2A-24A7-CAA7-D72E-838EB77A7A37"/>
+</associations>
+</Column>
+<Column name="Currency" id="C5687E61-8AD9-9116-799D-94B216B42806">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The currency code according to ISO4217.]]></comment>
+<generatorID>4A23C482-FF02-0418-6ABE-1B231D32D437</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>9af1c1d9-7914-4052-866a-ee27f7d5380d</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nominal_amount" id="C4819D05-09A2-E42A-2782-CCCA6E4D9453">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[Holding amount at nominal value]]></comment>
+<generatorID>2399196E-106C-53A1-8347-827DAAE6EE39</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="18F82A35-EF79-F24F-E301-17516F9072AB" name="Repurchase_agreement_component_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>2937DCD0-3F46-54CD-05AC-C3C09106D74E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65C91F82-E7D5-7C3B-95DE-CFAE8982C220"/>
+<colUsage columnID="0F54D743-6F0C-19C8-496F-1ADD2A9D0278"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E64BA1F3-ADA6-8C08-E2ED-F7762EF7B635" name="Repurchase_agreement_component_Instrument_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>0AF24D8D-30D3-5418-AA96-7DB617F41B39</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0F54D743-6F0C-19C8-496F-1ADD2A9D0278"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

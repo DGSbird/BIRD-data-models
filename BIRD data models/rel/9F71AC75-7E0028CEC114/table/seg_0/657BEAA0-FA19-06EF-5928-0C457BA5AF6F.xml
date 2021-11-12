@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="657BEAA0-FA19-06EF-5928-0C457BA5AF6F" name="Credit_facility_Collateral_assignment">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Credit facility Collateral assignment is the combination of a Credit facility and a Collateral that indicates which Credit facility is assigned to which Collateral.]]></commentInRDBMS>
+<generatorID>5E02F623-CC8D-9A20-AB10-A47E24CCF5C2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>8901219F-AB49-127E-838D-9EE79906B11E</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Credit_facility_identifier" id="6BD1373D-0CA7-5271-61DC-7E926798C1AA">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:28 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each credit facility.]]></comment>
+<generatorID>CB11BBE1-B9E5-53A1-CAE8-C3B917098B48</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D48C2B5D-3E4F-3344-E503-3A89021D6E99" referredColumn="AE9B86C3-CE11-11E3-B39B-D8B6D325C6F5"/>
+</associations>
+</Column>
+<Column name="Collateral_identifier" id="D4A85A31-9003-8B5C-03A3-03A24ACC3E3B">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:28 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each collateral.]]></comment>
+<generatorID>C67F38BF-39AC-272E-9AF1-C6EFBFCC0ACA</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="86B80AE4-7A76-7BE1-C0F4-295D0ED9066C" referredColumn="78AED54A-22C5-D31B-C40D-762392233186"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1B80BA38-AF12-838E-06F1-4DE6762AF232" name="Credit_facility_Collateral_assignment_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:28 UTC</createdTime>
+<generatorID>B0A1FD04-85AF-6E78-6D93-10206C34226E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6BD1373D-0CA7-5271-61DC-7E926798C1AA"/>
+<colUsage columnID="D4A85A31-9003-8B5C-03A3-03A24ACC3E3B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A213B3FD-CA97-8181-6381-D62A7AD5EB22" name="Credit_facility_Collateral_assignment_Collateral_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:28 UTC</createdTime>
+<generatorID>36A77B2A-25CA-B675-C958-2A3FDFD3E97E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D4A85A31-9003-8B5C-03A3-03A24ACC3E3B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AEE13869-1FEF-4F03-94F8-FC44DB71680F" name="Credit_facility_Collateral_assignment_Credit_facility_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:28 UTC</createdTime>
+<generatorID>FDA0ABE6-7F31-2A9A-4A4E-A6B9489A251B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6BD1373D-0CA7-5271-61DC-7E926798C1AA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

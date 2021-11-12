@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BBE9E655-D7FE-9699-EE8A-796E13407C83" name="Organisational unit">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-06 09:59:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Organisational unit is a Party that is not (directly) documented by a legal document like a birth certificate for Natural persons, an article of association for limited (liability) companies.
+Organisational units are individual building blocks that makes up an organisation. An Organisational unit constitutes one of the of several functions within a company.
+Contrary to a Legal person, Organisational units cannot, or only to a limited extend acquire legal rights and obligrations.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="false"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="false"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="false"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="false"/>
+</engineerTo>
+<typeID>7A67499C-0479-82E2-9F82-A693B748701D</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>68582837-AD3C-8E9C-DB5E-68322CD1DE08</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>ORGNSTNL_UNT</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Organisational unit type" id="52C68C7E-AE81-AD89-84C1-53974B826CE3">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-06 09:59:24 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of organisational units, like branches or investment funds / vehicles.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>EE2A8421-3265-03DB-0BB7-A1F366ACDF51</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ORGNSTNL_UNT_TYP</preferredAbbreviation>
+</Attribute>
+<Attribute name="Organisation Party identifier" id="A93487BD-7971-4608-0932-18528797625D">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-11 11:16:38 UTC</createdTime>
+<comment><![CDATA[The party identifier of the involved organisation.]]></comment>
+<generatorID>386F89F4-6AEC-DA68-DB61-D84078148AFB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<referedAttribute>7AF04655-DC9B-5CAB-249B-924D25012A59</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ORGNSTN_PRTY_ID</preferredAbbreviation>
+</Attribute>
+</attributes>
+</Entity>

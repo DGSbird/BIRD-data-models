@@ -1,0 +1,208 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="68582837-AD3C-8E9C-DB5E-68322CD1DE08" name="Party">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-05 09:09:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Party is an entity of interest.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<typeID>7A67499C-0479-82E2-9F82-A693B748701D</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>PRTY</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Party identifier" id="7AF04655-DC9B-5CAB-249B-924D25012A59">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-05 09:09:49 UTC</createdTime>
+<comment><![CDATA[An identifier that uniquely identifies a party.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>PRTY_ID</preferredAbbreviation>
+</Attribute>
+<Attribute name="Party type" id="5D80C222-8CAF-E512-4FF0-EF22F45F4860">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-05 09:10:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of parties.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>3D1FE49C-E173-5227-8023-0D8E7B0E51D1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>PRTY_TYP</preferredAbbreviation>
+</Attribute>
+<Attribute name="Country code" id="18BC46D0-6516-2AC6-A7E6-DC51EA31A972">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-10-08 16:01:33 UTC</createdTime>
+<comment><![CDATA[The country code according to ISO3166.]]></comment>
+<generatorID>2E25F704-40A3-5D43-8CE3-7329C1C6EEC9</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<referedAttribute>9C0BFCCB-13A2-E19F-6B76-4205A030A6C9</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>E832EA39-67C9-4303-AD29-B66510B666C6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>CNTRY_CD</preferredAbbreviation>
+</Attribute>
+<Attribute name="Nomenclature des unités territoriales statistiques (NUTS) region" id="2C764B4B-9B65-A66B-0AE9-BA3D74D7A871">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-10-08 16:01:33 UTC</createdTime>
+<comment><![CDATA[The region inside a country according to NUTS.]]></comment>
+<generatorID>2E25F704-40A3-5D43-8CE3-7329C1C6EEC9</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<referedAttribute>AB372BD3-0513-3D8F-108A-54C275EDDB02</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>5b0b10c5-abc7-4102-a854-27ecf2cd3c95</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>NTS_RGN</preferredAbbreviation>
+</Attribute>
+<Attribute name="Postal code" id="8DFFEC05-FC71-8A44-A6DC-5F26549D0E29">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-10-08 16:01:33 UTC</createdTime>
+<comment><![CDATA[Entity's postal code.]]></comment>
+<generatorID>2E25F704-40A3-5D43-8CE3-7329C1C6EEC9</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<referedAttribute>553FDC55-3748-2F28-CB93-64D68C92D08A</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>PSTL_CD</preferredAbbreviation>
+</Attribute>
+<Attribute name="City / town / village" id="C22E0B9A-864D-8ED7-B95E-283D81CE4690">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-05 09:33:57 UTC</createdTime>
+<comment><![CDATA[The city, town or village.]]></comment>
+<generatorID>2E25F704-40A3-5D43-8CE3-7329C1C6EEC9</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<referedAttribute>15A185DE-3EF4-DA3F-5AD0-B033909DB354</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>CTY_TWN_VLLG</preferredAbbreviation>
+</Attribute>
+<Attribute name="Street" id="13D8C838-1235-ECFB-0025-1E6961BD8EE9">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-05 09:33:46 UTC</createdTime>
+<comment><![CDATA[Entity's street address, including the street number.]]></comment>
+<generatorID>2E25F704-40A3-5D43-8CE3-7329C1C6EEC9</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<referedAttribute>770B587D-4BE5-5332-5D8F-D68BB8C011E3</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>STRT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Institutional sector" id="D2F8C42D-C0B5-14EA-7B8D-32CC5E9E42BD">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-05 09:20:18 UTC</createdTime>
+<comment><![CDATA[Institutional sectors in accordance with Regulation (EU) No 549/2013, Regulation (EU) No 575/2013 and Regulation (EU) No 1075/2013 of the European Central Bank (ECB/2013/40)(1).]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>24f978bf-6fd6-4b09-9b10-deb049e07952</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>INSTTTNL_SCTR</preferredAbbreviation>
+</Attribute>
+<Attribute name="Statistical Classification of Economic Activities in the European Community (NACE)" id="8A68D646-1A0D-2448-927C-2C5EEADC7808">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-05 09:38:34 UTC</createdTime>
+<comment><![CDATA[Classification of counterparties according to their economic activities, in accordance with the NACE revision 2 statistical classification as laid down in Regulation (EC) No 1893/2006 of the European Parliament and of the Council.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>862C2035-489F-67C5-DAE4-56454F6F4314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ECNMC_ACTVTY</preferredAbbreviation>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A6FE620C-D0A1-F3B4-BCF9-3ABCF84D367D" name="Party PK">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-05 09:10:26 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7AF04655-DC9B-5CAB-249B-924D25012A59</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

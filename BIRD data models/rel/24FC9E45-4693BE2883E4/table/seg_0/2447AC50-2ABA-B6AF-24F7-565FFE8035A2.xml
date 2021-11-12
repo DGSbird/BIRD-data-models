@@ -1,0 +1,601 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2447AC50-2ABA-B6AF-24F7-565FFE8035A2" name="Party">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Party is an entity of interest.]]></commentInRDBMS>
+<generatorID>68582837-AD3C-8E9C-DB5E-68322CD1DE08</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>7A67499C-0479-82E2-9F82-A693B748701D</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Party_identifier" id="2F35B340-B038-7E58-2F3C-F720F4083921">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[An identifier that uniquely identifies a party.]]></comment>
+<generatorID>7AF04655-DC9B-5CAB-249B-924D25012A59</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Ultimate_parent_undertaking_Party_identifier" id="8285F7B3-F862-B261-9D80-3F1E19179297">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The party identifier of the ultimate parent undertaking accoring to Regulation (EU) 867/2016, defined as the "Counterparty identifier for the legal entity which is the ultimate parent undertaking of the counterparty. This ultimate parent undertaking has no parent undertaking. If the counterparty has no parent undertaking, the counterparty identifier for the counterparty itself is to be reported. Parent undertaking has the same meaning as defined in Article 4(1)(15)(a) of Regulation (EU) No 575/2013.".]]></comment>
+<generatorID>BCD4DAAF-D865-F351-E934-3A89BFF363B0</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1B1C0F55-FC9E-4622-445E-1918E8DA064D" referredColumn="2F35B340-B038-7E58-2F3C-F720F4083921"/>
+</associations>
+</Column>
+<Column name="Institutional_unit_of_foreign_branches_Group_identifier" id="DEA4E586-0D7A-05BD-8209-877E1717409A">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The group identifier of the involved institutional unit of foreign branches.]]></comment>
+<generatorID>46032668-7CE1-3D2B-32DB-C2109585316C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4A0ABD3B-9D3D-645F-DDBA-92BEEB27AAB6" referredColumn="641C2C64-E942-1BB8-277F-988D304EAE44"/>
+</associations>
+</Column>
+<Column name="Organisation_Party_identifier" id="E169DEB9-C34B-38DD-5AB6-CD966A6DF891">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The party identifier of the involved organisation.]]></comment>
+<generatorID>A93487BD-7971-4608-0932-18528797625D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8EF8F7DA-60FF-8BF3-12AB-47283C42C1E9" referredColumn="2F35B340-B038-7E58-2F3C-F720F4083921"/>
+</associations>
+</Column>
+<Column name="Governed_Country_code" id="E4C4B692-75B8-3EC4-FA18-CCC6D24DE4C5">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The country code of the governed country according to ISO3166.]]></comment>
+<generatorID>CFF6F0BA-282B-874A-DBEA-C619D04E6113</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>005eccc3-e1f2-47eb-a2be-3922266ab95a</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AADAF117-EC59-70E2-5269-994D335C84E1" referredColumn="229652C7-68B3-51F5-A30D-18486AE60934"/>
+</associations>
+</Column>
+<Column name="Street" id="C6039BAB-E153-5D25-5337-F912D3C86F24">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[Entity's street address, including the street number.]]></comment>
+<generatorID>13D8C838-1235-ECFB-0025-1E6961BD8EE9</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B0676ECB-464C-86B6-60D3-34DD869D8FB7" referredColumn="58B03444-2AE8-2AEA-A30D-50E7FE3AD5B0"/>
+</associations>
+</Column>
+<Column name="City_/_town_/_village" id="2A577FDF-3D84-AD34-692E-19B46A50A703">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The city, town or village.]]></comment>
+<generatorID>C22E0B9A-864D-8ED7-B95E-283D81CE4690</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B0676ECB-464C-86B6-60D3-34DD869D8FB7" referredColumn="54A16C31-D4FA-EFE3-EBFE-FA9EEA68A181"/>
+</associations>
+</Column>
+<Column name="Nomenclature_des_unités_territoriales_statistiques_(NUTS)_region" id="A7777072-E1A6-4B3D-5D9F-6409920D97AF">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The region inside a country according to NUTS.]]></comment>
+<generatorID>2C764B4B-9B65-A66B-0AE9-BA3D74D7A871</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>5b0b10c5-abc7-4102-a854-27ecf2cd3c95</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B0676ECB-464C-86B6-60D3-34DD869D8FB7" referredColumn="1D4D229D-0481-A0AE-6F1F-CCD9D6555F95"/>
+</associations>
+</Column>
+<Column name="Country_code" id="36A53053-C539-C6F4-B2E2-BD99B7A2BA4B">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The country code according to ISO3166.]]></comment>
+<generatorID>18BC46D0-6516-2AC6-A7E6-DC51EA31A972</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>005eccc3-e1f2-47eb-a2be-3922266ab95a</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B0676ECB-464C-86B6-60D3-34DD869D8FB7" referredColumn="B6627C06-FC22-9680-7C44-7D00D9354D8B"/>
+</associations>
+</Column>
+<Column name="Postal_code" id="C83986D8-57F1-685F-99B6-D831D7D1052E">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[Entity's postal code.]]></comment>
+<generatorID>8DFFEC05-FC71-8A44-A6DC-5F26549D0E29</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B0676ECB-464C-86B6-60D3-34DD869D8FB7" referredColumn="0E8A4215-6B2E-67CF-4418-6611199D7D56"/>
+</associations>
+</Column>
+<Column name="Derived_Area_where_the_enitty_is_located_according_to_SHS" id="E43F1826-4257-6915-5171-AE7AC24198CD">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:04:02 UTC</createdTime>
+<comment><![CDATA[Area where the entity is located]]></comment>
+<generatorID>3C9FA867-3637-2B22-931A-0227AAD11B0B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>F21D7E66-8190-9747-3D5F-8232A93684E2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Controlled_by_national_or_foreign_bodies" id="23CD87F2-C83A-ED69-0161-E57DD6405E60">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[Controlled by national or foreign bodies specifies if a party is national private or foreign controlled according to European system of accounts (ESA) 2010.]]></comment>
+<generatorID>EBDCEF38-DF8D-BD60-859F-9024575CBC2F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>3ff1e73f-0451-45db-8fd4-c1996a61ebbc</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Derived_Date_of_enterprise_size" id="B016C3F8-5834-0D61-6225-22F1C648F146">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:04:02 UTC</createdTime>
+<comment><![CDATA[The date to which the value provided in the ‘enterprise size’ refers. This is the date of the latest data used to classify or review the classification of the enterprise.]]></comment>
+<generatorID>7849DF32-3083-06E8-0ED1-B376BC337F6A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Default_status" id="4D16C594-0C2F-9D70-7A41-E1211DF19CB5">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:04:02 UTC</createdTime>
+<comment><![CDATA[Identification of the default status of the instrument or entity. Categories describing the situations in which an instrument or entity can be described as being at default in accordance with Article 178 of Regulation (EU) No 575/2013.]]></comment>
+<generatorID>164AF929-E962-280C-DC59-F00066A65F29</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>41d6741c-742f-41aa-a980-57007f5d48e1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Enterprise_indicator" id="F32FFE2F-3FBF-CEE8-C23E-D6F4913CD16E">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[An indicator to specify if a party is an enterprise according to EU recommendation 2003/361.]]></comment>
+<generatorID>5A264CC4-01E6-4933-2216-3E41FFA3C6E2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>e3fdd98e-e8f8-4b11-b39e-169ab29513c7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Derived_Enterprise_size" id="4F9F4955-65D7-5324-4E7E-AD82F2CF4CA8">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:04:02 UTC</createdTime>
+<comment><![CDATA[Classification of enterprises by size, in accordance with the Annex to Commission Recommendation 2003/361/EC.]]></comment>
+<generatorID>09EC62BF-7126-1D59-285B-701A361907A5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>5E9EDC31-A8EC-4BB3-0052-1A81C1ED476C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Derived_Immediate_parent_undertaking" id="A4469002-9BC6-2556-F880-A20B6F553FCE">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:04:02 UTC</createdTime>
+<comment><![CDATA[Counterparty identifier for the legal entity which is the immediate parent undertaking of the counterparty. If the counterparty has no parent undertaking, the counterparty identifier for the counterparty itself is to be reported. Parent undertaking has the same meaning as defined in Article 4(1)(15)(a) of Regulation (EU) No 575/2013.]]></comment>
+<generatorID>C754CD3A-DBF7-75CE-1374-F5A7FE67624D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>0a3f8108-1848-4cc1-b97f-e8c05e7e7d3d</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Institutional_sector" id="25CB9CCF-0970-7165-9028-B3D0C23F5E8A">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[Institutional sectors in accordance with Regulation (EU) No 549/2013, Regulation (EU) No 575/2013 and Regulation (EU) No 1075/2013 of the European Central Bank (ECB/2013/40)(1).]]></comment>
+<generatorID>D2F8C42D-C0B5-14EA-7B8D-32CC5E9E42BD</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>24f978bf-6fd6-4b09-9b10-deb049e07952</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Derived_Institutional_sector_according_to_EBA_ITS" id="46E6F0ED-6EC7-77B2-22D6-5CAF40975E73">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:04:02 UTC</createdTime>
+<comment><![CDATA[The institutional sectors to-be-reported in FINREP EBA ITS.]]></comment>
+<generatorID>F4C86224-385B-4131-5D16-45164E3A5A22</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>48605adb-b346-4550-b377-9cac3244fade</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Derived_Institutional_sector_according_to_SHS" id="D4F19A8E-7B07-5F74-C16D-792567B2D0E8">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:04:02 UTC</createdTime>
+<comment><![CDATA[The institutional sectors to-be-reported in SHS.]]></comment>
+<generatorID>993B9FBA-E0B3-52FA-F690-5F7A08A6405F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>f8aa57bc-8914-4a00-ab05-f7317d693c48</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="International_organisation_code" id="E3CCC740-A5E5-A4DC-8EDB-26B7BF946A4C">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[Pseudo-ISO code for international organisations of the Eurostat’s ‘Balance of Payments Vademecum’.]]></comment>
+<generatorID>70B8789B-4456-D39F-159C-DB2F0D721114</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>4da9d8a2-f979-4cc6-93fd-b616088b9f61</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Legal_form" id="746F5841-7A2E-A543-EAC7-B896D0652A42">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[Type of business entity as defined in the national legal system.]]></comment>
+<generatorID>32E288C7-B7A4-E5FF-0B14-825EE10042F8</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>31457646-D166-EE48-82B3-81C9F7441928</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Legal_proceeding_status" id="DF37EC56-8C87-C1B1-3BC7-8CC449ED979D">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[Categories describing an entity's legal status in relation to its/his/her solvency based on the national legal framework.]]></comment>
+<generatorID>CCFBA7BA-0D9C-DFBD-BD9A-0D48B03C686E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>885F5794-B51C-70A9-297F-2D81FCD5D63B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Organisation_type_by_legal_proceeding_status" id="5A80AC87-CA15-E71E-E430-ED24B01BE93E">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between organisations where legal proceedings are ongoing and those without legal proceedings.]]></comment>
+<generatorID>CED7C22C-50CD-EA8D-7DED-F69F00FC9F46</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>5E4AA4E6-A4E3-06B8-9167-DAFFAA73263E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Performing_status" id="75005D6C-06E8-B50D-26FD-7952BA58080A">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:04:02 UTC</createdTime>
+<comment><![CDATA[Performing status in accordance with Implementing Regulation (EU) No 680/2014.]]></comment>
+<generatorID>59ED1BED-9A84-6DE6-52E7-408D1EF8A707</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>DA2E0AFC-9167-45B2-4D76-1F0E8F574C65</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Pulling_effect_indicator" id="B57EC8EA-D956-5302-711E-EA6A38872175">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if the pulling effect is applied.]]></comment>
+<generatorID>F7B82D00-94F9-A6EA-1D40-3E7E5D1FA97B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>e8d48f75-7f04-4965-8635-3121c8653d54</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Statistical_Classification_of_Economic_Activities_in_the_European_Community_(NACE)" id="71C21E58-ADAD-D73E-3875-238D18D75F17">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[Classification of counterparties according to their economic activities, in accordance with the NACE revision 2 statistical classification as laid down in Regulation (EC) No 1893/2006 of the European Parliament and of the Council.]]></comment>
+<generatorID>8A68D646-1A0D-2448-927C-2C5EEADC7808</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>862C2035-489F-67C5-DAE4-56454F6F4314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Type_Party" id="307E551F-188E-92DB-C66D-9B31ABE00CEC">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:04:33 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>3774a8c7-5ddb-485f-b762-611cfb8c731a</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Annual_turnover" id="FE18742E-00F9-533C-4A17-D06598114DFC">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[Annual sales volume net of all discounts and sales taxes in accordance with Recommendation 2003/361/EC. Equivalent to the concept of 'total annual sales' in Article 153(4) of Regulation (EU) No 575/2013.]]></comment>
+<generatorID>0C265137-74E4-20D7-C46D-A623B98A9C4B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Balance_sheet_total" id="5A657A27-2CC3-B096-B770-00EA40B73BAF">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[Carrying value of total assets in accordance with Regulation (EU) 549/2013.]]></comment>
+<generatorID>7DD7603B-ACD9-4AE7-8E6F-9B1DA79BA448</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Date_of_default_status" id="38A97ADF-853B-B75C-4811-C8CDB2DF17A7">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:04:02 UTC</createdTime>
+<comment><![CDATA[The date the default status refers to.]]></comment>
+<generatorID>E8C58C5F-5333-BDEC-8167-C863D01FCA44</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Date_of_initiation_of_legal_proceding" id="15AC325A-EE5D-8A30-6470-44A13356FD72">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The date on which the legal proceedings were initiated.]]></comment>
+<generatorID>7F3C3889-843D-6190-F3DB-40264BF17360</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="First_name" id="86D7D05B-50DD-DF33-337C-5979B5A822AE">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The first name.]]></comment>
+<generatorID>39AF952A-50DD-C2ED-E00E-7677C34EE91D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>b0b29fe0-ac43-4c33-a669-3fb4b4556d0f</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Last_name" id="CE8A8644-9306-F26F-9DCD-7412B1FF68EC">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The last name.]]></comment>
+<generatorID>A4BFEA1F-1C01-1F6A-4DA9-BBA3628DE3E2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>b0b29fe0-ac43-4c33-a669-3fb4b4556d0f</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Legal_entity_identifier_(LEI)" id="7CE7E02A-34C7-D09E-6DC3-F025CF18F919">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[Reference code in line with the International Organization for Standardization’s (ISO) 17442 standard]]></comment>
+<generatorID>9C2B6F89-405F-32AE-3497-563A3F790E4A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>3F7F6D3B-5B13-4083-88F5-199A70EB98D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Number_of_employees" id="580E35AD-CE6F-2127-D7A2-082ECE538111">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[Number of employees working for the counterparty, in accordance with Article 5 of the Annex to Recommendation 2003/361/EC.]]></comment>
+<generatorID>03DBC48F-3E11-C2CE-E3FC-0090D5CDB184</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>6ED1A254-93E8-4BCC-BD8B-126227470ACD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Organisation_name" id="6995677B-51BB-392C-2C7F-A2FEF749693C">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The organisation name.]]></comment>
+<generatorID>3AFF64DE-D792-94DD-E8AE-2E7F711243EB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Probability_of_default_according_to_AnaCredit" id="87DA1C32-4A9C-C8B3-B613-5F187F75D48B">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:04:02 UTC</createdTime>
+<comment><![CDATA[Probability of default according to AnaCredit.]]></comment>
+<generatorID>5AD12514-9128-4876-9CE9-C3DA74E7C226</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>8100266E-F750-48D0-B98A-821400187560</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AAB5BF71-9938-9075-A54D-68BD7DEDA36B" name="Party_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>A6FE620C-D0A1-F3B4-BCF9-3ABCF84D367D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F35B340-B038-7E58-2F3C-F720F4083921"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CC07FB8B-598B-AB5B-BE8D-F48B79338296" name="Party_Address_(used_for_reporting)_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>2E25F704-40A3-5D43-8CE3-7329C1C6EEC9</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6039BAB-E153-5D25-5337-F912D3C86F24"/>
+<colUsage columnID="2A577FDF-3D84-AD34-692E-19B46A50A703"/>
+<colUsage columnID="A7777072-E1A6-4B3D-5D9F-6409920D97AF"/>
+<colUsage columnID="36A53053-C539-C6F4-B2E2-BD99B7A2BA4B"/>
+<colUsage columnID="C83986D8-57F1-685F-99B6-D831D7D1052E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AEF50F5B-998A-334B-E00E-BD7DABA37131" name="Party_Country_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>E18220F9-E649-0E8C-A32C-DAEB7FEDCFCD</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4C4B692-75B8-3EC4-FA18-CCC6D24DE4C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C10B78D1-7363-9FF6-DCD5-193F011C547C" name="Party_Group_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>5BCE76C9-B35B-6C72-5A8E-16FD7BBA99B3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DEA4E586-0D7A-05BD-8209-877E1717409A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="532BB65F-B631-7740-CC0B-C25511E2320F" name="Party_Party_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>386F89F4-6AEC-DA68-DB61-D84078148AFB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E169DEB9-C34B-38DD-5AB6-CD966A6DF891"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CBA48CD9-38E1-6ACA-2642-E7415D387E36" name="Party_Party_FKv2">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>B0EB9733-6B90-BA77-390B-1EC67ADE9E76</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8285F7B3-F862-B261-9D80-3F1E19179297"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

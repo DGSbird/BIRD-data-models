@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CF45329C-91C7-68D5-A745-E689A2CDB248" name="Region">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-05 09:03:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[[https://ec.europa.eu/eurostat/web/nuts/background]
+The NUTS classification (Nomenclature of territorial units for statistics) is a hierarchical system for dividing up the economic territory of the EU and the UK for the purpose of:
+* The collection, development and harmonisation of European regional statistics
+* Socio-economic analyses of the regions
+** NUTS 1: major socio-economic regions
+** NUTS 2: basic regions for the application of regional policies
+** NUTS 3: small regions for specific diagnoses 
+* Framing of EU regional policies
+** Regions eligible for support from cohesion policy have been defined at NUTS 2 level
+** The Cohesion report has so far mainly been prepared at NUTS 2 level]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<typeID>1312D78D-A5F6-B25F-0715-6E131635D11D</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>RGN</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Country code" id="1AB02114-82DC-614C-6115-088CC4DE1997">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-05 09:05:26 UTC</createdTime>
+<comment><![CDATA[The country code according to ISO3166.]]></comment>
+<generatorID>FD0E81ED-BAB1-EA07-318C-0D1003F7F6B2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<referedAttribute>D5344D64-60FF-5EB6-B5FC-A662F608FDBA</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>E832EA39-67C9-4303-AD29-B66510B666C6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>CNTRY_CD</preferredAbbreviation>
+</Attribute>
+<Attribute name="Nomenclature des unités territoriales statistiques (NUTS) region" id="CDA26836-CE57-8924-07F9-2E3DCF517FF0">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-05 09:03:39 UTC</createdTime>
+<comment><![CDATA[The region inside a country according to NUTS.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>5b0b10c5-abc7-4102-a854-27ecf2cd3c95</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>NTS_RGN</preferredAbbreviation>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4ED9AA1D-A8AB-0D57-53FA-EFC17C6A78A4" name="Region PK">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-05 09:03:57 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CDA26836-CE57-8924-07F9-2E3DCF517FF0</attributeRef>
+<attributeRef>1AB02114-82DC-614C-6115-088CC4DE1997</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

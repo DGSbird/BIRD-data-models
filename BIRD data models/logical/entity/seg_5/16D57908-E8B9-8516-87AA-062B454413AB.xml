@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_5" id="16D57908-E8B9-8516-87AA-062B454413AB" name="Non-fixed interest financial asset instrument">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-03 23:52:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Non-fixed interest financial asset instrument is a Financial asset instrument with non-fixed interest rate.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="false"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="false"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="false"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="false"/>
+</engineerTo>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>AC25CE06-349E-2EC8-DA05-FFD6B8759432</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>NN_FXD_INTRST_FNNCL_ASST_INSTRMNT</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Reference rate" id="40D6BCA7-8866-AF66-525F-E7EB9D849855">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-03 23:54:06 UTC</createdTime>
+<comment><![CDATA[Reference rate used for the calculation of the actual interest rate.The Reference rate code is a combination of the reference rate value and maturity value.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>31ADF990-BD91-4DEE-BE00-9C0B6072B635</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RFRNC_RT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Interest rate cap" id="47D928CD-3B5A-A8AE-D7FB-1A05D53C5D33">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-03 23:54:06 UTC</createdTime>
+<comment><![CDATA[Maximum value for the interest rate charged.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>BC929BBF-3702-4146-9332-0B5F419F991E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>INTRST_RT_CP</preferredAbbreviation>
+</Attribute>
+<Attribute name="Interest rate floor" id="8E3E8F21-1BE8-CF7B-CCAC-7506B464AF9A">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-03 23:54:06 UTC</createdTime>
+<comment><![CDATA[Minimum value for the interest rate charged.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>BC929BBF-3702-4146-9332-0B5F419F991E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>INTRST_RT_FLR</preferredAbbreviation>
+</Attribute>
+<Attribute name="Interest rate spread / margin" id="B28225DC-5D11-1B29-35E3-E2C063112B76">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-03 23:54:07 UTC</createdTime>
+<comment><![CDATA[Margin or spread (expressed as a percentage) to add to the reference rate that is used for the calculation of the interest rate in basis points.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>BC929BBF-3702-4146-9332-0B5F419F991E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>INTRST_RT_SPRD</preferredAbbreviation>
+</Attribute>
+</attributes>
+</Entity>

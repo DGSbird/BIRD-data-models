@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2B7EC1A2-15F3-575F-BC70-179C100BE2B3" name="Advance">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-28 11:56:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[An Advance is a Loan (excluding Reverse repurchase agreement) and Advance that is an Advance according to Annex V, Part 2.85(g):
+‘Advances that are not loans’ shall include advances that cannot be classified as ‘loans’ according to the ECB BSI Regulation. This item shall include, among others, gross amounts receivable in respect of suspense items (such as funds that are awaiting investment, transfer, or settlement) and transit items (such as cheques and other forms of payment that have been sent for collection).]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="false"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="false"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="false"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="false"/>
+</engineerTo>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>B6FD5D89-A17A-4780-AA57-0259F91E0630</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>ADVNC</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Advance type" id="D2BC75D5-C601-572A-6E7D-98A012504D65">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-28 11:57:51 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between suspense items, transit items and other advances.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>044FB171-CDCC-A2E2-75CA-EDB2F7F223A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ADVNC_TYP</preferredAbbreviation>
+</Attribute>
+</attributes>
+</Entity>

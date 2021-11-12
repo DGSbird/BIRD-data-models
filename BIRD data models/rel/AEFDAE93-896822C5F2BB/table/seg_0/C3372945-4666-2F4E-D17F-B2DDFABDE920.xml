@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C3372945-4666-2F4E-D17F-B2DDFABDE920" name="CVRD_BND_ISSNC">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Covered bond issuance is a Covered bond issued under a Covered bond program.]]></commentInRDBMS>
+<generatorID>3AF3CD09-7540-3718-B623-38E579D1423A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>A0CBE5B5-15E4-B4F0-F88E-E83729225A42</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CVRD_BND_PRGRM_ID" id="7FE3E0BE-F13F-13A8-F692-63B1DC4EC8F1">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each covered bond program.]]></comment>
+<generatorID>D45E4123-4EBA-572B-046D-CE4785C1F820</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2AD229CD-55AE-46F6-D529-5E69605B317A" referredColumn="1311F54C-EAED-76B6-D016-4DAF9F801DCB"/>
+</associations>
+</Column>
+<Column name="CVRD_BND_SCRTY_ID" id="0FBD87AD-6389-2CDE-3414-91BEDFBD6CE4">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[The security identifier of the involved covered bond.]]></comment>
+<generatorID>23619BA8-E918-BED1-CAF6-77A7D59940B0</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C9B78491-9FA6-04FE-BC21-563723A70A77" referredColumn="B8BAFADD-F5AA-A542-47BE-863FDF29107A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E4BDCFAA-392E-9E62-9394-83A11E7C3DC4" name="CVRD_BND_ISSNC_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<generatorID>A346F9BB-74FC-D2F5-291E-65BE206FF33F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7FE3E0BE-F13F-13A8-F692-63B1DC4EC8F1"/>
+<colUsage columnID="0FBD87AD-6389-2CDE-3414-91BEDFBD6CE4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A08D7939-D9D0-5A63-8592-2FC71F510E51" name="CVRD_BND_ISSNC_SCRTY_EXCHNG_TRDBL_DRVTV_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<generatorID>BD8AD293-13AB-2336-1FE1-E897DFE98428</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0FBD87AD-6389-2CDE-3414-91BEDFBD6CE4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="321D829C-3C49-257A-4DB5-9763C3906F91" name="CVRD_BND_ISSNC_CVRD_BND_PRGRM_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<generatorID>B9E5228E-2115-2B18-7BA9-70B34E8157CC</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7FE3E0BE-F13F-13A8-F692-63B1DC4EC8F1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

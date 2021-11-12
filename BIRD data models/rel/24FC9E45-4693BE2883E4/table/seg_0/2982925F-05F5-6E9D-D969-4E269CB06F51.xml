@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2982925F-05F5-6E9D-D969-4E269CB06F51" name="Covered_bond_issuance">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Covered bond issuance is a Covered bond issued under a Covered bond program.]]></commentInRDBMS>
+<generatorID>3AF3CD09-7540-3718-B623-38E579D1423A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>A0CBE5B5-15E4-B4F0-F88E-E83729225A42</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Covered_bond_program_identifier" id="A37D519F-C8EC-40DA-01C7-4DCF83A7A00A">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each covered bond program.]]></comment>
+<generatorID>D45E4123-4EBA-572B-046D-CE4785C1F820</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DCAD8AB9-0263-6568-624F-1EB93C056D1D" referredColumn="6A0B6E8F-3364-CD5C-C2A8-BBE274C2A41B"/>
+</associations>
+</Column>
+<Column name="Covered_bond_Security_identifier" id="3EC3103D-68E8-0C05-AFDB-8D5392483FB9">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The security identifier of the involved covered bond.]]></comment>
+<generatorID>23619BA8-E918-BED1-CAF6-77A7D59940B0</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="09B1CB8B-8FCC-919B-ADC6-F883DB47DB9A" referredColumn="C543C9B5-9A71-84A3-A837-113E70073049"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="68FCD68D-AE6D-ECDC-6E66-F3788E320D0C" name="Covered_bond_issuance_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>A346F9BB-74FC-D2F5-291E-65BE206FF33F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A37D519F-C8EC-40DA-01C7-4DCF83A7A00A"/>
+<colUsage columnID="3EC3103D-68E8-0C05-AFDB-8D5392483FB9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="68AAA771-7533-A6C6-E060-17BDB28D4A46" name="Covered_bond_issuance_Security_and_exchange_tradable_derivative_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>BD8AD293-13AB-2336-1FE1-E897DFE98428</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3EC3103D-68E8-0C05-AFDB-8D5392483FB9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8D004A3B-422F-B256-BE9E-A69BAAD03E5F" name="Covered_bond_issuance_Covered_bond_program_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>B9E5228E-2115-2B18-7BA9-70B34E8157CC</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A37D519F-C8EC-40DA-01C7-4DCF83A7A00A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

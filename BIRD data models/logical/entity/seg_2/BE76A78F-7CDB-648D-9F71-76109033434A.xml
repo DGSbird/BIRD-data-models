@@ -1,0 +1,217 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_2" id="BE76A78F-7CDB-648D-9F71-76109033434A" name="Debt security">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-04 10:05:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Debt security is a Security that is a debt instrument.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="false"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="false"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="false"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="false"/>
+</engineerTo>
+<typeID>178C245A-208C-578D-F0C5-C390D8542711</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>6B9C4C46-5617-E783-1C65-FB2BF74222E9</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>DBT_SCRTY</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Debt security type" id="1C837F3E-A7BD-B59C-BC58-58F0A7604408">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-04 10:06:10 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between debt securities with underlying assets and debt securities without underlying assets.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>9EFEC168-8435-3274-B8B8-3DC3846FF31D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>DBT_SCRTY_TYP</preferredAbbreviation>
+</Attribute>
+<Attribute name="Legal final maturity date" id="729FDCE9-0DD7-04C0-37A5-035DD3CE9E33">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-04 10:06:19 UTC</createdTime>
+<comment><![CDATA[The contractual maturity date of the asset or liability, taking into account any agreements amending initial contracts.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>DT_LGL_FNL_MTRTY</preferredAbbreviation>
+</Attribute>
+<Attribute name="Subordinated debt indicator" id="8B4D1523-67AF-8A70-E311-B6131401F4A0">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-04 10:06:29 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if an asset is considered as subordinated debt or not.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>FA2F0B8B-27AA-8340-CCE3-031C5FF66E03</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>SBRDNTD_DBT_INDCTR</preferredAbbreviation>
+</Attribute>
+<Attribute name="Rank" id="CB38532F-B329-9EE4-B268-5F5C48D258F8">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-04 10:06:48 UTC</createdTime>
+<comment><![CDATA[A debt security's rank, like junior, mezanine or senior.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>68D5F70B-1E5A-4A86-926F-CC5E369ADD8A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RNK</preferredAbbreviation>
+</Attribute>
+<Attribute name="Eligible for central bank funding indicator" id="540CB3E9-0DEE-B78D-35AC-0F8BF3D9077A">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-04 10:06:58 UTC</createdTime>
+<comment><![CDATA[Specifies if an object is eligible for central bank funding in the sense that it might be exchanged / provided as collateral for funding. Further information may be found in the Guidance notes to reporting agents on SHS regulation (see https://www.ecb.europa.eu/pub/pdf/other/guidance_notes_to_reporting_agents_on_shs_regulation201705.en.pdf).]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>03d8986e-b5e3-43d2-bbd7-d9dea6560300</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ELGBL_CNTRL_BNK_FNDNG</preferredAbbreviation>
+</Attribute>
+<Attribute name="Security guarantee level" id="053F612F-B790-D9CD-214F-F503872BCD69">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-04 10:07:43 UTC</createdTime>
+<comment><![CDATA[It defines the security ‘guarantee level’  whether the instrument is guaranteed by an entity different from the issuer, e.g. by the government.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>7FD8F92F-C799-4AF9-AA40-D234A3E00301</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>SCRTY_GRNT_LVL</preferredAbbreviation>
+</Attribute>
+<Attribute name="Type of product" id="E81EC1C2-27CA-D0F0-AF84-A132338EC968">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-04 10:08:04 UTC</createdTime>
+<comment><![CDATA[Type of product]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>8BEB18D1-4EC5-4643-B4F3-1EBBFB071829</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>TYP_PRDCT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Performing status" id="13CFD194-BF99-99AE-7F55-AD9EE5A456A1">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-04 10:08:24 UTC</createdTime>
+<comment><![CDATA[Performing status in accordance with Implementing Regulation (EU) No 680/2014.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>19a7fc91-04c5-4426-a4f7-d0698d7615c8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>PRFRMNG_STTS</preferredAbbreviation>
+</Attribute>
+<Attribute name="Date of performing status" id="7D2A5B5D-2316-C442-9F7E-CDCB184816C7">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-04 10:08:35 UTC</createdTime>
+<comment><![CDATA[The date on which the performing status is considered to have been established or changed.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>DT_PRFRMNG_STTS</preferredAbbreviation>
+</Attribute>
+<Attribute name="Original nominal amount" id="722E0611-8D2D-B0DE-C2BC-F22B396EE635">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-04 10:08:49 UTC</createdTime>
+<comment><![CDATA[The original nominal amount. E.g. for debt securities issued it is the nominal amount at issuance date.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ORGNL_NMNL_AMNT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Date past due" id="5A892E7A-A1EC-F8BD-DC36-5022DDC2A9AA">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-04 10:09:08 UTC</createdTime>
+<comment><![CDATA[The date on which the asset became past due in accordance with Part 2.48 of Annex V to Implementing Regulation (EU) No 680/2014. This is the latest such date prior to the reporting reference date and it is to be reported if the instrument is past due on the reporting reference date.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>DT_PST_D</preferredAbbreviation>
+</Attribute>
+</attributes>
+</Entity>

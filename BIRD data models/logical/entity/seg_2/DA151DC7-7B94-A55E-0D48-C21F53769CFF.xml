@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_2" id="DA151DC7-7B94-A55E-0D48-C21F53769CFF" name="Default financial asset instrument individually assessed">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-03 23:18:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Default financial asset instrument individually assessed is a Financial asset instrument individually assessed that is in default according to Regulation (EU) 575/2013, Article 178 Obligor in default.
+Regulation (EU) 575/2013, Article 178 Default of an obligor:
+"In the case of retail exposures, institutions may apply the definition of default laid down in points (a) and (b) of the first subparagraph at the level of an individual credit facility rather than in relation to the total obligations of a borrower.".]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="false"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="false"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="false"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="false"/>
+</engineerTo>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>7FD93BB2-F39A-5440-D450-3AEB1BE2CADB</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>DFLT_FNNCL_ASST_INSTRMNT_INDVDLLY_ASSSSD</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Default status type" id="11C340C2-A004-F221-9265-9D3728DCDF65">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-03 23:28:05 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between default because unlikely to pay, 90/180 days past due or both according to Regulation (EU) 575/2013, Article 178.]]></comment>
+<generatorID>DAB08F65-F787-5DB9-9CAD-8B67095355B0</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<referedAttribute>1FA8495C-8DCD-5F83-2863-2A24D63B110F</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>E143E0AF-BEFA-97C8-5132-46D919C36AC4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>DFLT_STTS_TYP</preferredAbbreviation>
+</Attribute>
+<Attribute name="Date of default status" id="86EB4655-B133-6FA3-AC14-28E35DAC9E48">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-03 23:21:26 UTC</createdTime>
+<comment><![CDATA[The date on which the default status is considered to have arisen.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>DT_DFLT_STTS</preferredAbbreviation>
+</Attribute>
+<Attribute name="Accumulated recoveries since default" id="2EB02F85-CD1B-B48F-EF58-B76DF3957737">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-03 23:21:26 UTC</createdTime>
+<comment><![CDATA[The total amount recovered since the date of default.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>8AF63A7D-2245-4118-9583-CEDC4D186D2D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>CMLTV_RCVRS_SNC_DFLT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Non-performing prior to forbearance indicator" id="84F9FB1A-0928-51F7-6149-354F905B96C5">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-03 23:21:26 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if an asset is classified as non-performing prior to forbearance according to Regulation (EU) 680/2014, Annex V, part 2.263.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>F88013CE-0450-6ED0-E62F-A5AC72213D59</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>NN_PRFRMNG_PRR_FRBRNC_INDCTR</preferredAbbreviation>
+</Attribute>
+</attributes>
+</Entity>

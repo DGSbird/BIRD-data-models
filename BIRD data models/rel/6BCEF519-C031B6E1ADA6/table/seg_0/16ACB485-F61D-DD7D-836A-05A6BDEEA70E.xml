@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="16ACB485-F61D-DD7D-836A-05A6BDEEA70E" name="PSTL_CD_RGN">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Postal code in a region is a Postal code within a specific Region.]]></commentInRDBMS>
+<generatorID>E859013A-492A-76B9-BAD3-02FA3F376DA3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>1312D78D-A5F6-B25F-0715-6E131635D11D</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NTS_RGN" id="38A49CFA-5246-98FD-1763-E294B34D812D">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<comment><![CDATA[The region inside a country according to NUTS.]]></comment>
+<generatorID>601DACE3-CDB4-FCB2-FAAE-D428BE431A0C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>5b0b10c5-abc7-4102-a854-27ecf2cd3c95</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="81CD067A-05F4-3D26-B673-148CB43F095A" referredColumn="421F5FEC-5FA9-C677-3053-6FF1FA5E2DB8"/>
+</associations>
+</Column>
+<Column name="CNTRY_CD" id="FAE76890-B219-7158-CBBD-BC4807021D97">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<comment><![CDATA[The country code according to ISO3166.]]></comment>
+<generatorID>559C2E4A-49D7-655F-3D26-BFB352ADF4F3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>005eccc3-e1f2-47eb-a2be-3922266ab95a</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="81CD067A-05F4-3D26-B673-148CB43F095A" referredColumn="16F86F77-F9E5-699A-1200-F7982C3B6AA9"/>
+</associations>
+</Column>
+<Column name="PSTL_CD" id="A65F7558-4CBF-1F4D-515F-26AF5302C775">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<comment><![CDATA[Entity's postal code.]]></comment>
+<generatorID>95AEEB0F-D838-0371-9CB4-6C7CD1B58E8D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="09D5DC4B-4995-4CC5-2DB5-E13C2C6257B1" name="PSTL_CD_RGN_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<generatorID>EEC2F3F2-2D31-1BB3-2D9A-8F67DE583B90</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="38A49CFA-5246-98FD-1763-E294B34D812D"/>
+<colUsage columnID="FAE76890-B219-7158-CBBD-BC4807021D97"/>
+<colUsage columnID="A65F7558-4CBF-1F4D-515F-26AF5302C775"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6A2BE8D8-2D74-C866-46CB-C53070581FA4" name="PSTL_CD_RGN_RGN_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<generatorID>42F5B15D-463A-8376-5265-A639AFBAD731</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="38A49CFA-5246-98FD-1763-E294B34D812D"/>
+<colUsage columnID="FAE76890-B219-7158-CBBD-BC4807021D97"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

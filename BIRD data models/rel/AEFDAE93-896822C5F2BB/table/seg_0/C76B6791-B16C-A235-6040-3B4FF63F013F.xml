@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C76B6791-B16C-A235-6040-3B4FF63F013F" name="PRTY_PRVS_PRD_DT">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Party previous period data is information about a Party associated with teh previous period. For example the Enterprise size that was calculated in the previous period.]]></commentInRDBMS>
+<generatorID>9BC3536B-8321-4DC1-DBFD-E8B4652D40E2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>7A67499C-0479-82E2-9F82-A693B748701D</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="YR" id="A286CBB2-BF0B-5B9F-0E70-3EDCA5087CA4">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[The year.]]></comment>
+<generatorID>046EA1A4-DCE4-C0DA-41DD-27C75F954BB6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRTY_ID" id="83F08EEC-4A11-894D-7285-53B7C6160A39">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[An identifier that uniquely identifies a party.]]></comment>
+<generatorID>891B27C0-9CB7-FD52-37DB-1EB8B3FA4125</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4C1DB190-14B4-2246-D9AF-C98385904850" referredColumn="CF535E79-B3DD-9B81-0D44-7C33B241D753"/>
+</associations>
+</Column>
+<Column name="ENTRPRS_SZ_CLCLTD" id="048F57C0-1A0F-A505-BA7D-B3289A599E78">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[Classification of enterprises by size, in accordance with the Annex to Commission Recommendation 2003/361/EC.]]></comment>
+<generatorID>DBAFF9BD-2AA3-2B04-4272-F78F0176FCD4</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2F7E5F53-5754-4379-8BB8-625E1403A9A0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F1529E74-8770-677E-1CFB-8F71C3BCFE93" name="PRTY_PRVS_PRD_DT_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<generatorID>1541E25D-1E84-2EC4-1D81-E50211503B7D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A286CBB2-BF0B-5B9F-0E70-3EDCA5087CA4"/>
+<colUsage columnID="83F08EEC-4A11-894D-7285-53B7C6160A39"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="038525DF-B52F-E9FD-7F55-252242C753A7" name="PRTY_PRVS_PRD_DT_PRTY_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<generatorID>878F27C3-1FF6-0F79-A43D-04046BEC14B6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="83F08EEC-4A11-894D-7285-53B7C6160A39"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

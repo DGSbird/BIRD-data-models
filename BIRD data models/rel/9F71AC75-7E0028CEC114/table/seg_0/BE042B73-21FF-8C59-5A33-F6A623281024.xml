@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BE042B73-21FF-8C59-5A33-F6A623281024" name="Instrument_Protection_arrangement_assignment">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[An Instrument Protection arrangement assignment is the combination of an Instrument and a Protection arrangement that indicates which Instrument is related to which Protection arrangement.]]></commentInRDBMS>
+<generatorID>440398C3-B369-BCF2-7C8B-0A6ED64AF366</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>B00C49F8-7AB8-0344-2390-66F8B305696A</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Protection_arrangement_identifier" id="0BE2B96E-88B9-EAA2-D266-E49054758CF9">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:28 UTC</createdTime>
+<comment><![CDATA[An identifier to univocally identify each protection arragement.]]></comment>
+<generatorID>F55E6305-B28B-A73E-136B-BC588701AC16</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C676D60F-ECA5-0D52-6FC7-A65EB59F6614" referredColumn="E78D8A20-A807-D701-2634-424F4A21E046"/>
+</associations>
+</Column>
+<Column name="Instrument_identifier" id="4CA7DF12-7634-6808-41D9-DD8821ADA472">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:28 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>778C1692-63E3-47E6-78F0-8F2FCE0C9D16</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E5B7FF6A-CE3A-9ABF-2CCF-DB7B6A9E0D91" referredColumn="28B741AD-D62C-B307-0D9A-7B70ECF17189"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F1738A17-F16A-8F89-41EB-7A870C8BBF92" name="Instrument_Protection_arrangement_assignment_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:28 UTC</createdTime>
+<generatorID>BA8B178D-625C-2083-272F-2F0A117E7EB9</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BE2B96E-88B9-EAA2-D266-E49054758CF9"/>
+<colUsage columnID="4CA7DF12-7634-6808-41D9-DD8821ADA472"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4E0B21AA-2241-4BEA-FEF8-97B282AD954E" name="Instrument_Protection_arrangement_assignment_Instrument_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:28 UTC</createdTime>
+<generatorID>40254AA0-2E36-DCD5-F031-4473656CCBFF</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4CA7DF12-7634-6808-41D9-DD8821ADA472"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8624EC13-C028-E031-82D0-CFFD0CBB72B2" name="Instrument_Protection_arrangement_assignment_Protection_arrangement_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 12:34:29 UTC</createdTime>
+<generatorID>64461156-06AA-66A6-3A48-1314EF2A6F7B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BE2B96E-88B9-EAA2-D266-E49054758CF9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

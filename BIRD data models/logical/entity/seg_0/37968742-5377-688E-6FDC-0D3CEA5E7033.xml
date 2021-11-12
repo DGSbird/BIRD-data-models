@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="37968742-5377-688E-6FDC-0D3CEA5E7033" name="Linked enterprise">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-06 12:16:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Linked enterprise is a combination of a Central bank and private sector company and a Central bank and private sector company that indicates which Central bank and private sector company is linked to which Central bank and private sector company in the sense of Commission Recommendation 2003/361/EC.
+
+Commission Recommendation 2003/361/EC, Annex, Title I Definition of micro, small and medium-sized enterprises adopted by the commission, Article 3 Types of enterprise taken into consideration in calculating staff numbers and financial amounts:
+...
+3. ‘Linked enterprises’ are enterprises which have any of the following relationships with each other:
+(a) an enterprise has a majority of the shareholders' or members' voting rights in another enterprise;
+(b) an enterprise has the right to appoint or remove a majority of the members of the administrative, management or supervisory body of another enterprise;
+(c) an enterprise has the right to exercise a dominant influence over another enterprise pursuant to a contract entered
+into with that enterprise or to a provision in its memorandum or articles of association;
+(d) an enterprise, which is a shareholder in or member of another enterprise, controls alone, pursuant to an agreement with other shareholders in or members of that enterprise, a majority of shareholders' or members' voting rights in that enterprise.
+There is a presumption that no dominant influence exists if the investors listed in the second subparagraph of paragraph 2 are not involving themselves directly or indirectly in the management of the enterprise in question, without prejudice to their rights as stakeholders.
+Enterprises having any of the relationships described in the first subparagraph through one or more other enterprises, or any one of the investors mentioned in paragraph 2, are also considered to be linked.
+Enterprises which have one or other of such relationships through a natural person or group of natural persons acting jointly are also considered linked enterprises if they engage in their activity or in part of their activity in the same relevant market or in adjacent markets.
+An ‘adjacent market’ is considered to be the market for a product or service situated directly upstream or downstream of the relevant market.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<typeID>7A67499C-0479-82E2-9F82-A693B748701D</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>LNKD_ENTRPRS</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Party identifier" id="B73BA6C9-5D8F-F70D-65FB-577FEF3F43B2">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-06 12:17:14 UTC</createdTime>
+<comment><![CDATA[An identifier that uniquely identifies a party.]]></comment>
+<generatorID>F93FDDA3-4D15-6674-2AD8-2A544395AD8D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<referedAttribute>7AF04655-DC9B-5CAB-249B-924D25012A59</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>PRTY_ID</preferredAbbreviation>
+</Attribute>
+<Attribute name="Linked enterprise Party identifier" id="0BEA7DBD-A645-9AED-3B1C-C49A7627DF32">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-06 12:17:41 UTC</createdTime>
+<comment><![CDATA[The party identifier of the involved linked enterprise.]]></comment>
+<generatorID>2AA5D36A-3CB7-AF32-2791-0D50590FF31C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<referedAttribute>7AF04655-DC9B-5CAB-249B-924D25012A59</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>LNKD_ENTRPRS_PRTY_ID</preferredAbbreviation>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="419EA970-B1FC-A5A4-9459-1A1CE52451E4" name="Linked enterprise PK">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-06 12:17:14 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B73BA6C9-5D8F-F70D-65FB-577FEF3F43B2</attributeRef>
+<attributeRef>0BEA7DBD-A645-9AED-3B1C-C49A7627DF32</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

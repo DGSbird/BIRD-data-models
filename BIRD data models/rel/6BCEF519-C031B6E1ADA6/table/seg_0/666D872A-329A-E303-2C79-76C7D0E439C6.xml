@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="666D872A-329A-E303-2C79-76C7D0E439C6" name="CRDT_FCLTY_CLLTRL_ASSGNMNT">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Credit facility Collateral assignment is the combination of a Credit facility and a Collateral that indicates which Credit facility is assigned to which Collateral.]]></commentInRDBMS>
+<generatorID>5E02F623-CC8D-9A20-AB10-A47E24CCF5C2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>8901219F-AB49-127E-838D-9EE79906B11E</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CRDT_FCLTY_ID" id="3885D3DF-8BEF-5038-89D7-9E65E626182C">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:42 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each credit facility.]]></comment>
+<generatorID>CB11BBE1-B9E5-53A1-CAE8-C3B917098B48</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="707C7790-95A9-0332-CB36-59C96FE50E2D" referredColumn="BE855AAC-C1DC-71CA-B7B1-73205F9515D3"/>
+</associations>
+</Column>
+<Column name="CLLTRL_ID" id="8A8E65F2-534E-4D17-2D0A-405E60D53B85">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:42 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each collateral.]]></comment>
+<generatorID>C67F38BF-39AC-272E-9AF1-C6EFBFCC0ACA</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="944D1770-A9B9-1175-7D52-E4157CFF8ADB" referredColumn="26C4308E-29B3-17F0-5332-C83D17F605FA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B5A74CF2-4D27-C85C-A90A-76BD90B5E45E" name="CRDT_FCLTY_CLLTRL_ASSGNMNT_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:42 UTC</createdTime>
+<generatorID>B0A1FD04-85AF-6E78-6D93-10206C34226E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3885D3DF-8BEF-5038-89D7-9E65E626182C"/>
+<colUsage columnID="8A8E65F2-534E-4D17-2D0A-405E60D53B85"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="176FD608-024A-4A79-7C53-72E19C4CFA89" name="CRDT_FCLTY_CLLTRL_ASSGNMNT_CLLTRL_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<generatorID>36A77B2A-25CA-B675-C958-2A3FDFD3E97E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A8E65F2-534E-4D17-2D0A-405E60D53B85"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2550048D-964A-4DDB-9448-700D93EBB062" name="CRDT_FCLTY_CLLTRL_ASSGNMNT_CRDT_FCLTY_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<generatorID>FDA0ABE6-7F31-2A9A-4A4E-A6B9489A251B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3885D3DF-8BEF-5038-89D7-9E65E626182C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,195 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7F5A9E75-312A-E71D-7638-647EFB27ABA2" name="Long_security_position_Prudential_portfolio_assignment">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Long security position Prudential portfolio assignment is the combination of a Long security position and a Prudential portfolio that indicates which Long security position is assigned to which Prudential portfolio.]]></commentInRDBMS>
+<generatorID>9E620B56-8B7D-FFEE-6275-88A03A72E401</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>6B4999C9-9ED0-E7FF-EF12-F2895351A157</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Security_identifier" id="A9DFE8FC-F745-289B-2542-9C72B9F522E7">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each security.]]></comment>
+<generatorID>A73E5CAA-6B35-CDB1-BE0A-FD118888C056</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1A058E66-536E-14A6-C2DF-F9BFB3EA947A" referredColumn="DC939D63-16C2-DA4C-9837-209349C33F8C"/>
+</associations>
+</Column>
+<Column name="Investor_Party_role_type" id="C1EBBDD1-C919-2014-B12B-0FDB3828FFB8">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The investor role.]]></comment>
+<generatorID>C8E9B405-C94F-6E8F-5DBE-464CB85C76BD</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>fb47f404-bef8-4d54-adfc-044f1ea3be3e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1A058E66-536E-14A6-C2DF-F9BFB3EA947A" referredColumn="1381DAF4-FDFA-F1A5-30BF-470FA981E278"/>
+</associations>
+</Column>
+<Column name="Investor_Party_identifier" id="9968E658-6E84-C0E1-9F8A-F94B0EE783EA">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The party identifier of the involved investor.]]></comment>
+<generatorID>437168AE-6239-C93C-4403-089A9B1A446C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1A058E66-536E-14A6-C2DF-F9BFB3EA947A" referredColumn="2716F60D-049C-692B-ADAC-EF8C08C049DF"/>
+</associations>
+</Column>
+<Column name="Prudential_portfolio_type" id="C3F7B694-EBAA-FAB2-E05E-FD8054523624">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between trading and banking (or non-trading) book.]]></comment>
+<generatorID>DC215B99-E32E-45DB-0F3D-F08FFEAD753B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>9ECA7EA5-B456-4AD8-AA91-4AD16E2D4AD7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D6ADD18D-5D0C-A214-09D6-7788BFD7E94D" referredColumn="9B998F08-8C4C-34F7-C343-4BD8073A08D9"/>
+</associations>
+</Column>
+<Column name="Impairment_assessment_method" id="72F02CE7-6ADB-54F7-D2E3-A7F92CB746B7">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The method by which the impairment is assessed, if the instrument is subject to impairment in accordance with applied accounting standards. Collective and individual methods are distinguished.]]></comment>
+<generatorID>C4B8DDA7-FBCB-7A7C-63CE-EE071C42387A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>f17bf08c-b179-4a17-8968-be388e09bbdd</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Impairment_status" id="80A1F805-281A-69F0-D9FD-7A4D5EA9DC86">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[Type of impairment.]]></comment>
+<generatorID>9E76412C-36BA-B186-D256-20DA97BFE2AB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>5ae1d8ab-c445-4474-98aa-4cddc8f01fb9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Long_security_position_Prudential_portfolio_assignment_type" id="C778C24C-016E-81DA-F7FB-A246D778AE9D">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between debt securities and equity and fund securities.]]></comment>
+<generatorID>F63E6C45-45E7-3DAD-A320-398CE46B0FF2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>f3ceddd7-0af1-46f7-a64e-2443f9739a8a</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Arreas_for_the_instrument" id="502F41B7-6B9B-577A-4D40-FDEC8E764746">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[Aggregate amount of principal, interest and any fee payment outstanding at the reporting date, which is contractually due and has not been paid (past due). This amount is always to be reported. '0' is to be reported if the instrument was not past due on the reporting date.]]></comment>
+<generatorID>033BEB18-90B5-C2A2-06EE-3359CCB99572</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>8AF63A7D-2245-4118-9583-CEDC4D186D2D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nominal_amount" id="82F7D976-C81E-9FAF-E89E-7952A6667E36">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[Holding amount at nominal value]]></comment>
+<generatorID>600BFA3C-3BA1-7058-EBF6-04618E5B7739</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Number_of_shares" id="398ED92D-2EB3-F818-0EE5-F79F2C41D9D3">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<comment><![CDATA[The number of shares of a security.]]></comment>
+<generatorID>EA60CFD0-EC5D-A004-8B53-1592173385FF</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="03E9EFB4-CB27-3907-1ECE-BA3B9F7FC038" name="Long_security_position_Prudential_portfolio_assignment_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>37403655-6389-D19B-A049-06371ECDEB54</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A9DFE8FC-F745-289B-2542-9C72B9F522E7"/>
+<colUsage columnID="C1EBBDD1-C919-2014-B12B-0FDB3828FFB8"/>
+<colUsage columnID="9968E658-6E84-C0E1-9F8A-F94B0EE783EA"/>
+<colUsage columnID="C3F7B694-EBAA-FAB2-E05E-FD8054523624"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="22AA8389-B8BB-B004-B796-8B9F5EEFEC64" name="Long_security_position_Prudential_portfolio_assignment_Security_position_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>A6EEE4A6-F6D7-B4FE-2A80-F37CBCDE4C54</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A9DFE8FC-F745-289B-2542-9C72B9F522E7"/>
+<colUsage columnID="9968E658-6E84-C0E1-9F8A-F94B0EE783EA"/>
+<colUsage columnID="C1EBBDD1-C919-2014-B12B-0FDB3828FFB8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AC55EE65-1A1A-B5E3-B5AB-758AC7E2F601" name="Long_security_position_Prudential_portfolio_assignment_Prudential_portolio_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 11:49:41 UTC</createdTime>
+<generatorID>001BD150-3647-F4A4-2E26-8890E91BBCAD</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3F7B694-EBAA-FAB2-E05E-FD8054523624"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

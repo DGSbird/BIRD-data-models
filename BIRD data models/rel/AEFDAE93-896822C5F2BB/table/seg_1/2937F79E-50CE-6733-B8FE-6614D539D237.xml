@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="2937F79E-50CE-6733-B8FE-6614D539D237" name="TRNCH_TRDTNL_SCRTSTN">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Regulation (EU) 2402/2017, Article 2, (6):
+´Tranche’ means a contractually established segment of the credit risk associated with an exposure or a pool of exposures, where a position in the segment entails a risk of credit loss greater than or less than a position of the same amount in another segment, without taking account of credit protection provided by third parties directly to the holders of positions in the segment or in other segments.]]></commentInRDBMS>
+<generatorID>F113ACC3-8DA5-8E54-6DD7-91545BD2BAF3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>A0CBE5B5-15E4-B4F0-F88E-E83729225A42</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SCRTSTN_ID" id="33532595-2CC3-32DF-6DE7-C9339B6BF077">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each security.]]></comment>
+<generatorID>7E1F2DF4-E04A-109E-867A-89EE3AE8A22A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0CE04978-316F-5771-1096-84D3930C1AF4" referredColumn="A757E8CC-826F-2316-08BB-7C40585EAB47"/>
+</associations>
+</Column>
+<Column name="ABS_SCRTY_ID" id="93B3E671-E48E-16D2-6E73-6388045B36C5">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[The security identifier of the involved asset backed security.]]></comment>
+<generatorID>1CEB93D2-0E55-CB5C-BEC8-3C95B9251611</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="87AAF676-F699-773C-A4DA-6A9915C9D1B5" referredColumn="B8BAFADD-F5AA-A542-47BE-863FDF29107A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="84CF897E-4CB1-E722-2CDF-D775E61D0A79" name="TRNCH_TRDTNL_SCRTSTN_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<generatorID>63D3C2AC-A4FB-7DEA-330F-36820534D44B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33532595-2CC3-32DF-6DE7-C9339B6BF077"/>
+<colUsage columnID="93B3E671-E48E-16D2-6E73-6388045B36C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EB404DC3-C8E5-002F-84DD-B5156E783832" name="TRNCH_TRDTNL_SCRTSTN_SCRTY_EXCHNG_TRDBL_DRVTV_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<generatorID>273E1C38-4428-DE9C-3347-1C91E6D21B79</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="93B3E671-E48E-16D2-6E73-6388045B36C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="777C4DF9-6CF7-6DE6-3638-9D26AF6FB626" name="TRNCH_TRDTNL_SCRTSTN_TRDTNL_SCRTSTN_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:57 UTC</createdTime>
+<generatorID>242993BD-188F-3131-E006-1DC2F52BF475</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33532595-2CC3-32DF-6DE7-C9339B6BF077"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

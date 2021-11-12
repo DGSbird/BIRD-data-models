@@ -1,0 +1,195 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ECE77B1C-3834-CC64-D7BE-E0F7E1ED9B0A" name="LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Long security position Prudential portfolio assignment is the combination of a Long security position and a Prudential portfolio that indicates which Long security position is assigned to which Prudential portfolio.]]></commentInRDBMS>
+<generatorID>9E620B56-8B7D-FFEE-6275-88A03A72E401</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>6B4999C9-9ED0-E7FF-EF12-F2895351A157</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SCRTY_ID" id="FF3E3098-E6D9-085E-6025-7560A8ADBD2E">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each security.]]></comment>
+<generatorID>A73E5CAA-6B35-CDB1-BE0A-FD118888C056</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="08E3DF13-A69F-29CB-87B2-BFFF405C7D9F" referredColumn="48EF5396-A040-ED5F-EC08-263A48A601B0"/>
+</associations>
+</Column>
+<Column name="INVSTR_PRTY_RL_TYP" id="5218221C-91F8-3424-E2BA-8CE5C525BBD7">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[The investor role.]]></comment>
+<generatorID>C8E9B405-C94F-6E8F-5DBE-464CB85C76BD</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>fb47f404-bef8-4d54-adfc-044f1ea3be3e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="08E3DF13-A69F-29CB-87B2-BFFF405C7D9F" referredColumn="98F98501-5347-52CD-73B4-CD104154356E"/>
+</associations>
+</Column>
+<Column name="INVSTR_PRTY_ID" id="A2A32FC5-2820-FFD1-DEDD-B8DEDB6A6FA6">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[The party identifier of the involved investor.]]></comment>
+<generatorID>437168AE-6239-C93C-4403-089A9B1A446C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="08E3DF13-A69F-29CB-87B2-BFFF405C7D9F" referredColumn="C1A0E444-17C6-CC23-2BB9-B575C564A9C4"/>
+</associations>
+</Column>
+<Column name="PRDNTL_PRTFL_TYP" id="66DC9B70-C5F4-F942-9016-A85BF76EC44B">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between trading and banking (or non-trading) book.]]></comment>
+<generatorID>DC215B99-E32E-45DB-0F3D-F08FFEAD753B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>9ECA7EA5-B456-4AD8-AA91-4AD16E2D4AD7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A91AB376-67DE-3F8B-416A-5F2567D06386" referredColumn="313DD194-689D-879F-B2D6-FD7B968A0078"/>
+</associations>
+</Column>
+<Column name="IMPRMNT_ASSSSMNT_MTHD" id="3EC1979A-BC47-7CF6-6FF3-E018428246D1">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[The method by which the impairment is assessed, if the instrument is subject to impairment in accordance with applied accounting standards. Collective and individual methods are distinguished.]]></comment>
+<generatorID>C4B8DDA7-FBCB-7A7C-63CE-EE071C42387A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>f17bf08c-b179-4a17-8968-be388e09bbdd</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMPRMNT_STTS" id="DDB770C0-D588-7E72-68EB-F56894502B07">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[Type of impairment.]]></comment>
+<generatorID>9E76412C-36BA-B186-D256-20DA97BFE2AB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>5ae1d8ab-c445-4474-98aa-4cddc8f01fb9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_TYP" id="89481DFC-2156-682B-02A8-CC4300726647">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between debt securities and equity and fund securities.]]></comment>
+<generatorID>F63E6C45-45E7-3DAD-A320-398CE46B0FF2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>f3ceddd7-0af1-46f7-a64e-2443f9739a8a</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ARRS" id="89F3C44E-53B8-3A1B-9539-2396997EC5A8">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[Aggregate amount of principal, interest and any fee payment outstanding at the reporting date, which is contractually due and has not been paid (past due). This amount is always to be reported. '0' is to be reported if the instrument was not past due on the reporting date.]]></comment>
+<generatorID>033BEB18-90B5-C2A2-06EE-3359CCB99572</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>8AF63A7D-2245-4118-9583-CEDC4D186D2D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NMBR_SHRS" id="0D2972E6-0634-2392-56E8-47E8C0B8FCD4">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[The number of shares of a security.]]></comment>
+<generatorID>EA60CFD0-EC5D-A004-8B53-1592173385FF</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NMNL_AMNT" id="2C5E50E0-0DE6-CCBA-21B4-8B755C14A0F3">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[Holding amount at nominal value]]></comment>
+<generatorID>600BFA3C-3BA1-7058-EBF6-04618E5B7739</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9C688612-AE30-FC47-FCAC-FAED05151031" name="LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<generatorID>37403655-6389-D19B-A049-06371ECDEB54</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FF3E3098-E6D9-085E-6025-7560A8ADBD2E"/>
+<colUsage columnID="5218221C-91F8-3424-E2BA-8CE5C525BBD7"/>
+<colUsage columnID="A2A32FC5-2820-FFD1-DEDD-B8DEDB6A6FA6"/>
+<colUsage columnID="66DC9B70-C5F4-F942-9016-A85BF76EC44B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="26CD164A-EA78-DCCD-A648-50A0368B82B3" name="LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_SCRTY_PSTN_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<generatorID>A6EEE4A6-F6D7-B4FE-2A80-F37CBCDE4C54</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FF3E3098-E6D9-085E-6025-7560A8ADBD2E"/>
+<colUsage columnID="A2A32FC5-2820-FFD1-DEDD-B8DEDB6A6FA6"/>
+<colUsage columnID="5218221C-91F8-3424-E2BA-8CE5C525BBD7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9E0F9782-F69D-898E-EC68-7879584DBBD3" name="LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_PRDNTL_PRTL_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<generatorID>001BD150-3647-F4A4-2E26-8890E91BBCAD</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66DC9B70-C5F4-F942-9016-A85BF76EC44B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

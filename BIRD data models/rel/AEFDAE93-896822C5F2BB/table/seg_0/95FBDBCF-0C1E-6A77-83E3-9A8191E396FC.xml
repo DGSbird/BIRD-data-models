@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="95FBDBCF-0C1E-6A77-83E3-9A8191E396FC" name="OTHR_PRTY_CD">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[An Other party code is a code (different to the Party identifier) of a Party. It is a combination of a Party and a Party code identifier.]]></commentInRDBMS>
+<generatorID>642848DB-04A6-3CA0-D593-B955695B285F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>7A67499C-0479-82E2-9F82-A693B748701D</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PRTY_ID" id="094D4695-C6CA-2EB3-DC88-8CA53E74DB89">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[An identifier that uniquely identifies a party.]]></comment>
+<generatorID>3FA1088E-31ED-E7E3-00EF-47C23052992C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="000E6DF5-E82B-5B9C-2461-F87F7C9E4286" referredColumn="CF535E79-B3DD-9B81-0D44-7C33B241D753"/>
+</associations>
+</Column>
+<Column name="PRTY_CD_TYP" id="E2525B63-C7EC-A1A4-39D2-A6E9C3361DB6">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of party codes.]]></comment>
+<generatorID>EAC4A840-8E01-3D3A-581B-26FC34669CBB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BB46CC0E-0C99-AE89-CA49-DD8E9CAAB887" referredColumn="E1C85BFF-B8B8-B2A8-402E-2ED54EDFD139"/>
+</associations>
+</Column>
+<Column name="PRTY_CD" id="2EBF180A-9336-F6EC-32A3-858148A39139">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<comment><![CDATA[The party code.]]></comment>
+<generatorID>6B41CE5A-58D4-5B4D-3DBF-7D1A7240C4A6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="845AB1BA-93F7-74D6-9894-86BAB079C475" name="OTHR_PRTY_CD_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<generatorID>C50414D0-CB1C-8FE5-87F2-A999D378A30E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="094D4695-C6CA-2EB3-DC88-8CA53E74DB89"/>
+<colUsage columnID="E2525B63-C7EC-A1A4-39D2-A6E9C3361DB6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8B524446-52DF-015A-539F-8CA7B9739DC5" name="OTHR_PRTY_CD_PRTY_CD_ID_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<generatorID>3F6C05B3-3A76-82FB-038B-5473D49B95DF</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E2525B63-C7EC-A1A4-39D2-A6E9C3361DB6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9A8AEF68-999E-427E-C983-20F1D28E320B" name="OTHR_PRTY_CD_PRTY_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:55:56 UTC</createdTime>
+<generatorID>10B5FD6C-8683-6246-144C-FF5D3B6A2357</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="094D4695-C6CA-2EB3-DC88-8CA53E74DB89"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

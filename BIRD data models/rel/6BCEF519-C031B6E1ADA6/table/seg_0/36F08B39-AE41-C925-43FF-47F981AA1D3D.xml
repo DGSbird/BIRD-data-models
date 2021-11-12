@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="36F08B39-AE41-C925-43FF-47F981AA1D3D" name="INTRNL_GRP_RL">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Internal group role is a role an Internal group may act in.]]></commentInRDBMS>
+<generatorID>C8365EDE-ADB5-9875-3305-70BDC333E22F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>6A779D0D-F36E-D93D-2784-62A536E03441</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="GRP_RL_TYP" id="33130A4F-C2DC-2E07-3449-0DDD820D9B53">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different roles a group may act in.]]></comment>
+<generatorID>BD1D4C4F-2F9F-462B-B32E-6C6538EEE5D2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>4A5D2963-6381-98E0-CBB4-B57A2727126A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GRP_ID" id="C878AC47-DA14-CA55-272F-DB66E8E00613">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each group.]]></comment>
+<generatorID>0D655D0C-B9DE-579E-B9E5-7DDA44C599CD</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D256918D-02EF-9043-F314-F029639EECE5" referredColumn="72CFFD14-1E3C-F8AE-5F59-232D4ABF15B3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BCC1B8BB-B326-E405-87A6-C1DF235C1267" name="INTRNL_GRP_RL_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<generatorID>F00BB1B3-A35A-8A9C-531D-478398D2F5A4</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33130A4F-C2DC-2E07-3449-0DDD820D9B53"/>
+<colUsage columnID="C878AC47-DA14-CA55-272F-DB66E8E00613"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="38F396A2-ECB8-D14F-278A-A4AB410C1F58" name="INTRNL_GRP_RL_GRP_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<generatorID>59231D4C-8DC7-A69C-60D8-5D1BB6FD63A6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C878AC47-DA14-CA55-272F-DB66E8E00613"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

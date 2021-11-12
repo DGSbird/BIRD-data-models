@@ -1,0 +1,169 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="36F4F142-0055-6B37-EB1E-64DFB173402F" name="Organisation">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-06 10:08:06 UTC</createdTime>
+<commentInRDBMS><![CDATA[An Organisation is a Legal person which is an organized group of people with a particular purpose.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="false"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="false"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="false"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="false"/>
+</engineerTo>
+<typeID>7A67499C-0479-82E2-9F82-A693B748701D</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>B1F895CA-E612-3482-70D5-3578E2C60A8B</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>ORGNSTN</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Organisation type" id="CAC255F5-76F2-D57C-F425-84188058EEE3">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-06 10:36:35 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of organisation.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>41717139-7014-6FCC-0AE8-9ADAA81728FB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ORGNSTN_TYP</preferredAbbreviation>
+</Attribute>
+<Attribute name="Organisation type by legal proceeding status" id="CED7C22C-50CD-EA8D-7DED-F69F00FC9F46">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-02 11:00:06 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between organisations where legal proceedings are ongoing and those without legal proceedings.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>F35BD96B-A013-2ACD-CE38-E2D5E4C735C2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ORGNSTN_TYP_BY_PRCDNG_STTS</preferredAbbreviation>
+</Attribute>
+<Attribute name="Ultimate parent undertaking Party identifier" id="BCD4DAAF-D865-F351-E934-3A89BFF363B0">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-10 10:04:23 UTC</createdTime>
+<comment><![CDATA[The party identifier of the ultimate parent undertaking accoring to Regulation (EU) 867/2016, defined as the "Counterparty identifier for the legal entity which is the ultimate parent undertaking of the counterparty. This ultimate parent undertaking has no parent undertaking. If the counterparty has no parent undertaking, the counterparty identifier for the counterparty itself is to be reported. Parent undertaking has the same meaning as defined in Article 4(1)(15)(a) of Regulation (EU) No 575/2013.".]]></comment>
+<generatorID>B0EB9733-6B90-BA77-390B-1EC67ADE9E76</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>7AF04655-DC9B-5CAB-249B-924D25012A59</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ULTMT_PRNT_UNDRT_PRTY_ID</preferredAbbreviation>
+</Attribute>
+<Attribute name="Legal entity identifier (LEI)" id="9C2B6F89-405F-32AE-3497-563A3F790E4A">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-06 10:36:40 UTC</createdTime>
+<comment><![CDATA[Reference code in line with the International Organization for Standardization’s (ISO) 17442 standard]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>3F7F6D3B-5B13-4083-88F5-199A70EB98D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>LEI</preferredAbbreviation>
+</Attribute>
+<Attribute name="Organisation name" id="3AFF64DE-D792-94DD-E8AE-2E7F711243EB">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-10 08:27:38 UTC</createdTime>
+<comment><![CDATA[The organisation name.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ORGNSTN_NM</preferredAbbreviation>
+</Attribute>
+<Attribute name="Balance sheet total" id="7DD7603B-ACD9-4AE7-8E6F-9B1DA79BA448">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-06 10:54:34 UTC</createdTime>
+<comment><![CDATA[Carrying value of total assets in accordance with Regulation (EU) 549/2013.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>BLNC_SHT_TTL</preferredAbbreviation>
+</Attribute>
+<Attribute name="Annual turnover" id="0C265137-74E4-20D7-C46D-A623B98A9C4B">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-06 10:54:50 UTC</createdTime>
+<comment><![CDATA[Annual sales volume net of all discounts and sales taxes in accordance with Recommendation 2003/361/EC. Equivalent to the concept of 'total annual sales' in Article 153(4) of Regulation (EU) No 575/2013.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ANNL_TRNVR</preferredAbbreviation>
+</Attribute>
+<Attribute name="Number of employees" id="03DBC48F-3E11-C2CE-E3FC-0090D5CDB184">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-06 10:55:02 UTC</createdTime>
+<comment><![CDATA[Number of employees working for the counterparty, in accordance with Article 5 of the Annex to Recommendation 2003/361/EC.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>6ED1A254-93E8-4BCC-BD8B-126227470ACD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>NMBR_EMPLYS</preferredAbbreviation>
+</Attribute>
+</attributes>
+</Entity>

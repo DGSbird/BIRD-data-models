@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_1" id="0AC85C2F-F48A-96C1-01FF-641306C472B6" name="Repurchase agreement instrument">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-07-29 08:04:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Repurchase agreement instrument is a Securities financial transaction (SFT) fulfilling the definition of Annex V, part 2.183-184:
+183. ‘Repurchase agreements’ (‘repos’) shall be transactions in which the institution receives cash in exchange for financial assets sold at a given price under a commitment to repurchase the same (or identical) assets at a fixed price on a specified future date. Transactions involving the temporary transfer of gold against cash collateral shall also be considered ‘Repurchase agreements’ (‘repos’). Amounts received by the institution in exchange for financial assets transferred to a third party (‘temporary acquirer’) shall be classified under ‘repurchase agreements’ where there is a commitment to reverse the operation and not merely an option to do so. Repurchase agreements shall also include repo-type operations which may include: 
+	(a) Amounts received in exchange for securities temporarily transferred to a third party in the form of securities lending against cash collateral; 
+	(b) Amounts received in exchange for securities temporarily transferred to a third party in the form of sale/buy-back agreement. 
+184. ‘Repurchase agreements’ (‘repos’) and ‘reverse repurchase loans’ (‘reverse repos’) shall involve cash received or loaned out by the institution.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="false"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="false"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="false"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="false"/>
+</engineerTo>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>61A1258D-6C46-1DAB-6C7B-517F5BF9F5B4</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>RPRCHS_AGRMNT_INSTRMNT</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Repurchase agreement instrument type" id="5C41B20D-19A0-120E-A80B-BB0C89C378F0">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-09-22 12:45:12 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between term and open repurchase agreements.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>41a7c1e6-ccd0-4e1c-9775-84378911c419</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RPRCHS_AGRMNT_INSTRMNT_TYP</preferredAbbreviation>
+</Attribute>
+<Attribute name="Settlement date" id="8195B95F-F7E2-18D1-5E90-0C9156C05C4D">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-02 20:01:13 UTC</createdTime>
+<comment><![CDATA[The date on which the conditions specified in the contract are or can be executed for the first time, i.e. the date on which financial instruments are initially exchanged or created.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>DT_STTLMNT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Inception date" id="DDBFAE9B-5420-FA94-78C9-5CA2B7971336">
+<createdBy>lindomi</createdBy>
+<createdTime>2021-11-02 20:02:05 UTC</createdTime>
+<comment><![CDATA[The date on which the current contractual relationship originated, i.e. the date on which the contract agreement became binding for all parties.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>DT_INCPTN</preferredAbbreviation>
+</Attribute>
+</attributes>
+</Entity>

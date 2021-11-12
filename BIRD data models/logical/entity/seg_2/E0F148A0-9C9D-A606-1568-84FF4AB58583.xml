@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_2" id="E0F148A0-9C9D-A606-1568-84FF4AB58583" name="Debt security with underlying assets">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-04 11:04:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Debt security with underlying assets is a Debt security where the cash flow of the Debt security is dependent on the cash flow of the underlying assets.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="false"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="false"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="false"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="false"/>
+</engineerTo>
+<typeID>178C245A-208C-578D-F0C5-C390D8542711</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>BE76A78F-7CDB-648D-9F71-76109033434A</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>DBT_SCRTY_WTH_UNDRLYNG_ASSTS</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Debt security with underlying assets type" id="96C9B5A9-F918-7F39-E230-92B87C328A0B">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-04 11:05:04 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between asset backed securities and covered bonds.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>9BEB51AD-3E96-832B-92B2-89F5DC2CB45E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>DBT_SCRTY_WTH_UNDRLYNG_ASSTS_TYP</preferredAbbreviation>
+</Attribute>
+<Attribute name="Geographical location of collateral" id="3F42B7EC-8B55-2177-C565-7969CD9C303F">
+<createdBy>Dominik</createdBy>
+<createdTime>2021-08-04 11:06:54 UTC</createdTime>
+<comment><![CDATA[The country code of the location of the collateral according to ISO3166.]]></comment>
+<generatorID>660C6944-BAC1-0133-A49C-4C960C630C70</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+</engineerTo>
+<referedAttribute>D5344D64-60FF-5EB6-B5FC-A662F608FDBA</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>E832EA39-67C9-4303-AD29-B66510B666C6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>GGRPHCL_LCTN_CLLTRL</preferredAbbreviation>
+</Attribute>
+</attributes>
+</Entity>

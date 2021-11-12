@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3745A649-ECE5-7D96-77AC-1DD9039D2C9A" name="LNG_EQTY_FND_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ENCMBRNC_DT">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Long equity or fund security position Prudential portfolio assignment encumbrance data is encumbrance related information about a Long equity or fund security position Prudential portfolio assignment.]]></commentInRDBMS>
+<generatorID>15F6114C-6309-195F-E89D-7C385E9004F0</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>6B4999C9-9ED0-E7FF-EF12-F2895351A157</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SRC_ENCMBRNC" id="4C4EF8BA-EAC4-08FA-E5FD-E4CD295E3E87">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:42 UTC</createdTime>
+<comment><![CDATA[Type of transaction in which the exposure is encumbered in accordance with Implementing Regulation (EU) No 680/2014. An asset will be treated as encumbered if it has been pledged or if it is subject to any form of arrangement to secure, collateralise or credit enhance any instrument from which it cannot be freely withdrawn.]]></comment>
+<generatorID>38D209BF-BDC8-5C78-44CF-F7FB2B8AABE7</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>0E5DF8E5-54C3-457C-AFE3-439D057AF244</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SCRTY_ID" id="D62ED57F-D9C3-A81E-6058-087C84457F53">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:42 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each security.]]></comment>
+<generatorID>95291A32-75ED-B8CE-A24F-7362DDAE1A20</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="71743393-9C9C-D13E-2C60-B10C6DA2C53E" referredColumn="095F0F70-3E2D-1D11-61C9-0E2662E8B7DD"/>
+</associations>
+</Column>
+<Column name="INVSTR_PRTY_RL_TYP" id="5A7D76B5-66B2-CF21-8C4F-8F5AE8166DCC">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:42 UTC</createdTime>
+<comment><![CDATA[The investor role.]]></comment>
+<generatorID>82B2A250-1F30-7E18-642E-3565AB0FFB03</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>fb47f404-bef8-4d54-adfc-044f1ea3be3e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="71743393-9C9C-D13E-2C60-B10C6DA2C53E" referredColumn="7E2037C2-D4A7-45CA-0440-32FE61BFFD16"/>
+</associations>
+</Column>
+<Column name="INVSTR_PRTY_ID" id="D8024362-D738-EA75-7BC9-0ECD683E9B5D">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:42 UTC</createdTime>
+<comment><![CDATA[The party identifier of the involved investor.]]></comment>
+<generatorID>07661B82-83DD-4D0E-A2A8-AAD8D26763A8</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="71743393-9C9C-D13E-2C60-B10C6DA2C53E" referredColumn="10A766F7-0446-E653-C8E2-202C57581D2C"/>
+</associations>
+</Column>
+<Column name="PRDNTL_PRTFL_TYP" id="8229528C-D0D3-9B3F-CA28-E3564207FA80">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:42 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between trading and banking (or non-trading) book.]]></comment>
+<generatorID>3CD1DF5C-15E5-6FC6-F567-26E1262D7C3A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>9ECA7EA5-B456-4AD8-AA91-4AD16E2D4AD7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="71743393-9C9C-D13E-2C60-B10C6DA2C53E" referredColumn="DD6C1472-12E5-9809-5903-7918FF934C14"/>
+</associations>
+</Column>
+<Column name="ENCMBRD_NMBR_SHRS" id="A696A1FA-19CF-4834-9D40-34ED29B871FD">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:42 UTC</createdTime>
+<comment><![CDATA[The number of shares that are encumbered according to ITS on Asset encumbrance, 1.7 Definition of encumbrance.]]></comment>
+<generatorID>F0F5D30D-C0FC-2446-0B9D-AAC57B7C7D4C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0C776E9D-2FF5-E56A-826F-F464F9EA125F" name="LNG_EQTY_FND_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ENCMBRNC_DT_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:42 UTC</createdTime>
+<generatorID>47A460C4-304D-C8BF-E85E-F028AE9B2CB4</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C4EF8BA-EAC4-08FA-E5FD-E4CD295E3E87"/>
+<colUsage columnID="D62ED57F-D9C3-A81E-6058-087C84457F53"/>
+<colUsage columnID="5A7D76B5-66B2-CF21-8C4F-8F5AE8166DCC"/>
+<colUsage columnID="D8024362-D738-EA75-7BC9-0ECD683E9B5D"/>
+<colUsage columnID="8229528C-D0D3-9B3F-CA28-E3564207FA80"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DB385001-0248-F6E5-D09E-120FDBF5450A" name="LNG_EQTY_FND_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ENCMBRNC_DT_LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2021-11-10 13:11:43 UTC</createdTime>
+<generatorID>9D412178-D60F-9FFB-A665-102C55CB2213</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D62ED57F-D9C3-A81E-6058-087C84457F53"/>
+<colUsage columnID="5A7D76B5-66B2-CF21-8C4F-8F5AE8166DCC"/>
+<colUsage columnID="D8024362-D738-EA75-7BC9-0ECD683E9B5D"/>
+<colUsage columnID="8229528C-D0D3-9B3F-CA28-E3564207FA80"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
