@@ -5,9 +5,11 @@
 <commentInRDBMS><![CDATA[Security derived data is derived information about a Security.]]></commentInRDBMS>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
-<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
 </engineerTo>
 <typeID>178C245A-208C-578D-F0C5-C390D8542711</typeID>
@@ -21,6 +23,48 @@
 <normalForm>Third</normalForm>
 <preferredAbbreviation>SCRTY_DRVD_DT</preferredAbbreviation>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Security Reference date" id="71FF2DEB-1719-0EB0-A3CA-B4EA95487931">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:49:20 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>651FE4D9-F3F9-B901-C6B1-74F76CF6B520</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+</engineerTo>
+<referedAttribute>DA168399-B716-B4C5-B7F2-C2620D929EC4</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RFRNC_DT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Security Reporting agent identifier" id="45F906A7-58E4-55A0-F4F6-B0D6672CDF32">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:52:48 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>651FE4D9-F3F9-B901-C6B1-74F76CF6B520</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+</engineerTo>
+<referedAttribute>480FA821-32E6-C30D-2DB7-7BB8C85B6C0F</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RPRTNG_AGNT_ID</preferredAbbreviation>
+</Attribute>
 <Attribute name="Security identifier" id="A42E4A12-E307-73B4-01C1-E1FC4188D218">
 <createdBy>Dominik</createdBy>
 <createdTime>2021-08-04 10:36:37 UTC</createdTime>
@@ -30,8 +74,10 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <referedAttribute>70004979-0BF5-B3D8-542D-0A190D5BA5BD</referedAttribute>
 <use>0</use>
@@ -39,23 +85,6 @@
 <domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>SCRTY_ID</preferredAbbreviation>
-</Attribute>
-<Attribute name="Security status according to SHS" id="6F28AB39-B5CE-8F1E-B01E-2A54517D3471">
-<createdBy>Dominik</createdBy>
-<createdTime>2021-08-04 10:35:16 UTC</createdTime>
-<comment><![CDATA[The security status according to SHS.]]></comment>
-<ownerDesignName>BIRD data models</ownerDesignName>
-<engineerTo>
-<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
-<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
-<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
-<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
-</engineerTo>
-<use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<domain>E55CA1D1-DAEF-4658-AF11-5AA2E768CCF7</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<preferredAbbreviation>SCRTY_STTS_SHS</preferredAbbreviation>
 </Attribute>
 <Attribute name="Currency of transaction reported" id="45734765-F618-9B4D-6F8C-DF21424FF8A6">
 <createdBy>Dominik</createdBy>
@@ -65,8 +94,10 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
@@ -74,39 +105,73 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>CRRNCY_TRNSCTN_RPRTD</preferredAbbreviation>
 </Attribute>
-<Attribute name="Early redemptions included indicator" id="1A13C192-BB73-16F3-E3EB-DDB982406597">
-<createdBy>Dominik</createdBy>
-<createdTime>2021-08-04 10:35:57 UTC</createdTime>
-<comment><![CDATA[An indicator specifying if early redemptions have been included.]]></comment>
+<Attribute name="Early redemptions included indicator" id="DDECD401-258C-3C4B-9E96-E9EB5F4D3C9A">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-07-28 15:13:08 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if early redemptions have been included. Early redemptions included indicator and Accrued interests for market values indicator are not Security-by-Security but for the whole report. They cannot be derived.]]></comment>
+<generatorID>F98F7CBB-6F1E-E35E-DB02-B5867CDC71ED</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
-<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
 </engineerTo>
+<referedAttribute>0E29611F-DF1E-257D-C302-BE72DE1F10F4</referedAttribute>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <domain>F93EA851-DEF5-4958-4B6D-D58EFDF4BA5F</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>ERLY_RDMPTN_INCLDD_INDCTR</preferredAbbreviation>
 </Attribute>
-<Attribute name="Accrued interests for market values indicator" id="60B166E9-D500-1E27-0451-20A19D44FF6F">
-<createdBy>Dominik</createdBy>
-<createdTime>2021-08-04 10:36:19 UTC</createdTime>
-<comment><![CDATA[An indicator specifying if accrued interest for market values are included or not. Further details may be found in the Guidance notes to reporting agents on SHS regulation (see https://www.ecb.europa.eu/pub/pdf/other/guidance_notes_to_reporting_agents_on_shs_regulation201705.en.pdf).]]></comment>
+<Attribute name="Accrued interests for market values indicator" id="54099028-4CE8-77ED-49D4-A28420D81B1F">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-07-28 12:10:48 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if accrued interest for market values are included or not. Further details may be found in the Guidance notes to reporting agents on SHS regulation (see https://www.ecb.europa.eu/pub/pdf/other/guidance_notes_to_reporting_agents_on_shs_regulation201705.en.pdf). Early redemptions included indicator and Accrued interests for market values indicator are not Security-by-Security but for the whole report. They cannot be derived.]]></comment>
+<generatorID>6AF96AAA-E35F-F0B2-BFAF-5BF0B6DFB870</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
-<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
 </engineerTo>
+<referedAttribute>5AD06642-B5A1-497E-023A-0C9BFF5CCEEE</referedAttribute>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <domain>6C1310BC-9BCB-EAB6-C7AD-8D72C67626A3</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>INTRST_ACCRD_MV_INDCTR</preferredAbbreviation>
+</Attribute>
+<Attribute name="Security status according to SHS" id="0A3F5929-C605-6725-CCDF-16A0707B1F31">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-08-04 15:55:08 UTC</createdTime>
+<comment><![CDATA[The security status according to SHS.]]></comment>
+<generatorID>91335324-B005-58FB-C8FE-7C91BEC08F4B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+</engineerTo>
+<referedAttribute>0D8F1BAF-DE9A-D584-1463-5F272A9D2C9E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>F9F623D9-5AFC-4BFA-B66C-230A7A8C2271</domain>
+<listOfValues>
+<valueDef value="100" description="alive"/>
+<valueDef value="101" description="alive - outstanding after maturity date "/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>SCRTY_STTS_SHS</preferredAbbreviation>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -117,12 +182,16 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>A42E4A12-E307-73B4-01C1-E1FC4188D218</attributeRef>
+<attributeRef>71FF2DEB-1719-0EB0-A3CA-B4EA95487931</attributeRef>
+<attributeRef>45F906A7-58E4-55A0-F4F6-B0D6672CDF32</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

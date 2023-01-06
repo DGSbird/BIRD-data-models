@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C31588C5-1A46-90DC-AEE6-4630B13BB218" name="RTNG_SYSTM">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:12 UTC</createdTime>
+<commentInRDBMS><![CDATA[A (Credit) Rating system is a system that evaluates the the creditworthiness of a borrower in general terms or with respect to a particular debt or financial obligation [based on https://www.investopedia.com/terms/c/creditrating.asp].]]></commentInRDBMS>
+<generatorID>70FB289D-B03F-3183-2133-75789F14C663</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>6E05D22A-D6DB-0396-42A2-4B1DB49EB60E</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RTNG_SYSTM_NM" id="5C0416FC-73A5-B585-7700-9F1461BC4434">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:12 UTC</createdTime>
+<comment><![CDATA[The rating system's name.]]></comment>
+<generatorID>F63C3864-115A-97D4-FC33-9977C667E63A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RTNG_AGNCY_NM" id="C55FCB8D-5718-3DBB-1673-32D3DD4B0477">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:12 UTC</createdTime>
+<comment><![CDATA[The rating agency's name.]]></comment>
+<generatorID>2DF56884-6689-48F6-12A4-A3655E39122C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A651E47C-602A-2472-3723-EFC2E4A3B5C4" referredColumn="C49AD91A-6195-03A2-F1D1-9683E5B03BC4"/>
+</associations>
+</Column>
+<Column name="RFRNC_DT" id="D51A0CBA-7DD8-02D3-C53A-39B07C055EBB">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:12 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>3377A918-1D9E-35E9-74F7-8A5E380DD058</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A651E47C-602A-2472-3723-EFC2E4A3B5C4" referredColumn="C2E522FE-9017-30C5-CBD5-3BD65D896F42"/>
+</associations>
+</Column>
+<Column name="RPRTNG_AGNT_ID" id="A7E45CA5-D63D-B29A-1C9C-C6E3768A69B9">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:12 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>4F09C1A4-8C48-4513-E8CC-28AA1E3C54CF</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A651E47C-602A-2472-3723-EFC2E4A3B5C4" referredColumn="9D1CF337-FE9F-2986-2EF3-83AE5997888B"/>
+</associations>
+</Column>
+<Column name="RTNG_SYSTM_TYP_BY_NTR" id="911CA73D-C05C-670A-E727-153A9746D5E9">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:12 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different rating systems by nature, like grade based or numeric rating systems.]]></comment>
+<generatorID>C316C895-3941-AEAD-53DC-F0E4989A106F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>1FA07E1E-D9B6-848D-3994-82C9E3284E5A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SHRT_TRM_CRDT_ASSSSMNT_INDCTR" id="20784563-A9AA-BB0C-ABA1-C19F69A965AC">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:12 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if a rating system is a short term credit assessment or not.]]></comment>
+<generatorID>9A68AF17-764D-C1B0-794D-8A92B7802B41</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>54301F61-3AE9-86F6-4FB8-4FC82C8B44B8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TYP_RTNG_SYSTM" id="935F55D2-70B0-1B41-1E85-C2DD903F6A75">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:30:47 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>cb56537f-cabc-4dda-a86b-bf5048f102b3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9CB79BF6-DFC1-1EBD-1144-11E3E49CB398" name="RTNG_SYSTM_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:12 UTC</createdTime>
+<generatorID>82D96B0F-72FC-D603-0126-B14E364B13F1</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5C0416FC-73A5-B585-7700-9F1461BC4434"/>
+<colUsage columnID="C55FCB8D-5718-3DBB-1673-32D3DD4B0477"/>
+<colUsage columnID="D51A0CBA-7DD8-02D3-C53A-39B07C055EBB"/>
+<colUsage columnID="A7E45CA5-D63D-B29A-1C9C-C6E3768A69B9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="36B7F1E3-D942-D7CF-E963-AA1D971BF3E5" name="RTNG_SYSTM_RTNG_AGNCY_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:13 UTC</createdTime>
+<generatorID>F4E1D496-F2F8-9756-7B84-DED95D53BF71</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C55FCB8D-5718-3DBB-1673-32D3DD4B0477"/>
+<colUsage columnID="D51A0CBA-7DD8-02D3-C53A-39B07C055EBB"/>
+<colUsage columnID="A7E45CA5-D63D-B29A-1C9C-C6E3768A69B9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

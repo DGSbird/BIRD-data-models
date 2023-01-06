@@ -18,10 +18,13 @@ Enterprises which have one or other of such relationships through a natural pers
 An ‘adjacent market’ is considered to be the market for a product or service situated directly upstream or downstream of the relevant market.]]></commentInRDBMS>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
-<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="85D6F33D-A0B4-E758-E23E-254CCA678708" value="true"/>
 </engineerTo>
 <typeID>7A67499C-0479-82E2-9F82-A693B748701D</typeID>
 <adequatelyNormalized>NO</adequatelyNormalized>
@@ -33,6 +36,10 @@ An ‘adjacent market’ is considered to be the market for a product or service
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <preferredAbbreviation>LNKD_ENTRPRS</preferredAbbreviation>
+<foldedAttributesMap>
+<item key="45208F69-47A4-70B1-BFC2-3D9B902880DB" value="370310C5-3903-CA69-9B7B-78FD2039E0FC"/>
+<item key="4A276525-70C5-AF35-DDFF-95D624952334" value="816FE45F-E9BB-9A7D-71DE-F9CCEF1C216A"/>
+</foldedAttributesMap>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="Party identifier" id="B73BA6C9-5D8F-F70D-65FB-577FEF3F43B2">
 <createdBy>Dominik</createdBy>
@@ -40,19 +47,66 @@ An ‘adjacent market’ is considered to be the market for a product or service
 <comment><![CDATA[An identifier that uniquely identifies a party.]]></comment>
 <generatorID>F93FDDA3-4D15-6674-2AD8-2A544395AD8D</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="85D6F33D-A0B4-E758-E23E-254CCA678708" value="false"/>
 </engineerTo>
 <referedAttribute>7AF04655-DC9B-5CAB-249B-924D25012A59</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>PRTY_ID</preferredAbbreviation>
+</Attribute>
+<Attribute name="Party Reference date" id="370310C5-3903-CA69-9B7B-78FD2039E0FC">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:49:19 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>2AA5D36A-3CB7-AF32-2791-0D50590FF31C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="85D6F33D-A0B4-E758-E23E-254CCA678708" value="true"/>
+</engineerTo>
+<referedAttribute>851796BA-2B71-AB0C-A560-CDAAE3D5E0B4</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RFRNC_DT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Party Reporting agent identifier" id="816FE45F-E9BB-9A7D-71DE-F9CCEF1C216A">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:52:48 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>2AA5D36A-3CB7-AF32-2791-0D50590FF31C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="85D6F33D-A0B4-E758-E23E-254CCA678708" value="true"/>
+</engineerTo>
+<referedAttribute>3695D06F-9FD6-E16A-D880-CC403FF2604D</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RPRTNG_AGNT_ID</preferredAbbreviation>
 </Attribute>
 <Attribute name="Linked enterprise Party identifier" id="0BEA7DBD-A645-9AED-3B1C-C49A7627DF32">
 <createdBy>Dominik</createdBy>
@@ -60,19 +114,66 @@ An ‘adjacent market’ is considered to be the market for a product or service
 <comment><![CDATA[The party identifier of the involved linked enterprise.]]></comment>
 <generatorID>2AA5D36A-3CB7-AF32-2791-0D50590FF31C</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="85D6F33D-A0B4-E758-E23E-254CCA678708" value="false"/>
 </engineerTo>
 <referedAttribute>7AF04655-DC9B-5CAB-249B-924D25012A59</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>LNKD_ENTRPRS_PRTY_ID</preferredAbbreviation>
+</Attribute>
+<Attribute name="Linked enterprise Party Reference date" id="45208F69-47A4-70B1-BFC2-3D9B902880DB">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:49:19 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>F93FDDA3-4D15-6674-2AD8-2A544395AD8D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="85D6F33D-A0B4-E758-E23E-254CCA678708" value="true"/>
+</engineerTo>
+<referedAttribute>851796BA-2B71-AB0C-A560-CDAAE3D5E0B4</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RFRNC_DT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Linked enterprise Party Reporting agent identifier" id="4A276525-70C5-AF35-DDFF-95D624952334">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:52:48 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>F93FDDA3-4D15-6674-2AD8-2A544395AD8D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="85D6F33D-A0B4-E758-E23E-254CCA678708" value="true"/>
+</engineerTo>
+<referedAttribute>3695D06F-9FD6-E16A-D880-CC403FF2604D</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RPRTNG_AGNT_ID</preferredAbbreviation>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -83,13 +184,20 @@ An ‘adjacent market’ is considered to be the market for a product or service
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="85D6F33D-A0B4-E758-E23E-254CCA678708" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>B73BA6C9-5D8F-F70D-65FB-577FEF3F43B2</attributeRef>
+<attributeRef>45208F69-47A4-70B1-BFC2-3D9B902880DB</attributeRef>
+<attributeRef>4A276525-70C5-AF35-DDFF-95D624952334</attributeRef>
 <attributeRef>0BEA7DBD-A645-9AED-3B1C-C49A7627DF32</attributeRef>
+<attributeRef>370310C5-3903-CA69-9B7B-78FD2039E0FC</attributeRef>
+<attributeRef>816FE45F-E9BB-9A7D-71DE-F9CCEF1C216A</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

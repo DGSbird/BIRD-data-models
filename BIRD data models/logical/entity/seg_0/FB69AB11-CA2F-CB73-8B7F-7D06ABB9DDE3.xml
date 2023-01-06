@@ -5,10 +5,13 @@
 <commentInRDBMS><![CDATA[A Credit facility is a commitment (revocable or irrevocable) made by a financial institution to make an amount of money available to the customer (or a plurality of customers), or to assume for it an obligation to a third party. The commitment is based on an agreement between the financial institution and the customer, which originates from a request of the customer or an acceptance by the customer of a proposal from the financial institution.]]></commentInRDBMS>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
-<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
-<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
 </engineerTo>
 <typeID>AE3B0B8B-4E66-709C-450E-CC4B1C21FF1E</typeID>
 <adequatelyNormalized>NO</adequatelyNormalized>
@@ -20,7 +23,54 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <preferredAbbreviation>CRDT_FCLTY</preferredAbbreviation>
+<changeRequests>
+<requestID>13968-144</requestID>
+</changeRequests>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Credit facility Reference date" id="DE40AA9F-0745-E78B-DBE4-D99060132D85">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:49:20 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>8FA83D58-F066-CD01-1642-A91C9B1AF08B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
+</engineerTo>
+<referedAttribute>90FBD27B-EE6E-D877-F9E7-447D604CC0ED</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>CRDT_FCLTY_RFRNC_DT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Credit facility Reporting agent identifier" id="31EEE1E5-07D0-62D4-FD1E-5A762D440AB7">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:52:48 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>8FA83D58-F066-CD01-1642-A91C9B1AF08B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
+</engineerTo>
+<referedAttribute>29F5BBD5-6DF1-9F07-524A-463A45C7E70C</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>CRDT_FCLTY_RFRTNG_AGNT_ID</preferredAbbreviation>
+</Attribute>
 <Attribute name="Credit facility identifier" id="F1C28690-04F9-D9B0-3AAA-191F9EBE1F31">
 <createdBy>Dominik</createdBy>
 <createdTime>2021-07-28 11:11:22 UTC</createdTime>
@@ -29,8 +79,11 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
-<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
 </engineerTo>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
@@ -47,8 +100,11 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
-<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
 </engineerTo>
 <referedAttribute>9CFC3F53-F25A-FAF7-712A-C497AF08A6DF</referedAttribute>
 <use>0</use>
@@ -56,6 +112,50 @@
 <domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>FNNCL_CNTRCT_ID</preferredAbbreviation>
+</Attribute>
+<Attribute name="Financial contract Reference date" id="9D72D9BF-C7FF-466F-814A-232A84A0D2C9">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:49:20 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>271D55CB-75CD-BA9C-E41D-324500313B65</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
+</engineerTo>
+<referedAttribute>50EFC82E-393F-A5D3-3988-690E0B40ECBF</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RFRNC_DT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Financial contract Reporting agent identifier" id="5A6BBE42-00D0-CB7E-3408-5B1ABD280A78">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:52:48 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>271D55CB-75CD-BA9C-E41D-324500313B65</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
+</engineerTo>
+<referedAttribute>D7D682C7-CD3C-B05D-B0EB-7341F83151D6</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RPRTNG_AGNT_ID</preferredAbbreviation>
 </Attribute>
 <Attribute name="Type of credit facility" id="F1490880-4AA8-B9E1-9268-0780572965E7">
 <createdBy>Dominik</createdBy>
@@ -65,8 +165,11 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
-<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
 </engineerTo>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
@@ -82,43 +185,60 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
-<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
 </engineerTo>
 <use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<domain>8AF63A7D-2245-4118-9583-CEDC4D186D2D</domain>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>NMNL_AMNT</preferredAbbreviation>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
 </Attribute>
-<Attribute name="Currency" id="93CAC3CE-A0C6-DE87-8A5C-5E3F89C377B5">
-<createdBy>Dominik</createdBy>
-<createdTime>2021-07-28 11:11:38 UTC</createdTime>
+<Attribute name="Currency" id="44D2CF04-7752-BCE6-5393-8DFE7D1B8B32">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-06-27 13:07:08 UTC</createdTime>
 <comment><![CDATA[The currency code according to ISO4217.]]></comment>
+<generatorID>5BEA60B6-14B6-CED6-E421-F0D542F2F9C7</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
-<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
 </engineerTo>
+<referedAttribute>4CA512E4-A54A-933E-24C1-3D8E2D31E7C6</referedAttribute>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <domain>2D4D0542-0954-4C82-9231-4447DC95A6DE</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>CRRNCY</preferredAbbreviation>
 </Attribute>
-<Attribute name="Revocable indicator" id="10151F5E-25F1-E172-A7A5-0E5CBEE5C271">
-<createdBy>Dominik</createdBy>
-<createdTime>2021-07-28 11:12:35 UTC</createdTime>
-<comment><![CDATA[An indicator specifying if the commitment is revocable or not.]]></comment>
+<Attribute name="Revocable indicator" id="BA12C33B-24FA-3EFD-ED22-1FDD071525F2">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-06-29 08:19:36 UTC</createdTime>
+<generatorID>F758BDCF-EDF5-38A6-24DB-10E7BECA865A</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
-<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
 </engineerTo>
+<referedAttribute>F43D9707-84A8-0BE2-919B-05DD2A18B15C</referedAttribute>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <domain>2821B0F3-AE6E-1E7C-57AE-BEB48609CF66</domain>
@@ -133,11 +253,14 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
-<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
 </engineerTo>
 <use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>DT_INCPTN</preferredAbbreviation>
@@ -150,11 +273,14 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
-<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
 </engineerTo>
 <use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>DT_LGL_FNL_MTRTY</preferredAbbreviation>
@@ -167,14 +293,236 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
-<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
 </engineerTo>
 <use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>DT_STTLMNT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Provisions associated with off-balance sheet exposures" id="9F858FF4-9276-6318-1FB2-595DC20851B5">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-11-08 09:10:46 UTC</createdTime>
+<comment><![CDATA[The amount of provisions for off-balance sheet amounts.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>PRVSNS_OFF_BLNC_SHT</preferredAbbreviation>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Attribute>
+<Attribute name="Accumulated changes in fair value" id="3261AD23-B03E-4DCC-68C8-20C22C3207B5">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-11-08 09:10:46 UTC</createdTime>
+<comment><![CDATA[Amount of gains and losses from re-measurement of the asset accumulated from the initial recognition to the reference date.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>14C89E8C-F57F-4505-832D-C97676924FD1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ACCMLTD_CHNGS_FV</preferredAbbreviation>
+</Attribute>
+<Attribute name="Accumulated changes in fair value due to credit risk" id="EE21DD97-1324-9615-06F1-3FD6CF80B41E">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-11-08 09:10:46 UTC</createdTime>
+<comment><![CDATA[Accumulated changes in fair value due to credit risk in accordance with Part 2.46 of Annex V to Implementing Regulation (EU) No 680/2014.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>14C89E8C-F57F-4505-832D-C97676924FD1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ACCMLTD_CHNGS_FV_CR</preferredAbbreviation>
+</Attribute>
+<Attribute name="Accumulated impairment" id="BBD67C81-18ED-0E3E-79E5-B9361798712F">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-11-08 09:10:46 UTC</createdTime>
+<comment><![CDATA[The amount of loss allowances that are held against or are allocated to the asset on the reporting reference date. This data attribute applies to assets subject to impairment under the applied accounting standard. Under IFRS, the accumulated impairment relates to the following
+amounts:
+(i) loss allowance at an amount equal to 12-month expected
+credit losses;
+(ii) loss allowance at an amount equal to lifetime expected
+credit losses.
+Under GAAP, the accumulated impairment relates to the following
+amounts:
+(i) loss allowance at an amount equal to general allowances;
+(ii) loss allowance at an amount equal to specific allowances.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ACCMLTD_IMPRMNT</preferredAbbreviation>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Attribute>
+<Attribute name="General allowances for credit risk affecting carrying amount (nGAAP)" id="A32CFD59-CE1B-B8FE-0B7E-8BF339BBA565">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-11-08 09:10:46 UTC</createdTime>
+<comment><![CDATA[General allowances for credit risk affecting carrying amount (nGAAP)]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>GNRL_ALLWNCS_CRDT_RSK</preferredAbbreviation>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Attribute>
+<Attribute name="General allowances for bank risk affecting carrying amount (nGAAP)" id="2E6A0E3D-1758-A305-5298-B3EBDCE759A1">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-11-08 09:10:46 UTC</createdTime>
+<comment><![CDATA[General allowances for bank risk affecting carrying amount (nGAAP)]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>GNRL_ALLWNCS_BNK_RSK</preferredAbbreviation>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Attribute>
+<Attribute name="Accumulated negative value adjustments. Market risk induced" id="3B9578EE-4CD4-8A2D-CFD3-4D3D859D9E6B">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-11-08 09:10:46 UTC</createdTime>
+<comment><![CDATA[Accumulated negative value adjustments. Market risk induced]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ACCMLTD_NGTV_VL_ADJSTMNT_MR</preferredAbbreviation>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Attribute>
+<Attribute name="Fair value" id="7D56B807-DE64-C058-C6AB-CE1877C1A599">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-11-08 09:10:46 UTC</createdTime>
+<comment><![CDATA[Fair value as defined in IFRS 13.9.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>FV</preferredAbbreviation>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Attribute>
+<Attribute name="Accounting classification" id="F799EB9C-9D18-4E62-B632-8C186CFBF0A8">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-11-08 09:10:46 UTC</createdTime>
+<comment><![CDATA[Accounting portfolio where the asset or liability is recorded in accordance with the accounting standard – IFRS or national GAAP –under Regulation (EU) 2015/534 (ECB/2015/13) applied by the observed agent's legal entity.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>B55403CF-E495-4846-B034-10BB6A3F7AE2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ACCNTNG_CLSSFCTN</preferredAbbreviation>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -185,12 +533,17 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
-<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>F1C28690-04F9-D9B0-3AAA-191F9EBE1F31</attributeRef>
+<attributeRef>DE40AA9F-0745-E78B-DBE4-D99060132D85</attributeRef>
+<attributeRef>31EEE1E5-07D0-62D4-FD1E-5A762D440AB7</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

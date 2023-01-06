@@ -7,8 +7,10 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <typeID>AE3B0B8B-4E66-709C-450E-CC4B1C21FF1E</typeID>
 <adequatelyNormalized>NO</adequatelyNormalized>
@@ -21,6 +23,48 @@
 <normalForm>Third</normalForm>
 <preferredAbbreviation>CRDT_FCLTY_RSK_DT</preferredAbbreviation>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Credit facility Reference date" id="54A5CEB2-313A-0908-9D32-5D6650457B2A">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:49:20 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>8186BA83-E1D4-E0E1-ABD8-E2653D915779</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+</engineerTo>
+<referedAttribute>DE40AA9F-0745-E78B-DBE4-D99060132D85</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RFRNC_DT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Credit facility Reporting agent identifier" id="9AF23F7D-D597-DB66-FB29-632A646CE74C">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:52:48 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>8186BA83-E1D4-E0E1-ABD8-E2653D915779</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+</engineerTo>
+<referedAttribute>31EEE1E5-07D0-62D4-FD1E-5A762D440AB7</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RPRTNG_AGNT_ID</preferredAbbreviation>
+</Attribute>
 <Attribute name="Credit facility identifier" id="1EEF0829-35BB-B3BC-91A8-8C419AD7CA51">
 <createdBy>Dominik</createdBy>
 <createdTime>2021-08-03 09:00:19 UTC</createdTime>
@@ -30,8 +74,10 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <referedAttribute>F1C28690-04F9-D9B0-3AAA-191F9EBE1F31</referedAttribute>
 <use>0</use>
@@ -43,13 +89,15 @@
 <Attribute name="Default status" id="6ABD1AD8-38FA-CDA7-A4E0-530B05927D3C">
 <createdBy>Dominik</createdBy>
 <createdTime>2021-08-03 08:55:42 UTC</createdTime>
-<comment><![CDATA[Identification of the default status of the instrument or entity. Categories describing the situations in which an instrument or entity can be described as being at default in accordance with Article 178 of Regulation (EU) No 575/2013.]]></comment>
+<comment><![CDATA[Identification of the default status of the asset or entity. Categories describing the situations in which an instrument or entity can be described as being at default in accordance with Article 178 of Regulation (EU) No 575/2013.]]></comment>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
@@ -65,27 +113,33 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>DT_DFLT_STTS</preferredAbbreviation>
 </Attribute>
-<Attribute name="Forbearance status" id="9F6C035D-9FBD-308F-A82C-A42CA397472F">
-<createdBy>Dominik</createdBy>
-<createdTime>2021-08-03 08:56:08 UTC</createdTime>
-<comment><![CDATA[Identification of forborne and renegotiated instruments.]]></comment>
+<Attribute name="Forbearance status" id="099327FB-BA95-3B72-7209-77A2457F83F9">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-08-04 08:31:15 UTC</createdTime>
+<comment><![CDATA[Identification of forborne and renegotiated asset..]]></comment>
+<generatorID>69E5F11A-F596-E6B3-4087-92E57F2C20F7</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
+<referedAttribute>41E787A6-F8D7-9602-4E61-00468C76AC15</referedAttribute>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <domain>C4F21A0E-D961-4428-8927-8C96FCBCB0F6</domain>
@@ -100,12 +154,14 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>DT_FRBRNC_MSRS</preferredAbbreviation>
@@ -118,10 +174,11 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <domain>19a7fc91-04c5-4426-a4f7-d0698d7615c8</domain>
@@ -136,26 +193,32 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>DT_PRFRMNG_STTS</preferredAbbreviation>
 </Attribute>
-<Attribute name="Renegotiation status" id="70CDB5AA-649F-A4F3-AAE7-B6BF6EB9EB17">
-<createdBy>Dominik</createdBy>
-<createdTime>2021-08-03 08:56:58 UTC</createdTime>
+<Attribute name="Renegotiation status" id="8FF7995D-436D-B7C6-1C7D-75003BA3663C">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-08-04 13:38:38 UTC</createdTime>
 <comment><![CDATA[The status of renegotiation.]]></comment>
+<generatorID>0AD12C6E-8CD7-BFB1-1852-A71156A2757D</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
+<referedAttribute>4E73E121-CCC1-248C-493B-BEB02AEB7143</referedAttribute>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <domain>16D8BDBB-3C8A-53D8-9966-1A813475F1FE</domain>
@@ -170,12 +233,14 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>DT_RNGTTN_STTS</preferredAbbreviation>
@@ -188,11 +253,13 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>DT_PST_D</preferredAbbreviation>
@@ -200,38 +267,47 @@
 <Attribute name="Freezing period in days" id="DCC6D0FD-4598-5435-465D-763CA6FA0727">
 <createdBy>Dominik</createdBy>
 <createdTime>2021-08-03 08:57:38 UTC</createdTime>
-<comment><![CDATA[the number of days (if any) for which the freezing period of the
-  instrument has been applied, in accordance with EBA guidelines 2016/07
-  paragraph 18]]></comment>
+<comment><![CDATA[The number of days (if any) for which the freezing period of the asset has been applied, in accordance with EBA guidelines 2016/07 paragraph 18.]]></comment>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <domain>6ED1A254-93E8-4BCC-BD8B-126227470ACD</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>FRZNG_PRD_DYS</preferredAbbreviation>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
 </Attribute>
-<Attribute name="Assessment aproach for credit quality status" id="902DF2C4-8925-BA2F-5DEA-09F61063BCA6">
-<createdBy>Dominik</createdBy>
-<createdTime>2021-08-03 08:57:53 UTC</createdTime>
+<Attribute name="Assessment approach for credit quality status" id="84E6D1A1-395D-4D1F-A17F-EF6491FA082D">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-07-28 12:25:39 UTC</createdTime>
 <comment><![CDATA[Approach chosen by the institution to apply the definitions of default, according to Article 178 of Regulation (EU) No 575/2013, and of non-performing, according to Regulation (EU) No 680/2014, Annex V, Part 2.154.]]></comment>
+<generatorID>8959AD64-DEB9-1838-D3B4-053F6AF69158</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
+<referedAttribute>5929C8C1-2EBD-B5BB-B8DA-794C15E4E216</referedAttribute>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <domain>69C06194-004C-4FE7-BDF3-389D48924716</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
-<preferredAbbreviation> APPRCH_CRDT_QLTY_STTS</preferredAbbreviation>
+<preferredAbbreviation>APPRCH_CRDT_QLTY_STTS</preferredAbbreviation>
 </Attribute>
 <Attribute name="Non-performing forborne exposure under probation reclassified from non-performing indicator" id="D4431BAD-2782-4C23-DAD7-A17ECFB7F220">
 <createdBy>Dominik</createdBy>
@@ -241,8 +317,10 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
@@ -250,18 +328,21 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>NN_PRFRMNG_PRR_FRBRNC_INDCTR</preferredAbbreviation>
 </Attribute>
-<Attribute name="Retail exposure according to CRR, Article 123 (b) indicator" id="C22B8A2E-AD69-ED59-0CA8-05ED4C477D1E">
-<createdBy>Dominik</createdBy>
-<createdTime>2021-08-03 08:58:38 UTC</createdTime>
+<Attribute name="Retail exposure according to CRR, Article 123 (b) indicator" id="20F6CF3A-5D78-C6D7-C46E-6B591063B034">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-08-04 13:46:59 UTC</createdTime>
 <comment><![CDATA[An indicator specifying if a credit facility is considered a retail exposure according to Regulation (EU) 575/2013, Article 178, subparagraph following (b).]]></comment>
+<generatorID>59548D5A-61E2-579F-1D88-F272AA02A16C</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
+<referedAttribute>46A404E8-5DB2-257E-B051-075721C8F8B1</referedAttribute>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <domain>4861890f-2919-447f-89ae-cc163e360d2b</domain>
@@ -277,12 +358,16 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>1EEF0829-35BB-B3BC-91A8-8C419AD7CA51</attributeRef>
+<attributeRef>54A5CEB2-313A-0908-9D32-5D6650457B2A</attributeRef>
+<attributeRef>9AF23F7D-D597-DB66-FB29-632A646CE74C</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

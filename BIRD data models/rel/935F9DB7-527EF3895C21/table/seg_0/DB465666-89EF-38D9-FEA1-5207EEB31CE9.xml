@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DB465666-89EF-38D9-FEA1-5207EEB31CE9" name="CRDT_RSK_MTGTN_ASSGNMNT">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:12 UTC</createdTime>
+<commentInRDBMS><![CDATA[A credit risk mitigation membership is the combination of a Credit risk mitigation arrangement and a Protection item that indicates which Protection item is comprised in which Credit risk mitigation arrangement. 
+Please note that the many-to-many relationship (established via this entity) is only applicable to Registered protection (and saving accounts where there exists a physical document (i.e. Sparbuch)), for all other Protection items the relationship between the Credit risk mitigation arrangement and the Protection item is of type one-to-many.]]></commentInRDBMS>
+<generatorID>FBAF417B-1A11-B3D5-9C5F-16BCF562A7E2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>9233E877-99B3-25CB-0DCC-48B7E03DC1DD</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PRTCTN_ARRNGMNT_ID" id="52027C11-09BA-4EE7-65BC-4121204E33A8">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:12 UTC</createdTime>
+<comment><![CDATA[An identifier to univocally identify each protection arragement.]]></comment>
+<generatorID>71808C04-BB73-280C-4006-78971AD92E2B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="41527B44-18C3-5D04-9C53-F944AE4598EE" referredColumn="E7048F27-6A69-CB77-11A9-73FB1A335BAE"/>
+</associations>
+</Column>
+<Column name="CLLTRL_ID" id="EF8A2288-F95A-4058-975F-8CAF10B12F8C">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:12 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each collateral.]]></comment>
+<generatorID>288FF4F1-202C-CF3A-9E53-01DF2CA1E687</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7CB8DC81-502F-C7E0-6111-5531135538F3" referredColumn="80198C08-E053-5D5D-11A5-6F63842121AC"/>
+</associations>
+</Column>
+<Column name="DT_RFRNC" id="48FE8127-2CE9-7AE1-300A-0C409E21737A">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:12 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>977FCF8B-D0A5-4603-D025-3BDD8242B49C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7CB8DC81-502F-C7E0-6111-5531135538F3" referredColumn="ABF146F5-24AF-A7D7-FCD9-718395BF4DB9"/>
+<colAssociation fkAssociation="41527B44-18C3-5D04-9C53-F944AE4598EE" referredColumn="34AA40BE-95A3-4CA2-68B4-350C4288ACD2"/>
+</associations>
+</Column>
+<Column name="RPRTNG_AGNT_ID" id="EC5F6E13-370C-E0BB-3C72-15323DE99085">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:12 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>889B2D51-BEB4-A0CA-F7AE-C2E46CDAFF09</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7CB8DC81-502F-C7E0-6111-5531135538F3" referredColumn="67A7F615-B2B1-32F4-DB2B-5FBDB2CA9734"/>
+<colAssociation fkAssociation="41527B44-18C3-5D04-9C53-F944AE4598EE" referredColumn="76260640-ED71-C80C-3D24-33FC368772C8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="40F2800B-1692-FDDA-8C06-1E45FDCE8C62" name="CRDT_RSK_MTGTN_ASSGNMNT_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:12 UTC</createdTime>
+<generatorID>91354549-80EE-6393-8609-9E6F6F48DB27</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52027C11-09BA-4EE7-65BC-4121204E33A8"/>
+<colUsage columnID="EF8A2288-F95A-4058-975F-8CAF10B12F8C"/>
+<colUsage columnID="48FE8127-2CE9-7AE1-300A-0C409E21737A"/>
+<colUsage columnID="EC5F6E13-370C-E0BB-3C72-15323DE99085"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="33C577DF-DCA9-84DC-EE99-154990AEE3F6" name="CRDT_RSK_MTGTN_ASSGNMNT_CLLTRL_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:13 UTC</createdTime>
+<generatorID>5A2ADAAE-4B9F-4BD7-5EEE-A1A3DA4DE925</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EF8A2288-F95A-4058-975F-8CAF10B12F8C"/>
+<colUsage columnID="48FE8127-2CE9-7AE1-300A-0C409E21737A"/>
+<colUsage columnID="EC5F6E13-370C-E0BB-3C72-15323DE99085"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="82A3DC0F-37C1-D5DE-3FF7-51281CD89788" name="CRDT_RSK_MTGTN_ASSGNMNT_PRTCTN_ARRNGMNT_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 13:20:13 UTC</createdTime>
+<generatorID>A4967B88-3EF3-282F-4BED-1279453EB155</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52027C11-09BA-4EE7-65BC-4121204E33A8"/>
+<colUsage columnID="48FE8127-2CE9-7AE1-300A-0C409E21737A"/>
+<colUsage columnID="EC5F6E13-370C-E0BB-3C72-15323DE99085"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

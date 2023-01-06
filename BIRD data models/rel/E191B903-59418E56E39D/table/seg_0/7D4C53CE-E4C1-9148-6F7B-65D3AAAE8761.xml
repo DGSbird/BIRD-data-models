@@ -1,0 +1,948 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7D4C53CE-E4C1-9148-6F7B-65D3AAAE8761" name="ABSTRCT_INSTRMNT_RL">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[An Abstract instrument role is a role an Instrument may act in.]]></commentInRDBMS>
+<generatorID>21979073-EB8D-2274-D417-60619E4EF596</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RPRTNG_AGNT_ID" id="F38582CC-F9C7-A2BA-35CE-244252598FBC">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>CB7734D4-5ECD-011C-BF59-61AAD44D205B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E2E9F265-0DA4-8259-98AF-FF2AD7B12550" referredColumn="AFA05758-90D6-3261-9112-BF32F1ECC862"/>
+</associations>
+</Column>
+<Column name="INSTRMNT_ID" id="8F16BE61-D153-3334-9669-981B2A52663A">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>2AA5F1F8-7222-F0EE-9769-936B5346CE62</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E2E9F265-0DA4-8259-98AF-FF2AD7B12550" referredColumn="5037F94A-9F30-C9B3-7659-A9049EAE9399"/>
+</associations>
+</Column>
+<Column name="DT_RFRNC" id="74EB7D34-5E8A-55EA-81AF-F0D332C881D5">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>7F530CBF-4627-C7D1-6C50-AB1FC96056B0</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E2E9F265-0DA4-8259-98AF-FF2AD7B12550" referredColumn="1D55F78A-B00A-760F-DC8F-07C810D95B87"/>
+</associations>
+</Column>
+<Column name="TYP_ABSTRCT_INSTRMNT_RL" id="063B6775-D05E-7CED-5A2F-155EADD5C730">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:21:59 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>7DD926FE-D33E-F771-A5C3-ECD9D161E47D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ABSTRCT_INSTRMNT_RL_TYP" id="B51C805A-FA67-9BD4-7454-E523869FA4C6">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between Instrument role and OTC derivative role.]]></comment>
+<generatorID>32CE7AED-EF83-4052-2F1F-3C89EF24C7BE</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>CD328C69-0F1D-09CF-E2CA-2B27A0C9A75B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCNTNG_CLSSFCTN" id="446C70A6-06B8-9A6E-FB0F-4BE7773DF329">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Accounting portfolio where the asset or liability is recorded in accordance with the accounting standard – IFRS or national GAAP –under Regulation (EU) 2015/534 (ECB/2015/13) applied by the observed agent's legal entity.]]></comment>
+<generatorID>ADE0880F-1372-C328-FAE3-7B5F12B0775F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>743E5824-0C71-DF3E-9DC4-852AE1945CB6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCNTNG_HDG_INDCTR" id="27AA6AE2-36DF-63A9-E7F5-E2D4D7496A16">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<generatorID>00A742EC-C653-8B15-9108-F65DE9BC4715</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>67BB8028-D0A7-E1BE-DD13-29EB4D4788D9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DBT_FNNCNG_RGLTN867_2016_INDCTR" id="995F3DB7-2AE1-A616-2A77-249114FB3A3F">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[An indicator to specify wheather an instrument is considered as debt financing according to Regulation (EU) 867/2016, allowed value for the data attribute purpose: "Financing of outstanding or maturing debt. This includes debt refinancing.".]]></comment>
+<generatorID>1E2F8600-CE3B-682C-6C9F-9A27BFC850F4</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>3ae4f34e-20a2-47a9-9f7d-77e0861bebc9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXPSR_RCRS_INDCTR" id="64D190E6-9442-A53B-6051-54585313A489">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if an instrument is an instrument with or without recourse.]]></comment>
+<generatorID>BA4CE517-05C5-66C2-CD8E-B119ADDAB6EB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>a900d731-5de1-4aea-9395-0ccb11d037f1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FNNCL_ASST_INSTRMNT_TYP_CRR_123" id="477B3FE6-735C-4C50-6FCA-72D3212ED6DF">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between financial assets that may potentially be classified as retail exposures and non-retail exposures.]]></comment>
+<generatorID>D41DC802-7CDB-6D4F-D3BE-ABC3FDD82919</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>51100051-687B-DB3E-90AD-47254F8BDD53</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FNNCL_ASST_INSTRMNT_TYP_FXD_INTRST_RT" id="11D727CC-57A5-4BC4-CF36-120C08F52572">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between financial asset instruments with and without fixed interest rate.]]></comment>
+<generatorID>990D8AFC-0DBA-4B0A-AFA4-B34FDE0EA29F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>BDED7F83-AFD0-67E4-1557-B3E7C5BF5385</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FNNCL_ASST_INSTRMNT_TYP_INTRST_RT_ONL" id="EC84EBA1-4648-F27B-71C2-8C62E48636A2">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between financial asset instruments with and without interest only.]]></comment>
+<generatorID>F82DCDFC-B4C8-D571-13B8-E80AE3BA3FB1</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>F8466818-B9B5-9D25-19B1-13229EAAB243</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FNNCL_ASST_INSTRMNT_TYP_RNGTTN_STTS" id="8A5E961B-4657-5830-9903-4CB5E88E226A">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between financial asset instruments with and without renegotiations.]]></comment>
+<generatorID>0302717A-3405-9C1B-648D-EFA903593445</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>202067B3-64A9-AA51-0EFA-D94B13EB91FA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FV_DSGNTN" id="9EC91E4A-C538-3CE7-F68A-6E55F6DA9941">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Defines the reason to irrevocably designate a non derivative financial instrument at fair value through profit or loss (use of fair value option). Is not applicable for nGAAP based on BAD.]]></comment>
+<generatorID>8BE748BC-5357-05EA-4593-892C15D4E274</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>810501BF-2E6A-06B1-952B-20D55D2F5983</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FV_HRRCHY" id="A2932F2A-2037-AD3D-4AD2-53B4D5B29E4E">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Level of fair value of a financial asset or liability according to the hierarchy defined in IFRS 13. Applicable to national GAAP based on BAD only if the allocation of instruments is measured at fair value according to different levels.]]></comment>
+<generatorID>C48F3A19-51ED-5783-C7C5-527DBA2CB364</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>6b6a7a5c-3533-4f15-84dc-a85c03be48b6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FV_OPTN_DSGNTN" id="9A7812C2-0CB0-F646-42FF-976B123ADC83">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Defines the reason to irrevocably designate a non derivative financial instrument at fair value through profit or loss (use of fair value option). Is not applicable for nGAAP based on BAD.]]></comment>
+<generatorID>E2BA91BD-E1CF-F6E5-5406-9B01AA5DBD67</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>810501BF-2E6A-06B1-952B-20D55D2F5983</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HFS_INDCTR" id="61E54AF1-DEF8-0A3A-9DFF-C398E93094BC">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<generatorID>751573F7-FFE8-9DC9-A1B0-F1AF540330E4</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>9FC05F6E-0558-F79E-96CA-F05753F58262</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMPRMNT_STTS" id="92F0DE0C-E7A1-7953-D43A-7174E587BCE0">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<generatorID>0DFFBEED-8660-8789-AF30-3D9CCC9E80E4</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>D53B60E1-6316-42FE-A176-CA7FD1E6AB95</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOCOM_INDCTR" id="E3AB285D-1B39-3BA5-3A46-C698BBE9089F">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<generatorID>528D7738-3D08-AE02-F30C-5FB15861C6C5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>E8BA40E8-0391-E3FC-2ECE-F1290C6E1678</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NN_PRFRMNG_PRR_FRBRNC_INDCTR" id="60347B26-50BE-65B4-0DA0-1E40A596185F">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<generatorID>395B8282-155A-8F60-6AC9-42A895E50447</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>418321e8-2941-4937-bd6f-6d58cdcfac8b</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="P_FRBRN_EXPSR_PRBTN_RCLSSFD_NP" id="B41D819E-DD25-B6ED-906E-7DDCF87051AC">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<generatorID>59E4E672-F3B4-795E-0DDB-387CD2E7190D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>b6a03089-70fd-4f79-91f3-6714a8cc9403</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRCHSD_ORGNTD_INDCTR" id="576BA4BC-E33A-DDB0-7A8E-040D9DFF9E9F">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<generatorID>3D7F21D2-2135-98AF-73AB-40F7E916E1A0</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>35f41713-84de-48ca-985e-92a635d245ff</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRJCT_FNNC_LN_INDCTR" id="9E2931C1-6EDC-CB72-9F62-B9BAD06533A2">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[An indicator to specify if the loan is considered a project finance loan or not.]]></comment>
+<generatorID>398FD4A9-0826-B88C-ABE5-E77E40EB7C00</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>97e8261f-3200-4a1a-b004-e71c1c11302a</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRPS" id="C1CC42B9-00CB-A921-7C3B-5FE813293A8F">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Classification of instruments according to their purpose.]]></comment>
+<generatorID>FC30F31C-B6C3-2064-DAB5-52D94C61BBA5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>806e5236-b00c-43e6-8c82-c69f8f415db8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PYMNT_FRQNCY" id="88F670E5-A269-85AF-5789-D22E157A10B5">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Frequency of payments due, either of principal or interest, i.e. number of months between payments.]]></comment>
+<generatorID>224B8DAD-0F1D-A2C3-36F9-DF80EC20AC07</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>4c6671ae-3a77-4284-a171-592aba604192</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RCGNTN_STTS" id="C95A5A63-6A0F-34E7-4810-7B71555DDF15">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Balance sheet recognition of the financial asset.]]></comment>
+<generatorID>A7F1D6C2-1546-CDA2-332D-E6400666BEAD</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>18433f9f-18be-4c20-97d4-e4c5c0e6cba6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RFRNC_RT" id="09D0DA11-180D-E107-83D6-CCF002BAEBFC">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Reference rate used for the calculation of the actual interest rate.]]></comment>
+<generatorID>8D5E1473-B207-9EE6-8E1F-966B2C285360</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>31ADF990-BD91-4DEE-BE00-9C0B6072B635</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SBRDNTD_DBT_INDCTR" id="2BF1A2BE-5134-CB1F-E7E0-C00F25C864D3">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if an asset is considered as subordinated debt or not.]]></comment>
+<generatorID>8122E5C1-1359-3FE6-F81D-06A88B607600</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2229f50a-942c-452d-81d8-69068913a6c5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TYP_AMRTSTN" id="B2CF2664-50A3-C046-C341-EEFE4907E5B0">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Type of amortisation of the asset including principal and interest.]]></comment>
+<generatorID>64ADAD29-00C6-03CA-3AAD-A204C4315AAE</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>19f43c0c-0246-48e7-9cc5-b4991b44e984</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TYP_HDG" id="A6ADAAE2-A2EA-32CF-0DCA-103397D36012">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-16 09:06:53 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>00679f2a-d5dd-43bb-a847-015f332da4e8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TYP_INTRST_RT" id="8492DD70-94DD-88BA-A064-51197153CFEA">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Classification of credit exposures based on the base rate for establishing the interest rate for each payment period.]]></comment>
+<generatorID>A5D208F2-8F50-D93F-D6D1-149C0358A190</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>9f1b77a5-3b4f-4b0e-bce8-4a6549b58ac2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCMLTD_CHNGS_FV" id="6CE8102A-F125-1D02-7B89-204839B4639E">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Amount of gains and losses from re-measurement of the asset accumulated from the initial recognition to the reference date.]]></comment>
+<generatorID>CC29CB56-AE3B-30C4-8E3F-EE2D4F4ECC87</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>14C89E8C-F57F-4505-832D-C97676924FD1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCMLTD_CHNGS_FV_CR" id="293090AA-9E2B-4FAF-F412-B150454B65C1">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Accumulated changes in fair value due to credit risk in accordance with Part 2.46 of Annex V to Implementing Regulation (EU) No 680/2014.]]></comment>
+<generatorID>65A9C396-650F-DAE1-6295-2D2816821774</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>14C89E8C-F57F-4505-832D-C97676924FD1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCMLTD_CHNGS_FV_PRD" id="6763211D-4E78-00EE-8D0C-FA6949430E60">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Changes in fair value accumulated from the start of the period until the reference date.]]></comment>
+<generatorID>3005A21F-F93B-49B3-0375-76A2B0352010</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>14C89E8C-F57F-4505-832D-C97676924FD1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCMLTD_IMPRMNT" id="C4B63CED-BA64-F28D-C8E6-3629F5FC0284">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The amount of loss allowances that are held against or are allocated to the asset on the reporting reference date. This data attribute applies to assets subject to impairment under the applied accounting standard. Under IFRS, the accumulated impairment relates to the following
+amounts:
+(i) loss allowance at an amount equal to 12-month expected
+credit losses;
+(ii) loss allowance at an amount equal to lifetime expected
+credit losses.
+Under GAAP, the accumulated impairment relates to the following
+amounts:
+(i) loss allowance at an amount equal to general allowances;
+(ii) loss allowance at an amount equal to specific allowances.]]></comment>
+<generatorID>FFD1B52D-0CD8-1CE7-5AD4-4F81AA248F13</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="ACCMLTD_NGTV_VL_ADJSTMNT_MR" id="CD9246E1-D841-45A3-A369-ECE4EF958DB6">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Accumulated negative value adjustments. Market risk induced]]></comment>
+<generatorID>BB856590-C8E4-6E23-3B1D-6E488821FE73</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="ACCMLTD_WRTFFS" id="7F01FFA7-B8A5-0AF8-309E-9E528107646A">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Cumulative amount of principal and past due interest of any debt instrument that the institution is no longer recognising because they are considered uncollectible, independently of the portfolio in which they were included. Write-offs could be caused both by reductions in the carrying amount of financial assets recognised directly in profit or loss and by reductions in the amounts of the allowance accounts for credit losses set off against the carrying amount of financial assets.]]></comment>
+<generatorID>CA848094-EC11-C89A-F785-D3CEAF4372D3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="ACCRD_INTRST" id="AE0A0B44-B66B-C1AE-7179-B7D35CD28A8A">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The amount of accrued interest on loans at the reporting reference date as defined in Regulation (EU) No 1071/2013 (ECB/2013/33). In accordance with the general principle of accruals accounting, interest receivable on instruments should be subject to on-balance sheet recording as it accrues (i.e. on an accruals basis) rather than when it is actually received (i.e. on a cash basis).]]></comment>
+<generatorID>A2579EB2-16D1-C197-D64F-CEB4E2ED48D8</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="ANNLSD_AGRD_RT" id="ED8CC6E5-0617-1552-9859-C27C1830B384">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Annualised agreed rate or narrowly defined interest rate in accordance with Regulation (EU) No 1072/2013 of the European Central Bank (ECB/2013/34).]]></comment>
+<generatorID>E6C7D09F-3478-80CF-A538-35713CA05723</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>BC929BBF-3702-4146-9332-0B5F419F991E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ARRS_INSTRMNT" id="452B2E1B-74FA-5A40-07F7-3CF4508C7F99">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Aggregate amount of principal, interest and any fee payment outstanding at the reporting date, which is contractually due and has not been paid (past due). This amount is always to be reported. '0' is to be reported if the instrument was not past due on the reporting date.]]></comment>
+<generatorID>5B40E97B-89C2-6FFD-6C0F-446DB40EB6DE</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="CMLTV_RCVRS_SNC_DFLT" id="8EC609CF-CB2F-52D6-14AA-B021DC4DB27F">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The total amount recovered since the date of default.]]></comment>
+<generatorID>2EB02F85-CD1B-B48F-EF58-B76DF3957737</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="CMMTMNT_AMNT_INCPTN" id="5665C52C-3C6C-94C5-3931-D0191F0419AC">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Observed agent's maximum exposure to credit risk on the inception date of the instrument, without taking into account any protection held or other credit enhancements. Total commitment amount on the inception date is established during the approval process and is intended to restrict an observed agent's amount of credit risk to a given counterparty for the relevant instrument.]]></comment>
+<generatorID>FBEAA765-0F4F-A8E3-20A1-CF356566DF5D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="CRRYNG_AMNT" id="80EC0618-0296-3BBE-D7F8-0CD11DC0033D">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The carrying amount in accordance with Annex V to Implementing Regulation (EU) No 680/2014.]]></comment>
+<generatorID>8B4436AC-FAFF-8B71-098F-B065CAFF64F3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="DT_DFLT_STTS" id="E435AB87-0349-4B84-5F38-B0833FB96A69">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The date on which the default status is considered to have arisen.]]></comment>
+<generatorID>86EB4655-B133-6FA3-AC14-28E35DAC9E48</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_END_INTRST_ONLY" id="4D0774FA-BF06-6F9E-37AD-E3032BB11BB0">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The date on which the interest-only period ends. Interest-only is an instrument for which, for a contractually set period, only the interest on the principal balance is paid, with the principal balance remaining unchanged.]]></comment>
+<generatorID>60BA4A86-2218-8737-A6FE-654F4F6EF2B5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_FRBRNC_MSRS" id="1D2C7A6A-62D6-E42D-C998-3B45A06A642D">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The date on which forbearance measure have been applied.]]></comment>
+<generatorID>9510319E-212F-D9B7-584D-CAB0AA3D294B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_NN_PRFRMNG_STTS_INSTRMNT" id="237BD3D6-BAF3-287A-01CC-D5DAEBD5891C">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The date on which the non-performing status has been applied.]]></comment>
+<generatorID>CD1E3328-5BC2-F100-184B-76A87F6A9F7E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_PST_D" id="63B10764-216A-FB89-CD46-99176B686E87">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The date on which the asset became past due in accordance with Part 2.48 of Annex V to Implementing Regulation (EU) No 680/2014. This is the latest such date prior to the reporting reference date and it is to be reported if the instrument is past due on the reporting reference date.]]></comment>
+<generatorID>0E56CB66-8C52-E8AE-7487-4BC52D1768E4</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_RNGTTN_STTS" id="589AD85D-84E8-8D7D-AD9F-1D8EFD601963">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The date on which the renegotiation status is considered to have been established or changed.]]></comment>
+<generatorID>E1A00EF6-82B6-EDEA-54A8-030663CA5209</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_STTLMNT" id="CD741C21-4C82-3286-C728-DBA8DFCDDDC9">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The date on which the conditions specified in the contract are or can be executed for the first time, i.e. the date on which financial instruments are initially exchanged or created.]]></comment>
+<generatorID>1020F3E0-9660-3C49-5D97-F8FA09607213</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FRZNG_PRD_DYS" id="2AAE3856-3F7A-1C6E-91AD-1A8294251762">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The number of days (if any) for which the freezing period of the asset has been applied, in accordance with EBA guidelines 2016/07 paragraph 18.]]></comment>
+<generatorID>3CB789F5-E2DD-358E-0A00-9EF26BC95165</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>6ED1A254-93E8-4BCC-BD8B-126227470ACD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="FV" id="148D4E4D-DD50-A469-E42D-8445A4B915CF">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Fair value as defined in IFRS 13.9.]]></comment>
+<generatorID>171948B7-138B-4952-BE2F-0E12824794CF</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="FV_CHNG" id="9B8C08CA-1166-40E6-F3B4-369C61C0811D">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Fair value changes]]></comment>
+<generatorID>6C5FC3E0-908A-F41B-7AB3-204B23056184</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>14C89E8C-F57F-4505-832D-C97676924FD1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FV_CHNG_CR_BFR_PRCHS" id="AAA15925-1148-25FC-F47A-E1A236B27420">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The difference between the outstanding nominal amount and the purchase price of the asset at the purchase date.]]></comment>
+<generatorID>3FBEC6FB-22F1-3561-A2A8-A70B9A07996E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="FV_CHNGS_HDG_ACCNTNG" id="7BA4A904-1850-A610-BD91-664907702EA1">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Changes in the fair value of an asset or liability, which is a hedged item and measured at amortised cost, that are recognised in the carrying amount due to the application of hedge accounting (IFRS 9.6)]]></comment>
+<generatorID>BF34C418-6CA1-4C82-5B04-3D7AB95BB8E6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>14C89E8C-F57F-4505-832D-C97676924FD1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GNRL_ALLWNCS_BNK_RSK" id="DA6519EC-C67C-2C3A-F90D-63797D797E6D">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[General allowances for bank risk affecting carrying amount (nGAAP)]]></comment>
+<generatorID>4F816B8C-0A74-59E2-70C8-3F60B6AA076E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="GNRL_ALLWNCS_CRDT_RSK" id="0A8D6A41-FA67-99A8-E0C4-E844A683275E">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[General allowances for credit risk affecting carrying amount.]]></comment>
+<generatorID>C3B0FE9F-BA30-089F-07DA-9BE2AB1E1F1D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="GRSS_CRRYNG_AMNT_E_INTRST" id="68BA264D-6DDC-3F5E-20E2-FA3DD0A637B9">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Gross carrying amount, as defined in IFRS 9 appendix A, excluding accrued interest]]></comment>
+<generatorID>2DA3A78D-DACA-5976-24A7-B2EE2640772C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="INCPTN_DT" id="2A3CCD1E-744A-6030-2F13-254A0B22EE70">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The date on which the current contractual relationship originated, i.e. the date on which the contract agreement became binding for all parties.]]></comment>
+<generatorID>01F6A1B7-7297-200D-37B0-0490DCE40352</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INTRST_RT_CP" id="E3B1E215-67CA-5F9D-19C0-72B6514CCF50">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Maximum value for the interest rate charged.]]></comment>
+<generatorID>47D928CD-3B5A-A8AE-D7FB-1A05D53C5D33</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>BC929BBF-3702-4146-9332-0B5F419F991E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INTRST_RT_FLR" id="E21387C3-30A5-2766-1B6A-81F2CBCC57C7">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Minimum value for the interest rate charged.]]></comment>
+<generatorID>8E3E8F21-1BE8-CF7B-CCAC-7506B464AF9A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>BC929BBF-3702-4146-9332-0B5F419F991E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INTRST_RT_SPRD" id="3D99EF1A-593D-A6FE-4A91-0F2041D807DD">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Margin or spread (expressed as a percentage) to add to the reference rate that is used for the calculation of the interest rate in basis points.]]></comment>
+<generatorID>B28225DC-5D11-1B29-35E3-E2C063112B76</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>BC929BBF-3702-4146-9332-0B5F419F991E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRVSNS_OFF_BLNC_SHT" id="E20A8521-F0D9-DBFF-12DC-D819DE6E493D">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The amount of provisions for off-balance sheet amounts.]]></comment>
+<generatorID>D5D36B08-CCFF-849E-085A-A0C63FDBA542</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="STRT_DT_PRD" id="20D060BB-6CC6-A393-171B-399267BFAC4E">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The start date of the period.]]></comment>
+<generatorID>BD504E6F-8C15-66B0-BCF9-F042BD538E13</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A38E891B-2A5E-BFF5-7F8D-B441D85059B8" name="ABSTRCT_INSTRMNT_RL__IDX">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:19:12 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F38582CC-F9C7-A2BA-35CE-244252598FBC"/>
+<colUsage columnID="8F16BE61-D153-3334-9669-981B2A52663A"/>
+<colUsage columnID="74EB7D34-5E8A-55EA-81AF-F0D332C881D5"/>
+<colUsage columnID="063B6775-D05E-7CED-5A2F-155EADD5C730"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C80FD566-8154-73AE-655F-FD1293643C3C" name="ABSTRCT_INSTRMNT_RL_INSTRMNT_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<generatorID>85A01FF8-B54A-30D8-5D82-5186809741F3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8F16BE61-D153-3334-9669-981B2A52663A"/>
+<colUsage columnID="74EB7D34-5E8A-55EA-81AF-F0D332C881D5"/>
+<colUsage columnID="F38582CC-F9C7-A2BA-35CE-244252598FBC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

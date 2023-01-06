@@ -1,0 +1,182 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0DD95CCE-239C-9423-9EDF-15EC730AF1A9" name="INSTRMNT_ENTTY_RL_ASSGNMNT">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[An Instrument Entity role assignment is the combination of an Instrument and an Entity role that indicates which Instrument is assigned to which Entity role.]]></commentInRDBMS>
+<generatorID>782D4CD7-E062-37A0-9980-530022A068F0</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>FE45E328-F07E-B6E9-3D7B-D350215923F8</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RPRTNG_AGNT_ID" id="7AF9000F-1D03-AD21-4524-26F821EB6815">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>4B184FD2-B2B3-ACD2-5096-0F32E302849A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0B9C605F-E361-5503-0361-E44F39CE1CF5" referredColumn="4436F71B-2694-237C-F151-E34FBEEEB214"/>
+<colAssociation fkAssociation="20FF54E8-7C5A-4CB4-E3A8-F376C22E98A4" referredColumn="AFA05758-90D6-3261-9112-BF32F1ECC862"/>
+</associations>
+</Column>
+<Column name="INSTRMNT_ID" id="56AFA876-E91D-D3E5-DBE0-01E8AA0D252B">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>E29F511B-9859-8781-337B-A1C445AA6169</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="20FF54E8-7C5A-4CB4-E3A8-F376C22E98A4" referredColumn="5037F94A-9F30-C9B3-7659-A9049EAE9399"/>
+</associations>
+</Column>
+<Column name="DT_RFRNC" id="FC230390-11F3-58E1-7FBA-3255F7042B2D">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>F57DD9DF-0B1A-311D-2A24-959C183D1811</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0B9C605F-E361-5503-0361-E44F39CE1CF5" referredColumn="D3276105-AA69-F810-34B1-C9116CA3A3EE"/>
+<colAssociation fkAssociation="20FF54E8-7C5A-4CB4-E3A8-F376C22E98A4" referredColumn="1D55F78A-B00A-760F-DC8F-07C810D95B87"/>
+</associations>
+</Column>
+<Column name="PRTY_ID" id="DE531E56-829E-55C8-9A6B-BFFB3483B33E">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:19:11 UTC</createdTime>
+<comment><![CDATA[The party identifier of the involved organisation.]]></comment>
+<generatorID>7B6A00F4-FE2E-4800-0AAA-1A96382FA9CA</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0B9C605F-E361-5503-0361-E44F39CE1CF5" referredColumn="87C772D8-B432-BED1-B3F2-2840DFE2FE0A"/>
+</associations>
+</Column>
+<Column name="PRTY_RL_TYP" id="EDB8088F-CAEA-7462-6705-66E0CC3BBEE5">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:19:11 UTC</createdTime>
+<comment><![CDATA[The organisation role.]]></comment>
+<generatorID>6DC2FB7F-77C0-13EB-4DBA-541EDC1DD702</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>fb47f404-bef8-4d54-adfc-044f1ea3be3e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0B9C605F-E361-5503-0361-E44F39CE1CF5" referredColumn="CFA76759-716F-3D82-CFF3-8A5286CBC90E"/>
+</associations>
+</Column>
+<Column name="INSTRMNT_ENTTY_RL_ASSGNMNT_TYP" id="9BCA268C-166C-C040-171E-02F71E67B9B8">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different assignments between instruments and party roles, for example deposit taking corporation deposit assignment.]]></comment>
+<generatorID>83C7CAA4-463D-0D46-6CC2-623BC02275F2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>C2CF6B8E-BEDB-4448-6C1B-2CC54BD64FCC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MN_DBTR_INDCTR" id="8D8C5470-34E3-26B1-BCEF-1A6647CDC0C3">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if a debtor is the main debtor.]]></comment>
+<generatorID>2CDFF8C7-E933-C980-3E57-84D15EEB2959</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>d90ea317-1cac-4a23-89d6-c8b24ddc859f</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="JNT_LBLTY_AMNT" id="251CB065-7566-8986-6B91-9D506021B7DE">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<comment><![CDATA[Outstanding nominal amount for which each debtor is liable in relation to a single instrument where there are two or more debtors.]]></comment>
+<generatorID>2CD00F7E-8087-8890-90A5-95C10033CDDC</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3E4AE007-691A-029C-B692-A5DA6A8F7F6E" name="INSTRMNT_ENTTY_RL_ASSGNMNT__IDX">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:20:45 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7AF9000F-1D03-AD21-4524-26F821EB6815"/>
+<colUsage columnID="56AFA876-E91D-D3E5-DBE0-01E8AA0D252B"/>
+<colUsage columnID="FC230390-11F3-58E1-7FBA-3255F7042B2D"/>
+<colUsage columnID="DE531E56-829E-55C8-9A6B-BFFB3483B33E"/>
+<colUsage columnID="EDB8088F-CAEA-7462-6705-66E0CC3BBEE5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7DEAC7AB-9B6B-1EC4-1FB8-7F7A0BC268A1" name="INSTRMNT_ENTTY_RL_ASSGNMNT_ENTTY_RL_FKv15">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<generatorID>7507FAD4-CF7F-673E-68B7-CE072371A08B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7AF9000F-1D03-AD21-4524-26F821EB6815"/>
+<colUsage columnID="FC230390-11F3-58E1-7FBA-3255F7042B2D"/>
+<colUsage columnID="DE531E56-829E-55C8-9A6B-BFFB3483B33E"/>
+<colUsage columnID="EDB8088F-CAEA-7462-6705-66E0CC3BBEE5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7050C75F-B62E-DDA3-AA9C-8689072D3B35" name="INSTRMNT_ENTTY_RL_ASSGNMNT_INSTRMNT_FKv22">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-14 14:16:37 UTC</createdTime>
+<generatorID>51638D27-DDA9-1673-57B6-26CD17AD1EC6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="56AFA876-E91D-D3E5-DBE0-01E8AA0D252B"/>
+<colUsage columnID="FC230390-11F3-58E1-7FBA-3255F7042B2D"/>
+<colUsage columnID="7AF9000F-1D03-AD21-4524-26F821EB6815"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

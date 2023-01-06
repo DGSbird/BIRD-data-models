@@ -1,0 +1,71 @@
+CHANGE DOMAIN ACCOUNTING CLASSIFICATION
+COPY DOMAINS FROM DEFAULTDOMAINS
+
+
+
+
+
+Instructions for using the forward engineering scripts:
+
+a) Local settings:
+	SQL Data Modeler has default behaviour for removing foreign key columns when removing the foreign key constraints by asking you before deleting. 
+	This setting is useful but may cause a lot of work while running the forward egineering scripts.
+	Instructions for changing the behaviour:
+		Tools -> Preferences -> Data Modeler -> Model -> Relational ->
+		Delete FK columns strategy: Delete generate FK columns
+
+b) Create new Relational model (named Relational_3, if not, change Subtree generation script)
+c) Logical model: 
+	1.	run script Subtree generation
+	2.	Forward engineer to relational model
+d) Run scripts in order:
+	1.	Replace foreign key on folded columns
+	2.	!Entity role and Abstract instrument role
+			- if we want full names for columns and tables: change is_preferred_abbreviation to false;
+	3.	Save and close design, reopen
+	4.	!Generalisation
+			- if we want full names for columns and tables: change is_preferred_abbreviation to false;
+	5. 	Set foreign keys to primary key index
+	6. 	Remove unique constraints
+	7.	!Optional one-to-one relationships
+			- if we want to keep derived tables separate: change merge_derived_entities to false; 
+	8.	Columns order
+	9.	Remove duplicated relationships (run multiple times, until duplicated are gone from generalisation assignments)
+	10.	- [Optional] (Helper) Find disjoint subtyping
+                - [Optional] (Helper) Map entites to members 
+                - ![Optional] Reduce discriminators 
+			- if we want full names for columns and tables: change is_preferred_abbreviation to false;
+	11.      - [Optional] (Helper) Add member Not applicable
+                - Amend columns domains and remove duplicated columns
+                The column name is seen in log file after running Amend columns domains and remove duplicated columns (no matching domain for this column)
+	12.	Merge one-to-one relationships
+			- if we want to keep derived tables separate: change merge_derived_entities to false;
+	13.	Set enumerated columns to mandatory
+	14.	Order columns alphabetically
+	15.	Columns order
+	16.	Remove numbers from columns
+	17.	![Optional] Add DERIVED_ to derived columns
+			- if we want full names for columns and tables: change is_preferred_abbreviation to false;
+	18. 	Add foreign key domain constraints
+
+
+Instructions for amending the scripts after a change in the LDM:
+
+ 1. Entity name changes:
+   - Subtree generation: if it is a hierarchical type, check if it is present in the list "include" of supertypes we wrap in 
+   - Reduce discriminators: check if member name match entity name, if not, amend the map from entities to members
+
+ 2. Added entity:
+    a. Entity is an abstraction (generalisation without primary key)
+       - Subtree generation: add Entity name to list "include"
+       - Entity role and Abstract instrument role (if subtypes have primary keys with the same concept or is related to other generalisations):
+         add function call updateGeneralisation(new_table_name, primary_concept_name, list_of_replacibles)
+    b. Is supposed to have duplicated relationships in the model:
+       - Remove duplicated relationships: add to list of excluded (name and preferred abbreviation)
+    c. (If it is a hierarchical type, domain of discriminator of a parent should be amended)
+    d. It is a leaf of hierarchy:
+	- Reduce discriminators: if Entity has a different name than member, it has to be manually added to mapEntitiesToMembers function:
+		entity_member_map.put(<entity name>, <domain name> | <member code>: <member_name>);		
+ 
+3. Added disjoint subtyping:
+    - Reduce discriminators: add entity's prefered abbreviation to list discriminators_not_merged

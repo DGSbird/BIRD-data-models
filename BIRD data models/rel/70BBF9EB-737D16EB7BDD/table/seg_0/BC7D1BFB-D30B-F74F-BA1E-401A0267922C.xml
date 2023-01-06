@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BC7D1BFB-D30B-F74F-BA1E-401A0267922C" name="Master_agreement_Financial_contract_assignment">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-13 21:18:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Master agreement Financial contract assignment is the combination of a Master agreement and a Financial contract that indicates which Master agreement comprises which Financial contract.]]></commentInRDBMS>
+<generatorID>9CE97C69-237D-9D4C-6151-A292A663FBAC</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>B00C49F8-7AB8-0344-2390-66F8B305696A</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Master_agreement_identifier" id="1639AC75-DB21-E15A-C163-313B9C639CB6">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-13 21:18:28 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each master agreement.]]></comment>
+<generatorID>C5F76182-5717-838A-6D8F-080DA28B710B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1D96B3C0-E38A-F5ED-B392-A9B68448F60A" referredColumn="7AD02098-9D49-5C3E-86BA-9D28796ECA97"/>
+</associations>
+</Column>
+<Column name="Financial_contract_identifier" id="94D24E22-77E5-6ADF-D3D9-D2861B76CE72">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-13 21:18:28 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each financial contract.]]></comment>
+<generatorID>3812560C-6274-6A1F-F603-B83A7D2D7C3E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0F7C6FC0-FC19-FC3F-1AE0-C8B054B24C36" referredColumn="E83D4DAB-05A7-021E-BB81-E4189BFE2987"/>
+</associations>
+</Column>
+<Column name="Reference_date" id="7ADC2E3A-75E7-D1FD-E49B-3815B96209E3">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-13 21:18:28 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>D008EED6-308E-B27E-1AF9-0FB07DD9A7BA</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0F7C6FC0-FC19-FC3F-1AE0-C8B054B24C36" referredColumn="AA7C6C8D-AA9F-D5E2-0A0B-29A2742D4A2A"/>
+<colAssociation fkAssociation="1D96B3C0-E38A-F5ED-B392-A9B68448F60A" referredColumn="98E2765E-4723-A48E-E0A0-A152541717E7"/>
+</associations>
+</Column>
+<Column name="Reporting_agent_identifier" id="6E5AFE01-D59E-8CDB-C9E0-D447027EE882">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-13 21:18:28 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>AFF9344D-C04C-1350-3A65-82BCB774A33B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0F7C6FC0-FC19-FC3F-1AE0-C8B054B24C36" referredColumn="9EFD25F9-F2A4-D00B-EDB7-E83E1C3E55B0"/>
+<colAssociation fkAssociation="1D96B3C0-E38A-F5ED-B392-A9B68448F60A" referredColumn="7585637A-05D5-CD5A-85CE-09AE34FF4BEC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6EC8B5C5-5F0C-0029-D92E-A486F018F25B" name="Master_agreement_Financial_contract_assignment_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-13 21:18:28 UTC</createdTime>
+<generatorID>20FEDFF2-FD75-2FCB-853A-AB420A71E5EE</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1639AC75-DB21-E15A-C163-313B9C639CB6"/>
+<colUsage columnID="94D24E22-77E5-6ADF-D3D9-D2861B76CE72"/>
+<colUsage columnID="7ADC2E3A-75E7-D1FD-E49B-3815B96209E3"/>
+<colUsage columnID="6E5AFE01-D59E-8CDB-C9E0-D447027EE882"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5024CFB8-5D9B-E2A4-54BA-82B675EBEF4B" name="Master_agreement_Financial_contract_assignment_Financial_contract_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-13 21:18:28 UTC</createdTime>
+<generatorID>8E2D6410-0AFA-761E-F58D-04E85B49FE14</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="94D24E22-77E5-6ADF-D3D9-D2861B76CE72"/>
+<colUsage columnID="7ADC2E3A-75E7-D1FD-E49B-3815B96209E3"/>
+<colUsage columnID="6E5AFE01-D59E-8CDB-C9E0-D447027EE882"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="34F18A79-4FE4-420B-3E93-2DFCD7603CB2" name="Master_agreement_Financial_contract_assignment_Master_agreement_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-13 21:18:28 UTC</createdTime>
+<generatorID>F9127A22-EC89-2C07-99E3-79B57AEA6715</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1639AC75-DB21-E15A-C163-313B9C639CB6"/>
+<colUsage columnID="7ADC2E3A-75E7-D1FD-E49B-3815B96209E3"/>
+<colUsage columnID="6E5AFE01-D59E-8CDB-C9E0-D447027EE882"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="F84550CB-0253-F9B6-06A3-DBDAF9C0E4B9" name="Tranche_in_a_Traditional_securitisation">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-13 21:18:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Regulation (EU) 2402/2017, Article 2, (6):
+´Tranche’ means a contractually established segment of the credit risk associated with an exposure or a pool of exposures, where a position in the segment entails a risk of credit loss greater than or less than a position of the same amount in another segment, without taking account of credit protection provided by third parties directly to the holders of positions in the segment or in other segments.]]></commentInRDBMS>
+<generatorID>F113ACC3-8DA5-8E54-6DD7-91545BD2BAF3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>A0CBE5B5-15E4-B4F0-F88E-E83729225A42</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Securitisation_identifier" id="299902DD-89DF-829C-41D7-D2B5068547EF">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-13 21:18:28 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each security.]]></comment>
+<generatorID>7E1F2DF4-E04A-109E-867A-89EE3AE8A22A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="006791D1-A292-D487-4235-A7C7D8AED476" referredColumn="7A296781-457F-720E-A0E3-EEA5D98A9843"/>
+</associations>
+</Column>
+<Column name="Asset_backed_security_Security_identifier" id="A0030207-9C4D-6EC6-5196-49100BCAD90F">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-13 21:18:28 UTC</createdTime>
+<comment><![CDATA[The security identifier of the involved asset backed security.]]></comment>
+<generatorID>1CEB93D2-0E55-CB5C-BEC8-3C95B9251611</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F365581D-5A2B-B668-2E8A-1FA146EFF3A3" referredColumn="B4A16B62-BC09-2DA4-509F-AB4332631276"/>
+</associations>
+</Column>
+<Column name="Reference_date" id="DD1D6696-21AD-746B-D170-FC7A76C1A77C">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-13 21:18:28 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>D692F49A-B1D8-81FF-6608-F1846402D04C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F365581D-5A2B-B668-2E8A-1FA146EFF3A3" referredColumn="DEC88870-484C-C704-6208-FFCF186DDF01"/>
+<colAssociation fkAssociation="006791D1-A292-D487-4235-A7C7D8AED476" referredColumn="CD0686E2-44B1-DD45-E81F-72D364319567"/>
+</associations>
+</Column>
+<Column name="Reporting_agent_identifier" id="0FCD8BD4-58B2-38A6-3024-B963961B5223">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-13 21:18:28 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>69CA7CFD-474F-CFA4-6019-7EFC59C7B002</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F365581D-5A2B-B668-2E8A-1FA146EFF3A3" referredColumn="635A7E6B-D426-1429-B004-5AB419618FC0"/>
+<colAssociation fkAssociation="006791D1-A292-D487-4235-A7C7D8AED476" referredColumn="FD2F49B7-BA5A-5F14-D8A1-2C94C1C168F5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="884D7632-6482-6EF1-FF60-36A34FD51398" name="Tranche_in_a_Traditional_securitisation_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-13 21:18:28 UTC</createdTime>
+<generatorID>63D3C2AC-A4FB-7DEA-330F-36820534D44B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="299902DD-89DF-829C-41D7-D2B5068547EF"/>
+<colUsage columnID="A0030207-9C4D-6EC6-5196-49100BCAD90F"/>
+<colUsage columnID="DD1D6696-21AD-746B-D170-FC7A76C1A77C"/>
+<colUsage columnID="0FCD8BD4-58B2-38A6-3024-B963961B5223"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="243CBD33-E17A-73E2-EA2C-13425017DE85" name="Tranche_in_a_Traditional_securitisation_Security_and_exchange_tradable_derivative_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-13 21:18:28 UTC</createdTime>
+<generatorID>273E1C38-4428-DE9C-3347-1C91E6D21B79</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A0030207-9C4D-6EC6-5196-49100BCAD90F"/>
+<colUsage columnID="DD1D6696-21AD-746B-D170-FC7A76C1A77C"/>
+<colUsage columnID="0FCD8BD4-58B2-38A6-3024-B963961B5223"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="192A6460-2EBA-DD35-1BD4-34DAD34DDA63" name="Tranche_in_a_Traditional_securitisation_Traditional_securitisation_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-12-13 21:18:28 UTC</createdTime>
+<generatorID>242993BD-188F-3131-E006-1DC2F52BF475</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="299902DD-89DF-829C-41D7-D2B5068547EF"/>
+<colUsage columnID="DD1D6696-21AD-746B-D170-FC7A76C1A77C"/>
+<colUsage columnID="0FCD8BD4-58B2-38A6-3024-B963961B5223"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,14 +1,18 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_5" id="23700D94-7BD4-B730-CE3A-BD73D77FEEAE" name="Reference date">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_5" id="23700D94-7BD4-B730-CE3A-BD73D77FEEAE" name="Model Context">
 <createdBy>lindomi</createdBy>
 <createdTime>2021-10-26 16:19:54 UTC</createdTime>
-<commentInRDBMS><![CDATA[A Reference date is a date to which the data of this model is associated to.]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[A Model context is context to this model. In this specific case it involves the Reporting agent identifier and the Reference date.]]></commentInRDBMS>
 <ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="935F9DB7-5B1F-AD7A-2885-527EF3895C21" value="false"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="false"/>
+<item key="E191B903-6A69-BF7E-025A-59418E56E39D" value="false"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="false"/>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
-<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
-<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
-<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
 </engineerTo>
 <typeID>1312D78D-A5F6-B25F-0715-6E131635D11D</typeID>
 <adequatelyNormalized>NO</adequatelyNormalized>
@@ -19,24 +23,51 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>RFRNC_DT</preferredAbbreviation>
+<preferredAbbreviation>MDL_CNTXT</preferredAbbreviation>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Reference date" id="3853DDD3-7551-B05B-8A3D-3FDB63EC203A">
-<createdBy>lindomi</createdBy>
-<createdTime>2021-10-27 12:55:35 UTC</createdTime>
+<Attribute name="Reference date" id="90FBD27B-EE6E-D877-F9E7-447D604CC0ED">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:49:19 UTC</createdTime>
 <comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>7992EEED-829C-2D38-0C8E-F11CBC40CD46</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="E191B903-6A69-BF7E-025A-59418E56E39D" value="true"/>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
-<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
-<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
-<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="935F9DB7-5B1F-AD7A-2885-527EF3895C21" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
 </engineerTo>
+<referedAttribute>2144D2A0-E746-27A6-0FF0-268FEBCB6AB5</referedAttribute>
 <use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
-<preferredAbbreviation>DT_RFRNC</preferredAbbreviation>
+<preferredAbbreviation>RFRNC_DT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Reporting agent identifier" id="29F5BBD5-6DF1-9F07-524A-463A45C7E70C">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:52:48 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>C15510C9-3230-1561-A86D-BAF9E69E57C2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="E191B903-6A69-BF7E-025A-59418E56E39D" value="true"/>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="935F9DB7-5B1F-AD7A-2885-527EF3895C21" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
+</engineerTo>
+<referedAttribute>D138BC90-C930-9A30-2450-FAE9F1BAD6FD</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RPRTNG_AGNT_ID</preferredAbbreviation>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -45,14 +76,18 @@
 <createdTime>2021-10-27 12:55:46 UTC</createdTime>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="E191B903-6A69-BF7E-025A-59418E56E39D" value="true"/>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
-<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
-<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
-<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="935F9DB7-5B1F-AD7A-2885-527EF3895C21" value="true"/>
+<item key="70BBF9EB-559F-53F6-36C6-737D16EB7BDD" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+<item key="95824C8F-787A-FE7E-FC6E-EB0A6A49B2A0" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>3853DDD3-7551-B05B-8A3D-3FDB63EC203A</attributeRef>
+<attributeRef>90FBD27B-EE6E-D877-F9E7-447D604CC0ED</attributeRef>
+<attributeRef>29F5BBD5-6DF1-9F07-524A-463A45C7E70C</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

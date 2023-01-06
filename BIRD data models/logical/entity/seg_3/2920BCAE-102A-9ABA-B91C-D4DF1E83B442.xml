@@ -2,13 +2,15 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_3" id="2920BCAE-102A-9ABA-B91C-D4DF1E83B442" name="Asset pool Loan (excluding repurchase agreement) assignment">
 <createdBy>Dominik</createdBy>
 <createdTime>2021-08-11 15:17:32 UTC</createdTime>
-<commentInRDBMS><![CDATA[An Asset pool Loan (excluding repurchase agreement) assignment is the combination of an Asset pool (subject to a securitisation and other credit transfer) and an Loan (excluding repurchase agreement) that indicates which Loan is assigned to which Asset pool (subject to a securitisation and other credit transfer).]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[An Asset pool Loan (excluding repurchase agreement) assignment is the combination of an Asset pool (subject to a securitisation and other credit transfer) and a Loan (excluding repurchase agreement) that indicates which Loan is assigned to which Asset pool (subject to a securitisation and other credit transfer).]]></commentInRDBMS>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <typeID>A0CBE5B5-15E4-B4F0-F88E-E83729225A42</typeID>
 <adequatelyNormalized>NO</adequatelyNormalized>
@@ -20,7 +22,53 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <preferredAbbreviation>ASST_PL_LN_ASSGNMNT</preferredAbbreviation>
+<foldedAttributesMap>
+<item key="0F1DE1A8-CB92-4663-F1A1-D878090DADA0" value="7CC5383F-ECB4-EAC3-61A5-48AB9537DB04"/>
+<item key="5C89B892-92B3-7F6D-2208-C5123E74027F" value="F8A065F5-BB6D-6B10-886B-D5B6939A32A3"/>
+</foldedAttributesMap>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Asset pool Reference date" id="7CC5383F-ECB4-EAC3-61A5-48AB9537DB04">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:49:19 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>FDB5C2E5-36D2-CBB7-331F-9DF4A14D0521</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+</engineerTo>
+<referedAttribute>053B57FF-7837-99DA-5042-392AED2A3756</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RFRNC_DT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Asset pool Reporting agent identifier" id="F8A065F5-BB6D-6B10-886B-D5B6939A32A3">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:52:48 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>FDB5C2E5-36D2-CBB7-331F-9DF4A14D0521</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+</engineerTo>
+<referedAttribute>2CD7E94C-BF27-4403-A0A0-025E848D96E2</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RPRTNG_AGNT_ID</preferredAbbreviation>
+</Attribute>
 <Attribute name="Asset pool identifier" id="4F588DB0-0B6E-24D8-3FF9-4F995D497228">
 <createdBy>Dominik</createdBy>
 <createdTime>2021-08-11 15:18:35 UTC</createdTime>
@@ -30,8 +78,10 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <referedAttribute>6EAFCA4A-19AA-1F50-DD36-16F2365205C1</referedAttribute>
 <use>0</use>
@@ -39,6 +89,48 @@
 <domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>ASST_PL_ID</preferredAbbreviation>
+</Attribute>
+<Attribute name="Loan Instrument Reference date" id="0F1DE1A8-CB92-4663-F1A1-D878090DADA0">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:49:20 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>AE795EBF-2362-39DE-E33B-AA327BA29559</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+</engineerTo>
+<referedAttribute>9ECE8643-3670-4EAE-A455-B5EF4C2CE45A</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>LN_INSTRMNT_RFRNC_DT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Loan Instrument Reporting agent identifier" id="5C89B892-92B3-7F6D-2208-C5123E74027F">
+<createdBy>ostarij</createdBy>
+<createdTime>2022-02-03 16:52:48 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>AE795EBF-2362-39DE-E33B-AA327BA29559</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
+<item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
+<item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
+<item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
+</engineerTo>
+<referedAttribute>BB6D9386-34F3-FCB8-F6D0-4BB43D4EAAA8</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>LN_INSTRMNT_RPRTNG_AGNT_ID</preferredAbbreviation>
 </Attribute>
 <Attribute name="Loan Instrument identifier" id="762AF20D-A7F4-088B-2620-926AE61F3C9E">
 <createdBy>lindomi</createdBy>
@@ -49,8 +141,10 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <referedAttribute>F7859051-3E5A-9707-1E2B-67B4383135E4</referedAttribute>
 <use>0</use>
@@ -67,15 +161,22 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
 <use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<logicalDatatype>LOGDT026</logicalDatatype>
 <domain>8100266E-F750-48D0-B98A-821400187560</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>PRCNTG_RTND</preferredAbbreviation>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+<endValue>1</endValue>
+</rangeDef>
+</listOfRanges>
 </Attribute>
 <Attribute name="Percentage transfered" id="1E6FFC3A-22E5-F6F6-CBAF-44E9FCE8C0A3">
 <createdBy>Dominik</createdBy>
@@ -85,15 +186,22 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
 <use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<logicalDatatype>LOGDT026</logicalDatatype>
 <domain>8100266E-F750-48D0-B98A-821400187560</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>PRCNTG_TRNSFRD</preferredAbbreviation>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+<endValue>1</endValue>
+</rangeDef>
+</listOfRanges>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -104,13 +212,19 @@
 <engineerTo>
 <item key="AEFDAE93-361A-74FC-D9B0-896822C5F2BB" value="true"/>
 <item key="9F71AC75-C64B-3A4F-AE9B-7E0028CEC114" value="true"/>
+<item key="9D37A54F-1C11-31C4-737B-2F9B9E5FEEAE" value="true"/>
 <item key="24FC9E45-18D3-C550-6BAD-4693BE2883E4" value="true"/>
 <item key="6BCEF519-13E1-B08A-2794-C031B6E1ADA6" value="true"/>
+<item key="506C3777-4731-CD0A-8CFF-8965ED0252F3" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>4F588DB0-0B6E-24D8-3FF9-4F995D497228</attributeRef>
+<attributeRef>7CC5383F-ECB4-EAC3-61A5-48AB9537DB04</attributeRef>
+<attributeRef>F8A065F5-BB6D-6B10-886B-D5B6939A32A3</attributeRef>
 <attributeRef>762AF20D-A7F4-088B-2620-926AE61F3C9E</attributeRef>
+<attributeRef>0F1DE1A8-CB92-4663-F1A1-D878090DADA0</attributeRef>
+<attributeRef>5C89B892-92B3-7F6D-2208-C5123E74027F</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
