@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- File contains Custom Libraries Scripts -->
+<custom_libraries>
+	<lib id="890EE999-7784-D255-3D62-4A964C35C269" name="BIRD LDM Design validations" engine="Oracle Nashorn" methods="checkEntityTypeNameInRelationshipTypeName,subtypeIsDomainValueOfDisciminator,checkNamesInIncludeList" >
+		<script>
+			<![CDATA[// variable used to return custom message
+var ruleMessage;
+// variable used to return the type of the rule Error
+// or Warning and red/blue color will be used for result
+// if another custom type is returned (Problem in the rule below) 
+// then result is colored in yellow
+var errType;
+
+/**
+ *  SCRIPT NAME: Entity type name in relationship type name
+ *  PURPOSE: check names of relationship types  
+ *  OBJECT: applied on entity types in the logical model
+ *  SHORT DESCRIPTION: checks the relationship type of an entity type to 
+ *  see if the name of the entity type is part of the name of the
+ *  relationship type.
+ *  AUTHOR: Arjan Bos
+ *  DATE: 2023-01
+ */
+// variable used to write the log messages. 
+// There is 1 log message file per entity type because the
+// function is called for each entity type separately.
+
+// variable used to return custom message.
+var ruleMessage;
+
+// variable used to return the type of the rule "Error"
+// or "Warning" and red/blue color will be used for result
+// if another custom type is returned (Problem in the rule below) 
+// then result is colored in yellow
+var errType;
+
+// variable used to copy messages to the console
+var app_view;
+
+// variable used for the directory to save the files with the change comments in 
+var outputDir;
+
+function checkEntityTypeNameInRelationshipTypeName(entityType) {
+	outputDir = "D:/Data/klad/";
+ 	entityTypeName = entityType.getName();
+	retVal = true;
+	rlnTpSet = entityType.getRelations().toArray();
+	ruleMessage = "";
+   	errType="";
+   	for(var i = 0; i < rlnTpSet.length;i++){
+		rlnTp          = rlnTpSet[i]
+	 	rlnTpName      = rlnTp.getName();
+
+		if (rlnTp.isInheritanceRelation()) {
+			// nop
+		} else {
+		 	if (rlnTpName.contains(entityTypeName)) {
+		 		errType = "";
+		 		// outputFile.write("\nAll good")
+		 	} else {
+		 		errType="Error";
+		 		ruleMessage = "Relationship type '" + rlnTpName + 
+		 		              "' should contain entity type name '" + entityTypeName + 
+		 		              "', but it doesn't.";
+		 		retVal = false;
+				// output_file_name = outputDir + "relationshipCheck " + entityTypeName + ".txt";
+				output_file_name = outputDir + "relationshipCheck.txt";
+				outputFile = new java.io.FileWriter(output_file_name,true); // true makes it append, false makes it overwrite
+				outputFile.write("\n" + ruleMessage);
+				outputFile.write("\n" + "Updated the name of relationship type '" + rlnTpName 
+				                      + "' to include the correct spelling of the name of entity type '" 
+				                      + entityTypeName + "'.");
+		 		outputFile.flush(); // needed to clear the file buffer in memory
+		 		outputFile.close(); // needed to write the content of the file to disk
+		 		return retVal;
+		 	}
+		}
+	}
+	return retVal;
+}
+
+/**
+ * Test function to see how hard it is to put up a dialog box.
+ * This function will run for every entity type.
+ * Fully qualified java classes can be used directly in the code.
+ */
+function dialogTest(entity) {
+	if (entity.getName() == "Instrument") {
+		javax.swing.JOptionPane.showMessageDialog(null, entity.getCommentInRDBMS(), entity.getName(), javax.swing.JOptionPane.ERROR_MESSAGE);
+		return false;
+	}
+	return true;
+}
+
+function domainValuesCorrespondToSubtypes(domain) {
+	outputDir = "D:/Data/klad/";
+	outputFileName = outputDir + "domaininfo.txt";
+	outputFile = new java.io.FileWriter(outputFileName,true); // true makes it append, false makes it overwrite
+	outputFile.write("\n domain name:" + domain.getName());
+	//outputFile.write("\n domain values:" + domain.getValueList());
+	outputFile.write("\n domain usage:" + domain.getEngineerTo());
+	outputFile.flush();
+	outputFile.close();
+
+	return false;
+}
+
+function subtypeIsDomainValueOfDisciminator(entity){
+	outputDir = "D:/Data/klad/";
+	outputFileName = outputDir + "subtypeinfo.txt";
+	outputFile = new java.io.FileWriter(outputFileName,true); // true makes it append, false makes it overwrite
+	outputFile.write("\n entity type name: " + entity.getName());
+	retVal = true;
+
+	if (entity.isInheriting()) {
+		entityName = entity.getName();
+		superType = entity.getHierarchicalParent();
+		outputFile.write("\n has supertype: " + superType.getName());
+		ruleMessage = "";
+   		errType="";
+
+		if (checkNameInDomainListOfEntity(entityName, superType, outputFile)) {
+			ruleMesssage = "";
+			errType = "";
+			outputFile.write("\n\nMatch found\n\n");
+			retVal = true;
+		} else {
+			ruleMessage = "Subtype name '" + entityName +
+			              "' not found in a member of a domain of an attribute of superType '" + superType.getName() + "'.";
+              errType = "Error";
+              outputFile.write("\n------");
+              outputFile.write("\n" + ruleMessage);
+              outputFile.write("\n------");
+              retVal = false;
+		}
+	} else {
+		outputFile.write(" is a root entity type.");
+	}
+
+	outputFile.flush();
+	outputFile.close();
+
+	return retVal;
+}
+
+/**
+ * entityName is the name of the subtype
+ * entity is the name of the supertype
+ * outputFile is where to write the debug information
+ * returns true if the entityName matches a value of the domain of one of the attributes.
+ */
+function checkNameInDomainListOfEntity(entityName, entity, outputFile) {
+	entityNameInDomainValueMatch = false;
+	attrSet = entity.getAttributes().toArray();
+
+	if (attrSet.length > 1) {
+		outputFile.write("\n with " +attrSet.length + " attributes:");
+	} else if (attrSet.length > 0) {
+		outputFile.write("\n with attribute:");
+	} else {
+		outputFile.write("\n without attributes. \n");
+	}
+
+			
+	for(var i = 0; i < attrSet.length;i++){
+		attribute = attrSet[i];
+		outputFile.write("\n  " + attribute.getName());
+		outputFile.flush();
+		domain = attribute.getDomain();
+		outputFile.write(" - " + domain.getName()); 
+		outputFile.flush();
+		valueList = domain.getValueList();
+		if (valueList) {
+            	domainMemberMap = valueList.getValuesDescriptionMap();
+            	domainCodeSet = domainMemberMap.keySet().toArray();
+            	//m = member_map.keySet().toArray();			
+			for(var j = 0; j < domainCodeSet.length; j++) {
+				memberCode = domainCodeSet[j];
+				domainValue = domainMemberMap.get(memberCode);
+				outputFile.write("\n    value - " + domainValue);
+				outputFile.flush();
+				if (entityName == domainValue) {
+					entityNameInDomainValueMatch = true;
+					break;
+				}
+			}
+		}
+		if (entityNameInDomainValueMatch) {
+			break;
+		}
+	}
+	return entityNameInDomainValueMatch;
+}
+
+function checkNamesInIncludeList() {
+	// List of all entities in hierarchiers, which we want to keep in relational model
+	include = new java.util.ArrayList([
+	 // Party related
+	 'Country',
+	 'Party',
+	 'Entity role',
+	 // Rating system related
+	 'Rating system',
+	 'Rating grade',
+	 // Group related
+	 'Group',
+	 'Internal group role',
+	 // Assignments
+	 'Instrument Entity role assignment',
+	 'Credit facility Entity role assignment',
+	 'Security Entity role assignment',
+	 'Security position',
+	 'Long security position Prudential portfolio assignment',
+	 'Long security position Prudential Portfolio assignment Accounting classification for financial assets assignment',
+	 'Long debt security position Prudential portfolio assignment encumbrance data',
+	 'Long equity or fund security position Prudential portfolio assignment encumbrance data',
+	 'Long security position Prudential portfolio assignment risk data',
+	 'Prudential portolio',
+	 'Prudential portfolio',
+	 'Accounting classification',
+	 'Master agreement Entity role assignment',
+	 'Exchange tradable derivative position', 
+	 'Exchange tradable derivative position role',
+	 'Subsidiary, joint venture and associate Other organisation role assignment',
+	 // Instrument related
+	 'Instrument',
+	 'Repurchase agreement component',
+	 'Security borrowing and lending transaction including cash as collateral component',
+	 'Security Security repurchase agreement component assignment',
+	 // uncomment if verison wo role concept
+	 //'Over the counter (OTC) Derivative role',
+	 'Master agreement',
+	 'Protection arrangement',
+	 'Collateral',
+	 'Security and exchange tradable derivative',
+	 'Asset pool (subject to a Securitisation and other credit transfer)',
+	 // Securitisation
+	 'Covered bond program',
+	 'Traditional securitisation', 
+	 'Synthetic securitisation',
+	 'Credit transfer other than securitisation and covered bond program',
+	 'Tranche in a synthetic securitisation without SSPE',
+	 // BSI
+	 'Non-financial asset',
+	 'Cash on hand',
+	 'Financial asset in the form of a debt security position',
+	 'Financial asset in the form of an equity or fund security position',
+	 'Financial asset in the form of an instrument',
+	 'Financial asset in the form of an instrument or security position',
+	 // Disjoint subtypes 
+	 'Financial asset according to International Financial Reporting Standard (IFRS)',
+	 'Financial asset according to national general accepted accounting principles (nGAAP)',
+	 'Non-financial liability',
+	 'Financial liability in the form of a debt security issued','Financial liability in the form of an instrument',
+	 'Off-balance sheet item given in the form of an Off-balance sheet instrument',
+	 'Off-balance sheet item given in the form of a Credit facility',
+	 'Off-balance sheet item received in the form of an instrument',
+	 'Off-balance sheet item received in the form of a credit facility',
+	
+	 // Credit facility related
+	 'Credit facility role',
+	
+	 // Additonal from second option draft 
+	 'Abstract instrument role', 
+	 'Financial asset instrument Collateral received instrument assignment',
+	 'Financial asset instrument role',
+	 'Financial liability instrument role',
+	 'Instrument hedged by Over the counter (OTC) Derivative',
+	
+	 // Additional master types
+	 'Default status',
+	 'Forbearance measure',
+	 'Model Context',
+	 'Accounting classification',
+	 'Subordinated debt type',
+	
+	 // Address
+	 'Postal code',
+	 'Address (used for reporting)',
+	 'Financial contract'
+	   
+	 ]);
+	outputDir = "D:/Data/klad/";
+	outputFileName = outputDir + "/includeCheck.txt";
+	outputFile = new java.io.FileWriter(outputFileName,false); // true makes it append, false makes it overwrite
+
+	
+
+}]]>
+		</script>
+	</lib>
+</custom_libraries>

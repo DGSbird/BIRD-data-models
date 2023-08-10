@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9FAAF878-15C8-B0F6-4600-960FE7D9E049" name="Repurchase_agreement_component">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Repurchase agreement component is a component of a (Reverse) Repurchase agreement, i.e. either a cash leg or a security leg.]]></commentInRDBMS>
+<generatorID>C231ED66-3962-9C00-AE08-B830072D03A6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Repurchase_component_type" id="B07CFED4-4C98-8702-D1AA-AB09F1BA12C6">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between the security and the cash leg.]]></comment>
+<generatorID>27585DB5-6962-A183-079A-C86D83A39F17</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>B4EC1EB6-B4CF-3F87-6349-5C54D23FD2B2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Repurchase_agreement_Instrument_identifier" id="17E23B60-E01D-6C3D-3DA3-3A1E602942B7">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<comment><![CDATA[The instrument identifier of the involved repurchase agreement.]]></comment>
+<generatorID>4B2BD8B9-0938-780C-E83B-EFB7F7879C3D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1302F929-B112-DC14-2000-9928F4524A51" referredColumn="A0FE4991-1E41-FE59-6F82-43D1A695B8C7"/>
+</associations>
+</Column>
+<Column name="Reference_date" id="0D863AB0-2A91-A9D6-08F4-E13204CA0FCC">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>859AB0C7-1422-2BCA-6050-D7138E03A372</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1302F929-B112-DC14-2000-9928F4524A51" referredColumn="3EE86456-FF33-708B-AFE7-CFBE686C99FF"/>
+</associations>
+</Column>
+<Column name="Reporting_agent_identifier" id="1C669804-80CB-E18C-8763-A9B8D3CC4412">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>814ABDA0-1477-EE36-FCE6-393B2D1E8C25</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1302F929-B112-DC14-2000-9928F4524A51" referredColumn="C422443C-7AE0-F98D-0A29-D8D9A6F08F3F"/>
+</associations>
+</Column>
+<Column name="Currency" id="FDFD818C-87C6-3648-83CF-988824E2567E">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<comment><![CDATA[The currency code according to ISO4217.]]></comment>
+<generatorID>6BCE7F4C-4AE2-F3CC-DBA2-4C40C502417B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>9af1c1d9-7914-4052-866a-ee27f7d5380d</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nominal_amount" id="542B2529-054D-0C56-CF9C-AAA69B45334B">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<comment><![CDATA[Holding amount at nominal value]]></comment>
+<generatorID>2399196E-106C-53A1-8347-827DAAE6EE39</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E9FB734E-723E-A8F8-2C53-48A6DC0799B9" name="Repurchase_agreement_component_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<generatorID>2937DCD0-3F46-54CD-05AC-C3C09106D74E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B07CFED4-4C98-8702-D1AA-AB09F1BA12C6"/>
+<colUsage columnID="17E23B60-E01D-6C3D-3DA3-3A1E602942B7"/>
+<colUsage columnID="0D863AB0-2A91-A9D6-08F4-E13204CA0FCC"/>
+<colUsage columnID="1C669804-80CB-E18C-8763-A9B8D3CC4412"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DE740B5B-A9EE-11DE-1649-22F5E8DFD148" name="Repurchase_agreement_component_Instrument_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<generatorID>0AF24D8D-30D3-5418-AA96-7DB617F41B39</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17E23B60-E01D-6C3D-3DA3-3A1E602942B7"/>
+<colUsage columnID="0D863AB0-2A91-A9D6-08F4-E13204CA0FCC"/>
+<colUsage columnID="1C669804-80CB-E18C-8763-A9B8D3CC4412"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

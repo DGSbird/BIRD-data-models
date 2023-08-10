@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="49F4BD9E-182A-4501-E48D-51E93EF7F7DB" name="Instrument_hedged_by_Over_the_counter_(OTC)_Derivative">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[An Instrument hedged by Over the counter (OTC) Derivative is the combination of an Instrument and an Over the counter (OTC) Derivative as a hedge that indicates which Instrument is hedged by which Over the counter (OTC) Derivative (acting in a the role of an Over the counter (OTC) Derivative as a hedge).]]></commentInRDBMS>
+<generatorID>EB096E17-76EB-145F-9304-28FF226AD063</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<ordsAlias>instrument_hedged_by_over_the_counter_otc_derivative</ordsAlias>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Over_the_counter_(OTC)_Derivative_Instrument_identifier" id="76731300-6FAE-5A5B-A750-110FCBDA3720">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<comment><![CDATA[The instrument identifier of the invovled over the counter derivative.]]></comment>
+<generatorID>3C25A68D-5FB4-D2DD-A41C-ABCF454E9131</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4E7FB7FB-C128-B1A4-8BA3-1408A15768D6" referredColumn="7EC78492-1B2E-9D22-C90D-0AEE0BF5FE37"/>
+</associations>
+</Column>
+<Column name="Hedged_Instrument_identifier" id="13D33F04-E3BC-B391-CDF6-ED4F38D576FA">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<comment><![CDATA[The instrument identifier of the hedged instrument.]]></comment>
+<generatorID>03B297CF-2A88-EB82-1500-2C81BE54136F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4E7FB7FB-C128-B1A4-8BA3-1408A15768D6" referredColumn="FE3D1DBC-57CD-EA10-65E3-19FD609E34E9"/>
+<colAssociation fkAssociation="4C5017ED-C1C5-B882-CCF4-E55C2F17369F" referredColumn="A0FE4991-1E41-FE59-6F82-43D1A695B8C7"/>
+</associations>
+</Column>
+<Column name="Reference_date" id="FB50D78C-6940-B8B8-41E8-0FB3DEA902B9">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>88D79DD8-1047-FE15-EFB9-9E38DFF0BE00</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4E7FB7FB-C128-B1A4-8BA3-1408A15768D6" referredColumn="38F775E2-8D0D-F6CA-596B-640DE66C1FD5"/>
+<colAssociation fkAssociation="4C5017ED-C1C5-B882-CCF4-E55C2F17369F" referredColumn="3EE86456-FF33-708B-AFE7-CFBE686C99FF"/>
+</associations>
+</Column>
+<Column name="Reporting_agent_identifier" id="82DC8068-B045-B011-A60E-BF32AB98BD49">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>CC230DB7-91A5-BCB2-5D84-0DF25F9771EC</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4C5017ED-C1C5-B882-CCF4-E55C2F17369F" referredColumn="C422443C-7AE0-F98D-0A29-D8D9A6F08F3F"/>
+</associations>
+</Column>
+<Column name="Type_of_Abstract_instrument_role" id="41BC7093-A909-171D-72C6-BA27BFFB7054">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 15:20:38 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>E0FB3EFD-8533-9FA1-69F5-E24422894AA2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4E7FB7FB-C128-B1A4-8BA3-1408A15768D6" referredColumn="85ADD1D9-2B12-A9FB-F6C2-576FC1C05243"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="249B020B-D02F-21C5-56B4-30CB412CC2A2" name="Instrument_hedged_by_Over_the_counter_(OTC)_Derivative_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<generatorID>70B0C329-393C-DEF8-21CB-EA02F4E5C163</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="76731300-6FAE-5A5B-A750-110FCBDA3720"/>
+<colUsage columnID="13D33F04-E3BC-B391-CDF6-ED4F38D576FA"/>
+<colUsage columnID="FB50D78C-6940-B8B8-41E8-0FB3DEA902B9"/>
+<colUsage columnID="82DC8068-B045-B011-A60E-BF32AB98BD49"/>
+<colUsage columnID="41BC7093-A909-171D-72C6-BA27BFFB7054"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C40B091A-7050-E5C7-8465-25AF85D58691" name="Instrument_hedged_by_Over_the_counter_(OTC)_Derivative_Instrument_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<generatorID>B526125E-5941-395D-5B8C-86FCDEA1563F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13D33F04-E3BC-B391-CDF6-ED4F38D576FA"/>
+<colUsage columnID="FB50D78C-6940-B8B8-41E8-0FB3DEA902B9"/>
+<colUsage columnID="82DC8068-B045-B011-A60E-BF32AB98BD49"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3CB5A39D-308E-FACF-42C3-783B873C6EAA" name="Instrument_hedged_by_Over_the_counter_(OTC)_Derivative_Abstract_instrument_role_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-16 14:59:10 UTC</createdTime>
+<generatorID>DF3B7F67-DD6E-FEB7-5F06-35C098897302</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FB50D78C-6940-B8B8-41E8-0FB3DEA902B9"/>
+<colUsage columnID="76731300-6FAE-5A5B-A750-110FCBDA3720"/>
+<colUsage columnID="13D33F04-E3BC-B391-CDF6-ED4F38D576FA"/>
+<colUsage columnID="41BC7093-A909-171D-72C6-BA27BFFB7054"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,189 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_5" id="CCEA8329-7410-42D1-3EB7-F85A1E904071" name="Over the counter (OTC) Credit default swap Collateral received instrument assignment">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-01-26 14:11:12 UTC</createdTime>
+<commentInRDBMS><![CDATA[Over the counter (OTC) Credit default swap Collateral received instrument assignment is the combination of Over the counter (OTC) Credit default swap and Collateral received instrument that indicates which Over the counter (OTC) Credit default swap is linked to which Collateral received instrument. 
+
+Because there can be more than one CDS for one instrument, only one can become eligible as a guarantee for that instrument. However, all CDSes are linked here.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="C083FD85-D1B9-E583-74F8-D21AEF72E2BC" value="false"/>
+<item key="2F95CE3A-CB8C-BD28-A553-EDBE7F94003D" value="false"/>
+<item key="5CF11FB1-F95F-60BC-DA98-ABFECEE7315A" value="false"/>
+<item key="D692C862-C9D4-A57D-98F6-C0D7D8DBCCCF" value="false"/>
+</engineerTo>
+<typeID>BA6872F2-94CA-21F5-EE67-2D64E8105B0E</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>1DD8C546-8ABB-E1E3-5242-D51324C3948E</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>OTC_CRDT_DFLT_SWP_CLLTRL_RCVD_INSTRMNT_ASSGNMNT</preferredAbbreviation>
+<foldedAttributesMap>
+<item key="0BAB137A-C061-B78D-17A4-CFC7246FAF36" value="051EB560-7317-72D1-4A7D-319745AA149A"/>
+<item key="FF1F2CE3-A3EC-4BFF-4110-5B6B856F528D" value="FE12EA21-2A64-A785-2FE4-9F31253AF9EB"/>
+</foldedAttributesMap>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Over the counter (OTC) Credit default swap Instrument identifier" id="C86D8E2C-F379-8DFA-4F64-66B5AA351048">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-01-26 14:34:11 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>7B981BE4-3C59-1323-5414-A695C34795C6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="C083FD85-D1B9-E583-74F8-D21AEF72E2BC" value="true"/>
+<item key="2F95CE3A-CB8C-BD28-A553-EDBE7F94003D" value="true"/>
+<item key="D692C862-C9D4-A57D-98F6-C0D7D8DBCCCF" value="true"/>
+<item key="5CF11FB1-F95F-60BC-DA98-ABFECEE7315A" value="true"/>
+</engineerTo>
+<referedAttribute>F7859051-3E5A-9707-1E2B-67B4383135E4</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>OTC_CRDT_DFLT_SWP_INSTRMNT_ID</preferredAbbreviation>
+</Attribute>
+<Attribute name="Over the counter (OTC) Credit default swap Instrument Reference date" id="0BAB137A-C061-B78D-17A4-CFC7246FAF36">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-01-26 14:34:11 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>7B981BE4-3C59-1323-5414-A695C34795C6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="C083FD85-D1B9-E583-74F8-D21AEF72E2BC" value="true"/>
+<item key="2F95CE3A-CB8C-BD28-A553-EDBE7F94003D" value="true"/>
+<item key="D692C862-C9D4-A57D-98F6-C0D7D8DBCCCF" value="true"/>
+<item key="5CF11FB1-F95F-60BC-DA98-ABFECEE7315A" value="true"/>
+</engineerTo>
+<referedAttribute>9ECE8643-3670-4EAE-A455-B5EF4C2CE45A</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>OTC_CRDT_DFLT_SWP_INSTRMNT_RFRNC_DT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Over the counter (OTC) Credit default swap Instrument Reporting agent identifier" id="FF1F2CE3-A3EC-4BFF-4110-5B6B856F528D">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-01-26 14:34:11 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>7B981BE4-3C59-1323-5414-A695C34795C6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="C083FD85-D1B9-E583-74F8-D21AEF72E2BC" value="true"/>
+<item key="2F95CE3A-CB8C-BD28-A553-EDBE7F94003D" value="true"/>
+<item key="D692C862-C9D4-A57D-98F6-C0D7D8DBCCCF" value="true"/>
+<item key="5CF11FB1-F95F-60BC-DA98-ABFECEE7315A" value="true"/>
+</engineerTo>
+<referedAttribute>BB6D9386-34F3-FCB8-F6D0-4BB43D4EAAA8</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>OTC_CRDT_DFLT_SWP_INSTRMNT_RPRTNG_AGNT_ID</preferredAbbreviation>
+</Attribute>
+<Attribute name="Over the counter (OTC) Credit default swap Instrument role type" id="23C5254C-3103-1E52-C362-75C77CC66D74">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-01-26 14:35:14 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different roles an instrument may act in. Examples are financial asset instrument, financial liability instrument.]]></comment>
+<generatorID>8EF7A110-769B-48E9-6303-AADB30E29F90</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="C083FD85-D1B9-E583-74F8-D21AEF72E2BC" value="true"/>
+<item key="2F95CE3A-CB8C-BD28-A553-EDBE7F94003D" value="true"/>
+<item key="D692C862-C9D4-A57D-98F6-C0D7D8DBCCCF" value="true"/>
+<item key="5CF11FB1-F95F-60BC-DA98-ABFECEE7315A" value="true"/>
+</engineerTo>
+<referedAttribute>25388038-025D-99E8-CF86-3AB697F8D586</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>8e78f30b-610e-404e-97c5-60fa855125db</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>OTC_CRDT_DFLT_SWP_INSTRMNT_RL_TYP</preferredAbbreviation>
+</Attribute>
+<Attribute name="Over the counter (OTC) Credit default swap received as collateral instrument identifier" id="DAB6A724-4BC9-1278-9C88-0832ADCB6CF0">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-01-26 14:35:14 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>8EF7A110-769B-48E9-6303-AADB30E29F90</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="C083FD85-D1B9-E583-74F8-D21AEF72E2BC" value="true"/>
+<item key="2F95CE3A-CB8C-BD28-A553-EDBE7F94003D" value="true"/>
+<item key="D692C862-C9D4-A57D-98F6-C0D7D8DBCCCF" value="true"/>
+<item key="5CF11FB1-F95F-60BC-DA98-ABFECEE7315A" value="true"/>
+</engineerTo>
+<referedAttribute>2AA5F1F8-7222-F0EE-9769-936B5346CE62</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>OTC_CRDT_DFLT_SWP_RCVD_CLLTRL_INSTRMNT_ID</preferredAbbreviation>
+</Attribute>
+<Attribute name="Over the counter (OTC) Credit default swap received as collateral instrument Reference date" id="051EB560-7317-72D1-4A7D-319745AA149A">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-01-26 14:35:14 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>8EF7A110-769B-48E9-6303-AADB30E29F90</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="C083FD85-D1B9-E583-74F8-D21AEF72E2BC" value="true"/>
+<item key="2F95CE3A-CB8C-BD28-A553-EDBE7F94003D" value="true"/>
+<item key="D692C862-C9D4-A57D-98F6-C0D7D8DBCCCF" value="true"/>
+<item key="5CF11FB1-F95F-60BC-DA98-ABFECEE7315A" value="true"/>
+</engineerTo>
+<referedAttribute>7F530CBF-4627-C7D1-6C50-AB1FC96056B0</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>OTC_CRDT_DFLT_SWP_RCVD_CLLTRL_INSTRMNT_RFRNC_DT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Over the counter (OTC) Credit default swap received as collateral instrument Reporting agent identifier" id="FE12EA21-2A64-A785-2FE4-9F31253AF9EB">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-01-26 14:35:14 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>8EF7A110-769B-48E9-6303-AADB30E29F90</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="C083FD85-D1B9-E583-74F8-D21AEF72E2BC" value="true"/>
+<item key="2F95CE3A-CB8C-BD28-A553-EDBE7F94003D" value="true"/>
+<item key="D692C862-C9D4-A57D-98F6-C0D7D8DBCCCF" value="true"/>
+<item key="5CF11FB1-F95F-60BC-DA98-ABFECEE7315A" value="true"/>
+</engineerTo>
+<referedAttribute>CB7734D4-5ECD-011C-BF59-61AAD44D205B</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>OTC_CRDT_DFLT_SWP_RCVD_CLLTRL_INSTRMNT_RPRTNG_AGNT_ID</preferredAbbreviation>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BFC27711-2A91-2CFB-B8D7-440F58DFD4E6" name="Over the counter (OTC) Credit default swap Collateral received instrument assignment PK">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-01-26 14:34:11 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="C083FD85-D1B9-E583-74F8-D21AEF72E2BC" value="true"/>
+<item key="2F95CE3A-CB8C-BD28-A553-EDBE7F94003D" value="true"/>
+<item key="D692C862-C9D4-A57D-98F6-C0D7D8DBCCCF" value="true"/>
+<item key="5CF11FB1-F95F-60BC-DA98-ABFECEE7315A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C86D8E2C-F379-8DFA-4F64-66B5AA351048</attributeRef>
+<attributeRef>0BAB137A-C061-B78D-17A4-CFC7246FAF36</attributeRef>
+<attributeRef>FF1F2CE3-A3EC-4BFF-4110-5B6B856F528D</attributeRef>
+<attributeRef>23C5254C-3103-1E52-C362-75C77CC66D74</attributeRef>
+<attributeRef>DAB6A724-4BC9-1278-9C88-0832ADCB6CF0</attributeRef>
+<attributeRef>051EB560-7317-72D1-4A7D-319745AA149A</attributeRef>
+<attributeRef>FE12EA21-2A64-A785-2FE4-9F31253AF9EB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,10 +1,3 @@
-CHANGE DOMAIN ACCOUNTING CLASSIFICATION
-COPY DOMAINS FROM DEFAULTDOMAINS
-
-
-
-
-
 Instructions for using the forward engineering scripts:
 
 a) Local settings:
@@ -22,21 +15,16 @@ d) Run scripts in order:
 	1.	Replace foreign key on folded columns
 	2.	!Entity role and Abstract instrument role
 			- if we want full names for columns and tables: change is_preferred_abbreviation to false;
-	3.	Save and close design, reopen
 	4.	!Generalisation
 			- if we want full names for columns and tables: change is_preferred_abbreviation to false;
-	5. 	Set foreign keys to primary key index
+	5. 	Replace foreign key on folded columns
 	6. 	Remove unique constraints
 	7.	!Optional one-to-one relationships
 			- if we want to keep derived tables separate: change merge_derived_entities to false; 
-	8.	Columns order
 	9.	Remove duplicated relationships (run multiple times, until duplicated are gone from generalisation assignments)
-	10.	- [Optional] (Helper) Find disjoint subtyping
-                - [Optional] (Helper) Map entites to members 
-                - ![Optional] Reduce discriminators 
+                ! Reduce discriminators 
 			- if we want full names for columns and tables: change is_preferred_abbreviation to false;
-	11.      - [Optional] (Helper) Add member Not applicable
-                - Amend columns domains and remove duplicated columns
+        10.     Amend columns domains and remove duplicated columns
                 The column name is seen in log file after running Amend columns domains and remove duplicated columns (no matching domain for this column)
 	12.	Merge one-to-one relationships
 			- if we want to keep derived tables separate: change merge_derived_entities to false;
@@ -44,8 +32,7 @@ d) Run scripts in order:
 	14.	Order columns alphabetically
 	15.	Columns order
 	16.	Remove numbers from columns
-	17.	![Optional] Add DERIVED_ to derived columns
-			- if we want full names for columns and tables: change is_preferred_abbreviation to false;
+	17.	Remove additional columns
 	18. 	Add foreign key domain constraints
 
 

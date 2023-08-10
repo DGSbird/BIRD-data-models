@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- File contains Custom Validation Scripts -->
+<custom__validation_scripts>
+	<scr id="D36CE536-D575-BE5C-625F-23DE23913C6B" name="Complex rule - check comments demo" object="Table" engine="Oracle Nashorn" type="Warning" var="table" library="my first library" method="checkcomments" purpose="validation" >
+		<script>
+			<![CDATA[]]>
+		</script>
+	</scr>
+	<scr id="D72E63EC-9DA2-3537-F8C9-AE8ACEDC73D2" name="Length of Not Null Constraint name" object="Column" engine="Oracle Nashorn" type="Error" var="column" library="my first library" method="NotNullConstr_Name_Length" purpose="validation" >
+		<script>
+			<![CDATA[]]>
+		</script>
+	</scr>
+	<scr id="3F2B77AE-F97F-EF6D-4D6D-C9FE4CC78999" name="Optional FK with mandatory columns" object="Index/Constraint" engine="Oracle Nashorn" type="Warning" var="index" library="" method="null" purpose="validation" >
+		<script>
+			<![CDATA[var index;
+// define function - function parameter doesn't need to be named index
+function checkFKColumns(index){
+  //check it's foreign key index, otherwise FK is null
+ if(index.isFK()){
+ 	if(!index.getFKAssociation().isMandatory()){
+	 cols = index.getElements();
+	 for(var i=0;i<cols.length;i++){
+		if(cols[i].isMandatory()){
+			return false;
+		}
+	 }
+ 	}
+ }
+ return true;
+}
+// invoke the function
+checkFKColumns(index);]]>
+		</script>
+	</scr>
+	<scr id="731D6664-100C-557F-BCAB-6052F91E3684" name="Entity type name in relationship type name" object="Entity" engine="Oracle Nashorn" type="Warning" var="entity" library="" method="null" purpose="validation" >
+		<script>
+			<![CDATA[/**
+ *  SCRIPT NAME: Entity type name in relationship type name
+ *  PURPOSE: check names of relationship types  
+ *  OBJECT: applied on entity types in the logical model
+ *  SHORT DESCRIPTION: checks the relationship type of an entity type to 
+ *  see if the name of the entity type is part of the name of the
+ *  relationship type.
+ *  AUTHOR: Arjan Bos
+ */
+
+// variable used to return custom message
+var ruleMessage;
+
+// variable used to return the type of the rule "Error"
+// or "Warning" and red/blue color will be used for result
+// if another custom type is returned (Problem in the rule below) 
+// then result is colored in yellow
+var errType;
+
+// variable used to copy messages to the console
+var app_view;
+
+function checkEntityTypeNameInRelationshipTypeName(entityType) {
+	app_view = model.getAppView();
+	app_view.logMessage("I'm here!");
+	retVal = true;
+	rlnTpSet = entityType.getRelations().toArray();
+	ruleMessage = "";
+	for(var i = 0; i < rlnTpSet.length;i++){
+		rlnTp          = rlnTpSet[i]
+	 	entityTypeName = entityType.getName();
+	 	rlnTpName      = rlnTp.getName();
+	 	app_view.logMessage("Entity type       " + entityTypename);
+	 	app_view.logMessage("Relationship Type " + rlnTpName);
+
+	 	if (rlnTpName.contains(entityTypeName)) {
+	 		errType = "";
+	 		app_view.logMessage("All good")
+	 	} else {
+	 		   errType="Error";
+	 		ruleMessage = "Relationship type '" + rlnTpName + "' should contain entity type name '" + entityTypeName + "', but it doens't.";
+	 		retVal = false;
+	 		app_view.logMessage(ruleMessage);
+	 		return retVal;
+	 	}
+	 }
+	 return retVal;
+}]]>
+		</script>
+	</scr>
+</custom__validation_scripts>

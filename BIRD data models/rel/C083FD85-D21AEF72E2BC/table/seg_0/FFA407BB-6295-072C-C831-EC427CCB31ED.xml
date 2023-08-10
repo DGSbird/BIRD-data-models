@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FFA407BB-6295-072C-C831-EC427CCB31ED" name="CRDT_FCLTY_CLLTRL_ASSGNMNT">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-15 14:52:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Credit facility Collateral assignment is the combination of a Credit facility and a Collateral that indicates which Credit facility is assigned to which Collateral.]]></commentInRDBMS>
+<generatorID>5E02F623-CC8D-9A20-AB10-A47E24CCF5C2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>8901219F-AB49-127E-838D-9EE79906B11E</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CRDT_FCLTY_ID" id="AFAE4D10-B9BE-46F9-D96E-53D7A5D0BFF4">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-15 14:52:45 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each credit facility.]]></comment>
+<generatorID>CB11BBE1-B9E5-53A1-CAE8-C3B917098B48</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EEEE104A-B90F-CE96-1B7E-E4FE5C44AA06" referredColumn="784FAB29-45D3-DEC7-2BD7-39E3422F2481"/>
+</associations>
+</Column>
+<Column name="CLLTRL_ID" id="63659BB5-04C1-0E3E-2C3A-82F3B2BCA73D">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-15 14:52:45 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each collateral.]]></comment>
+<generatorID>C67F38BF-39AC-272E-9AF1-C6EFBFCC0ACA</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A9276905-90AF-A317-4A8E-56C657CBF008" referredColumn="FA535725-16EF-B3FC-767C-D643965A085F"/>
+</associations>
+</Column>
+<Column name="DT_RFRNC" id="37F32B55-BA46-F226-6E8A-837B15B8E4D4">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-15 14:52:45 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>F6F1EF7F-76A7-D528-E02B-F72B2C33EB1E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<abbreviation>DT_RFRNC</abbreviation>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A9276905-90AF-A317-4A8E-56C657CBF008" referredColumn="BFD75458-70FE-8556-CFA7-F10D9703BA0E"/>
+<colAssociation fkAssociation="EEEE104A-B90F-CE96-1B7E-E4FE5C44AA06" referredColumn="66F30DCA-04FD-6105-4D5A-02FAE09417E5"/>
+</associations>
+</Column>
+<Column name="RPRTNG_AGNT_ID" id="6381A0DD-06B4-954A-84B9-E7433C10F28B">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-15 14:52:45 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>4491E758-C1CB-81EB-FF56-FCA1389567FB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A9276905-90AF-A317-4A8E-56C657CBF008" referredColumn="782FBF8A-EDCC-E657-6453-EE886FA1A00B"/>
+<colAssociation fkAssociation="EEEE104A-B90F-CE96-1B7E-E4FE5C44AA06" referredColumn="55F29E65-6642-35EB-7156-AE4AEFAE891D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="74F772E2-E3A4-DA2D-E54F-DFF3ACC190DD" name="CRDT_FCLTY_CLLTRL_ASSGNMNT_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-15 14:52:45 UTC</createdTime>
+<generatorID>B0A1FD04-85AF-6E78-6D93-10206C34226E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AFAE4D10-B9BE-46F9-D96E-53D7A5D0BFF4"/>
+<colUsage columnID="63659BB5-04C1-0E3E-2C3A-82F3B2BCA73D"/>
+<colUsage columnID="37F32B55-BA46-F226-6E8A-837B15B8E4D4"/>
+<colUsage columnID="6381A0DD-06B4-954A-84B9-E7433C10F28B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5E63D522-DA2A-4130-5CA7-A8C40FD2518F" name="CRDT_FCLTY_CLLTRL_ASSGNMNT_CLLTRL_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-15 14:52:45 UTC</createdTime>
+<generatorID>36A77B2A-25CA-B675-C958-2A3FDFD3E97E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="63659BB5-04C1-0E3E-2C3A-82F3B2BCA73D"/>
+<colUsage columnID="37F32B55-BA46-F226-6E8A-837B15B8E4D4"/>
+<colUsage columnID="6381A0DD-06B4-954A-84B9-E7433C10F28B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EBCF53BB-C69C-6C49-47ED-902021C782A2" name="CRDT_FCLTY_CLLTRL_ASSGNMNT_CRDT_FCLTY_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-06-15 14:52:45 UTC</createdTime>
+<generatorID>FDA0ABE6-7F31-2A9A-4A4E-A6B9489A251B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AFAE4D10-B9BE-46F9-D96E-53D7A5D0BFF4"/>
+<colUsage columnID="37F32B55-BA46-F226-6E8A-837B15B8E4D4"/>
+<colUsage columnID="6381A0DD-06B4-954A-84B9-E7433C10F28B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
