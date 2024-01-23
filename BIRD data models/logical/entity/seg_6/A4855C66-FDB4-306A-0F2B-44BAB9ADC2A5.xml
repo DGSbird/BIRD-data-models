@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_6" id="A4855C66-FDB4-306A-0F2B-44BAB9ADC2A5" name="Non-performing debt security">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-10-25 12:41:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[Non-performing debt security is a debt security that is classified as non-performing.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="false"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="false"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="false"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="false"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="false"/>
+</engineerTo>
+<typeID>178C245A-208C-578D-F0C5-C390D8542711</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>BE76A78F-7CDB-648D-9F71-76109033434A</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>NN_PRFRMNG_DBT_SCRTY</preferredAbbreviation>
+<changeRequests>
+<requestID>18551-276</requestID>
+</changeRequests>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Forbearance measure count" id="53DA367D-56F5-BEF0-9B16-4743BCC8D8C4">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-10-25 13:30:02 UTC</createdTime>
+<comment><![CDATA[Number of times an exposure has been under forbearance measures. Exposures classified as forborne at the reporting reference date, to which forbearance measures have been applied at two, respectively more than two different points in time. That includes, among others, originally forborne exposures that exited the forborne status (cured forborne exposures), but were granted new forbearance measures after that.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>3880C9D4-D966-103E-57C9-CAD195D367C5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>FRBRNC_MSR_CNT</preferredAbbreviation>
+<changeRequests>
+<requestID>18851-343</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Non-performing exit criteria met indicator" id="E039B655-5D69-A3E4-BD0B-B7F404BC02FC">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-10-25 13:30:44 UTC</createdTime>
+<comment><![CDATA[Non-performing forborne exposures that failed to meet the non-performing exit criteria.]]></comment>
+<generatorID>2DE63ED3-3488-6730-E399-D078324C0E9C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>BC4D9918-6BBA-EAE6-37D3-67C7E48B91CD</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>D48531D1-F9C0-AFE2-212A-9198FA2A14E7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>NN_PRFRMNG_EXT_CRTR_MT_INDCTR</preferredAbbreviation>
+<changeRequests>
+<requestID>18851-343</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Multiple forbearance measures in place indicator" id="338AFD4F-7051-157D-31F8-A9EB12EFB13D">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-10-25 13:31:26 UTC</createdTime>
+<comment><![CDATA[Forbearance measures were granted in addition to already existing forbearance measures. It concerns forborne exposures under probation to which forbearance measures were applied in addition to forbearance measures granted at an earlier point in time, without the exposure having cured in between.]]></comment>
+<generatorID>513D85C7-116E-958B-DA5A-433E5D076994</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>C982D586-D1BC-3174-9FE1-8CD1E6590BCB</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>0AA28620-05FF-1C8D-CC3A-C767E643EA1C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>MLTPL_FRBRNC_MSRS_INDCTR</preferredAbbreviation>
+<changeRequests>
+<requestID>18851-343</requestID>
+</changeRequests>
+</Attribute>
+</attributes>
+</Entity>

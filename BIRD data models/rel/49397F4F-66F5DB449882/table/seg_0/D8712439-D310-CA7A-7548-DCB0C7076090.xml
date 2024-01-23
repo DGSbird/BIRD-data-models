@@ -1,0 +1,191 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D8712439-D310-CA7A-7548-DCB0C7076090" name="Entity_role">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[An Entity role is a role a Party (or a subtype of Party) may act in.]]></commentInRDBMS>
+<generatorID>2FC3E280-28F1-343C-9290-A116F833830A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>7A67499C-0479-82E2-9F82-A693B748701D</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Reference_date" id="406EE51F-9270-3EFE-35F6-8B9C852C2AF2">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>718412D3-3FE3-ADBF-A962-16315E5555A5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="089426FE-6E19-6F69-67C0-3E73A281A6F0" referredColumn="19D96D37-E18E-1197-45E3-9D386509C7A0"/>
+</associations>
+</Column>
+<Column name="Party_role_type" id="581EF8F2-2914-6E92-26D6-298B621098A7">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[The organisation role.]]></comment>
+<generatorID>6DC2FB7F-77C0-13EB-4DBA-541EDC1DD702</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>35801F96-9492-4C2C-53FD-2CD652A27F69</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Party_identifier" id="AF11C9B5-40EB-FB2F-86DA-9BEB66FDC2D3">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[The party identifier of the involved organisation.]]></comment>
+<generatorID>7B6A00F4-FE2E-4800-0AAA-1A96382FA9CA</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="089426FE-6E19-6F69-67C0-3E73A281A6F0" referredColumn="2C70F245-EADA-37A3-D04C-E537D6D5AAE9"/>
+</associations>
+</Column>
+<Column name="Reporting_agent_identifier" id="B7E77E64-F880-55B8-A47B-771C70DB2CBE">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>F8CE95B6-D516-BA32-1EE9-825A8A684408</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="089426FE-6E19-6F69-67C0-3E73A281A6F0" referredColumn="F9C0BE7B-1574-3122-24F0-7B889707FC03"/>
+</associations>
+</Column>
+<Column name="Entity_group_role_type" id="DF33FD9F-B1DE-1C19-7826-920CE9EC03CE">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of roles which are applicable to a group of legal entities.]]></comment>
+<generatorID>53B0002F-5160-134E-6761-2D6EDFD3EFED</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>3360CB3E-B1D5-1A1E-E6DE-8D445E94D297</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Entity_role_type" id="E02B6E0B-02D5-E1A2-0F58-CB8DB2EC0188">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between party roles, organisation roles, central bank and private sector company roles and legal person roles.]]></comment>
+<generatorID>09ECBC2F-DA10-D166-659B-F9B8651D523E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>5DBBA043-C341-3470-A831-EFC982957AF9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Entity_transaction_role_type" id="8F13CB97-0FF0-99C9-016D-8A2EF9850046">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of roles where a role is specific to a transaction of the entity.]]></comment>
+<generatorID>14960A5A-FCEA-85F5-907E-312E33C353AC</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>34E648F0-659F-BC2F-B77B-7463468C1EF7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Equity" id="F7F38F53-055B-4A49-60FE-6D06B9E5418D">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[Equity at the last financial statement (see Finrep annex V 296.f)]]></comment>
+<generatorID>F1D41D22-88B2-C061-0EBD-91AD618DD884</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>14C89E8C-F57F-4505-832D-C97676924FD1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Profit_(loss)" id="0645FA37-AFA3-D945-5A36-6A0FE02C45A2">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[Profit or loss.]]></comment>
+<generatorID>5A35DFA3-629A-17BB-E729-D07CD9F49AF1</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>14C89E8C-F57F-4505-832D-C97676924FD1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Share_capital" id="BDD256A7-6F22-9FD3-AFE3-A78A49658922">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[Share capital according to Regulation (EU) 680/2014, Annex V, part 2.296(e): "‘Share capital of investee’ means the total amount of capital issued by the investee as at the reference date;"]]></comment>
+<generatorID>701B9B15-A3B9-7C21-F03B-0D1DBEB4F656</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Total_assets" id="80A8C81C-96F2-3ADF-3B53-474BA7A45A9C">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[Total assets.]]></comment>
+<generatorID>39C2CF2B-E5F8-CC28-9F3C-2371AB5F0909</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6DDDAA42-D38E-FB49-8B5C-43108B662A43" name="Entity_role__IDX">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:59:27 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="406EE51F-9270-3EFE-35F6-8B9C852C2AF2"/>
+<colUsage columnID="581EF8F2-2914-6E92-26D6-298B621098A7"/>
+<colUsage columnID="AF11C9B5-40EB-FB2F-86DA-9BEB66FDC2D3"/>
+<colUsage columnID="B7E77E64-F880-55B8-A47B-771C70DB2CBE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D26AB17E-06F7-3699-1946-E3A11088D710" name="Entity_role_Party_FKv3">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:25 UTC</createdTime>
+<generatorID>66658E6D-535C-BE86-3854-9DF0BA6FBB96</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF11C9B5-40EB-FB2F-86DA-9BEB66FDC2D3"/>
+<colUsage columnID="406EE51F-9270-3EFE-35F6-8B9C852C2AF2"/>
+<colUsage columnID="B7E77E64-F880-55B8-A47B-771C70DB2CBE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

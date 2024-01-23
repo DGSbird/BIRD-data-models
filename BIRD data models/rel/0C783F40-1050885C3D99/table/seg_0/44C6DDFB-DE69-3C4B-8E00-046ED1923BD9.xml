@@ -1,0 +1,271 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="44C6DDFB-DE69-3C4B-8E00-046ED1923BD9" name="Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_OTC_positions">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 15:14:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[A measured risk of an OTC position against a particular risk factor]]></commentInRDBMS>
+<generatorID>53C569B3-159D-54EB-E597-D42F8718538C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>1B94F88B-CE04-E04E-DE88-6866B6DBCB24</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Instrument_identifier" id="0E95C30F-ED2E-93A6-5925-189B0142CF2D">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 15:14:25 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>457C6D47-6CC8-6C63-8A9E-D9D45BFFBEB5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B4013BEA-118A-3A40-1DFE-2E37A78A882F" referredColumn="3FE925FF-2F29-D521-A373-5B55790D34FF"/>
+</associations>
+</Column>
+<Column name="Reference_date" id="374CA33A-BE70-4826-48A0-BA17E3B37F86">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 15:14:25 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>CFEA6C52-3B10-FE2D-44EA-BA79C2903D1D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B4013BEA-118A-3A40-1DFE-2E37A78A882F" referredColumn="64439D74-F337-E445-F890-CF6462847D0F"/>
+<colAssociation fkAssociation="FDE1708E-39B0-7C87-FE30-BEC93A738FCB" referredColumn="2786448F-7DE1-6A1C-4806-B0CC1FFD62F9"/>
+</associations>
+</Column>
+<Column name="Reporting_agent_identifier" id="FF935501-1966-6090-FCE0-60183DA36CC7">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 15:14:25 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>9283676D-2ECD-200D-CCE4-EB8D72B351C9</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B4013BEA-118A-3A40-1DFE-2E37A78A882F" referredColumn="3A9F1D8D-4B0A-8168-D3CF-81E76416012B"/>
+<colAssociation fkAssociation="FDE1708E-39B0-7C87-FE30-BEC93A738FCB" referredColumn="405EE8F9-D392-013C-CD1B-0DD784F992C3"/>
+</associations>
+</Column>
+<Column name="Risk_factor_identifier" id="D7F7B88D-72A0-6D03-6E20-EE2F694B9D8C">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 15:14:25 UTC</createdTime>
+<comment><![CDATA[Risk factor identifier is a number that uniquely identifies the Risk factor.]]></comment>
+<generatorID>CB906243-55AA-18FB-4612-B54140199C52</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FDE1708E-39B0-7C87-FE30-BEC93A738FCB" referredColumn="E07EEBC6-6CC1-A453-8A13-B84D89926AEB"/>
+</associations>
+</Column>
+<Column name="Currency_of_record" id="7A1A317F-6452-DFA6-C7DE-60FA35A22141">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-04 10:16:51 UTC</createdTime>
+<comment><![CDATA[Currency of record is the currency in which the curvature risk is measured.]]></comment>
+<generatorID>E92756AA-3FA8-BF69-7113-4371FB6757B6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>9af1c1d9-7914-4052-866a-ee27f7d5380d</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Shock_direction" id="0CAF0E1C-02CE-07EF-D099-609BB3AF350F">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-04 10:16:51 UTC</createdTime>
+<comment><![CDATA[The direction of the change in uderlying (up or down), for each non-linear position we will have an upshift and a downshift measure recorded.]]></comment>
+<generatorID>7B7E33A9-7832-7A06-AA13-73C50F182976</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>548009F7-2BC0-D536-F5F2-A332B899494E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Curvature_risk_weight" id="C3E31B15-5993-7194-4BFF-C070B65E2BEE">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-04 10:16:51 UTC</createdTime>
+<comment><![CDATA[The weight associated with the curvature.]]></comment>
+<generatorID>1D0B0EAE-4EB1-338E-4EE5-465CAC456456</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>A602B33C-0004-D05B-A4E1-4A2339C606D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="Curvature_valuation_difference" id="AA3D7854-CA50-7322-4A3B-180A91E26E51">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-04 10:16:51 UTC</createdTime>
+<comment><![CDATA[Curvature recorded as a difference between the normal valuation and  a revaluation after a small  increase OR decrease in an underyling risk factor, this is an amount interprted in the curency of record, e.g. 100 dollars. We only use carvature for non-linear instruments (e.g. options).]]></comment>
+<generatorID>ED0FAE04-C423-C393-78EA-2F46AFE9C955</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>A602B33C-0004-D05B-A4E1-4A2339C606D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="Delta_sensitivity" id="7F28E0B9-CEF7-C042-1B87-09E2B9EF18FD">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-04 10:16:51 UTC</createdTime>
+<comment><![CDATA[An amount interprted in the curency of record, e.g. 100 dollars.]]></comment>
+<generatorID>A1F43D20-D582-122A-A0E0-2409733DEF62</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>A602B33C-0004-D05B-A4E1-4A2339C606D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="Option_maturity" id="7641E83D-95C2-7EE0-DEB7-35BD6624634D">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-04 10:16:51 UTC</createdTime>
+<comment><![CDATA[The option maturity to which this sensitivity relates.]]></comment>
+<generatorID>99D62938-B7D9-17D7-26F3-262D8B28DA07</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>A602B33C-0004-D05B-A4E1-4A2339C606D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="Tenor" id="7EB4D328-AECB-B106-6DE9-702365CB0F85">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-04 10:16:51 UTC</createdTime>
+<comment><![CDATA[The tenor point of the related curve if this is a risk to a curve based risk factor.]]></comment>
+<generatorID>E8117BA0-ABBB-F44F-AC44-274A6CC08B85</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>A602B33C-0004-D05B-A4E1-4A2339C606D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="Underlying_residual_maturity" id="55E39F90-A2D3-1863-0BA0-13B0E5EA76FA">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-04 10:16:51 UTC</createdTime>
+<comment><![CDATA[Where required, the underlying residual maturity to which the sensitivity is wwa created. Required when we consider that the sensitivity came from a change in a volatility surface.]]></comment>
+<generatorID>769BE65F-3772-E71C-AB9A-B84E19CA08D3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>A602B33C-0004-D05B-A4E1-4A2339C606D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="Vega_sensitivity" id="CC4BAF35-A98F-C76C-74FE-1CCAF4E69DC6">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-04 10:16:51 UTC</createdTime>
+<comment><![CDATA[The sensitivity, as an amount (e.g. 100 dollars).]]></comment>
+<generatorID>6A23AB24-ABC7-3BC1-0BCC-A8E40E30FD88</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>A602B33C-0004-D05B-A4E1-4A2339C606D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FB020A5F-AFB1-2261-B989-C8DEB00782ED" name="Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_OTC_positions_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 15:14:26 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="0E95C30F-ED2E-93A6-5925-189B0142CF2D"/>
+<colUsage columnID="374CA33A-BE70-4826-48A0-BA17E3B37F86"/>
+<colUsage columnID="FF935501-1966-6090-FCE0-60183DA36CC7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E7B56ED6-BDAE-C369-78D3-F8E3134F0C27" name="Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_OTC_positions_Instrument_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 15:14:26 UTC</createdTime>
+<generatorID>850EF420-23A9-19F5-F6C0-43EBC06B8A50</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E95C30F-ED2E-93A6-5925-189B0142CF2D"/>
+<colUsage columnID="374CA33A-BE70-4826-48A0-BA17E3B37F86"/>
+<colUsage columnID="FF935501-1966-6090-FCE0-60183DA36CC7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D47F70D5-C85F-554D-D339-178EA917F1F6" name="Fundamental_review_of_the_trading_book_standard_approach_risk_measure_for_OTC_positions_Risk_factor_for_standardised_approach_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-04 10:49:02 UTC</createdTime>
+<generatorID>7D054294-945A-68F1-39F7-D11CD19B85F5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="374CA33A-BE70-4826-48A0-BA17E3B37F86"/>
+<colUsage columnID="FF935501-1966-6090-FCE0-60183DA36CC7"/>
+<colUsage columnID="D7F7B88D-72A0-6D03-6E20-EE2F694B9D8C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

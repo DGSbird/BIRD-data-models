@@ -1,0 +1,149 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_6" id="C2014617-CE32-E7F2-B8AE-95111CEDC71D" name="Equity risk factor for standardised approach">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-06-19 14:58:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[(1)	
+Delta equity: the equity delta risk factors are:
+
+(a)	
+all the equity spot prices; and
+
+(b)	
+all the equity repurchase agreement rates (equity repo rates).
+
+(2)	
+Vega equity:
+
+(a)	
+The equity vega risk factors are the implied volatilities of options that reference the equity spot prices as underlyings as defined along one dimension, the maturity of the option. This is defined as the implied volatility of the option as mapped to one or several of the following maturity tenors: 0.5 years, 1 year, 3 years, 5 years and 10 years.
+
+(b)	
+There is no vega risk capital requirement for equity repo rates.
+
+(3)	
+Curvature equity:
+
+(a)	
+The equity curvature risk factors are all the equity spot prices.
+
+(b)	
+There is no curvature risk capital requirement for equity repo rates.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="false"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="false"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="false"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="false"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="false"/>
+</engineerTo>
+<typeID>1B94F88B-CE04-E04E-DE88-6866B6DBCB24</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>569226D4-0B71-7630-0EE4-00E6F7A871C8</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>EQTY_RSK_FCTR</preferredAbbreviation>
+<documents usedDucuments="577C6671-054B-63C9-0FA7-48002B03D7C4"/>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Equity factor type" id="D1666B01-60AD-C8AE-5321-B6314F73C87D">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-06-19 15:01:03 UTC</createdTime>
+<comment><![CDATA[Equity factor type classifies Equity risk factorf into Spot or Repo Equity Risk Factor.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>10511173-094A-64DC-444F-BD030BDC9776</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>EQUTY_FCTR_TYP</preferredAbbreviation>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Equity Security identifier" id="DA1A532D-338A-996C-C405-4036DAE0FE96">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-08-15 09:06:25 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each security.]]></comment>
+<generatorID>0EABFA84-186D-4E3E-518E-05F8BD90E445</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>70004979-0BF5-B3D8-542D-0A190D5BA5BD</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>EQTY_SCRTY_ID</preferredAbbreviation>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Equity Security Reference date" id="34CB320C-7A24-109F-82F7-D246A9096D53">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-08-15 09:06:25 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>0EABFA84-186D-4E3E-518E-05F8BD90E445</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>DA168399-B716-B4C5-B7F2-C2620D929EC4</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>EQTY_SCRTY_RFRNC_DT</preferredAbbreviation>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Equity Security Reporting agent identifier" id="CB2F2C25-84A7-A162-F83A-3075457E5B75">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-08-15 09:06:25 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>0EABFA84-186D-4E3E-518E-05F8BD90E445</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>480FA821-32E6-C30D-2DB7-7BB8C85B6C0F</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>EQTY_SCRTY_RPRTNG_AGNT_ID</preferredAbbreviation>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+</Attribute>
+</attributes>
+</Entity>

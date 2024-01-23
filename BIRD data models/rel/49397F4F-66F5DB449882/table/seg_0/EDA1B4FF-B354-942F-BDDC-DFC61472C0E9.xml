@@ -1,0 +1,521 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EDA1B4FF-B354-942F-BDDC-DFC61472C0E9" name="Instrument">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[An Instrument is a product that establishes a financial relationship between a bank and its customer.
+In the context of accounting such a financial relationship may be considered a financial asset or a financial liabilty or an off-balance sheet item.]]></commentInRDBMS>
+<generatorID>54907B80-5ADD-5298-6AE7-54D1AC9CA6F6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Instrument_identifier" id="73E4AA44-C004-0FDB-1DAE-C1201345DA1A">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>F7859051-3E5A-9707-1E2B-67B4383135E4</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Reference_date" id="7CAE9D63-662B-D494-69E6-A64C09131289">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>9ECE8643-3670-4EAE-A455-B5EF4C2CE45A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B75E92E8-C269-9F87-8705-B8E02E3E6225" referredColumn="95FFD2BB-462E-E10E-885E-4FC03BC05956"/>
+<colAssociation fkAssociation="1D89F693-FC36-52DD-6037-EA4EBEAC4E5D" referredColumn="94CD582C-6707-54D8-262C-B4E694406FA0"/>
+<colAssociation fkAssociation="195080EA-A765-1ACE-4150-7077DCED8741" referredColumn="24FEABE4-FA5B-B29E-71A6-654014C7CA4F"/>
+<colAssociation fkAssociation="E77AE3E5-4D16-A758-7CF7-DA1CE7D0BEF7" referredColumn="AB0B8B0A-1425-F3A3-58EF-95C5260924ED"/>
+</associations>
+</Column>
+<Column name="Reporting_agent_identifier" id="9DC29510-8949-CF42-96B3-F38A96A10C9C">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>BB6D9386-34F3-FCB8-F6D0-4BB43D4EAAA8</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B75E92E8-C269-9F87-8705-B8E02E3E6225" referredColumn="EC31FB48-71DD-D15F-062C-5D4CE216BBD7"/>
+<colAssociation fkAssociation="1D89F693-FC36-52DD-6037-EA4EBEAC4E5D" referredColumn="16EFDE91-6543-3A4B-146F-DC2042EE73A5"/>
+<colAssociation fkAssociation="195080EA-A765-1ACE-4150-7077DCED8741" referredColumn="D32287BB-4824-D9A6-6DD5-2B49AF6B887B"/>
+<colAssociation fkAssociation="E77AE3E5-4D16-A758-7CF7-DA1CE7D0BEF7" referredColumn="A215DC33-00AA-34FD-2176-FF4096D6CF9B"/>
+</associations>
+</Column>
+<Column name="Financial_contract_identifier" id="84EADA61-5320-3206-F5B5-1037743106A3">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each financial contract.]]></comment>
+<generatorID>1541421C-04EF-E145-CDC6-FF13DC379AE3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="195080EA-A765-1ACE-4150-7077DCED8741" referredColumn="3657DE3D-BFFC-1EE5-8AF5-FF316FF0695F"/>
+</associations>
+</Column>
+<Column name="Credit_facility_identifier" id="8EFD2F66-1DA2-D880-A15C-16E6D0EBB72C">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each credit facility.]]></comment>
+<generatorID>CB1651E6-1314-F1B1-7A1D-DE986F4855D9</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1D89F693-FC36-52DD-6037-EA4EBEAC4E5D" referredColumn="47907704-0E50-6CBF-097A-685890BA1F14"/>
+</associations>
+</Column>
+<Column name="Balance_sheet_netting_identifier" id="40D5165A-6D26-7023-4CEF-C263B56ECF8C">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each a balance sheet netting.]]></comment>
+<generatorID>315382EF-00C2-733A-48E5-CEC1E5EC069F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B75E92E8-C269-9F87-8705-B8E02E3E6225" referredColumn="0461AE4A-64C5-EBF5-C069-E820F8E02084"/>
+</associations>
+</Column>
+<Column name="Debt_Security_identifier" id="62235BA5-E65A-241D-F001-C130CC4050FA">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[The security identifier of the involved debt security.]]></comment>
+<generatorID>0547C8D7-4CC7-0974-B7ED-F55B1F85283F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E77AE3E5-4D16-A758-7CF7-DA1CE7D0BEF7" referredColumn="B1AED93E-06C8-119C-1FCB-B983773D6BFB"/>
+</associations>
+</Column>
+<Column name="Commercial_real_estate_loan_indicator" id="2CF79254-BE2A-3F77-906F-60CAA971F818">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 13:54:53 UTC</createdTime>
+<comment><![CDATA[A Commercial real estate loan indicator distinguishes Loan (excluding repurchase agreement) derived data whether it is a commercial real estate loan or not.]]></comment>
+<generatorID>092F4A14-AF4F-9F34-9AB4-79BDF50A59B2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>29DE22BE-049A-8E06-7604-618C67DD23ED</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Currency" id="3E12C453-30DF-F546-43F3-DDBEBB0A1EEF">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[The currency code according to ISO4217.]]></comment>
+<generatorID>6C6D76CE-F872-363A-8524-E77CAABD7080</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>9af1c1d9-7914-4052-866a-ee27f7d5380d</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fiduciary_instrument_indicator" id="F2EAA4A8-3115-3622-ECF1-605A583DB203">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[Identification of instruments in which the observed agent acts in its own name but on behalf of and with the risk borne by a third party.]]></comment>
+<generatorID>1F0B6FA9-73AF-0EDD-9500-FCF8EB065522</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>af1ebfeb-d540-418a-b2e1-75024a24ef78</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Instrument_type_by_origin" id="F6E507D2-7680-3553-7B0A-B37D25CA0164">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish instrument by their type of origin. For example instruments arising from financial contracts or instruments arising from credit facilities.]]></comment>
+<generatorID>E6F132DD-310E-A45A-B11A-050E795B012C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>18e67227-ff3e-458a-8912-46488d4eb6dc</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Litigation_status" id="FE2AD1A6-32F5-8B1E-68DD-E6F5EE239D86">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[Litigation indicates the status of the litigation that the exposure is in.
+
+Finrep Annex V,  Part 2.321, 322: An exposure shall be ‘in pre-litigation status’ where the debtor has been formally notified that the institution will take legal action against the debtor within a defined time period, unless certain contractual or other payment obligations are met. That shall also include cases where the contract has been terminated by the reporting institution because the debtor is in formal breach of the terms and conditions of the contract and the debtor has been notified accordingly, but no legal action against the debtor has formally been taken by the institution yet. Exposures classified as ‘in pre-litigation status’ can exit this classification if the outstanding amounts are paid or if they enter into litigation status as defined in the following paragraph. 
+An exposure shall be ‘in litigation status’ where legal action against the debtor has formally been taken. This comprises cases where a court of law confirmed that formal judiciary proceedings have occurred or the judiciary system has been notified of the intention to commence legal proceedings.]]></comment>
+<generatorID>0844C601-04A2-692D-3033-A781861E85C8</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>E9AC9799-6E08-A760-5AFC-2A0167B08AEF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Repayment_rights" id="DC0240D4-AAA9-1233-2EEC-34F772462601">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[Repayment rights, e.g. redeemable at notice.]]></comment>
+<generatorID>717AD0DE-83C0-AA8C-65EA-6E8B6CB1A516</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>e960f06b-6a72-40e7-bfec-59ade4e4808b</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Revocable_indicator" id="A4D5D8B9-C15F-843C-27AD-BB66CC1E9C62">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[Revocable indicator is an indicator specifying if the Other commitment is revocable or not]]></comment>
+<generatorID>2104115A-AD2E-E9A1-02AE-75399A55F0D8</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>fbfa4ee3-13f8-414b-9a85-033b7b28e04f</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Revolving_loan_indicator" id="1269FEA6-FB39-FBD5-64E1-CBBA3F73E3D8">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if an instrument is considered revolving or non-revolving.]]></comment>
+<generatorID>EA53A39E-92A1-71FE-EE4C-2FE3B267F218</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>ae64ef49-7b52-40e1-a839-c9685a937dfe</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Significant_asset_class" id="25366231-6BA0-4640-7D46-FD88A132E6D0">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[Classification into specific asset classes, like interest rate, equity, foreign exchange.]]></comment>
+<generatorID>2D87869F-3C07-91FB-ADBA-150761867DB4</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>1CB87DC0-27A7-2590-7FBE-58915D8D3A86</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Type_of_commitment" id="E7A452E3-1571-6777-9A02-7FDD36D19994">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[Type of commitment.]]></comment>
+<generatorID>D6F4F827-1846-5882-0187-49C37CCCB9C3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>148b4f04-733a-4246-a7ab-34777312ff3a</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Type_of_Instrument" id="A3D9AFC9-BC89-3BC2-FC1F-422A8E63C013">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 13:03:41 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>C46CD195-B4B4-AB64-DF8E-5B023B0CA207</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Type_of_risk" id="C3AD924C-8461-0232-5B1C-A8F8BC232F52">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[Type of financial risk.]]></comment>
+<generatorID>D5575172-7360-2D9A-99A3-6BEE5B3823AA</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>5C3CD3A8-221A-0775-6F67-5CE1B24918CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Accumulated_coverage_ratio" id="16F220B7-DACB-7975-28C6-C50DBF11A348">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 13:54:53 UTC</createdTime>
+<comment><![CDATA[It is calculated as the ratio between the accumulated impairments, respectively the accumulated negative changes in fair value due to credit risk related to a loan or advance as numerator, and the gross carrying amount of that loan or advance as denominator.]]></comment>
+<generatorID>C411E3C3-EC93-A1CF-2799-38805E3B980E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>8100266E-F750-48D0-B98A-821400187560</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+<endValue>1</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="Cash_reserve_amount" id="ACB4414F-2E86-F7F4-CBCF-6E9E07BFEF42">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 14:00:20 UTC</createdTime>
+<comment><![CDATA[The cash reserve of a factoring operation.]]></comment>
+<generatorID>53DC5CD2-42C1-5430-35D0-DA4090DAF86D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cash_reserve_maturity_date" id="407811D5-558D-270C-2269-761E54ED03BD">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 14:00:20 UTC</createdTime>
+<comment><![CDATA[ The contractual maturity date of the cash reserve (acting as protection), which is the earliest date at which the cash reserve may terminate or be terminated, taking into account any agreements amending initial contracts.]]></comment>
+<generatorID>79CB94FB-A6D3-52A7-6EFD-F4D6D56B0766</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Current_loan-to-value_ratio" id="E358A93A-0986-85D4-76C0-B02186C058E3">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 13:54:53 UTC</createdTime>
+<comment><![CDATA[Current loan-to-value ratio (LTV-C) means the sum of all loans or loan tranches secured by the borrower on a property at the reporting date relative to the current value of the property (ESRB), allocated per Loan (excluding repurchase agreement) derived data.]]></comment>
+<generatorID>DFEF6C55-FBE1-B4D2-5FA6-633395051B6A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>A602B33C-0004-D05B-A4E1-4A2339C606D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="Legal_final_maturity_date" id="C5541147-188F-A7AC-C22C-A465D94A1D9B">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[The contractual maturity date of the asset or liability, taking into account any agreements amending initial contracts.]]></comment>
+<generatorID>8517BAA2-05E0-CE9F-C53F-F6CD8C0A76DB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nominal_amount" id="2553D54E-4C2E-761B-850D-33746153DCB4">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[Holding amount at nominal value]]></comment>
+<generatorID>3270CD8B-396E-FE90-55AB-DC29B8973028</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Notional_amount" id="424EF83E-73FD-F993-0C5A-9172838DBCA7">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[The notional amount on a financial instrument is the nominal or face amount that is used to calculate payments made on that instrument.]]></comment>
+<generatorID>DC8ECD0F-3F93-84FB-B9D1-37F4F55554AB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Off-balance_sheet_amount" id="C85A4185-1B8C-33CB-067B-340F35B1EA6A">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[Total nominal amount of off-balance sheet exposures. This includes any commitment to lend before considering conversion factors and credit risk mitigation techniques. It is the amount that best represents the institution's maximum exposure to credit risk without taking into account any protection held or other credit enhancements.]]></comment>
+<generatorID>8CFADA0F-2F11-4159-A6A3-0A55D8A33A5D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Original_cash_reserve_amount" id="F52103E0-0DC9-B807-86A3-C90C899176B4">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 14:00:20 UTC</createdTime>
+<comment><![CDATA[The original cash reserve amount of a factoring operation.]]></comment>
+<generatorID>F5E87718-D12B-93D0-F888-F5C86911C86E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Original_cash_reserve_amount_date" id="9C97427E-CF3D-E9C7-06F0-9C9AB875D791">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 14:00:20 UTC</createdTime>
+<comment><![CDATA[Original cash reserve amount date.]]></comment>
+<generatorID>942B6CBF-076E-A324-D397-056AA21356D5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Repurchase_agreement_instrument_Inception_date" id="279C6C60-67C7-3A6E-1EA8-AD3B7199DE1E">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[The date on which the current contractual relationship originated, i.e. the date on which the contract agreement became binding for all parties.]]></comment>
+<generatorID>DDBFAE9B-5420-FA94-78C9-5CA2B7971336</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Settlement_date" id="6042347A-E028-F5C5-1E59-3B4F0EA67FF4">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<comment><![CDATA[The date on which the conditions specified in the contract are or can be executed for the first time, i.e. the date on which financial instruments are initially exchanged or created.]]></comment>
+<generatorID>8195B95F-F7E2-18D1-5E90-0C9156C05C4D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2FD4C8C9-EB66-6C3E-E41D-D07F40E63F70" name="Instrument_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:24 UTC</createdTime>
+<generatorID>5F537373-F972-0198-62B3-B60EA615A290</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="73E4AA44-C004-0FDB-1DAE-C1201345DA1A"/>
+<colUsage columnID="7CAE9D63-662B-D494-69E6-A64C09131289"/>
+<colUsage columnID="9DC29510-8949-CF42-96B3-F38A96A10C9C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A48670EB-8013-1039-A71D-BAF4CD3EEED7" name="Instrument_Balance_sheet_netting_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:25 UTC</createdTime>
+<generatorID>50BFE82A-39E6-628F-C6B8-AEB697E0C5F0</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="40D5165A-6D26-7023-4CEF-C263B56ECF8C"/>
+<colUsage columnID="7CAE9D63-662B-D494-69E6-A64C09131289"/>
+<colUsage columnID="9DC29510-8949-CF42-96B3-F38A96A10C9C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EEB177AF-17F0-BDAB-2B23-17DF515C26F6" name="Instrument_Credit_facility_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:25 UTC</createdTime>
+<generatorID>7D808783-CCD3-EDAD-B7DB-6994FAB738BE</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8EFD2F66-1DA2-D880-A15C-16E6D0EBB72C"/>
+<colUsage columnID="7CAE9D63-662B-D494-69E6-A64C09131289"/>
+<colUsage columnID="9DC29510-8949-CF42-96B3-F38A96A10C9C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="36008F46-2155-AD88-46FA-E77DC15AD6B8" name="Instrument_Security_and_exchange_tradable_derivative_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:25 UTC</createdTime>
+<generatorID>4CE1D92C-3F92-142B-DD72-722CDF0617EB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="62235BA5-E65A-241D-F001-C130CC4050FA"/>
+<colUsage columnID="7CAE9D63-662B-D494-69E6-A64C09131289"/>
+<colUsage columnID="9DC29510-8949-CF42-96B3-F38A96A10C9C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="16371AA4-4AE1-A51D-51F3-98A876F70997" name="Instrument_Financial_contract_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 12:57:25 UTC</createdTime>
+<generatorID>EB8DC78A-A41B-EF23-EEC3-B768E0BC6505</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="84EADA61-5320-3206-F5B5-1037743106A3"/>
+<colUsage columnID="7CAE9D63-662B-D494-69E6-A64C09131289"/>
+<colUsage columnID="9DC29510-8949-CF42-96B3-F38A96A10C9C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

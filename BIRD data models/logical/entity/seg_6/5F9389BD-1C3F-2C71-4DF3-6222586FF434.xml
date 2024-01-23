@@ -1,0 +1,157 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_6" id="5F9389BD-1C3F-2C71-4DF3-6222586FF434" name="General interest rate risk (GIRR) factor for standardised approach">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-06-19 15:06:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[(1)	
+Delta GIRR: the GIRR delta risk factors are defined along two dimensions: (i) a risk-free yield curve for each currency in which interest rate-sensitive instruments are denominated and (ii) the following tenors: 0.25 years, 0.5 years, 1 year, 2 years, 3 years, 5 years, 10 years, 15 years, 20 years and 30 years, to which delta risk factors are assigned.3
+
+(a)	
+The risk-free yield curve per currency should be constructed using money market instruments held in the trading book that have the lowest credit risk, such as overnight index swaps (OIS). Alternatively, the risk-free yield curve should be based on one or more market-implied swap curves used by the bank to mark positions to market. For example, interbank offered rate (BOR) swap curves.
+
+(b)	
+When data on market-implied swap curves described in above (1)(a) are insufficient, the risk-free yield curve may be derived from the most appropriate sovereign bond curve for a given currency. In such cases the sensitivities related to sovereign bonds are not exempt from the CSR capital requirement: when a bank cannot perform the decomposition y=r+cs, any sensitivity to y is allocated both to the GIRR and to CSR classes as appropriate with the risk factor and sensitivity definitions in the standardised approach. Applying swap curves to bond-derived sensitivities for GIRR will not change the requirement for basis risk to be captured between bond and credit default swap (CDS) curves in the CSR class.
+
+(c)	
+For the purpose of constructing the risk-free yield curve per currency, an OIS curve (such as Eonia or a new benchmark rate) and a BOR swap curve (such as three-month Euribor or other benchmark rates) must be considered two different curves. Two BOR curves at different maturities (eg three-month Euribor and six-month Euribor) must be considered two different curves. An onshore and an offshore currency curve (eg onshore Indian rupee and offshore Indian rupee) must be considered two different curves.
+
+(2)	
+The GIRR delta risk factors also include a flat curve of market-implied inflation rates for each currency with term structure not recognised as a risk factor.
+
+(a)	
+The sensitivity to the inflation rate from the exposure to implied coupons in an inflation instrument gives rise to a specific capital requirement. All inflation risks for a currency must be aggregated to one number via simple sum.
+
+(b)	
+This risk factor is only relevant for an instrument when a cash flow is functionally dependent on a measure of inflation (eg the notional amount or an interest payment depending on a consumer price index). GIRR risk factors other than for inflation risk will apply to such an instrument notwithstanding.
+
+(c)	
+Inflation rate risk is considered in addition to the sensitivity to interest rates from the same instrument, which must be allocated, according to the GIRR framework, in the term structure of the relevant risk-free yield curve in the same currency.
+
+(3)	
+The GIRR delta risk factors also include one of two possible cross-currency basis risk factors4 for each currency (ie each GIRR bucket) with the term structure not recognised as a risk factor (ie both cross-currency basis curves are flat).
+
+(a)	
+The two cross-currency basis risk factors are basis of each currency over USD or basis of each currency over EUR. For instance, an AUD-denominated bank trading a JPY/USD cross-currency basis swap would have a sensitivity to the JPY/USD basis but not to the JPY/EUR basis.
+
+(b)	
+Cross-currency bases that do not relate to either basis over USD or basis over EUR must be computed either on “basis over USD” or “basis over EUR” but not both. GIRR risk factors other than for cross-currency basis risk will apply to such an instrument notwithstanding.
+
+(c)	
+Cross-currency basis risk is considered in addition to the sensitivity to interest rates from the same instrument, which must be allocated, according to the GIRR framework, in the term structure of the relevant risk-free yield curve in the same currency.
+
+(4)	
+Vega GIRR: within each currency, the GIRR vega risk factors are the implied volatilities of options that reference GIRR-sensitive underlyings; as defined along two dimensions:5
+
+(a)	
+The maturity of the option: the implied volatility of the option as mapped to one or several of the following maturity tenors: 0.5 years, 1 year, 3 years, 5 years and 10 years.
+
+(b)	
+The residual maturity of the underlying of the option at the expiry date of the option: the implied volatility of the option as mapped to two (or one) of the following residual maturity tenors: 0.5 years, 1 year, 3 years, 5 years and 10 years.
+
+(5)	
+Curvature GIRR:
+
+(a)	
+The GIRR curvature risk factors are defined along only one dimension: the constructed risk-free yield curve per currency with no term structure decomposition. For example, the euro, Eonia, three-month Euribor and six-month Euribor curves must be shifted at the same time in order to compute the euro-relevant risk-free yield curve curvature risk capital requirement. For the calculation of sensitivities, all tenors (as defined for delta GIRR) are to be shifted in parallel.
+
+(b)	
+There is no curvature risk capital requirement for inflation and cross-currency basis risks.
+
+(6)	
+The treatment described in above (1)(b) for delta GIRR also applies to vega GIRR and curvature GIRR risk factors.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="false"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="false"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="false"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="false"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="false"/>
+</engineerTo>
+<typeID>1B94F88B-CE04-E04E-DE88-6866B6DBCB24</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>569226D4-0B71-7630-0EE4-00E6F7A871C8</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>GIRR_RSK_FCTR</preferredAbbreviation>
+<shortName>GIRR risk factor</shortName>
+<documents usedDucuments="577C6671-054B-63C9-0FA7-48002B03D7C4"/>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="General interest rate risk (GIRR) factor type" id="F85718AC-9CAB-9594-D3F4-814A21A71C90">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-06-19 15:10:24 UTC</createdTime>
+<comment><![CDATA[General interest rate risk (GIRR) factor type is the type of interest rate risk factor. Can be Yield, Basis or Inflation]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>5C906E1D-52DD-D49C-D419-F3231D734D43</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>GIRR_FCTR_TYP</preferredAbbreviation>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Main currency" id="D14B5830-D819-0ECE-290E-CA2439F08CB1">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-06-19 15:12:21 UTC</createdTime>
+<comment><![CDATA[The curve's main currency.]]></comment>
+<generatorID>1CEFC288-D67B-E12D-E158-F81D7614075F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>4CA512E4-A54A-933E-24C1-3D8E2D31E7C6</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2D4D0542-0954-4C82-9231-4447DC95A6DE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>MN_CRRNCY</preferredAbbreviation>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Second currency" id="FB1D6958-6246-3C70-84F9-750952CFF1C9">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-06-19 15:13:51 UTC</createdTime>
+<comment><![CDATA[The second currency of the curve if it has a basis curve.]]></comment>
+<generatorID>EBC807B4-9256-8BF6-39A8-7AA85105AFF5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>4CA512E4-A54A-933E-24C1-3D8E2D31E7C6</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2D4D0542-0954-4C82-9231-4447DC95A6DE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>SCND_CRRNCY</preferredAbbreviation>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+</Attribute>
+</attributes>
+</Entity>

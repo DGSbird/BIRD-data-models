@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="A4EE7F91-9342-4800-A018-4542D7B171F1" name="RPRCHS_AGRMNT_CMPNNT">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Repurchase agreement component is a component of a (Reverse) Repurchase agreement, i.e. either a cash leg or a security leg.]]></commentInRDBMS>
+<generatorID>C231ED66-3962-9C00-AE08-B830072D03A6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RPRCHS_AGRMNT_CMPNNT_TYP" id="67B2321F-E274-F4E4-5546-CF1F503A85CA">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between the security and the cash leg.]]></comment>
+<generatorID>27585DB5-6962-A183-079A-C86D83A39F17</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>B4EC1EB6-B4CF-3F87-6349-5C54D23FD2B2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RPRCHS_AGRMNT_INSTRMNT_ID" id="FE00EA57-CCA1-B0BD-8632-1800DD6CE9A7">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<comment><![CDATA[The instrument identifier of the involved repurchase agreement.]]></comment>
+<generatorID>4B2BD8B9-0938-780C-E83B-EFB7F7879C3D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B648A39A-40F8-0959-3E21-82BBB17DC1AB" referredColumn="F41E7365-496F-A912-0F18-BE314EFF631F"/>
+</associations>
+</Column>
+<Column name="RPRCHS_AGRMNT_INSTRMNT_RFRNC_DT" id="D275A722-23E7-ECC5-6E48-0FA1C24BF73D">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>859AB0C7-1422-2BCA-6050-D7138E03A372</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B648A39A-40F8-0959-3E21-82BBB17DC1AB" referredColumn="F511491E-C15F-3E1E-E259-22B2AFA91F34"/>
+</associations>
+</Column>
+<Column name="RPRCHS_AGRMNT_INSTRMNT_RPRTNG_AGNT_ID" id="E6969B18-7C0C-D125-CDE3-04D2D5AAB56D">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>814ABDA0-1477-EE36-FCE6-393B2D1E8C25</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B648A39A-40F8-0959-3E21-82BBB17DC1AB" referredColumn="88FE91F1-6E72-0E16-E41D-E4A8EF97E12D"/>
+</associations>
+</Column>
+<Column name="CRRNCY" id="BAF113FA-6739-E183-7C98-96635BC50B6E">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<comment><![CDATA[The currency code according to ISO4217.]]></comment>
+<generatorID>6BCE7F4C-4AE2-F3CC-DBA2-4C40C502417B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>9af1c1d9-7914-4052-866a-ee27f7d5380d</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NMNL_AMNT" id="FA910B22-2D6E-E8AE-B560-2D598CA9C895">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<comment><![CDATA[Holding amount at nominal value]]></comment>
+<generatorID>2399196E-106C-53A1-8347-827DAAE6EE39</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="ED1778AF-7DD2-B074-4F19-A3BE271BCA19" name="RPRCHS_AGRMNT_CMPNNT_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<generatorID>2937DCD0-3F46-54CD-05AC-C3C09106D74E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="67B2321F-E274-F4E4-5546-CF1F503A85CA"/>
+<colUsage columnID="FE00EA57-CCA1-B0BD-8632-1800DD6CE9A7"/>
+<colUsage columnID="D275A722-23E7-ECC5-6E48-0FA1C24BF73D"/>
+<colUsage columnID="E6969B18-7C0C-D125-CDE3-04D2D5AAB56D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="74504CC6-FA51-7461-5275-548D3CED83B3" name="RPRCHS_AGRMNT_CMPNNT_INSTRMNT_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:59 UTC</createdTime>
+<generatorID>0AF24D8D-30D3-5418-AA96-7DB617F41B39</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FE00EA57-CCA1-B0BD-8632-1800DD6CE9A7"/>
+<colUsage columnID="D275A722-23E7-ECC5-6E48-0FA1C24BF73D"/>
+<colUsage columnID="E6969B18-7C0C-D125-CDE3-04D2D5AAB56D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

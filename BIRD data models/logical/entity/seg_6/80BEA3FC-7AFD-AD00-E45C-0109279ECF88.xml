@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_6" id="80BEA3FC-7AFD-AD00-E45C-0109279ECF88" name="Commodity risk factor for standardised approach">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-06-19 14:38:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[(1)	
+Delta commodity: the commodity delta risk factors are all the commodity spot prices. However for some commodities such as electricity (which is defined to fall within bucket 3 (energy – electricity and carbon trading) in MAR21.82 the relevant risk factor can either be the spot or the forward price, as transactions relating to commodities such as electricity are more frequent on the forward price than transactions on the spot price. Commodity delta risk factors are defined along two dimensions:
+
+(a)	
+legal terms with respect to the delivery location6 of the commodity; and
+
+(b)	
+time to maturity of the traded instrument at the following tenors: 0 years, 0.25 years, 0.5 years, 1 year, 2 years, 3 years, 5 years, 10 years, 15 years, 20 years and 30 years.
+
+(2)	
+Vega commodity: the commodity vega risk factors are the implied volatilities of options that reference commodity spot prices as underlyings. No differentiation between commodity spot prices by the maturity of the underlying or delivery location is required. The commodity vega risk factors are further defined along one dimension, the maturity of the option. This is defined as the implied volatility of the option as mapped to one or several of the following maturity tenors: 0.5 years, 1 year, 3 years, 5 years and 10 years.
+
+(3)	
+Curvature commodity: the commodity curvature risk factors are defined along only one dimension, the constructed curve (ie no term structure decomposition) per commodity spot prices. For the calculation of sensitivities, all tenors (as defined for delta commodity) are to be shifted in parallel.
+]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="false"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="false"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="false"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="false"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="false"/>
+</engineerTo>
+<typeID>1B94F88B-CE04-E04E-DE88-6866B6DBCB24</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>569226D4-0B71-7630-0EE4-00E6F7A871C8</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>CMMDTY_RSK_FCTR_FR_STNDRDSD_APPRCH</preferredAbbreviation>
+<documents usedDucuments="577C6671-054B-63C9-0FA7-48002B03D7C4"/>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Commodity type" id="CFDCA722-B709-D13C-CA76-F83DDA2A27CB">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-06-19 14:41:14 UTC</createdTime>
+<comment><![CDATA[The type of commodity, taken from Commodity Type Domain]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>F72E4F1A-CE19-323F-D20F-79FE54F4BECE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>CMMDTY_TYP</preferredAbbreviation>
+</Attribute>
+<Attribute name="Delivery location" id="882A9337-5707-1443-D763-09DFDDCEC0FF">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-06-19 14:41:14 UTC</createdTime>
+<comment><![CDATA[The delivery location related to the commodity Risk factor, typically the delivery location of a deliverable commodity future.]]></comment>
+<commentInRDBMS><![CDATA[The delivery location related to the commodity Risk factor, typically the delivery location of a deliverable commodity future.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>DLVRY_LCTN</preferredAbbreviation>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+</Attribute>
+</attributes>
+</Entity>

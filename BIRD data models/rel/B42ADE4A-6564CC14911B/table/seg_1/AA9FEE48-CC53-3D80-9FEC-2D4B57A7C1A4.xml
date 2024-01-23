@@ -1,0 +1,179 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="AA9FEE48-CC53-3D80-9FEC-2D4B57A7C1A4" name="SCRTY_SCRTY_RPRCHS_AGRMNT_CMPNNT_ASSGNMNT">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Security Security leg assignment is the combination of a Security leg and a Security that indicates which Security is used in which Security leg.]]></commentInRDBMS>
+<generatorID>F49EE749-0E7F-7D36-C6BE-36A2410D27B9</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RPRCHS_AGRMNT_INSTRMNT_ID" id="87E94054-06AC-0D7F-58B9-9AE7E68B5057">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<comment><![CDATA[The instrument identifier of the involved repurchase agreement.]]></comment>
+<generatorID>79F4E4C4-DDA7-F300-F98E-5E222228C973</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8D8B1770-E5C9-8DC6-0CB7-ECBC0694BEE1" referredColumn="FE00EA57-CCA1-B0BD-8632-1800DD6CE9A7"/>
+</associations>
+</Column>
+<Column name="SCRTY_LG_TYP" id="61531195-ACE2-8007-5F05-093AAE0E7CB7">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different security legs, legs referring to debt securities and legs referring to equity and fund securities.]]></comment>
+<generatorID>1ECFF0D7-FB22-1BA1-90C3-FCF6C7343D9D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>B4EC1EB6-B4CF-3F87-6349-5C54D23FD2B2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8D8B1770-E5C9-8DC6-0CB7-ECBC0694BEE1" referredColumn="67B2321F-E274-F4E4-5546-CF1F503A85CA"/>
+</associations>
+</Column>
+<Column name="DT_RFRNC" id="C41ED785-4B4A-3918-E344-2A2D5A716EC2">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>F59B1D08-624E-3FA3-3A96-6E9B0B7D9EEF</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9E889C9E-3438-D1DB-8ACA-2F34205CA94A" referredColumn="7E094182-AF54-1D93-B53D-8A6896AD4409"/>
+<colAssociation fkAssociation="8D8B1770-E5C9-8DC6-0CB7-ECBC0694BEE1" referredColumn="D275A722-23E7-ECC5-6E48-0FA1C24BF73D"/>
+</associations>
+</Column>
+<Column name="RPRTNG_AGNT_ID" id="F8435D41-F084-D5A6-885D-72273B4F8E90">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>D057DA64-447D-BF19-65BD-9B1AAD91E3E2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9E889C9E-3438-D1DB-8ACA-2F34205CA94A" referredColumn="5D4C4EEB-45F7-5A38-B1B1-4CEE286EE916"/>
+<colAssociation fkAssociation="8D8B1770-E5C9-8DC6-0CB7-ECBC0694BEE1" referredColumn="E6969B18-7C0C-D125-CDE3-04D2D5AAB56D"/>
+</associations>
+</Column>
+<Column name="SCRTY_ID" id="7976D3A7-9A63-59ED-1B8E-0E4652FE9C7A">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each security.]]></comment>
+<generatorID>D6AEC400-C68C-1B11-1EE5-B4A860D3A0B4</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9E889C9E-3438-D1DB-8ACA-2F34205CA94A" referredColumn="45A61234-5B7E-C22E-2173-EE1B4192EC23"/>
+</associations>
+</Column>
+<Column name="SCRTY_SCRTY_RPRCHS_AGRMNT_CMPNNT_ASSGNMNT_TYP" id="BDAF0DE8-62E6-7094-AD49-265AA3016295">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of assignments between securities and security leg copmonents.]]></comment>
+<generatorID>73D6DA7E-CFAE-BB89-128D-467CF8C2960E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2779b7f7-65e3-48f5-8e07-29634da18b1d</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NMBR_SHRS" id="8EB9CD95-8CDA-6D4F-E809-4AC4637D6BF7">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<comment><![CDATA[The number of shares of a security.]]></comment>
+<generatorID>9F15D1BB-B01E-1D5F-2BBB-D3E896F52ECF</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NMNL_AMNT" id="54D70DF9-76A3-078A-1C99-A49E8905963D">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<comment><![CDATA[Holding amount at nominal value]]></comment>
+<generatorID>F2881B90-FF07-DFCE-5563-F5B13976787B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6A749461-D731-D13E-89E5-3C49181D658D" name="SCRTY_SCRTY_RPRCHS_AGRMNT_CMPNNT_ASSGNMNT_PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:58 UTC</createdTime>
+<generatorID>2B37DA23-02CA-F890-F5D8-BCA1BF1B785B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="87E94054-06AC-0D7F-58B9-9AE7E68B5057"/>
+<colUsage columnID="61531195-ACE2-8007-5F05-093AAE0E7CB7"/>
+<colUsage columnID="C41ED785-4B4A-3918-E344-2A2D5A716EC2"/>
+<colUsage columnID="F8435D41-F084-D5A6-885D-72273B4F8E90"/>
+<colUsage columnID="7976D3A7-9A63-59ED-1B8E-0E4652FE9C7A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5CF74189-3D4F-60C7-0AED-0C0F69C94CEC" name="SCRTY_SCRTY_RPRCHS_AGRMNT_CMPNNT_ASSGNMNT_SCRTY_EXCHNG_TRDBL_DRVTV_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:59 UTC</createdTime>
+<generatorID>30F78899-86D9-D7F0-3E7E-3D6289FCC47C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7976D3A7-9A63-59ED-1B8E-0E4652FE9C7A"/>
+<colUsage columnID="C41ED785-4B4A-3918-E344-2A2D5A716EC2"/>
+<colUsage columnID="F8435D41-F084-D5A6-885D-72273B4F8E90"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D19983CF-7B7F-74B4-850A-B3877C8C0A96" name="SCRTY_SCRTY_RPRCHS_AGRMNT_CMPNNT_ASSGNMNT_RPRCHS_AGRMNT_CMPNNT_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:29:59 UTC</createdTime>
+<generatorID>2B67C838-F144-79EA-641B-FCE7D58A9F7E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61531195-ACE2-8007-5F05-093AAE0E7CB7"/>
+<colUsage columnID="87E94054-06AC-0D7F-58B9-9AE7E68B5057"/>
+<colUsage columnID="C41ED785-4B4A-3918-E344-2A2D5A716EC2"/>
+<colUsage columnID="F8435D41-F084-D5A6-885D-72273B4F8E90"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

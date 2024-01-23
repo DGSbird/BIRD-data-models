@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_6" id="EA6E26CC-8EAC-E13D-3746-0B99B875BD04" name="Securitisation non-correlation trading portfolio, (non-CTP) Risk Factor for standardised approach">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-06-19 15:36:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[CSR securitisation: non-CTP risk factors
+
+(1)	
+For securitisation instruments that do not meet the definition of CTP as set out in MAR20.5 (ie, non-CTP), the sensitivities of delta risk factors (ie CS01) must be calculated with respect to the spread of the tranche rather than the spread of the underlying of the instruments.
+
+(2)	
+Delta CSR securitisation (non-CTP): the CSR securitisation delta risk factors are defined along two dimensions:
+
+(a)	
+Tranche credit spread curves; and
+
+(b)	
+The following tenors: 0.5 years, 1 year, 3 years, 5 years and 10 years to which delta risk factors are assigned.
+
+(3)	
+Vega CSR securitisation (non-CTP): Vega risk factors are the implied volatilities of options that reference non-CTP credit spreads as underlyings (bond and CDS); further defined along one dimension - the maturity of the option. This is defined as the implied volatility of the option as mapped to one or several of the following maturity tenors: 0.5 years, 1 year, 3 years, 5 years and 10 years.
+
+(4)	
+Curvature CSR securitisation (non-CTP): the CSR securitisation curvature risk factors are defined along one dimension, the relevant tranche credit spread curves (bond and CDS). For instance, the bond-inferred spread curve of a given Spanish residential mortgage-backed security (RMBS) tranche and the CDS-inferred spread curve of that given Spanish RMBS tranche would be considered a single spread curve. For the calculation of sensitivities, all the tenors are to be shifted in parallel.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="false"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="false"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="false"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="false"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="false"/>
+</engineerTo>
+<typeID>1B94F88B-CE04-E04E-DE88-6866B6DBCB24</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>569226D4-0B71-7630-0EE4-00E6F7A871C8</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>SCRTSTN_NN_CRRLTN_TRDNG_PRTFL_RSK_FCTR_FR_STNDRDSD_APPRCH</preferredAbbreviation>
+<documents usedDucuments="577C6671-054B-63C9-0FA7-48002B03D7C4"/>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Asset backed Security identifier" id="A9902854-CB2E-3A32-D1CC-A4D2C2AC4E57">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-08-15 09:07:09 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each security.]]></comment>
+<generatorID>A150C9E0-D588-A676-69CA-6646DB89B9CC</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>70004979-0BF5-B3D8-542D-0A190D5BA5BD</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ASST_BCKD_SCRTY_ID</preferredAbbreviation>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Asset backed Security Reference date" id="E323B573-83ED-79E6-E888-6F53C1A1D5B7">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-08-15 09:07:09 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>A150C9E0-D588-A676-69CA-6646DB89B9CC</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>DA168399-B716-B4C5-B7F2-C2620D929EC4</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ASST_BCKD_SCRTY_RFRNC_DT</preferredAbbreviation>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Asset backed Security Reporting agent identifier" id="D29F9E95-F859-0E86-E32C-A91BE32FB6A5">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-08-15 09:07:09 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>A150C9E0-D588-A676-69CA-6646DB89B9CC</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>480FA821-32E6-C30D-2DB7-7BB8C85B6C0F</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ASST_BCKD_SCRTY_RPRTNG_AGNT_ID</preferredAbbreviation>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+</Attribute>
+</attributes>
+</Entity>

@@ -286,6 +286,20 @@
 <valueDef value="8" description="Not a hedge: There is not a hedging relationship"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Debt security by performing status type" id="0137BDD0-C69F-6D8D-4B9A-D7E4094FE17F">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-21 14:40:45 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>2</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>DBT_SCRTY_PRFRMNG_STTS_TYP</synonym>
+<listOfValues>
+<valueDef value="19" description="Performing debt security"/>
+<valueDef value="20" description="Non-performing debt security"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Financial asset instrument individually assessed type" id="031AA0A3-9840-1610-CCF2-7B695A7691DF">
 <createdBy>lindomi</createdBy>
 <createdTime>2021-11-04 13:57:25 UTC</createdTime>
@@ -298,21 +312,6 @@
 <listOfValues>
 <valueDef value="28" description="Default financial asset instrument individually assessed"/>
 <valueDef value="29" description="Non-default financial asset instrument individually assessed"/>
-</listOfValues>
-</Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of Rating system (Input Layer) - develop" id="03C2DAC9-32B7-27D0-1887-2529F206C790">
-<createdBy>ostarij</createdBy>
-<createdTime>2023-04-02 14:41:18 UTC</createdTime>
-<ownerDesignName>BIRD data models</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<listOfValues>
-<valueDef value="1" description="Issue based rating system"/>
-<valueDef value="3" description="Central government rating system"/>
-<valueDef value="4" description="Non-Central government rating system"/>
-<valueDef value="5" description="Graded Rating System"/>
-<valueDef value="6" description="Numeric rating system"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Rating grade for issuer based rating systems type" id="03DAE4FB-D0DC-54E4-5413-8081B5A983A1">
@@ -358,20 +357,6 @@
 <valueDef value="140" description="Other advance: Advance other than Suspens or Transit item"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Investment property taken into possession type" id="046E3FF9-7B68-954C-6CD0-8427EFDEEDCC">
-<createdBy>lindomi</createdBy>
-<createdTime>2021-11-04 14:42:54 UTC</createdTime>
-<ownerDesignName>BIRD data models</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<dataTypeSize>1</dataTypeSize>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>INSTMNT_PRPRTY_TKN_INT_PSSSSN_TYP</synonym>
-<listOfValues>
-<valueDef value="16" description="Investment property taken into possession during the period"/>
-<valueDef value="17" description="Investment property taken into possession before the period"/>
-</listOfValues>
-</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="String up to 255 characters - latin extended" id="04F38763-DBE9-71CA-60CC-8AE479375450">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:42 UTC</createdTime>
@@ -396,32 +381,41 @@
 <valueDef value="39" description="Other collateral received instrument"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Prudential portfolio (Input Layer)" id="066BD47E-A74B-9938-FB1E-2700D3965D45">
-<createdBy>ostarij</createdBy>
-<createdTime>2021-11-09 07:34:52 UTC</createdTime>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Offices and commercial premises collateral indicator" id="071918C6-F317-2648-9BF0-C6315CDA13FC">
+<createdBy>saporig</createdBy>
+<createdTime>2023-10-17 17:51:31 UTC</createdTime>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>PRDNTL_PRTFL_INPT</synonym>
+<synonym>OFFC_CMMRCL_PRMS_CLLTRL_INDCTR</synonym>
 <listOfValues>
-<valueDef value="0" description="Not applicable"/>
-<valueDef value="38" description="Trading book: Instruments in the trading book as defined in Article 4(1)(86) of Regulation (EU) No 575/2013."/>
-<valueDef value="39" description="Non-trading book: Instruments not in the trading book as defined in Article 4(1)(86) of Regulation (EU) No 575/2013."/>
+<valueDef value="105" description="Offices and commercial premises related to land collateral"/>
+<valueDef value="106" description="Offices and commercial premises not related to land collateral"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Performing status (Input Layer)" id="07FA581F-A2E3-5B6D-697C-287596AD2F38">
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of non-financial asset (Input Layer)" id="0754A565-2F6E-E9B6-9921-88181F43DDAE">
 <createdBy>ostarij</createdBy>
-<createdTime>2023-06-13 13:45:25 UTC</createdTime>
+<createdTime>2023-12-28 13:07:24 UTC</createdTime>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
+<dataTypeSize>3</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>CRDT_QLTY_INPT</synonym>
+<synonym>TYP_NN_FNNCL_ASST_INPT</synonym>
 <listOfValues>
-<valueDef value="0" description="Not applicable"/>
-<valueDef value="1" description="Non-performing"/>
-<valueDef value="11" description="Performing"/>
+<valueDef value="14" description="Other intangible asset not taken into possession"/>
+<valueDef value="15" description="Other intangible asset taken into possession"/>
+<valueDef value="18" description="Property, plant and equipment taken into possession"/>
+<valueDef value="19" description="Property, plant and equipment not taken into possession"/>
+<valueDef value="36" description="Investment property not taken into possession"/>
+<valueDef value="37" description="Investment property taken into possession"/>
+<valueDef value="420" description="Intangible assets. Goodwill"/>
+<valueDef value="440" description="Current tax assets"/>
+<valueDef value="450" description="Deferred tax assets"/>
+<valueDef value="46" description="Other non-financial asset not taken into possession"/>
+<valueDef value="47" description="Other non-financial asset taken into possession"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Approach for prudential purposes" id="0805E868-C4A9-426B-B31B-D53B631BB383">
@@ -477,6 +471,35 @@
 <listOfValues>
 <valueDef value="20" description="Corporation"/>
 <valueDef value="36" description="Private sector company other than corporation"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Multiple forbearance measures in place indicator" id="0AA28620-05FF-1C8D-CC3A-C767E643EA1C">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-10-20 09:15:04 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>MLTPL_FRBRNC_MSR_INDCTR</synonym>
+<listOfValues>
+<valueDef value="1" description="Multiple forbearance measures in place"/>
+<valueDef value="2" description="Not multiple forbearance measures in place"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Planning permission indicator (Input Layer)" id="0B008583-BD61-13DD-AE75-2AFD4E6466C4">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 14:20:14 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>PLNNNG_PRMSSN_INDCTR_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Land with planning permission for developnment"/>
+<valueDef value="2" description="Land without planning permission for development"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Overnight deposit type" id="0CBDE277-054B-DEC4-FD6A-1E9A4E365DEB">
@@ -589,6 +612,21 @@
 <valueDef value="4" description="Other legal measures: Legal measures other than those already specified including bilateral legal measures between the reporting agent and the counterparty."/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Equity factor type" id="10511173-094A-64DC-444F-BD030BDC9776">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-06-19 15:01:03 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>3</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>EQUTY_FCTR_TYP</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Spot"/>
+<valueDef value="2" description="Repo"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Long security position Prudentiial Portfolio assignment Accounting classification for financial assets assignment type" id="10529e90-ccb0-4646-ac5c-2fbcebc39ea9">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:49 UTC</createdTime>
@@ -601,6 +639,40 @@
 <listOfValues>
 <valueDef value="1" description="Long debt security position Prudential portfolio assignment Accounting classification for financial assets assignment"/>
 <valueDef value="2" description="Long equity or fund security position Prudential portfolio assignment Accounting classification for financial assets assignment"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Security status (Input Layer)" id="12438E37-E540-2AE5-8EA2-6BD1A679E6F3">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 14:20:20 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>3</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>SCRTY_STTS_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="100" description="alive"/>
+<valueDef value="101" description="Alive - under judicial administration, receivership or similar measures"/>
+<valueDef value="200" description="not alive - reason not specified"/>
+<valueDef value="201" description="not alive - matured (planned redemption)"/>
+<valueDef value="202" description="not alive - matured (early redemption)"/>
+<valueDef value="203" description="not alive - issuer default (bankrupt)"/>
+<valueDef value="204" description="not alive - instrument in default"/>
+<valueDef value="205" description="not alive - split"/>
+<valueDef value="206" description="not alive - reverse split"/>
+<valueDef value="207" description="not alive - knocked out"/>
+<valueDef value="208" description="not alive - merger"/>
+<valueDef value="209" description="not alive - demerger"/>
+<valueDef value="210" description="not alive - repurchase of own securities"/>
+<valueDef value="211" description="not alive - converted/ exercised"/>
+<valueDef value="212" description="not alive - issue withdrawn"/>
+<valueDef value="213" description="not alive - Dissolution of company"/>
+<valueDef value="214" description="not alive - assimilation"/>
+<valueDef value="215" description="not alive - temporary ISIN"/>
+<valueDef value="216" description="not alive - other reason"/>
+<valueDef value="217" description="not alive - old rights issue"/>
+<valueDef value="218" description="not alive - not covered by IF list"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="String up to 60 characters limited to letters (capital and low cases), numbers, dash and underscore" id="12DFCE00-085A-4E8C-BE55-52350D849DA7">
@@ -680,6 +752,9 @@
 <valueDef value="1199" description="ABS - No detailed classification available"/>
 <valueDef value="1200" description="Mortgage-backed security (MBS)"/>
 <valueDef value="1201" description="Residential mortgage-backed security (RMBS)"/>
+<valueDef value="12011" description="Residential mortgage-backed security - Prime (RMBS-Prime)"/>
+<valueDef value="12012" description="Residential mortgage-backed security - Mid-prime (RMBS-Mid-prime)"/>
+<valueDef value="12013" description="Residential mortgage-backed security - Sub-prime (RMBS-Sub-prime)"/>
 <valueDef value="1202" description="Commercial mortgage-backed security (CMBS)"/>
 <valueDef value="1203" description="Mixed MBS"/>
 <valueDef value="1298" description="Other MBS"/>
@@ -710,8 +785,8 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>RNGTTN_STTS</synonym>
 <listOfValues>
-<valueDef value="3" description="Forborne: Refinanced debt: Non-renegotiation"/>
-<valueDef value="9" description="Renegotiated instrument without forbearance measures: Renegotiation"/>
+<valueDef value="1" description="Renegotiated instrument with forbearance measures"/>
+<valueDef value="9" description="Renegotiated instrument without forbearance measures"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Balance sheet recognition of the financial asset" id="18433f9f-18be-4c20-97d4-e4c5c0e6cba6">
@@ -768,6 +843,21 @@
 <listOfValues>
 <valueDef value="3" description="Instrument resulting directly from a Financial contract"/>
 <valueDef value="4" description="Instrument resulting from a Credit facility"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Rating system type by target (Input Layer)" id="195B0D40-9E5A-D35E-9B81-A73593D421A6">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 13:29:04 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>RTNG_SYSTM_TYP_TRGT_INPT</synonym>
+<listOfValues>
+<valueDef value="1" description="Issue-based rating system"/>
+<valueDef value="3" description="Central government rating system"/>
+<valueDef value="4" description="Non-Central government rating system"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="European Union member postal code type" id="1985EA03-5BAF-52C1-1BB9-88075464A043">
@@ -889,6 +979,33 @@
 <valueDef value="522" description="Deposits with agreed maturity - other than counterpart liability to non-derecognised loans"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Perpetual debt security indicator" id="1E07F0F4-F276-5E35-743E-5A366E019807">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-10-13 09:39:23 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>PRPTL_DBT_SCRTY_INDCTR</synonym>
+<listOfValues>
+<valueDef value="17" description="Perpetual debt security"/>
+<valueDef value="18" description="Non-perpetual debt security"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Securitisation tranche type" id="1E7B8C9D-ED5F-063E-3CFA-EFEE110DA453">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-12 12:45:41 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>SCRTSTN_TRNCH_TYP</synonym>
+<listOfValues>
+<valueDef value="3" description="Tranche in a Traditional securitisation"/>
+<valueDef value="4" description="Tranche in a synthetic securitisation"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Rating system type by nature (Grade vs. Numeric) type" id="1FA07E1E-D9B6-848D-3994-82C9E3284E5A">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
@@ -934,7 +1051,7 @@
 <valueDef value="17" description="Non-renegotiated financial asset instrument"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Purpose" id="2078935d-1737-4bb9-9d29-db62cdd50597">
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Purpose type" id="2078935d-1737-4bb9-9d29-db62cdd50597">
 <createdBy>domin</createdBy>
 <createdTime>2019-08-22 12:45:43 UTC</createdTime>
 <ownerDesignName>System</ownerDesignName>
@@ -998,6 +1115,21 @@
 <valueDef value="19" description="Non-fixed interest financial asset instrument"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Under construction or development indicator (Input Layer)" id="2107D397-2A5A-0003-C5E0-98E67DC045E2">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 14:20:13 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>UNDR_CNSTRCT_DVLPMNT_INDCTR_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Under construction or development"/>
+<valueDef value="2" description="Not under construction or development"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Subordinated debt indicator (Input Layer)" id="2229f50a-942c-452d-81d8-69068913a6c5">
 <createdBy>domin</createdBy>
 <createdTime>2019-08-22 12:45:43 UTC</createdTime>
@@ -1023,6 +1155,8 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>TYP_CRDT_FCLTY</synonym>
 <listOfValues>
+<valueDef value="12" description="To lend or to provide acceptance facilities at a below-market interest rate"/>
+<valueDef value="13" description="To lend or to provide acceptance facilities under pre-specified terms and conditions other than those at a below-market interest rate"/>
 <valueDef value="14" description="To lend or to provide acceptance facilities where the terms and conditions are not under pre-specified"/>
 <valueDef value="15" description="To provide guarantees"/>
 <valueDef value="16" description="To purchase securities"/>
@@ -1055,6 +1189,7 @@
 <valueDef value="S125_D" description="Specialised financial corporations other than CCPs: Specialised financial corporations, as defined in Regulation (EU) No 549/2013 (paragraph 2.93 of Annex A), extended to the rest of the world, other than CCPs, as defined in point (1) of Article 2 of Regulation (EU) No 648/2012."/>
 <valueDef value="S125_E" description="Central Counterparties (CCPs): CCPs as defined in point (1) of Article 2 of Regulation (EU) No 648/2012."/>
 <valueDef value="S125_I" description="Other financial intermediaries, except insurance corporations and pension funds, other than CCPs, FVCs, security and derivative dealers, financial corporations engaged in lending and specialised financial corporations: It corresponds to subsector S.125, as defined in Regulation (EU) No 549/2013 (paragraphs 2.86 to 2.94 of Annex A), extended to the rest of the world, other than CCPs, as defined in point (1) of Article 2 of Regulation (EU) No 648/2012, FVCs, as defined in Article 1 of Regulation (EU) No 1075/2013, and security and derivative dealers, financial corporations engaged in lending and specialised financial corporations, as defined in Regulation (EU) No 549/2013 (paragraphs 2.91, 2.92 and 2.93, respectively, of Annex A), extended to the rest of the world."/>
+<valueDef value="S125_W" description="Other financial corporations excluding financial vehicle corporations"/>
 <valueDef value="S126" description="Financial auxiliaries: It corresponds to subsector S.126, as defined in Regulation (EU) No 549/2013 (paragraphs 2.63 and 2.95 to 2.97 of Annex A), extended to the rest of the world."/>
 <valueDef value="S127" description="Captive financial institutions and money lenders: It corresponds to subsector S.127, as defined in Regulation (EU) No 549/2013 (paragraphs 2.98 to 2.99 of Annex A), extended to the rest of the world."/>
 <valueDef value="S128" description="Insurance corporations: It corresponds to subsector S.128, as defined in Regulation (EU) No 549/2013 (paragraphs 2.100 to 2.104 of Annex A), extended to the rest of the world."/>
@@ -1063,9 +1198,31 @@
 <valueDef value="S1312" description="State government (excluding social security funds): It corresponds to subsector S.1312, as defined in Regulation (EU) No 549/2013 (paragraph 2.115 of Annex A), extended to the rest of the world."/>
 <valueDef value="S1313" description="Local government (excluding social security funds): It corresponds to subsector S.1313, as defined in Regulation (EU) No 549/2013 (paragraph 2.116 of Annex A), extended to the rest of the world."/>
 <valueDef value="S1314" description="Social security funds: It corresponds to subsector S.1314, as defined in Regulation (EU) No 549/2013 (paragraph 2.117 of Annex A), extended to the rest of the world."/>
+<valueDef value="S14" description="Households, extended to the rest of the world."/>
 <valueDef value="S14_A" description="Households that are sole proprietorships/partnerships without legal status: Sole proprietorships and partnerships without legal status included in the sector S.14, as defined in Regulation (EU) No 549/2013 (paragraphs 2.118 to 2.121 of Annex A), extended to the rest of the world."/>
 <valueDef value="S14_B" description="Households other than sole proprietorships/partnerships without legal status: It corresponds to sector S.14, as defined in Regulation (EU) No 549/2013 (paragraphs 2.118 to 2.121 of Annex A), extended to the rest of the world, other than sole proprietorships and partnerships without legal status."/>
 <valueDef value="S15" description="Non profit institutions serving households: It corresponds to sector S.15, as defined in Regulation (EU) No 549/2013 (paragraphs 2.129 to 2.130 of Annex A), extended to the rest of the world."/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Primary asset class of the cover pool (Input Layer)" id="251B637B-3B26-1956-1407-FF288B7D6DF6">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 14:20:12 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>PRMRY_ASST_CLSS_CVR_PL_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="a" description="Exposures to or guaranteed by central governments, ESCB central banks, public sector entities, regional governments or local authorities in the Union"/>
+<valueDef value="b" description="Exposures to or guaranteed by third country central governments, third-country central banks, multilateral development banks, international organisations that fullfill specific requirements"/>
+<valueDef value="c" description="Exposures to institutions that fullfilll specific requirements"/>
+<valueDef value="d" description="Loans secured by (i) residential property or (ii) senior units issued by French Fonds Communs de Titrisation or equivalent securitisation entities governed by the laws of a Member State securitising residential property exposures"/>
+<valueDef value="e" description="Residential loans fully guaranteed by an eligible rpotection provider"/>
+<valueDef value="f" description="Loans secured by (i) commercial immovable property or (ii) senior units issued by French Fonds Communs de Titrisation or equivalent securitisation entities governed by the law of a Member State securitising commercial immovable property exposures."/>
+<valueDef value="g" description="Loans secured by maritime liens on ships up to the difference between 60% of the value of the pledged ship and the value of any prior maritime liens"/>
+<valueDef value="h" description="Other exposures"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Financial guarantee instrument type" id="25CFDA5B-E5B6-D3C2-B5AD-EAC390FA6906">
@@ -2207,7 +2364,7 @@
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Security Security repurchase agreement component assignment type" id="2779b7f7-65e3-48f5-8e07-29634da18b1d">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:49 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>2</dataTypeSize>
 <fileName>birdDomains</fileName>
@@ -2246,6 +2403,33 @@
 <valueDef value="37" description="Investment property taken into possession"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Commercial real estate loan indicator" id="29DE22BE-049A-8E06-7604-618C67DD23ED">
+<createdBy>antuneo</createdBy>
+<createdTime>2023-10-16 10:15:23 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>CMMRCL_RL_ESTT_LN_INDCTR</synonym>
+<listOfValues>
+<valueDef value="1" description="Commercial real estate loan"/>
+<valueDef value="2" description="Not a commercial real estate loan"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Risk measure type by position" id="2ADE46DB-96A6-76D2-380A-ADBC566915E8">
+<createdBy>LENOVO</createdBy>
+<createdTime>2023-10-08 12:50:58 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>RSK_MSR_TYP_PSTN</synonym>
+<listOfValues>
+<valueDef value="1" description="Fundamental review of the trading book standard approach risk measure for OTC positions"/>
+<valueDef value="2" description="Fundamental review of the trading book standard approach risk measure for ETD positions"/>
+<valueDef value="3" description="Fundamental review of the trading book standard approach risk measure for security positions"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="All possible dates" id="2BB0BC4F-2625-4B6E-BFB9-85C466713314">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
@@ -2255,6 +2439,20 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <synonym>DT_FLL</synonym>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Under construction or development indicator" id="2C582793-822A-A0FA-AC6E-B22B8AEEABBF">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-09-05 13:36:26 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>UNDR_CNSTRCTN_DVLPMNT_INDCTR</synonym>
+<listOfValues>
+<valueDef value="1" description="Under construction or development"/>
+<valueDef value="2" description="Not under construction or development"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Non-negative real numbers with 2 decimals" id="2C968BC4-71A1-4A15-B562-1EBD51BE44D3">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
@@ -2263,11 +2461,9 @@
 <fileName>birdDomains</fileName>
 <logicalDatatype>LOGDT026</logicalDatatype>
 <synonym>RL_NN_NGTV_2D</synonym>
-<listOfRanges>
-<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
-<beginValue>0</beginValue>
-</rangeDef>
-</listOfRanges>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="%column% &gt;= 0"/>
+</checkConstraint>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Subdomain for domain ISO-4217 Currency Codes (ISO4217 Domain)" id="2D4D0542-0954-4C82-9231-4447DC95A6DE">
 <createdBy>ostarij</createdBy>
@@ -2463,20 +2659,6 @@
 <valueDef value="ZWL" description="Zimbabwe Dollar"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Other non-financial asset taken into possession type" id="2DFD0B46-29F7-10B9-A50D-0E9F70A23763">
-<createdBy>lindomi</createdBy>
-<createdTime>2021-11-04 14:49:54 UTC</createdTime>
-<ownerDesignName>BIRD data models</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<dataTypeSize>1</dataTypeSize>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>OTHR_NN_FNNCL_ASST_TKN_INT_PSSSSN_TYP</synonym>
-<listOfValues>
-<valueDef value="48" description="Other non-financial asset taken into possession before the period"/>
-<valueDef value="49" description="Other non-financial asset taken into possession during the period"/>
-</listOfValues>
-</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of Party (Input Layer)" id="2F2F11B3-936C-3F9B-FC77-39273D9B156C">
 <createdBy>ostarij</createdBy>
 <createdTime>2023-03-28 15:36:46 UTC</createdTime>
@@ -2518,6 +2700,49 @@
 <valueDef value="4" description="Micro enterprise: Enterprise qualifying as a micro enterprise in accordance with the Annex to Recommendation 2003/361/EC."/>
 <valueDef value="6" description="Large enterprise (from input data): Enterprise not qualifying as a micro, small or medium-sized enterprise (SME), in accordance with the Annex to Recommendation 2003/361/EC, as calculated from input data."/>
 <valueDef value="7" description="Large enterprise because of absence of input data: Enterprise not qualifying as a micro, small or medium-sized enterprise (SME), in accordance with the Annex to Recommendation 2003/361/EC, as classified because of absence of input data."/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of abstract instrument role (Input Layer)" id="2FE09B90-5731-2399-6ECD-339790599DAC">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 14:20:17 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>2</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>ABSTRCT_INSTRMNT_RL_TYP_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="10" description="Non-balance sheet recognised financial asset instrument"/>
+<valueDef value="12" description="Non-balance sheet recognised financial liability instrument"/>
+<valueDef value="34" description="Balance sheet recognised financial asset instrument according to national general accepted accounting principles (nGAAP)"/>
+<valueDef value="35" description="Balance sheet recognised financial asset instrument according to International Financial Reporting Standard (IFRS)"/>
+<valueDef value="36" description="Fair-valued balance sheet recognised financial liability instrument"/>
+<valueDef value="37" description="Non-fair-valued balance sheet recognised financial liability instrument"/>
+<valueDef value="38" description="Over the counter (OTC) Credit default swap received as collateral instrument"/>
+<valueDef value="39" description="Other collateral received instrument"/>
+<valueDef value="44" description="Serviced asset instrument"/>
+<valueDef value="5" description="Off-balance sheet item given instrument"/>
+<valueDef value="6" description="Off-balance sheet item received instrument"/>
+<valueDef value="8" description="Collateral given instrument"/>
+<valueDef value="9" description="Over the counter (OTC) Derivative as a hedge"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Exchange tradable derivative position role type (Input Layer)" id="30601232-FD1D-E8FD-0E18-C1A811AC5077">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 13:07:24 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>TYP_ETD_PSTN_RL_INPT</synonym>
+<listOfValues>
+<valueDef value="10" description="Non-fair-valued balance sheet recognised exchange tradable derivative asset position"/>
+<valueDef value="4" description="Non-balance sheet recognised exchange tradable derivative asset position"/>
+<valueDef value="6" description="Non-balance sheet recognised exchange tradable derivative liability position"/>
+<valueDef value="7" description="Fair-valued balance sheet recognised exchange tradable derivative liability position"/>
+<valueDef value="8" description="Non-fair-valued balance sheet recognised exchange tradable derivative liability position"/>
+<valueDef value="9" description="Fair-valued balance sheet recognised exchange tradable derivative asset position"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Legal form" id="31457646-D166-EE48-82B3-81C9F7441928">
@@ -3779,6 +4004,20 @@
 <valueDef value="99" description="multiple reference rates - 7M"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Agriculture land indicator" id="31D8E4D4-8434-5786-6143-C834F3DE196F">
+<createdBy>saporig</createdBy>
+<createdTime>2023-10-17 18:26:08 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>AGRCLTR_LND_INDCTR</synonym>
+<listOfValues>
+<valueDef value="107" description="Land excluding agriculture"/>
+<valueDef value="108" description="Land including agriculture"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Year" id="32160F4F-B3D4-9336-1EEE-D04214DBEE06">
 <createdBy>ostarij</createdBy>
 <createdTime>2022-12-13 13:57:36 UTC</createdTime>
@@ -3828,7 +4067,7 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>ENTTY_GRP_RL_TYP</synonym>
 <listOfValues>
-<valueDef value="29" description="Other organisation role"/>
+<valueDef value="29" description="Central bank and private sector company role"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Loan and advance type" id="336C65AC-E62E-2AAB-D901-EE9E00260683">
@@ -3845,33 +4084,31 @@
 <valueDef value="28" description="Loan (excluding repurchase agreement)"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Fair value option designation (Input Layer)" id="33CDFE06-AF05-8127-D678-375230BBD7DD">
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Tranche in a synthetic securitisation type" id="33A0F2CF-E58B-9798-2B59-A99DE3C24189">
 <createdBy>ostarij</createdBy>
-<createdTime>2022-12-13 21:27:53 UTC</createdTime>
+<createdTime>2023-10-27 08:36:05 UTC</createdTime>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>FVO_DSGNTN_INPT</synonym>
+<synonym>TRNCH_SYNTHTC_SCRTSTN_TYP</synonym>
 <listOfValues>
-<valueDef value="0" description="Not applicable"/>
-<valueDef value="1" description="Accounting mismatch"/>
-<valueDef value="4" description="Management for credit risk"/>
-<valueDef value="5" description="Management of credit risk. Upon designation"/>
-<valueDef value="6" description="Management of credit risk. After the designation"/>
+<valueDef value="1" description="Tranche in a synthetic securitisation with SSPE"/>
+<valueDef value="2" description="Tranche in a synthetic securitisation without SSPE"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Internal group type" id="33F348AC-1306-1A1E-AD3A-CE8BFFC072F7">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>2</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>INTRN_GRP_TYP</synonym>
 <listOfValues>
-<valueDef value="11" description="Institutional unit of foreign branches"/>
+<valueDef value="11" description="Institutional unit"/>
 <valueDef value="12" description="Internal consolidation group"/>
 <valueDef value="16" description="Subsidiary, joint venture and associate"/>
 </listOfValues>
@@ -3918,18 +4155,51 @@
 <valueDef value="2" description="Security borrowing and lending transaction component"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Purchased credit-impaired" id="35f41713-84de-48ca-985e-92a635d245ff">
-<createdBy>domin</createdBy>
-<createdTime>2019-08-22 12:45:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Party role type (Input Layer)" id="35801F96-9492-4C2C-53FD-2CD652A27F69">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 14:20:12 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
-<dataTypeSize>1</dataTypeSize>
+<dataTypeSize>2</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>PRCHSD_ORGNTD</synonym>
+<synonym>TYP_PRTY_RL_INPT</synonym>
 <listOfValues>
-<valueDef value="1" description="Purchased or originated credit-impaired"/>
-<valueDef value="2" description="Not purchased or originated credit-impaired"/>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="10" description="Securitisation special purpose entity (SSPE)"/>
+<valueDef value="11" description="Master netting counterparty"/>
+<valueDef value="12" description="Security debtor"/>
+<valueDef value="13" description="Investor"/>
+<valueDef value="14" description="Buyer"/>
+<valueDef value="15" description="Lessor"/>
+<valueDef value="16" description="Factor"/>
+<valueDef value="17" description="Creditor"/>
+<valueDef value="18" description="Depositor"/>
+<valueDef value="19" description="Lessee"/>
+<valueDef value="20" description="Seller"/>
+<valueDef value="21" description="Original lender"/>
+<valueDef value="22" description="Servicer"/>
+<valueDef value="23" description="Swap provider"/>
+<valueDef value="24" description="Protection provider"/>
+<valueDef value="25" description="Originator"/>
+<valueDef value="26" description="Central counterparty client"/>
+<valueDef value="27" description="Deposit taking corporation"/>
+<valueDef value="28" description="Loan debtor"/>
+<valueDef value="30" description="Subsidiary"/>
+<valueDef value="31" description="Joint venture"/>
+<valueDef value="32" description="Associate"/>
+<valueDef value="33" description="Lender"/>
+<valueDef value="35" description="Borrower"/>
+<valueDef value="36" description="Beneficiary"/>
+<valueDef value="4" description="Assigned debtor"/>
+<valueDef value="41" description="Partner enterprise"/>
+<valueDef value="42" description="Linked enterprise"/>
+<valueDef value="43" description="Immediate parent enterprise"/>
+<valueDef value="5" description="Non-qualifying central counterparty"/>
+<valueDef value="6" description="Qualifying central counterparty (QCCP)"/>
+<valueDef value="7" description="Clearing member"/>
+<valueDef value="8" description="Issuer"/>
+<valueDef value="9" description="Sponsor"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Integer" id="3880C9D4-D966-103E-57C9-CAD195D367C5">
@@ -3986,29 +4256,15 @@
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Performing forborne exposure under probation reclassified from non-performing indicator" id="38F97F83-D9A9-4896-1F56-2ED6CA576232">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<dataTypeSize>1</dataTypeSize>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>P_FRBRN_EXPSR_PRBTN_RCLD_NP</synonym>
-<listOfValues>
-<valueDef value="1" description="Performing forborne exposure under probation reclassified from non-performing"/>
-<valueDef value="2" description="Not performing forborne exposure under probation reclassified from non-performing"/>
-</listOfValues>
-</Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Other intangible asset taken into possession type" id="3925E987-BFCF-38B1-DC83-415DC3D8E1FB">
-<createdBy>lindomi</createdBy>
-<createdTime>2021-11-04 14:45:12 UTC</createdTime>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>1</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>OTHR_INTGBL_ASST_TKN_INT_PSSSSN_TYP</synonym>
+<synonym>PRFRMNG_FRBRN_EXPSR_PRBTN_RCLD_NN_PRFRMNG_INDCTR</synonym>
 <listOfValues>
-<valueDef value="12" description="Other intangible asset taken into possession before the period"/>
-<valueDef value="13" description="Other intangible asset taken into possession during the period"/>
+<valueDef value="1" description="Performing forborne exposure under probation"/>
+<valueDef value="2" description="Performing forborne exposure not under probation"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Controlled by national or foreign bodies" id="39af11be-68e1-47b9-8923-36eee75d8bd6">
@@ -4038,6 +4294,19 @@
 <valueDef value="1" description="Credit facility Creditor assignment"/>
 <valueDef value="2" description="Credit facility Debtor assignment"/>
 <valueDef value="3" description="Credit facility Servicer assignment"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Date / period of application of forbearance measure" id="3BC05AAE-55DA-CBD8-38A1-82074F764B78">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-11-02 14:36:41 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>DT_OPNNG_BLNC_F_24.01_INTL_RCGNTN_DT_REF</synonym>
+<listOfValues>
+<valueDef value="-1" description="Any date (Total)"/>
+<valueDef value="2" description="Current reference period / date"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Party type" id="3D1FE49C-E173-5227-8023-0D8E7B0E51D1">
@@ -4096,20 +4365,19 @@
 <valueDef value="2" description="Other Instrument Collateral received instrument assignment"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Default status (Input Layer)" id="3F457EF0-8425-9F40-69A3-2590ABF41F0C">
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Initial impairment status" id="3E701DBB-AE13-4320-D402-2D9DA177F9CE">
 <createdBy>ostarij</createdBy>
-<createdTime>2022-12-13 14:19:52 UTC</createdTime>
+<createdTime>2023-12-12 10:10:17 UTC</createdTime>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
+<dataTypeSize>2</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>DFLT_STTS_INPT</synonym>
+<synonym>INTL_IMPRMNT_STTS</synonym>
 <listOfValues>
-<valueDef value="0" description="Not applicable"/>
-<valueDef value="14" description="Not in default"/>
-<valueDef value="18" description="Default because both unlikely to pay and more than 90/180 days past due"/>
-<valueDef value="19" description="Default because unlikely to pay"/>
-<valueDef value="20" description="Default because more than 90/180 days past due"/>
+<valueDef value="23" description="Stage 1 (IFRS)"/>
+<valueDef value="24" description="Stage 2 (IFRS)"/>
+<valueDef value="25" description="Stage 3 (IFRS)"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="String with 18 characters (capital letters or digits) followed by 2 digits" id="3F7F6D3B-5B13-4083-88F5-199A70EB98D8">
@@ -4155,14 +4423,14 @@
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Securitisation and other credit transfer type" id="40F9B794-48DF-E81D-AC04-11D1F47355F1">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>1</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>SCRTSN_OTHR_CRDT_TRNSFR_TYP</synonym>
 <listOfValues>
-<valueDef value="5" description="Covered bond program"/>
+<valueDef value="5" description="Covered bond programme"/>
 <valueDef value="6" description="Credit transfer other than securitisation and covered bond program"/>
 <valueDef value="7" description="Securitisation"/>
 </listOfValues>
@@ -4209,6 +4477,20 @@
 <valueDef value="0" description="Not applicable"/>
 <valueDef value="1" description="Non-performing prior to forbearance"/>
 <valueDef value="2" description="Not non-performing prior to forbearance"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Risk measure type" id="41D9833B-AA71-8E94-FFB9-200B9E425D0F">
+<createdBy>LENOVO</createdBy>
+<createdTime>2023-10-08 12:05:38 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>FRTB_RSK_MSR_TYP</synonym>
+<listOfValues>
+<valueDef value="4" description="Delta sensitivity"/>
+<valueDef value="5" description="Vega sensitivity"/>
+<valueDef value="6" description="Curvature"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Group type" id="41F8DA9F-FC51-94D0-4F77-6AE64162BD18">
@@ -4258,14 +4540,14 @@
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Rating system type by target (Issue vs. Issuer based) type" id="436AFE26-8093-AB5E-9934-2AED0E5C8233">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>1</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>RTNG_SYSTM_TYP_TRGT</synonym>
 <listOfValues>
-<valueDef value="1" description="Issue based rating system"/>
+<valueDef value="1" description="Issue-based rating system"/>
 <valueDef value="2" description="Issuer based rating system"/>
 </listOfValues>
 </Domain>
@@ -4340,24 +4622,6 @@
 <valueDef value="F.1" description="Undertaking for collective investment in transferable securities (UCITS) Fund"/>
 <valueDef value="F.2" description="Alternative investment fund (AIF)"/>
 <valueDef value="F.9" description="Other fund"/>
-</listOfValues>
-</Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Impairment status (Input Layer)" id="438CB8AF-2A4D-3BCA-931A-4CE013181F9E">
-<createdBy>ostarij</createdBy>
-<createdTime>2023-06-16 08:58:50 UTC</createdTime>
-<ownerDesignName>BIRD data models</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>IMPRMNT_STTS_INPT</synonym>
-<listOfValues>
-<valueDef value="0" description="Not applicable"/>
-<valueDef value="21" description="General allowances (GAAP)"/>
-<valueDef value="23" description="Stage 1 (IFRS)"/>
-<valueDef value="24" description="Stage 2 (IFRS)"/>
-<valueDef value="25" description="Stage 3 (IFRS)"/>
-<valueDef value="26" description="Specific allowances (GAAP)"/>
-<valueDef value="27" description="POCI (IFRS)"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Exposure classes for the calculation of risk weight" id="47928F95-C491-4745-9A88-DC217CE864E4">
@@ -4441,6 +4705,19 @@
 <synonym>GRP_RL_TYP</synonym>
 <listOfValues>
 <valueDef value="1" description="Reporting agent (group)"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Balance sheet recognised financial asset instrument by fair value type" id="4C9098A1-6B07-02A5-830B-F4311D919A73">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-10-31 09:16:43 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_FR_VL_TYP</synonym>
+<listOfValues>
+<valueDef value="42" description="Fair-valued balance sheet recognised financial asset instrument"/>
+<valueDef value="43" description="Non-fair valued balance sheet recognised financial asset instrument"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Other intangible asset type" id="4C9846B1-63C0-50A0-8EB4-EE28E7356A6F">
@@ -4662,6 +4939,25 @@
 <valueDef value="33" description="Non-performing non-default financial asset instrument individually assessed"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Time past due band" id="52A45C75-DF77-9D1F-D4FA-0C403CFC649C">
+<createdBy>antuneo</createdBy>
+<createdTime>2023-08-24 10:13:12 UTC</createdTime>
+<ownerDesignName>System</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>TM_PST_DU_BND</synonym>
+<listOfValues>
+<valueDef value="12" description="&gt; 90 days &lt;= 180 days"/>
+<valueDef value="16" description="&gt; 180 days &lt;= 1 year"/>
+<valueDef value="21" description="&gt; 1 year &lt;= 2 years"/>
+<valueDef value="29" description="&gt; 2 years &lt;= 5 years"/>
+<valueDef value="73" description="&lt;= 30 days"/>
+<valueDef value="84" description="&gt; 5 year &lt;= 7 years"/>
+<valueDef value="85" description="&gt; 7 years  "/>
+<valueDef value="9" description="&gt; 30 days &lt;= 90 days"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Exposure with recourse indicator" id="53E48821-1FB9-9C6C-80A9-B24F4838801F">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
@@ -4705,6 +5001,66 @@
 <valueDef value="2" description="Not short term credit assessment"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Fair value option designation (Input Layer)" id="54546BDD-F068-8236-37E3-F94ABB46E346">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-08-14 13:37:29 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>FVO_DSGNTN_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="2" description="Management on a fair value basis"/>
+<valueDef value="5" description="Management of credit risk. Upon designation"/>
+<valueDef value="6" description="Management of credit risk. After the designation"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Shock direction" id="548009F7-2BC0-D536-F5F2-A332B899494E">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-10-27 09:50:37 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>SHCK_DRCTN</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Up"/>
+<valueDef value="2" description="Down"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Listed indicator (Input Layer)" id="54CB6AB6-3017-C8CE-2935-B4CC0C366DCB">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-08-14 13:37:34 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>LST_INDCTR_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="F" description="Non-listed"/>
+<valueDef value="T" description="Listed"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Negotiable security position indicator" id="552FA18A-DEF6-9673-4C9E-E61AE9F836E6">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-12 10:32:19 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>NGTBL_SCRTY_PSTN_INDCTR</synonym>
+<listOfValues>
+<valueDef value="19" description="Long non-negotiable security position"/>
+<valueDef value="20" description="Long negotiable security position"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Significant risk transfer indicator" id="55FBA3A8-C904-8727-39A7-858A5EB36415">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
@@ -4715,8 +5071,58 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>SGNFCNT_RSK_TRNSFR_INDCTR</synonym>
 <listOfValues>
-<valueDef value="1" description="Significant risk transfer"/>
-<valueDef value="2" description="Not significant risk transfer"/>
+<valueDef value="1" description="Significant risk transfer securitisation"/>
+<valueDef value="2" description="Not significant risk transfer securitisation"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of asset provided as security (Input Layer)" id="562AEEC9-B1D4-AD2D-FBCD-265166A240EE">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 14:20:21 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>7</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>TYP_ASST_SCRTSTN_INPT_WNA</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1000" description="Securitisation"/>
+<valueDef value="1100" description="Asset-backed security (ABS)"/>
+<valueDef value="1101" description="Auto loans ABS"/>
+<valueDef value="1102" description="Consumer loans ABS"/>
+<valueDef value="1103" description="Credit card receivables ABS"/>
+<valueDef value="1104" description="Equipment leases ABS"/>
+<valueDef value="1105" description="Home equity loans ABS"/>
+<valueDef value="1106" description="Manufactured housing leases ABS"/>
+<valueDef value="1107" description="Small and medium-sized enterprises (SME) loans ABS"/>
+<valueDef value="1108" description="Student loans ABS"/>
+<valueDef value="1109" description="Whole Business Securitisation (WBS) ABS"/>
+<valueDef value="1110" description="Mixed ABS"/>
+<valueDef value="1198" description="Other Assets ABS"/>
+<valueDef value="1199" description="ABS - No detailed classification available"/>
+<valueDef value="1200" description="Mortgage-backed security (MBS)"/>
+<valueDef value="1201" description="Residential mortgage-backed security (RMBS)"/>
+<valueDef value="12011" description="Residential mortgage-backed security - Prime (RMBS-Prime)"/>
+<valueDef value="12012" description="Residential mortgage-backed security - Mid-prime (RMBS-Mid-prime)"/>
+<valueDef value="12013" description="Residential mortgage-backed security - Sub-prime (RMBS-Sub-prime)"/>
+<valueDef value="1202" description="Commercial mortgage-backed security (CMBS)"/>
+<valueDef value="1203" description="Mixed MBS"/>
+<valueDef value="1298" description="Other MBS"/>
+<valueDef value="1299" description="MBS - No detailed classification available"/>
+<valueDef value="1300" description="Collateralised Debt Obligation (CDO)"/>
+<valueDef value="1400" description="Collateralised Mortgage Obligation (CMO)"/>
+<valueDef value="1500" description="Mixed securitisation"/>
+<valueDef value="1800" description="Other securitisation"/>
+<valueDef value="1900" description="Securitisation - No detailed classification available"/>
+<valueDef value="2000" description="Covered Bond"/>
+<valueDef value="2100" description="Public sector Covered bond"/>
+<valueDef value="2200" description="Mortgage Covered bond"/>
+<valueDef value="2300" description="Ship Covered bond"/>
+<valueDef value="2400" description="Aircraft Covered bond"/>
+<valueDef value="2500" description="Mixed Covered bond"/>
+<valueDef value="2800" description="Other Covered bond"/>
+<valueDef value="2900" description="Covered Bond - No detailed classification available"/>
+<valueDef value="9999" description="Securitisation and Covered Bond - No detailed classification available"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Full list of the Security Guarantee level (Input Layer)" id="58ed721e-2d1e-4e26-bfd3-43dbe5147e3b">
@@ -4749,6 +5155,21 @@
 <valueDef value="101" description="Non-European Union member party"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Market Capitalisation indicator (Input Layer)" id="59D005EB-B108-0484-ACED-82FD2122B1EC">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:32:26 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>MRKT_CP_INDCTR_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not Applicable"/>
+<valueDef value="1" description="Large Market Capitalisation"/>
+<valueDef value="2" description="Small Market Capitalisation"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="String up to 12 characters - ISIN" id="5B032320-5201-9F8C-998B-035ADD0AB08B">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
@@ -4758,17 +5179,6 @@
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>STRNG_ISIN_12</synonym>
-</Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Alpha-numeric string (only capitals) of up to 20 characters and dashes" id="5B4FA8CF-7B10-ADFE-7151-4DD0F62B2B23">
-<createdBy>ostarij</createdBy>
-<createdTime>2023-06-27 09:11:47 UTC</createdTime>
-<comment><![CDATA[Used in reporting real estate collateral location: if a postal code is available "XX-postal code"; otherwise if NUTS3 is in use "XX-NUTS3", otherwise "XX", where XX stands for the two-digit ISO code of the country]]></comment>
-<ownerDesignName>BIRD data models</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<dataTypeSize>20</dataTypeSize>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>STRNG_ID_20</synonym>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of risk (Input Layer)" id="5C3CD3A8-221A-0775-6F67-5CE1B24918CE">
 <createdBy>ostarij</createdBy>
@@ -4803,6 +5213,22 @@
 <valueDef value="400" description="Non-financial assets: Assets that are not considerable financial assets according to the relevant accounting standard. Such as Tangible (Investment property; property, plant and equipment) and Intangible assets (Goodwill; other intagible assets)."/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="GIRR risk factor" id="5C906E1D-52DD-D49C-D419-F3231D734D43">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-10-27 10:07:32 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>GIRR_RSK_FCTR</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Inflation"/>
+<valueDef value="2" description="Basis"/>
+<valueDef value="3" description="Yield"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Entity role type" id="5DBBA043-C341-3470-A831-EFC982957AF9">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
@@ -4817,7 +5243,7 @@
 <valueDef value="38" description="Entity transaction role"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Organisation type by legal proceding status (Input Layer)" id="5E4AA4E6-A4E3-06B8-9167-DAFFAA73263E">
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Organisation type by legal proceeding status (Input Layer)" id="5E4AA4E6-A4E3-06B8-9167-DAFFAA73263E">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-11-08 19:30:24 UTC</createdTime>
 <ownerDesignName>BIRD data models</ownerDesignName>
@@ -6364,7 +6790,7 @@
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Organisation role type" id="6150484D-1093-F5B0-6591-4087D06D62C7">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>2</dataTypeSize>
 <fileName>birdDomains</fileName>
@@ -6377,7 +6803,6 @@
 <valueDef value="5" description="Non-qualifying central counterparty"/>
 <valueDef value="6" description="Qualifying central counterparty (QCCP)"/>
 <valueDef value="7" description="Clearing member"/>
-<valueDef value="8" description="Issuer"/>
 <valueDef value="9" description="Sponsor"/>
 </listOfValues>
 </Domain>
@@ -6496,6 +6921,20 @@
 <valueDef value="9" description="Rank level - No detailed information available"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Credit spread risk curve type" id="691CF7CA-2465-39E3-933D-4570DB6A2060">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-10-27 10:25:12 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>CSR_CRV_TYP</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Bond"/>
+<valueDef value="2" description="Credit spread risk (CSR)"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Assessment approach for credit quality status - full domain" id="69C06194-004C-4FE7-BDF3-389D48924716">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
@@ -6541,16 +6980,14 @@
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Non-negative integers" id="6ED1A254-93E8-4BCC-BD8B-126227470ACD">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <fileName>birdDomains</fileName>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <synonym>INTGR_NN_NGTV</synonym>
-<listOfRanges>
-<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
-<beginValue>0</beginValue>
-</rangeDef>
-</listOfRanges>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="%column% &gt;= 0"/>
+</checkConstraint>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Fair value hierarchy" id="6b6a7a5c-3533-4f15-84dc-a85c03be48b6">
 <createdBy>ostarij</createdBy>
@@ -6597,14 +7034,14 @@
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Rating grade type" id="70AA36A8-80B3-A8BA-3E96-1CF3482AE5FC">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>1</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>RTNG_GRD_TYP</synonym>
 <listOfValues>
-<valueDef value="1" description="Rating grade for issue based rating system"/>
+<valueDef value="1" description="Rating grade for issue-based rating system"/>
 <valueDef value="2" description="Rating grade for issuer based rating systems"/>
 </listOfValues>
 </Domain>
@@ -6625,21 +7062,6 @@
 <valueDef value="88" description="Other non-registered collateral"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of security by identifier (Input Layer)" id="719bc3e8-f5a9-4034-8af7-918760014f69">
-<createdBy>domin</createdBy>
-<createdTime>2019-08-22 12:45:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<dataTypeSize>1</dataTypeSize>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>TYP_SCRTY_ID_INPT</synonym>
-<listOfValues>
-<valueDef value="0" description="Not applicable"/>
-<valueDef value="8" description="International securities identification number (ISIN) security: ISIN security"/>
-<valueDef value="9" description="Non-International securities identification number (ISIN) security: Non-ISIN security"/>
-</listOfValues>
-</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Balance sheet recognised financial liability instrument type" id="73604eb0-9f1e-4e2c-99a9-8b71faecd49d">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:49 UTC</createdTime>
@@ -6650,8 +7072,23 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>BLNC_SHT_RCGNSD_FNNCL_LBLTY_INSTRMNT_TYP</synonym>
 <listOfValues>
-<valueDef value="36" description="Fair valued balance sheet recognised financial liability instrument"/>
-<valueDef value="37" description="Non-fair valued balance sheet recognised financial liability instrument"/>
+<valueDef value="36" description="Fair-valued balance sheet recognised financial liability instrument"/>
+<valueDef value="37" description="Non-fair-valued balance sheet recognised financial liability instrument"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of economy (Input Layer)" id="749415A8-8C37-B482-D900-84839AF8C965">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:32:26 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>TYP_ECNMY_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not Applicable"/>
+<valueDef value="1" description="Emerging market economy"/>
+<valueDef value="2" description="Advanced economy"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Asset pool (subject to securitisation and other credit transfer) type" id="74F9D2DC-4D52-4270-111B-7D67212176E7">
@@ -6664,8 +7101,8 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>ASST_PL_TYP</synonym>
 <listOfValues>
-<valueDef value="1" description="Asset pool (subject to a Covered bond program)"/>
-<valueDef value="2" description="Asset pool (subject to a credit transfer other than securitisation and covered bond program)"/>
+<valueDef value="1" description="Asset pool (subject to a Covered bond programme)"/>
+<valueDef value="2" description="Asset pool (subject to a credit transfer other than securitisation and covered bond programme)"/>
 <valueDef value="3" description="Asset pool (subject to a Securitisation)"/>
 </listOfValues>
 </Domain>
@@ -6693,6 +7130,7 @@
 <valueDef value="76" description="nGAAP: Non-trading non-derivative financial assets measured at a cost-based method. LOCOM: nGAAP: Non-trading non-derivative financial assets measured at a cost-based method at LOCOM"/>
 <valueDef value="77" description="nGAAP: Non-trading non-derivative financial assets measured at a cost-based method. Other than LOCOM"/>
 <valueDef value="8" description="IFRS: Financial assets at fair value through other comprehensive income: Financial assets measured at fair value through other comprehensive income due to business model and cash-flows characteristics in accordance with IFRS."/>
+<valueDef value="83" description="Investments in subsidiaries, joint ventures and associates."/>
 <valueDef value="9" description="nGAAP: Non-trading non-derivative financial assets measured at fair value to equity: Non-trading non-derivative financial assets measured at fair value to equity in accordance with national GAAP."/>
 </listOfValues>
 </Domain>
@@ -6809,6 +7247,26 @@
 <valueDef value="2" description="Government / Treasury guarantee"/>
 <valueDef value="8" description="Other guarantee"/>
 <valueDef value="9" description="Guarantee level - No detailed information available"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Impairment status (Input Layer)" id="7FFDA5E6-EEBB-09DC-7037-8E4FCC118C70">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:32:17 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>3</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>IMPRMNT_STTS_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="211" description="General allowances for credit risk (GAAP)"/>
+<valueDef value="212" description="General allowances for banking risk (GAAP)"/>
+<valueDef value="23" description="Stage 1 (IFRS)"/>
+<valueDef value="24" description="Stage 2 (IFRS)"/>
+<valueDef value="25" description="Stage 3 (IFRS)"/>
+<valueDef value="26" description="Specific allowances (GAAP)"/>
+<valueDef value="27" description="Purchased or originated credit-impaired instruments (POCI) (IFRS)"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Reference rate (Input Layer)" id="7ebb6bc5-1fec-4d23-99b5-d1b960b25f2a">
@@ -7016,8 +7474,8 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>CNTRL_BNK_TYP</synonym>
 <listOfValues>
-<valueDef value="1" description="European Central Bank"/>
-<valueDef value="2" description="Central Bank that is not the European Central Bank"/>
+<valueDef value="37" description="European Central Bank"/>
+<valueDef value="38" description="Central Bank that is not the European Central Bank"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Real numbers from 0 to 1 with 6 decimals" id="8100266E-F750-48D0-B98A-821400187560">
@@ -7045,37 +7503,22 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>FVO_DSGNTN</synonym>
 <listOfValues>
+<valueDef value="2" description="Management on a fair value basis"/>
 <valueDef value="5" description="Management of credit risk. Upon designation"/>
 <valueDef value="6" description="Management of credit risk. After the designation"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Property, plant and equipment taken into possession type" id="823A342D-1048-22DE-D228-B8F36388B1E7">
-<createdBy>lindomi</createdBy>
-<createdTime>2021-11-04 14:47:28 UTC</createdTime>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Forbearance measure granted during reference period" id="83EDCD0A-336E-8F27-ACBD-3861003F0BA8">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-10-24 15:19:15 UTC</createdTime>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
-<dataTypeSize>1</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>PRPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN_TYP</synonym>
+<synonym>FRBRNC_MSR_GRNTD_DRNG_RFRNC_PRD</synonym>
 <listOfValues>
-<valueDef value="26" description="Property, plant and equipment taken into possession before the period"/>
-<valueDef value="27" description="Property, plant and equipment taken into possession during the period"/>
-</listOfValues>
-</Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of rating grade (Input Layer)" id="829dfdf7-a8a1-4f0c-936a-efcf848d46a4">
-<createdBy>domin</createdBy>
-<createdTime>2019-08-22 12:45:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<dataTypeSize>1</dataTypeSize>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>TYP_RTNG_GRD_INPT</synonym>
-<listOfValues>
-<valueDef value="1" description="Rating grade for issue based rating system"/>
-<valueDef value="3" description="Rating grade for issuer based rating systems for non-Central government"/>
-<valueDef value="4" description="Rating grade for issuer based rating systems for Central government"/>
+<valueDef value="1" description="Forbearance measure granted during the reference period"/>
+<valueDef value="2" description="No Forbearance measure granted during the reference period"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Renegotiated financial asset instrument type" id="8442BF8C-FB47-DF24-CF67-45E8F7B04BDF">
@@ -7090,32 +7533,6 @@
 <listOfValues>
 <valueDef value="14" description="Renegotiated financial asset instrument without forbearance measure"/>
 <valueDef value="15" description="Renegotiated financial asset instrument with forbearance measure"/>
-</listOfValues>
-</Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of Non-financial asset (Input Layer)" id="8526E659-313E-7DEB-6B40-4B6E3BDF6095">
-<createdBy>ostarij</createdBy>
-<createdTime>2023-03-28 15:36:46 UTC</createdTime>
-<ownerDesignName>BIRD data models</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>TYP_NN_FNNCL_ASST_INPT</synonym>
-<listOfValues>
-<valueDef value="12" description="Other intangible asset taken into possession before the period"/>
-<valueDef value="13" description="Other intangible asset taken into possession during the period"/>
-<valueDef value="14" description="Other intangible asset not taken into possession"/>
-<valueDef value="16" description="Investment property taken into possession during the period"/>
-<valueDef value="17" description="Investment property taken into possession before the period"/>
-<valueDef value="19" description="Property, plant and equipment not taken into possession"/>
-<valueDef value="26" description="Property, plant and equipment taken into possession before the period"/>
-<valueDef value="27" description="Property, plant and equipment taken into possession during the period"/>
-<valueDef value="36" description="Investment property not taken into possession"/>
-<valueDef value="420" description="Intangible assets. Goodwill"/>
-<valueDef value="440" description="Current tax assets"/>
-<valueDef value="450" description="Deferred tax assets"/>
-<valueDef value="46" description="Other non-financial asset not taken into possession"/>
-<valueDef value="48" description="Other non-financial asset taken into possession before the period"/>
-<valueDef value="49" description="Other non-financial asset taken into possession during the period"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Eligible as guarantee indicator (Input Layer)" id="8614909E-4EAC-4979-06FF-442EB3E14563">
@@ -8121,20 +8538,6 @@
 <valueDef value="99_00" description="Activities of extraterritorial organisations and bodies"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Balance sheet recognition of the financial asset (Input Layer)" id="86CDC8DA-47CD-336A-ABEE-6F191730FD14">
-<createdBy>ostarij</createdBy>
-<createdTime>2023-06-16 08:58:50 UTC</createdTime>
-<ownerDesignName>BIRD data models</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>BLNC_SHT_RCGNTN_FNNCL_ASST_INPT</synonym>
-<listOfValues>
-<valueDef value="0" description="Not applicable"/>
-<valueDef value="1" description="Entirely recognised"/>
-<valueDef value="4" description="Partially derecognised"/>
-</listOfValues>
-</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Forbearance measure type" id="87EF806E-E453-9C18-75EE-10501A78404B">
 <createdBy>lindomi</createdBy>
 <createdTime>2021-11-04 13:24:32 UTC</createdTime>
@@ -8145,9 +8548,32 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>FRBRNC_MSR_TYP</synonym>
 <listOfValues>
-<valueDef value="3" description="Forborne: Refinanced debt"/>
-<valueDef value="4" description="Forborne: instruments with modified interest rate below market conditions"/>
-<valueDef value="5" description="Forborne: instruments with other modified terms and conditions"/>
+<valueDef value="1" description="Grace period/payment moratorium"/>
+<valueDef value="10" description="Forborne: instruments with modified interest rate below market conditions"/>
+<valueDef value="11" description="Forborne: instruments with modified interest rate not below market conditions"/>
+<valueDef value="3" description="Extension of maturity/term"/>
+<valueDef value="4" description="Rescheduled payments"/>
+<valueDef value="5" description="Debt forgiveness"/>
+<valueDef value="6" description="Debt asset swaps"/>
+<valueDef value="7" description="Other forbearance measures"/>
+<valueDef value="8" description="Forborne: Refinanced debt"/>
+<valueDef value="9" description="Forborne: instruments with other modified terms and conditions"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Initial imapirment status (Input Layer)" id="8858F29B-C7A0-D284-840D-A6A720901643">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 14:20:10 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>2</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>INTL_IMPRMNT_STTS_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="23" description="Stage 1 (IFRS)"/>
+<valueDef value="24" description="Stage 2 (IFRS)"/>
+<valueDef value="25" description="Stage 3 (IFRS)"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Legal proceedings status (Input Layer)" id="885F5794-B51C-70A9-297F-2D81FCD5D63B">
@@ -8234,6 +8660,21 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>MNTRY</synonym>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Software assets indicator (Input Layer)" id="8B8FD3F4-4D93-9D80-3C79-19E6C3367F1A">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 14:20:18 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>SFTWR_ASST_INDCTR_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Software assets"/>
+<valueDef value="2" description="Not software assets"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Non-default financial asset instrument individually assessed type" id="8BCB7784-001A-A0F7-6862-70C0572ED8E6">
 <createdBy>lindomi</createdBy>
 <createdTime>2021-11-04 13:58:58 UTC</createdTime>
@@ -8281,10 +8722,38 @@
 <valueDef value="652" description="Other debt securities issued - non-convertible"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Multiple forbearance measures in place indicator (Input Layer)" id="8E6A86B8-B503-5CF8-0ABE-6A103754B586">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 14:20:11 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>MLTPL_FRBRNC_MSR_INDCTR_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Multiple forbearance measures in place"/>
+<valueDef value="2" description="Not multiple forbearance measures in place"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Balance sheet recognised exchange tradable derivative asset position type" id="8E9867D1-C2B2-FF1A-61C9-171225D710C7">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-11-02 09:49:11 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>BLNC_SHT_RCGNSD_ETD_ASST_PSTN_TYP</synonym>
+<listOfValues>
+<valueDef value="10" description="Non-fair-valued balance sheet recognised exchange tradable derivative asset position"/>
+<valueDef value="9" description="Fair-valued balance sheet recognised exchange tradable derivative asset position"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Instrument role type" id="8e78f30b-610e-404e-97c5-60fa855125db">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:49 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>1</dataTypeSize>
 <fileName>birdDomains</fileName>
@@ -8293,6 +8762,7 @@
 <listOfValues>
 <valueDef value="3" description="Financial asset instrument"/>
 <valueDef value="4" description="Financial liability instrument"/>
+<valueDef value="44" description="Serviced asset instrument"/>
 <valueDef value="5" description="Off-balance sheet item given instrument"/>
 <valueDef value="6" description="Off-balance sheet item received instrument"/>
 <valueDef value="7" description="Collateral received instrument"/>
@@ -8330,19 +8800,20 @@
 <valueDef value="948" description="Off balance sheet instruments"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Is listed indicator (Input Layer)" id="92FDA418-CC17-E872-3335-BA1B19F9ADF3">
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Indentifier type (Input Layer)" id="92A6089D-6098-1C0F-4041-0FDCB423AEF6">
 <createdBy>ostarij</createdBy>
-<createdTime>2023-06-13 13:45:26 UTC</createdTime>
+<createdTime>2023-08-14 13:37:33 UTC</createdTime>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
-<dataTypeSize>2</dataTypeSize>
+<dataTypeSize>60</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>LST_INDCTR_INPT</synonym>
+<synonym>IDNTFR_TYP</synonym>
 <listOfValues>
 <valueDef value="0" description="Not applicable"/>
-<valueDef value="10" description="Non-listed"/>
-<valueDef value="31" description="Listed"/>
+<valueDef value="CUSIP" description="CUSIP"/>
+<valueDef value="INTERNAL_CODE" description="Internal Code"/>
+<valueDef value="SEDOL" description="SEDOL"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Financial collateral type" id="931c5d66-4c95-4782-9407-6b34e0d9bf79">
@@ -8465,6 +8936,21 @@
 <valueDef value="6" description="Non European Union member country"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Recourse indicator (Input Layer)" id="97636C07-9CCB-CE11-1E22-28B347BBC4DA">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-08-14 13:37:29 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>EXPSR_RCRS_INDCTR_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Recourse"/>
+<valueDef value="2" description="No recourse"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of identifier for the security" id="978AA7B8-E924-68A1-D9A9-0EE9D50AA663">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
@@ -8537,6 +9023,20 @@
 <valueDef value="6" description="Non-balance sheet recognised exchange tradable derivative liability position"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Economy" id="99DE0662-BAB5-5473-EAD0-5714FAC4965C">
+<createdBy>Neil</createdBy>
+<createdTime>2022-04-14 07:36:18 UTC</createdTime>
+<ownerDesignName>frtb</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>birdDomains</fileName>
+<logicalDatatype>LOGDT017</logicalDatatype>
+<synonym>ECNMY</synonym>
+<listOfValues>
+<valueDef value="0" description="Not Applicable"/>
+<valueDef value="1" description="Emerging market economy"/>
+<valueDef value="2" description="Advanced economy"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Debt security with underlying assets type" id="9BEB51AD-3E96-832B-92B2-89F5DC2CB45E">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
@@ -8561,8 +9061,9 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>PRTY_CD_TYP</synonym>
 <listOfValues>
-<valueDef value="1" description="LEI"/>
-<valueDef value="2" description="RIAD"/>
+<valueDef value="1" description="Legal entity identifier party code"/>
+<valueDef value="2" description="Register of Institutions and Affiliates Database (RIAD) party code"/>
+<valueDef value="3" description="Other party code"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Accounting classification (Input Layer)" id="9CE82EFB-F20B-5C22-E9B2-31D3E06498E0">
@@ -8596,6 +9097,7 @@
 <valueDef value="76" description="nGAAP: Non-trading non-derivative financial assets measured at a cost-based method. LOCOM: nGAAP: Non-trading non-derivative financial assets measured at a cost-based method at LOCOM"/>
 <valueDef value="77" description="nGAAP: Non-trading non-derivative financial assets measured at a cost-based method. Other than LOCOM"/>
 <valueDef value="8" description="IFRS: Financial assets at fair value through other comprehensive income: Financial assets measured at fair value through other comprehensive income due to business model and cash-flows characteristics in accordance with IFRS."/>
+<valueDef value="83" description="Investments in subsidiaries, joint ventures and associates."/>
 <valueDef value="9" description="nGAAP: Non-trading non-derivative financial assets measured at fair value to equity: Non-trading non-derivative financial assets measured at fair value to equity in accordance with national GAAP."/>
 <valueDef value="90" description="Under IFRS 9 impairment: Off balance sheet accounting classification: under IFRS 9 impairment"/>
 <valueDef value="911" description="Measured under IAS 37: Off balance sheet accounting classification: measured under IAS 37"/>
@@ -8618,20 +9120,6 @@
 <valueDef value="2" description="Master agreement Qualifying central counterparty assignment"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Immediate parent undertaking" id="9EB6F777-3774-5B00-F7FD-7588755301A6">
-<createdBy>ostarij</createdBy>
-<createdTime>2021-10-04 08:25:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<dataTypeSize>1</dataTypeSize>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>IMMDT_PRNT_UNDRTKNG_INDCTR</synonym>
-<listOfValues>
-<valueDef value="1" description="Immediate parent undertaking"/>
-<valueDef value="2" description="Not immediate parent undertaking"/>
-</listOfValues>
-</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Prudential portfolio" id="9ECA7EA5-B456-4AD8-AA91-4AD16E2D4AD7">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:43 UTC</createdTime>
@@ -8642,8 +9130,8 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>PRDNTL_PRTFL</synonym>
 <listOfValues>
-<valueDef value="38" description="Trading book: Instruments in the trading book as defined in Article 4(1)(86) of Regulation (EU) No 575/2013."/>
-<valueDef value="39" description="Non-trading book: Instruments not in the trading book as defined in Article 4(1)(86) of Regulation (EU) No 575/2013."/>
+<valueDef value="1" description="Trading book: Instruments in the trading book as defined in Article 4(1)(86) of Regulation (EU) No 575/2013."/>
+<valueDef value="2" description="Non-trading book: Instruments not in the trading book as defined in Article 4(1)(86) of Regulation (EU) No 575/2013."/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Debt security type" id="9EFEC168-8435-3274-B8B8-3DC3846FF31D">
@@ -8901,6 +9389,25 @@
 <valueDef value="3" description="Mixed: Interest rate class other than fixed or variable."/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Interest rate reset frequency" id="A174855F-FB77-C069-AB48-AE80BD319354">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-05-22 13:59:03 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>INTRST_RT_RST_FRQNCY</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Annual"/>
+<valueDef value="12" description="Other than overnight, monthly, quarterly, half yearly, annually or at creditor discretion"/>
+<valueDef value="16" description="Overnight"/>
+<valueDef value="18" description="Quarterly"/>
+<valueDef value="19" description="Semi-annually"/>
+<valueDef value="3" description="At creditor discretion"/>
+<valueDef value="8" description="Monthly"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Financial asset instrument type by renegotiation status" id="A3877C6A-8CC5-2574-2754-4EF1DD90B7AB">
 <createdBy>lindomi</createdBy>
 <createdTime>2021-11-04 14:37:16 UTC</createdTime>
@@ -8979,6 +9486,49 @@
 </rangeDef>
 </listOfRanges>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Real estate collateral type" id="A6FB7A00-F314-B3E4-6E4A-83130601409F">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-09-22 08:43:43 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>RL_ESTT_CLLTRL_TYP</synonym>
+<listOfValues>
+<valueDef value="10" description="Commercial real estate collateral"/>
+<valueDef value="8" description="Residential real estate collateral"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Litigation status" id="A74017C2-FB85-4C52-0ECE-FD4F2BA2B981">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-09-08 09:30:04 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>LTGTN_STTS</synonym>
+<listOfValues>
+<valueDef value="1" description="In pre-litigation"/>
+<valueDef value="2" description="In litigation"/>
+<valueDef value="3" description="Not in litigation/pre-litigation"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Multilateral development bank indicator" id="A837D872-E836-D84B-4550-5AA040F45A63">
+<createdBy>saporig</createdBy>
+<createdTime>2023-09-29 12:17:33 UTC</createdTime>
+<ownerDesignName>System</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>MLTLTRL_DVLPMNT_BNK_INDCTR</synonym>
+<listOfValues>
+<valueDef value="1" description="Multilateral development bank"/>
+<valueDef value="2" description="Not a Multilateral development bank"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Finrep subdomain for financial assets" id="A8E5C407-B93D-43E6-A783-AFBD38FEF7DA">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:44 UTC</createdTime>
@@ -8992,6 +9542,25 @@
 <valueDef value="1" description="Accounting mismatch: Option to significantly reduce a measurement or recognition inconsistency that would otherwise arise from measuring assets or liabilities. According to IFRS 9.4.1.5 and 9.4.2.2 (a)"/>
 <valueDef value="4" description="Management for credit risk: Eligibility of a financial instrument for which the credit risk is managed with a credit derivative at fair value through profit or loss. According to IFRS 9.6.7"/>
 <valueDef value="5" description="Management of credit risk. Upon designation"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of group (Input Layer)" id="A9183D9A-899C-4CF6-9A2B-7E666C4A47F4">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 13:07:24 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>2</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>TYP_GRP_INPT</synonym>
+<listOfValues>
+<valueDef value="11" description="Institutional unit"/>
+<valueDef value="13" description="Group of consolidated clients"/>
+<valueDef value="14" description="Accounting consolidation group"/>
+<valueDef value="15" description="Prudential consolidation group"/>
+<valueDef value="16" description="Subsidiary, joint venture and associate"/>
+<valueDef value="4" description="Other group of clients"/>
+<valueDef value="6" description="Group of connected clients"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Internal consolidation group type" id="A961D10D-AB1D-3F7E-6C0D-714722E1BB95">
@@ -9008,18 +9577,19 @@
 <valueDef value="15" description="Prudential consolidation group"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Fair value designation (Input Layer)" id="A96EC15A-C8D7-DA1A-95D9-4C8AD598997B">
-<createdBy>ostarij</createdBy>
-<createdTime>2023-06-13 13:45:22 UTC</createdTime>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Market capitalisation indicator" id="ADBED33F-BF12-0B3C-2F9A-F95599AF2B99">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-06-19 12:31:30 UTC</createdTime>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
+<dataTypeSize>3</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>FVO_DSGNTN_BIRD_1_INPT</synonym>
+<synonym>MRKT_CP</synonym>
 <listOfValues>
-<valueDef value="0" description="Not applicable"/>
-<valueDef value="5" description="Management of credit risk. Upon designation"/>
-<valueDef value="6" description="Management of credit risk. After the designation"/>
+<valueDef value="0" description="Not Applicable"/>
+<valueDef value="1" description="Large Market Capitalisation"/>
+<valueDef value="2" description="Small Market Capitalisation"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Security position hedged by Over the counter (OTC) derivative type" id="AEA436E0-8143-5787-B80D-42C5F9ECE6EC">
@@ -9032,14 +9602,14 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>SCRTY_PSTN_HDGD_OTC_DRVTV_TYP</synonym>
 <listOfValues>
-<valueDef value="603" description="Debt security position hedged by Over the counter (OTC) derivative"/>
-<valueDef value="604" description="Equity or fund security position hedged by Over the counter (OTC) derivative"/>
+<valueDef value="40" description="Debt security position hedged by Over the counter (OTC) derivative"/>
+<valueDef value="41" description="Equity or fund security position hedged by Over the counter (OTC) derivative"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Issuer based rating system type" id="AF5B8332-8B45-A6D4-16F5-4C9820A84C0B">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:44 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>1</dataTypeSize>
 <fileName>birdDomains</fileName>
@@ -10457,13 +11027,14 @@
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Collateral type" id="B37BC93A-07AD-028E-B847-602681672BE8">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:44 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>2</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>CLLTRL_TYP</synonym>
 <listOfValues>
+<valueDef value="109" description="Immaterial rights as collateral"/>
 <valueDef value="75" description="Financial collateral"/>
 <valueDef value="76" description="Physical collateral"/>
 </listOfValues>
@@ -10480,6 +11051,29 @@
 <listOfValues>
 <valueDef value="1" description="Revolving loan"/>
 <valueDef value="2" description="Not revolving loan"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="External party identifier type" id="B4AA811B-F34F-B24C-C18A-F0EC9670DF84">
+<createdBy>nuvolia</createdBy>
+<createdTime>2023-11-23 10:43:49 UTC</createdTime>
+<ownerDesignName>System</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<listOfValues>
+<valueDef value="BIC code" description="BIC"/>
+<valueDef value="Full list see" description="https://sdd.ecb.de/view/VariableSet/3000026068933"/>
+<valueDef value="Identifier assigned by the National Central Bank" description="NCB"/>
+<valueDef value="Investment/Pension fund identifier" description="IPF"/>
+<valueDef value="National Business register identifier" description="NBR"/>
+<valueDef value="National Statistical Institute number" description="NSI"/>
+<valueDef value="National Supervisory Authority code" description="NSA"/>
+<valueDef value="Other Non-LEI code" description="Other Non-LEI"/>
+<valueDef value="Public sector entity identifier" description="PS"/>
+<valueDef value="RIAD Code" description="RIAD"/>
+<valueDef value="TAX Code" description="TAX"/>
+<valueDef value="Trade register identifier" description="TRD"/>
+<valueDef value="Value added tax identifier" description="VAT"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Repurchase agreement component type" id="B4EC1EB6-B4CF-3F87-6349-5C54D23FD2B2">
@@ -10527,6 +11121,25 @@
 <valueDef value="6" description="Equity security"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Risk class" id="B5E79572-5DA4-894F-B857-347805103E67">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-08-15 09:41:25 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>RSK_CLSS</synonym>
+<listOfValues>
+<valueDef value="1" description="General interest rate risk (GIRR)"/>
+<valueDef value="2" description="Credit spread risk (CSR): non-securitisations"/>
+<valueDef value="3" description="CSR: securitisations (non-correlation trading portfolio, or non-CTP)"/>
+<valueDef value="4" description="CSR: securitisations (correlation trading portfolio, or CTP)"/>
+<valueDef value="5" description="Equity risk"/>
+<valueDef value="6" description="Commodity risk"/>
+<valueDef value="7" description="Foreign exchange (FX) risk"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Employee benefit type" id="B96EE010-4F41-1FB7-E4B6-299084918D1E">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:44 UTC</createdTime>
@@ -10567,6 +11180,55 @@
 <listOfValues>
 <valueDef value="1" description="Tranche in a synthetic securitisation without SSPE being a deposit"/>
 <valueDef value="2" description="Tranche in a synthetic securitisation without SSPE being a financial guarantee"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Negotiable security posiiton indicator (Input Layer)" id="BA55C05B-30CF-9C23-0262-F44FAEA5A5BD">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 13:46:23 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>2</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>NGTBL_SCTRY_PSTN_INDCTR_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="17" description="Forborne long non-negotiable security position"/>
+<valueDef value="18" description="Non-forborne long non-negotiable security position"/>
+<valueDef value="20" description="Long negotiable security position"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Real estate collateral location type (Input Layer)" id="BA864143-0BB2-5696-C1AE-F694060E9FC5">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-27 10:33:09 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>2</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>RL_ESTT_CLLTRL_LCTN_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="90" description="Real estate collateral located in a member state"/>
+<valueDef value="91" description="Real estate collateral not located in a member state"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Transfers between impairment stages" id="BAC24BD5-93CD-9579-119D-83D1FEE3CC48">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-12 10:19:39 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>TRNSFR_IMPRMNT_STGS_F_12.02_TRNSFR_IMPRMNT_STGS_REF</synonym>
+<listOfValues>
+<valueDef value="1" description="To stage 1 from stage 2"/>
+<valueDef value="2" description="To stage 1 from stage 3"/>
+<valueDef value="3" description="To stage 2 from stage 1"/>
+<valueDef value="4" description="To stage 2 from stage 3"/>
+<valueDef value="5" description="To stage 3 from stage 1"/>
+<valueDef value="6" description="To stage 3 from stage 2"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="General government type" id="BBA82112-A443-D2D1-88E5-D23C6BE82560">
@@ -10623,32 +11285,6 @@
 <valueDef value="19" description="Non-fixed interest financial asset instrument"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of collateral (Input Layer)" id="C08BD3C0-7554-97B3-5FCC-462995D968E2">
-<createdBy>ostarij</createdBy>
-<createdTime>2022-12-13 14:19:52 UTC</createdTime>
-<ownerDesignName>BIRD data models</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>TYP_CLLTRL_INPT</synonym>
-<listOfValues>
-<valueDef value="12" description="Securities"/>
-<valueDef value="13" description="Gold"/>
-<valueDef value="17" description="Trade receivables"/>
-<valueDef value="2" description="Life insurance policies pledged"/>
-<valueDef value="72" description="Other financial protection"/>
-<valueDef value="77" description="Currency"/>
-<valueDef value="81" description="Aircraft collateral"/>
-<valueDef value="83" description="Ship collateral"/>
-<valueDef value="84" description="Rolling stock collateral"/>
-<valueDef value="85" description="Machinery and equiptment collateral"/>
-<valueDef value="86" description="Inventory collateral"/>
-<valueDef value="88" description="Other non-registered collateral"/>
-<valueDef value="89" description="Other commodity collateral"/>
-<valueDef value="90" description="Real estate collateral located in a member state"/>
-<valueDef value="91" description="Real estate collateral not located in a member state"/>
-</listOfValues>
-</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Securities financial transaction type" id="C13E13D0-FCEF-E304-B215-EAFFA7EF3B21">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:44 UTC</createdTime>
@@ -10661,22 +11297,6 @@
 <listOfValues>
 <valueDef value="24" description="Repurchase agreement instrument"/>
 <valueDef value="25" description="Security borrowing and lending transaction"/>
-</listOfValues>
-</Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of ETD position role (Input Layer)" id="C26C6306-4CFA-6DDF-EAD5-2916F38CBE9D">
-<createdBy>ostarij</createdBy>
-<createdTime>2022-12-13 14:19:52 UTC</createdTime>
-<ownerDesignName>BIRD data models</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>TYP_ETD_PSTN_RL_INPT</synonym>
-<listOfValues>
-<valueDef value="3" description="Balance sheet recognised exchange tradable derivative asset position"/>
-<valueDef value="4" description="Non-balance sheet recognised exchange tradable derivative asset position"/>
-<valueDef value="6" description="Non-balance sheet recognised exchange tradable derivative liability position"/>
-<valueDef value="7" description="Fair valued exchange tradable derivative liability position"/>
-<valueDef value="8" description="Non-fair valued exchange tradable derivative liability position"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Financial asset instrument type by interest only (Input Layer)" id="C28AA63F-7F58-DBD9-F24A-9036194B5949">
@@ -10730,10 +11350,28 @@
 <valueDef value="9" description="Repurchase agreement Seller assignment"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of protection valuation approach (Input Layer)" id="C2E8E9A6-B6B7-9372-D9AF-97BB0B95A090">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:32:20 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>TYP_PRTCTN_VLTN_APPRCH_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Counterparty estimation"/>
+<valueDef value="2" description="Creditor valuation"/>
+<valueDef value="3" description="Mark-to-market"/>
+<valueDef value="4" description="Other type of valuation"/>
+<valueDef value="5" description="Third-party valuation"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Security position type" id="C383BC87-3800-82BD-668B-B96C24A53866">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:44 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>1</dataTypeSize>
 <fileName>birdDomains</fileName>
@@ -10786,7 +11424,7 @@
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Forbearance status" id="C4F21A0E-D961-4428-8927-8C96FCBCB0F6">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:44 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>1</dataTypeSize>
 <fileName>birdDomains</fileName>
@@ -10797,8 +11435,6 @@
 <valueDef value="3" description="Forborne: Refinanced debt: Forbearance measures apply to refinanced debt in accordance with Implementing Regulation (EU) No 680/2014."/>
 <valueDef value="4" description="Forborne: instruments with modified interest rate below market conditions: Forbearance measures apply to instruments with modified terms and conditions, including a modification of interest rate below market conditions in accordance with Regulation (EU) No 1072/2013 (ECB/2013/34)."/>
 <valueDef value="5" description="Forborne: instruments with other modified terms and conditions: Forbearance measures apply to instruments with modified terms and conditions, excluding a modification of interest rate below market conditions in accordance with Implementing Regulation (EU) No 680/2014."/>
-<valueDef value="8" description="Not forborne or renegotiated: Neither forbearance measures nor renegotiation apply in accordance with Implementing Regulation (EU) No 680/2014."/>
-<valueDef value="9" description="Renegotiated instrument without forbearance measures: An instrument for which the financial conditions have been modified and to which no forbearance measures apply in accordance with Implementing Regulation (EU) No 680/2014."/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Legal person role type" id="C63473A2-36CE-76E8-1675-22C49721A4CD">
@@ -10824,8 +11460,54 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>BLNC_SHT_RCGNSD_EXCHNG_TRDBL_DRVTV_LBLTY_PSTN_TYP</synonym>
 <listOfValues>
-<valueDef value="7" description="Fair valued exchange tradable derivative liability position"/>
-<valueDef value="8" description="Non-fair valued exchange tradable derivative liability position"/>
+<valueDef value="7" description="Fair-valued balance sheet recognised exchange tradable derivative liability position"/>
+<valueDef value="8" description="Non-fair-valued balance sheet recognised exchange tradable derivative liability position"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Balance sheet recognised financial asset instrument type by fair value (Input Layer)" id="C79FDF0C-9DC6-39C4-D668-6D7982053D1B">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 13:07:23 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>2</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>BLNC_SHT_RCGNSD_FFNCL_ASST_INSTRMNT_FR_VL_TYP_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="42" description="Fair-valued balance sheet recognised financial asset instrument"/>
+<valueDef value="43" description="Non-fair valued balance sheet recognised financial asset instrument"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Collateral type (Input Layer)" id="C7C07DB5-7B2E-A8B0-AB44-6FF68CBB71B5">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 13:46:21 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>3</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>TYP_CLLTRL_INPT</synonym>
+<listOfValues>
+<valueDef value="10" description="Commercial real estate collateral"/>
+<valueDef value="106" description="Offices and commercial premises not related to land collateral"/>
+<valueDef value="107" description="Land excluding agriculture"/>
+<valueDef value="108" description="Land including agriculture"/>
+<valueDef value="109" description="Immaterial rights as collateral"/>
+<valueDef value="12" description="Securities"/>
+<valueDef value="13" description="Gold"/>
+<valueDef value="17" description="Trade receivables"/>
+<valueDef value="2" description="Life insurance policies pledged"/>
+<valueDef value="72" description="Other financial protection"/>
+<valueDef value="77" description="Currency"/>
+<valueDef value="8" description="Residential real estate collateral"/>
+<valueDef value="81" description="Aircraft collateral"/>
+<valueDef value="83" description="Ship collateral"/>
+<valueDef value="84" description="Rolling stock collateral"/>
+<valueDef value="85" description="Machinery and equiptment collateral"/>
+<valueDef value="86" description="Inventory collateral"/>
+<valueDef value="88" description="Other non-registered collateral"/>
+<valueDef value="89" description="Other commodity collateral"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Legal person type" id="C8752093-6006-9886-8A36-2097A4E65F7C">
@@ -10851,11 +11533,23 @@
 <fileName>birdDomains</fileName>
 <logicalDatatype>LOGDT022</logicalDatatype>
 <synonym>RL_NN_NGTV_0D</synonym>
-<listOfRanges>
-<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
-<beginValue>0</beginValue>
-</rangeDef>
-</listOfRanges>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="%column% &gt;= 0"/>
+</checkConstraint>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Subject to impairment indicator" id="CC130ADF-A8E8-DDD1-30A1-ABADCA0C63DC">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-11 09:07:54 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>SBJCT_IMPRMNT_INDCTR_F_04.08_SBJCT_IMPRMNT_INDCTR_REF</synonym>
+<listOfValues>
+<valueDef value="1" description="Subject to impairment"/>
+<valueDef value="2" description="Not subject to impairment"/>
+</listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Abstract instrument role type" id="CD328C69-0F1D-09CF-E2CA-2B27A0C9A75B">
 <createdBy>ostarij</createdBy>
@@ -11005,6 +11699,59 @@
 <valueDef value="7M" description="EUROFIMA (European Company for the Financing of Railroad Rolling Stock)"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Non-performing exit criteria met indicator (Input Layer)" id="CF034369-99A0-8FFB-2215-9EE7634141C5">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 14:20:09 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>NN_PRFRMNG_EXT_CRTR_INDCTR_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Failed to meet the non-performing exit criteria"/>
+<valueDef value="2" description="Still able to meet the non-performing exit criteria"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Forbearance measure type (Input Layer)" id="CF668C99-D92E-7268-D6C2-775C3A1A2820">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:32:18 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>2</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>FRBRNC_MSR_TYP_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Grace period/payment moratorium"/>
+<valueDef value="10" description="Forborne: instruments with modified interest rate below market conditions"/>
+<valueDef value="11" description="Forborne: instruments with modified interest rate not below market conditions"/>
+<valueDef value="3" description="Extension of maturity/term"/>
+<valueDef value="4" description="Rescheduled payments"/>
+<valueDef value="5" description="Debt forgiveness"/>
+<valueDef value="6" description="Debt asset swaps"/>
+<valueDef value="7" description="Other forbearance measures"/>
+<valueDef value="8" description="Forborne: Refinanced debt"/>
+<valueDef value="9" description="Forborne: instruments with other modified terms and conditions"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Perpetual debt security indicator (Input Layer)" id="CF822F64-99BD-84EA-CDD4-5548E402742B">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 13:46:22 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>2</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>PRPTL_DBT_SCRTY_INDCTR_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="17" description="Perpetual debt security"/>
+<valueDef value="18" description="Non-perpetual debt security"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Financial asset instrument debtor assessed type" id="CFEDDB0D-DD60-6138-0CD9-B23824EDDC8E">
 <createdBy>lindomi</createdBy>
 <createdTime>2021-11-04 13:56:07 UTC</createdTime>
@@ -11017,6 +11764,20 @@
 <listOfValues>
 <valueDef value="30" description="Performing financial asset instrument debtor assessed"/>
 <valueDef value="31" description="Non-performing financial asset instrument debtor assessed"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Planning permission for development indicator" id="D0352C45-53DB-31CC-520B-8FE7C83B35E4">
+<createdBy>saporig</createdBy>
+<createdTime>2023-10-17 18:33:09 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>PLNNNG_PRMSSN_DVLPMNT_INDCTR</synonym>
+<listOfValues>
+<valueDef value="1" description="Land with planning permission for developnment"/>
+<valueDef value="2" description="Land without planning permission for development"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Party role type" id="D0551245-E927-3180-FE42-C9D973931F73">
@@ -11109,6 +11870,20 @@
 <valueDef value="T" description="Listed"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Failed to meet the non-performing exit criteria indicator" id="D48531D1-F9C0-AFE2-212A-9198FA2A14E7">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-10-20 09:19:09 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>FLD_NN_PRFRMNG_EXT_CRTR_INDCTR</synonym>
+<listOfValues>
+<valueDef value="1" description="Failed to meet the non-performing exit criteria"/>
+<valueDef value="2" description="Still able to meet the non-performing exit criteria"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Debt security issued type" id="D51655F7-C1E9-739D-EDF2-14EC9D6264A9">
 <createdBy>lindomi</createdBy>
 <createdTime>2021-11-04 13:18:27 UTC</createdTime>
@@ -11119,11 +11894,11 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>DBT_SCRTY_ISSD_TYP</synonym>
 <listOfValues>
-<valueDef value="15" description="Fair valued debt security issued"/>
-<valueDef value="16" description="Non-fair valued debt security issued"/>
+<valueDef value="15" description="Fair-valued debt security issued"/>
+<valueDef value="16" description="Non-fair-valued debt security issued"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="AnaCredit collection Impairment status" id="D53B60E1-6316-42FE-A176-CA7FD1E6AB95">
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Impairment status" id="D53B60E1-6316-42FE-A176-CA7FD1E6AB95">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:44 UTC</createdTime>
 <ownerDesignName>BIRD data models</ownerDesignName>
@@ -11131,14 +11906,15 @@
 <dataTypeSize>2</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>CRDT_QLTY_IMPRMNT_STTS_ANCRDT_CLLCTN</synonym>
+<synonym>IMPRMNT_STTS</synonym>
 <listOfValues>
-<valueDef value="21" description="General allowances (GAAP): To be used if the instrument is subject to impairment in accordance with an applied accounting standard other than IFRS 9 and no specific loss allowances are raised against the instrument (unimpaired)."/>
+<valueDef value="211" description="General allowances for credit risk (GAAP)"/>
+<valueDef value="212" description="General allowances for banking risk (GAAP)"/>
 <valueDef value="23" description="Stage 1 (IFRS): To be used if the instrument is not impaired and a loss allowance at an amount equal to 12-month expected credit losses is raised against the instrument under IFRS. Only for instruments subject to impairment under IFRS 9."/>
 <valueDef value="24" description="Stage 2 (IFRS): To be used if the instrument is not impaired and a loss allowance at an amount equal to lifetime expected credit losses is raised against the instrument under IFRS. Only for instruments subject to impairment under IFRS 9."/>
 <valueDef value="25" description="Stage 3 (IFRS): To be used if the instrument is impaired and a loss allowance at an amount equal to lifetime expected credit losses is raised against the instrument under IFRS. Only for instruments subject to impairment under IFRS 9."/>
 <valueDef value="26" description="Specific allowances (GAAP): To be used if the instrument is subject to impairment in accordance with an applied accounting standard other than IFRS 9 and specific loss allowances are raised, irrespective of whether these allowances are individually or collectively assessed (impaired"/>
-<valueDef value="27" description="POCI (IFRS)"/>
+<valueDef value="27" description="Purchased or originated credit-impaired instruments (POCI) (IFRS)"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="European Union member country type" id="D5A78DCE-8703-E3CF-082B-D306CB451D35">
@@ -11153,6 +11929,34 @@
 <listOfValues>
 <valueDef value="7" description="Single Supervisory Mechanism member country"/>
 <valueDef value="8" description="Non Single Supervisory Mechanism member country"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Software assets indicator" id="D5F61F09-C310-4CBD-DBFB-7ABE4AC99E68">
+<createdBy>antuneo</createdBy>
+<createdTime>2023-11-08 22:43:15 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>birdDomains</fileName>
+<logicalDatatype>LOGDT017</logicalDatatype>
+<synonym>SFTWR_ASST_INDCTR</synonym>
+<listOfValues>
+<valueDef value="1" description="Software assets"/>
+<valueDef value="2" description="Not software assets"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Debt security by performing status type (Input Layer)" id="D629749B-0E35-2CD3-58B6-5E9AA7F0CAD0">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-27 10:33:12 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>2</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>DBT_SCRTY_PRFRMNG_STTS_TYP_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="19" description="Performing debt security"/>
+<valueDef value="20" description="Non-performing debt security"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="OTC Swap type" id="D67C44FC-4B59-50D0-6DD5-F58EADCB586D">
@@ -11186,6 +11990,21 @@
 <valueDef value="3" description="Level 3: Level 3 inputs used for the measurment of fair value. Level 3 inputs are unobservable inputs for the asset or liability"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Multilateral development bank indicator (Input Layer)" id="D8AC73CA-BBE5-1096-11BC-5620F5C11511">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 14:20:19 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>MLTLTRL_DVLPMNT_BNK_INDCTR_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Multilateral development bank"/>
+<valueDef value="2" description="Not a Multilateral development bank"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Fiduciary instrument indicator" id="D9D544B1-1229-4FD5-4C97-06E213CE6217">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:44 UTC</createdTime>
@@ -11198,6 +12017,21 @@
 <listOfValues>
 <valueDef value="1" description="Fiduciary instrument: To be used if the instrument is placed in a fiduciary capacity."/>
 <valueDef value="2" description="Non-fiduciary instrument: To be used if the instrument is not placed in a fiduciary capacity."/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Recognition status (Input Layer)" id="DDEEC8AD-C494-4F26-A1E3-350E54937DEF">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 08:32:18 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>BLNC_SHT_RCGNTN_FNNCL_ASST_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Entirely recognised"/>
+<valueDef value="4" description="Partially derecognised"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Simple, transparent and standardised (STS) securitisation indicator" id="DEB58F5D-C9E0-6C46-2D5F-9955421AF67E">
@@ -11214,13 +12048,19 @@
 <valueDef value="2" description="Not simple, transparent and standardised (STS) securitisation"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Unknown" id="DOM3000004">
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Rating grade type (Input Layer)" id="DF2F2C2A-D191-6FB6-7788-03BA7337FF6F">
 <createdBy>ostarij</createdBy>
-<createdTime>2021-11-08 13:51:31 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<createdTime>2023-12-28 13:07:25 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <fileName>birdDomains</fileName>
-<logicalDatatype>LOGDT017</logicalDatatype>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>TYP_RTNG_GRD_INPT</synonym>
+<listOfValues>
+<valueDef value="1" description="Rating grade for issue-based rating system"/>
+<valueDef value="3" description="Rating grade for issuer based rating systems for non-Central government"/>
+<valueDef value="4" description="Rating grade for issuer based rating systems for Central government"/>
+</listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Trade receivable type" id="E0EDE52B-099B-04E7-7DF6-40CFBC0CAF66">
 <createdBy>ostarij</createdBy>
@@ -11236,27 +12076,19 @@
 <valueDef value="1023" description="Other trade receivables: Trade receivables as defined in Regulation (EU) No 680/2014, Annex V, Part 2.41 (c) other than factoring. Among other things, this category includes outright purchase of trade receivables and discounting of invoices, bills of exchange and other claims."/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of abstract instrument role (Input Layer)" id="E0FB3EFD-8533-9FA1-69F5-E24422894AA2">
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Accounting framework" id="E121E041-B09C-AB9A-70C9-78308EDD10E8">
 <createdBy>ostarij</createdBy>
-<createdTime>2023-06-13 13:45:23 UTC</createdTime>
+<createdTime>2023-12-12 15:36:25 UTC</createdTime>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>ABSTRCT_INSTRMNT_RL_TYP_INPT</synonym>
+<synonym>ACCNTNG_FRMWRK</synonym>
 <listOfValues>
-<valueDef value="10" description="Non-balance sheet recognised financial asset instrument"/>
-<valueDef value="12" description="Non-balance sheet recognised financial liability instrument"/>
-<valueDef value="34" description="Balance sheet recognised financial asset instrument according to national general accepted accounting principles (nGAAP)"/>
-<valueDef value="35" description="Balance sheet recognised financial asset instrument according to International Financial Reporting Standard (IFRS)"/>
-<valueDef value="36" description="Fair valued balance sheet recognised financial liability instrument"/>
-<valueDef value="37" description="Non-fair valued balance sheet recognised financial liability instrument"/>
-<valueDef value="38" description="Over the counter (OTC) Credit default swap received as collateral instrument"/>
-<valueDef value="39" description="Other collateral received instrument"/>
-<valueDef value="5" description="Off-balance sheet item given instrument"/>
-<valueDef value="6" description="Off-balance sheet item received instrument"/>
-<valueDef value="8" description="Collateral given instrument"/>
-<valueDef value="9" description="Over the counter (OTC) Derivative as a hedge"/>
+<valueDef value="1" description="National GAAP not consistent with IFRS"/>
+<valueDef value="2" description="IFRS"/>
+<valueDef value="3" description="National GAAP consistent with IFRS"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Default status type" id="E143E0AF-BEFA-97C8-5132-46D919C36AC4">
@@ -11272,6 +12104,30 @@
 <valueDef value="18" description="Default because both unlikely to pay and more than 90/180 days past due"/>
 <valueDef value="19" description="Default because unlikely to pay"/>
 <valueDef value="20" description="Default because more than 90/180 days past due"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Commodity type (Input Layer)" id="E17A381B-AB51-2595-1586-E855CB6B4068">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-02 10:33:17 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>2</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>CMMDTY_TYP_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Energy solid combustables"/>
+<valueDef value="10" description="Gaseous combustables"/>
+<valueDef value="11" description="Precious metals"/>
+<valueDef value="2" description="Grains and oilseed"/>
+<valueDef value="3" description="Livestock and dairy"/>
+<valueDef value="4" description="Soft and other agriculturals"/>
+<valueDef value="5" description="Other commodity"/>
+<valueDef value="6" description="Energy liquid combustables"/>
+<valueDef value="7" description="Energy electricity and carbon trading"/>
+<valueDef value="8" description="Freight"/>
+<valueDef value="9" description="Non-precious metals"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Enterprise indicator" id="E2A1ED29-367C-4FC6-B9D6-D8848A1F0315">
@@ -11317,6 +12173,21 @@
 <valueDef value="1" description="Long debt security position"/>
 <valueDef value="2" description="Long equity or fund security position"/>
 <valueDef value="6" description="Short security position"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Security type by identifier (Input Layer)" id="E82D2DB6-440B-2E28-9F87-A9CCBC48CCAD">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-27 10:33:11 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>SCRTY_TYP_BY_IDNTFR_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="8" description="International securities identification number (ISIN) security"/>
+<valueDef value="9" description="Non-International securities identification number (Non-ISIN) security"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="ISO 3166-1 alpha-2 code of the country" id="E832EA39-67C9-4303-AD29-B66510B666C6">
@@ -11580,6 +12451,19 @@
 <valueDef value="ZW" description="Zimbabwe"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Forborne non-negotiable long security position indicator" id="E8612C0C-6AF0-A51C-8AD6-D2D5AB5C5ACA">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-10-10 12:33:32 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>FRBRN_LNG_NN_NGTBL_SCRTY_PSTN_INDCTR</synonym>
+<listOfValues>
+<valueDef value="17" description="Forborne long non-negotiable security position"/>
+<valueDef value="18" description="Non-forborne long non-negotiable security position"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Lower of cost or market indicator" id="E8BA40E8-0391-E3FC-2ECE-F1290C6E1678">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:44 UTC</createdTime>
@@ -11620,6 +12504,22 @@
 <listOfValues>
 <valueDef value="S11" description="Non-financial corporation: It corresponds to sector S.11, as defined in Regulation (EU) No 549/2013 (paragraphs 2.45 to 2.50 of Annex A), extended to the rest of the world."/>
 <valueDef value="S12" description="Financial corporation: S.12 extended to the rest of the world."/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Litigation status (Input Layer)" id="E9AC9799-6E08-A760-5AFC-2A0167B08AEF">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 14:20:16 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>LTGTN_STTS_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="In pre-litigation"/>
+<valueDef value="2" description="In litigation"/>
+<valueDef value="3" description="Not in litigation/pre-litigation"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Provision type" id="EA1EB444-FC71-BD27-F54A-104DEBBA126E">
@@ -11696,22 +12596,19 @@
 <valueDef value="19" description="Self-employed natural person"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of protection valuation approach (Input Layer)" id="EF27C80A-0E73-ECD2-464C-593058E1745C">
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Prudential portfolio type (Input Layer)" id="EF4AB955-8D95-4513-ED02-71FE4460FA83">
 <createdBy>ostarij</createdBy>
-<createdTime>2023-06-16 08:58:51 UTC</createdTime>
+<createdTime>2024-01-03 08:32:18 UTC</createdTime>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>1</dataTypeSize>
 <fileName>birdDomains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>TYP_PRTCTN_VLTN_APPRCH_INPT</synonym>
+<synonym>PRDNTL_PRTFL_INPT</synonym>
 <listOfValues>
 <valueDef value="0" description="Not applicable"/>
-<valueDef value="1" description="Counterparty estimation"/>
-<valueDef value="2" description="Creditor valuation"/>
-<valueDef value="3" description="Mark-to-market"/>
-<valueDef value="4" description="Other type of valuation"/>
-<valueDef value="5" description="Third-party valuation"/>
+<valueDef value="1" description="Trading book"/>
+<valueDef value="2" description="Non-trading book"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Financial corporation type" id="F1CE745B-410C-E5A0-B4F3-A92A2CC2B012">
@@ -11991,6 +12888,24 @@
 <valueDef value="_X" description="Not allocated/ unspecified/not assigned"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Rating grade credit quality" id="F2695C17-41C3-AFA6-53A1-BA53E3B7900C">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-10-23 09:56:12 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>RTNG_GRD_CRDT_QLTY</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Senior investment grade"/>
+<valueDef value="2" description="Non-senior investment grade"/>
+<valueDef value="3" description="High yield"/>
+<valueDef value="4" description="Non-rated"/>
+<valueDef value="5" description="Investment grade"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Project finance loan indicator" id="F280EF3B-D5EA-8BEB-EFD4-D54B56058AD3">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:44 UTC</createdTime>
@@ -12019,7 +12934,7 @@
 <valueDef value="2" description="Not pulling effect"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Organisation type by legal proceding status" id="F35BD96B-A013-2ACD-CE38-E2D5E4C735C2">
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Organisation type by legal proceeding status" id="F35BD96B-A013-2ACD-CE38-E2D5E4C735C2">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:45 UTC</createdTime>
 <ownerDesignName>BIRD data models</ownerDesignName>
@@ -12031,6 +12946,35 @@
 <listOfValues>
 <valueDef value="14" description="Organisation without legal proceeding"/>
 <valueDef value="15" description="Organisation with legal proceeding"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Subject to impairment indicator (Input Layer)" id="F37EA0A2-1459-7303-E007-00920643CB82">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-12-28 14:20:09 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>SBJCT_IMPRMNT_INDCTR_INPT</synonym>
+<listOfValues>
+<valueDef value="0" description="Not applicable"/>
+<valueDef value="1" description="Subject to impairment"/>
+<valueDef value="2" description="Not subject to impairment"/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Commercial real estate and offices and commercial premises collateral type" id="F46DBD3B-725C-9AA6-6E4E-AF42ABEDD9C2">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-09-22 10:12:56 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypeSize>1</dataTypeSize>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>CMMRCL_RL_ESTT_OFFC_CMMRCL_PRMS_CLLTRL_TYP</synonym>
+<listOfValues>
+<valueDef value="10" description="Commercial real estate collateral"/>
+<valueDef value="9" description="Offices and commercial premises collateral"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Currency for transaction reported" id="F6EEE55E-858F-5070-F4B1-361975A9D182">
@@ -12266,6 +13210,28 @@
 <valueDef value="ZWR" description="Third Zimbabwe dollar"/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Commodity type for FRTB" id="F72E4F1A-CE19-323F-D20F-79FE54F4BECE">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-10-27 10:19:08 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>birdDomains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<synonym>CMMDTY_TYP_FRTB</synonym>
+<listOfValues>
+<valueDef value="1" description="Energy solid combustables"/>
+<valueDef value="10" description="Gaseous combustables"/>
+<valueDef value="11" description="Precious metals"/>
+<valueDef value="2" description="Grains and oilseed"/>
+<valueDef value="3" description="Livestock and dairy"/>
+<valueDef value="4" description="Soft and other agriculturals"/>
+<valueDef value="5" description="Other commodity"/>
+<valueDef value="6" description="Energy liquid combustables"/>
+<valueDef value="7" description="Energy electricity and carbon trading"/>
+<valueDef value="8" description="Freight"/>
+<valueDef value="9" description="Non-precious metals"/>
+</listOfValues>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Non-performing prior to forbearance indicator" id="F88013CE-0450-6ED0-E62F-A5AC72213D59">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:45 UTC</createdTime>
@@ -12294,27 +13260,6 @@
 <valueDef value="2" description="Not early redemptions included"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Primary asset class of cover pool (Input Layer)" id="F95165C3-0D95-034B-A87D-BB24D8C4C389">
-<createdBy>ostarij</createdBy>
-<createdTime>2023-06-13 13:45:23 UTC</createdTime>
-<ownerDesignName>BIRD data models</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<dataTypeSize>1</dataTypeSize>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>PRMRY_ASST_CLSS_CVR_PL_INPT</synonym>
-<listOfValues>
-<valueDef value="0" description="Not applicable"/>
-<valueDef value="a" description="Exposures to or guaranteed by central governments, ESCB central banks, public sector entities, regional governments or local authorities in the Union"/>
-<valueDef value="b" description="Exposures to or guaranteed by third country central governments, third-country central banks, multilateral development banks, international organisations that fullfill specific requirements"/>
-<valueDef value="c" description="Exposures to institutions that fullfilll specific requirements"/>
-<valueDef value="d" description="Loans secured by (i) residential property or (ii) senior units issued by French Fonds Communs de Titrisation or equivalent securitisation entities governed by the laws of a Member State securitising residential property exposures"/>
-<valueDef value="e" description="Residential loans fully guaranteed by an eligible rpotection provider"/>
-<valueDef value="f" description="Loans secured by (1) commercial immovable property or (ii) senior units issued by French Fonds Communs de Titrisation or equivalent securitisation entities governed by the law of a Member State securitising commercial immovable property exposures."/>
-<valueDef value="g" description="Loans secured y maritime liens on ships up to the difference between 60% of the value of the pledged ship and the value of any prior maritime liens"/>
-<valueDef value="h" description="Other exposures"/>
-</listOfValues>
-</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Security status" id="F9F623D9-5AFC-4BFA-B66C-230A7A8C2271">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:45 UTC</createdTime>
@@ -12326,6 +13271,7 @@
 <synonym>SCRTY_STTS</synonym>
 <listOfValues>
 <valueDef value="100" description="alive"/>
+<valueDef value="101" description="Alive - under judicial administration, receivership or similar measures"/>
 <valueDef value="200" description="not alive - reason not specified"/>
 <valueDef value="201" description="not alive - matured (planned redemption)"/>
 <valueDef value="202" description="not alive - matured (early redemption)"/>
@@ -12364,16 +13310,14 @@
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Non negative monetary amounts with 2 decimals" id="FAA20A39-31D6-458E-8297-A7FD01A6501F">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:45 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <fileName>birdDomains</fileName>
 <logicalDatatype>LOGDT026</logicalDatatype>
 <synonym>MNTRY_NN_NGTV_2D</synonym>
-<listOfRanges>
-<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
-<beginValue>0</beginValue>
-</rangeDef>
-</listOfRanges>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="%column% &gt;= 0"/>
+</checkConstraint>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Master agreement Entity role type" id="FACED78B-F602-A7BC-F5B4-A66D1F583E7B">
 <createdBy>ostarij</createdBy>
@@ -12460,39 +13404,6 @@
 <valueDef value="2" description="Not held for sale: The member indicates that the instrument is not held for sale"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Security status (Input Layer)" id="a12cfc40-95b1-43ad-b9fc-b1d2729f69dc">
-<createdBy>domin</createdBy>
-<createdTime>2019-08-22 12:45:43 UTC</createdTime>
-<ownerDesignName>BIRD data models</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<dataTypeSize>3</dataTypeSize>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>SCRTY_STTS_INPT</synonym>
-<listOfValues>
-<valueDef value="0" description="Not applicable"/>
-<valueDef value="100" description="alive"/>
-<valueDef value="200" description="not alive - reason not specified"/>
-<valueDef value="201" description="not alive - matured (planned redemption)"/>
-<valueDef value="202" description="not alive - matured (early redemption)"/>
-<valueDef value="203" description="not alive - issuer default (bankrupt)"/>
-<valueDef value="204" description="not alive - instrument in default"/>
-<valueDef value="205" description="not alive - split"/>
-<valueDef value="206" description="not alive - reverse split"/>
-<valueDef value="207" description="not alive - knocked out"/>
-<valueDef value="208" description="not alive - merger"/>
-<valueDef value="209" description="not alive - demerger"/>
-<valueDef value="210" description="not alive - repurchase of own securities"/>
-<valueDef value="211" description="not alive - converted/ exercised"/>
-<valueDef value="212" description="not alive - issue withdrawn"/>
-<valueDef value="213" description="not alive - Dissolution of company"/>
-<valueDef value="214" description="not alive - assimilation"/>
-<valueDef value="215" description="not alive - temporary ISIN"/>
-<valueDef value="216" description="not alive - other reason"/>
-<valueDef value="217" description="not alive - old rights issue"/>
-<valueDef value="218" description="not alive - not covered by IF list"/>
-</listOfValues>
-</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of master agreement type (Input Layer)" id="a2bb516d-f352-4217-a4ec-6d521c122c99">
 <createdBy>domin</createdBy>
 <createdTime>2019-08-22 12:45:43 UTC</createdTime>
@@ -12511,7 +13422,7 @@
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Other organisation role type" id="a58123d6-f2f1-4847-9648-764dc7ed6af2">
 <createdBy>domin</createdBy>
 <createdTime>2019-08-22 12:45:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>2</dataTypeSize>
 <fileName>birdDomains</fileName>
@@ -12521,6 +13432,9 @@
 <valueDef value="30" description="Subsidiary"/>
 <valueDef value="31" description="Joint venture"/>
 <valueDef value="32" description="Associate"/>
+<valueDef value="41" description="Partner enterprise"/>
+<valueDef value="42" description="Linked enterprise"/>
+<valueDef value="43" description="Immediate parent enterprise"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of amortisation" id="a8f7e3d5-41d7-4cd4-9952-7ed53c3fe964">
@@ -12538,21 +13452,6 @@
 <valueDef value="3" description="Fixed amortisation schedule: Amortisation in which the principal amount repaid in each instalment is the same."/>
 <valueDef value="4" description="Bullet: Amortisation in which the full principal amount is repaid in the last instalment."/>
 <valueDef value="5" description="Amortisation types other than French, German, Fixed amortisation schedule or bullet: Other amortisation schedule applied than the ones specified."/>
-</listOfValues>
-</Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Exposure with recourse indicator (Input Layer)" id="a900d731-5de1-4aea-9395-0ccb11d037f1">
-<createdBy>domin</createdBy>
-<createdTime>2019-08-22 12:45:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<dataTypeSize>1</dataTypeSize>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>EXPSR_RCRS_INDCTR_INPT</synonym>
-<listOfValues>
-<valueDef value="0" description="Not applicable"/>
-<valueDef value="1" description="Exposure with recourse"/>
-<valueDef value="2" description="Not exposure with recourse"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Security type by product" id="a986f5cd-dadd-44c9-8759-0e514ab9ed45">
@@ -12612,7 +13511,7 @@
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Performing forborne exposure under probation reclassified from non-performing indicator (Input Layer)" id="b6a03089-70fd-4f79-91f3-6714a8cc9403">
 <createdBy>domin</createdBy>
 <createdTime>2019-08-22 12:45:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>1</dataTypeSize>
 <fileName>birdDomains</fileName>
@@ -12620,8 +13519,8 @@
 <synonym>P_FRBRN_EXPSR_PRBTN_RCLD_NP_INPT</synonym>
 <listOfValues>
 <valueDef value="0" description="Not applicable"/>
-<valueDef value="1" description="Performing forborne exposure under probation reclassified from non-performing"/>
-<valueDef value="2" description="Not performing forborne exposure under probation reclassified from non-performing"/>
+<valueDef value="1" description="Performing forborne exposure under probation"/>
+<valueDef value="2" description="Performing forborne exposure not under probation"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Repayment rights" id="bbff53b5-19b3-4367-a356-28bb6e4af3c0">
@@ -12653,10 +13552,10 @@
 <valueDef value="2" description="Not elibible for central bank funding: Specifies if an object is not eligible for central bank funding."/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Real estate collateral type" id="bd938efd-efca-482c-a9ca-102cab79784f">
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Real estate collateral location type" id="bd938efd-efca-482c-a9ca-102cab79784f">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:49 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>2</dataTypeSize>
 <fileName>birdDomains</fileName>
@@ -12711,25 +13610,6 @@
 <valueDef value="6" description="Equity security"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of groups (Input Layer)" id="caf6867f-7699-40b1-8fdf-d4211a8a85bb">
-<createdBy>domin</createdBy>
-<createdTime>2019-08-22 12:45:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<dataTypeSize>2</dataTypeSize>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>TYP_GRP_INPT</synonym>
-<listOfValues>
-<valueDef value="11" description="Institutional unit of foreign branches"/>
-<valueDef value="13" description="Group of consolidated clients"/>
-<valueDef value="14" description="Accounting consolidation group"/>
-<valueDef value="15" description="Prudential consolidation group"/>
-<valueDef value="16" description="Subsidiary, joint venture and associate"/>
-<valueDef value="4" description="Other group of clients"/>
-<valueDef value="6" description="Group of connected clients"/>
-</listOfValues>
-</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Primary asset class of cover pool" id="cb0c0767-a13c-4be8-adef-927c6f7690e5">
 <createdBy>domin</createdBy>
 <createdTime>2019-08-22 12:45:43 UTC</createdTime>
@@ -12744,24 +13624,9 @@
 <valueDef value="c" description="Exposures to institutions that fullfilll specific requirements"/>
 <valueDef value="d" description="Loans secured by (i) residential property or (ii) senior units issued by French Fonds Communs de Titrisation or equivalent securitisation entities governed by the laws of a Member State securitising residential property exposures"/>
 <valueDef value="e" description="Residential loans fully guaranteed by an eligible rpotection provider"/>
-<valueDef value="f" description="Loans secured by (1) commercial immovable property or (ii) senior units issued by French Fonds Communs de Titrisation or equivalent securitisation entities governed by the law of a Member State securitising commercial immovable property exposures."/>
-<valueDef value="g" description="Loans secured y maritime liens on ships up to the difference between 60% of the value of the pledged ship and the value of any prior maritime liens"/>
+<valueDef value="f" description="Loans secured by (i) commercial immovable property or (ii) senior units issued by French Fonds Communs de Titrisation or equivalent securitisation entities governed by the law of a Member State securitising commercial immovable property exposures."/>
+<valueDef value="g" description="Loans secured by maritime liens on ships up to the difference between 60% of the value of the pledged ship and the value of any prior maritime liens"/>
 <valueDef value="h" description="Other exposures"/>
-</listOfValues>
-</Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of rating system (Input Layer)" id="cb56537f-cabc-4dda-a86b-bf5048f102b3">
-<createdBy>domin</createdBy>
-<createdTime>2019-08-22 12:45:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<dataTypeSize>1</dataTypeSize>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>TYP_RTNG_SYSTM_INPT</synonym>
-<listOfValues>
-<valueDef value="1" description="Issue based rating system"/>
-<valueDef value="3" description="Central government rating system"/>
-<valueDef value="4" description="Non-Central government rating system"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of long security position Prudentiial Portfolio assignment Accounting classification for financial assets assignment (Input Layer)" id="cc529c70-1b15-42f1-87fe-b8649167e24a">
@@ -12804,8 +13669,8 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <synonym>SCRTY_TYP_ID</synonym>
 <listOfValues>
-<valueDef value="8" description="International securities identification number (ISIN) security: ISIN security"/>
-<valueDef value="9" description="Non-International securities identification number (ISIN) security: Non-ISIN security"/>
+<valueDef value="8" description="International securities identification number (ISIN) security"/>
+<valueDef value="9" description="Non-International securities identification number (Non-ISIN) security"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Accounting hedge indicator (Input Layer)" id="ce11f94d-a946-4058-b9aa-2ceb6cdfe2bd">
@@ -12947,25 +13812,10 @@
 <valueDef value="4" description="Long debt security position Prudential portfolio assignment Accounting classification for financial assets assignment according to national general accepted accounting principles (nGAAP)"/>
 </listOfValues>
 </Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Assessment approach for credit quality status (Input Layer)" id="f17bf08c-b179-4a17-8968-be388e09bbdd">
-<createdBy>domin</createdBy>
-<createdTime>2019-08-22 12:45:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<dataTypeSize>1</dataTypeSize>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>APPRCH_CRDT_QLTY_STTS_INPT</synonym>
-<listOfValues>
-<valueDef value="0" description="Not applicable"/>
-<valueDef value="1" description="Debtor based: Total obligations of a borrower"/>
-<valueDef value="2" description="Transaction based: Individual credit facility"/>
-</listOfValues>
-</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Long security position Prudential portfolio assignment type" id="f3ceddd7-0af1-46f7-a64e-2443f9739a8a">
 <createdBy>ostarij</createdBy>
 <createdTime>2021-10-04 08:25:49 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<ownerDesignName>BIRD data models</ownerDesignName>
 <avTSortOrder>0</avTSortOrder>
 <dataTypeSize>1</dataTypeSize>
 <fileName>birdDomains</fileName>
@@ -13032,111 +13882,6 @@
 <listOfValues>
 <valueDef value="1" description="ECAI"/>
 <valueDef value="2" description="ECA"/>
-</listOfValues>
-</Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of party role (Input Layer)" id="fb47f404-bef8-4d54-adfc-044f1ea3be3e">
-<createdBy>domin</createdBy>
-<createdTime>2019-08-22 12:45:43 UTC</createdTime>
-<ownerDesignName>BIRD data models</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<dataTypeSize>2</dataTypeSize>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>TYP_PRTY_RL_INPT</synonym>
-<listOfValues>
-<valueDef value="10" description="Securitisation special purpose entity (SSPE)"/>
-<valueDef value="11" description="Master netting counterparty"/>
-<valueDef value="12" description="Security debtor"/>
-<valueDef value="13" description="Investor"/>
-<valueDef value="14" description="Buyer"/>
-<valueDef value="15" description="Lessor"/>
-<valueDef value="16" description="Factor"/>
-<valueDef value="17" description="Creditor"/>
-<valueDef value="18" description="Depositor"/>
-<valueDef value="19" description="Lessee"/>
-<valueDef value="20" description="Seller"/>
-<valueDef value="21" description="Original lender"/>
-<valueDef value="22" description="Servicer"/>
-<valueDef value="23" description="Swap provider"/>
-<valueDef value="24" description="Protection provider"/>
-<valueDef value="25" description="Originator"/>
-<valueDef value="26" description="Central counterparty client"/>
-<valueDef value="27" description="Deposit taking corporation"/>
-<valueDef value="28" description="Loan debtor"/>
-<valueDef value="30" description="Subsidiary"/>
-<valueDef value="31" description="Joint venture"/>
-<valueDef value="32" description="Associate"/>
-<valueDef value="33" description="Lender"/>
-<valueDef value="35" description="Borrower"/>
-<valueDef value="36" description="Beneficiary"/>
-<valueDef value="37" description="Assigned debtor"/>
-<valueDef value="5" description="Non-qualifying central counterparty"/>
-<valueDef value="6" description="Qualifying central counterparty (QCCP)"/>
-<valueDef value="7" description="Clearing member"/>
-<valueDef value="8" description="Issuer"/>
-<valueDef value="9" description="Sponsor"/>
-</listOfValues>
-</Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Purchased credit-impaired (Input Layer)" id="fb4bf06c-ae8d-45bb-bd77-18fce5409d0d">
-<createdBy>domin</createdBy>
-<createdTime>2019-08-22 12:45:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<dataTypeSize>1</dataTypeSize>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>PRCHSD_ORGNTD_INPT</synonym>
-<listOfValues>
-<valueDef value="0" description="Not applicable"/>
-<valueDef value="1" description="Purchased or originated credit-impaired"/>
-<valueDef value="2" description="Not purchased or originated credit-impaired"/>
-</listOfValues>
-</Domain>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Type of asset provided as security (Input Layer)" id="fb87291d-a6e3-4453-b696-20a392801bbf">
-<createdBy>domin</createdBy>
-<createdTime>2019-08-22 12:45:43 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
-<avTSortOrder>0</avTSortOrder>
-<dataTypeSize>4</dataTypeSize>
-<fileName>birdDomains</fileName>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<synonym>TYP_ASST_SCRTSTN_INPT_WNA</synonym>
-<listOfValues>
-<valueDef value="0" description="Not applicable"/>
-<valueDef value="1000" description="Securitisation"/>
-<valueDef value="1100" description="Asset-backed security (ABS)"/>
-<valueDef value="1101" description="Auto loans ABS"/>
-<valueDef value="1102" description="Consumer loans ABS"/>
-<valueDef value="1103" description="Credit card receivables ABS"/>
-<valueDef value="1104" description="Equipment leases ABS"/>
-<valueDef value="1105" description="Home equity loans ABS"/>
-<valueDef value="1106" description="Manufactured housing leases ABS"/>
-<valueDef value="1107" description="Small and medium-sized enterprises (SME) loans ABS"/>
-<valueDef value="1108" description="Student loans ABS"/>
-<valueDef value="1109" description="Whole Business Securitisation (WBS) ABS"/>
-<valueDef value="1110" description="Mixed ABS"/>
-<valueDef value="1198" description="Other Assets ABS"/>
-<valueDef value="1199" description="ABS - No detailed classification available"/>
-<valueDef value="1200" description="Mortgage-backed security (MBS)"/>
-<valueDef value="1201" description="Residential mortgage-backed security (RMBS)"/>
-<valueDef value="1202" description="Commercial mortgage-backed security (CMBS)"/>
-<valueDef value="1203" description="Mixed MBS"/>
-<valueDef value="1298" description="Other MBS"/>
-<valueDef value="1299" description="MBS - No detailed classification available"/>
-<valueDef value="1300" description="Collateralised Debt Obligation (CDO)"/>
-<valueDef value="1400" description="Collateralised Mortgage Obligation (CMO)"/>
-<valueDef value="1500" description="Mixed securitisation"/>
-<valueDef value="1800" description="Other securitisation"/>
-<valueDef value="1900" description="Securitisation - No detailed classification available"/>
-<valueDef value="2000" description="Covered Bond"/>
-<valueDef value="2100" description="Public sector Covered bond"/>
-<valueDef value="2200" description="Mortgage Covered bond"/>
-<valueDef value="2300" description="Ship Covered bond"/>
-<valueDef value="2400" description="Aircraft Covered bond"/>
-<valueDef value="2500" description="Mixed Covered bond"/>
-<valueDef value="2800" description="Other Covered bond"/>
-<valueDef value="2900" description="Covered Bond - No detailed classification available"/>
-<valueDef value="9999" description="Securitisation and Covered Bond - No detailed classification available"/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="High liquidity and credit quality (HQLA) indicator (Input Layer)" id="fba77206-94b4-4137-9f29-8aa1ae650604">

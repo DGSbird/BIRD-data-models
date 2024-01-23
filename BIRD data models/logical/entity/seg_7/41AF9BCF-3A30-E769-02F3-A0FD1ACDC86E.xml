@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_7" id="41AF9BCF-3A30-E769-02F3-A0FD1ACDC86E" name="Off-balance sheet item given instrument derived data">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-11-08 15:44:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[Off-balance sheet item given instrument derived data is additional information about Off-balance sheet item given instrument.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="C083FD85-D1B9-E583-74F8-D21AEF72E2BC" value="true"/>
+<item key="2F95CE3A-CB8C-BD28-A553-EDBE7F94003D" value="true"/>
+<item key="5CF11FB1-F95F-60BC-DA98-ABFECEE7315A" value="true"/>
+<item key="D692C862-C9D4-A57D-98F6-C0D7D8DBCCCF" value="true"/>
+</engineerTo>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>OFF_BLNC_SHT_ITM_GVN_INSTRMNT_DRVD_DT</preferredAbbreviation>
+<changeRequests>
+<requestID>21881-403</requestID>
+</changeRequests>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Instrument role type" id="A4DA0C8A-3DDF-014D-3296-5AFCADDA44C8">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-11-08 15:45:50 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different roles an instrument may act in. Examples are financial asset instrument, financial liability instrument.]]></comment>
+<generatorID>365628B6-B13E-792B-8D75-63894D513A0C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="C083FD85-D1B9-E583-74F8-D21AEF72E2BC" value="true"/>
+<item key="2F95CE3A-CB8C-BD28-A553-EDBE7F94003D" value="true"/>
+<item key="D692C862-C9D4-A57D-98F6-C0D7D8DBCCCF" value="true"/>
+<item key="5CF11FB1-F95F-60BC-DA98-ABFECEE7315A" value="true"/>
+</engineerTo>
+<referedAttribute>25388038-025D-99E8-CF86-3AB697F8D586</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>8e78f30b-610e-404e-97c5-60fa855125db</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>INSTRMNT_RL_TYP</preferredAbbreviation>
+</Attribute>
+<Attribute name="Instrument identifier" id="F57FA95E-5997-DEAE-6AC7-E3FB2A16DB89">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-11-08 15:45:50 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>365628B6-B13E-792B-8D75-63894D513A0C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="C083FD85-D1B9-E583-74F8-D21AEF72E2BC" value="true"/>
+<item key="2F95CE3A-CB8C-BD28-A553-EDBE7F94003D" value="true"/>
+<item key="D692C862-C9D4-A57D-98F6-C0D7D8DBCCCF" value="true"/>
+<item key="5CF11FB1-F95F-60BC-DA98-ABFECEE7315A" value="true"/>
+</engineerTo>
+<referedAttribute>2AA5F1F8-7222-F0EE-9769-936B5346CE62</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>INSTRMNT_ID</preferredAbbreviation>
+</Attribute>
+<Attribute name="Instrument Reference date" id="4EA629FB-17F5-B50A-4ECE-5FC7C2794C31">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-11-08 15:45:50 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>365628B6-B13E-792B-8D75-63894D513A0C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="C083FD85-D1B9-E583-74F8-D21AEF72E2BC" value="true"/>
+<item key="2F95CE3A-CB8C-BD28-A553-EDBE7F94003D" value="true"/>
+<item key="D692C862-C9D4-A57D-98F6-C0D7D8DBCCCF" value="true"/>
+<item key="5CF11FB1-F95F-60BC-DA98-ABFECEE7315A" value="true"/>
+</engineerTo>
+<referedAttribute>7F530CBF-4627-C7D1-6C50-AB1FC96056B0</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>INSTRMNT_RFRNC_DT</preferredAbbreviation>
+</Attribute>
+<Attribute name="Instrument Reporting agent identifier" id="FF8AFEA5-8EE0-0BF7-5721-A14E5239C299">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-11-08 15:45:50 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>365628B6-B13E-792B-8D75-63894D513A0C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="C083FD85-D1B9-E583-74F8-D21AEF72E2BC" value="true"/>
+<item key="2F95CE3A-CB8C-BD28-A553-EDBE7F94003D" value="true"/>
+<item key="D692C862-C9D4-A57D-98F6-C0D7D8DBCCCF" value="true"/>
+<item key="5CF11FB1-F95F-60BC-DA98-ABFECEE7315A" value="true"/>
+</engineerTo>
+<referedAttribute>CB7734D4-5ECD-011C-BF59-61AAD44D205B</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>INSTRMNT_RPRTNG_AGNT_ID</preferredAbbreviation>
+</Attribute>
+<Attribute name="Transfer between impairment stages" id="510F7D38-DFEA-8F97-74AD-CE0F3D40FB47">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-11-08 15:47:17 UTC</createdTime>
+<comment><![CDATA[Transfer between impairment stages compares the impairment status at the beginning of the period (Initial impairment status) with the impairment status at the end of the period.]]></comment>
+<generatorID>B55A7164-1303-4D57-5902-20ACBB1A47AC</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="C083FD85-D1B9-E583-74F8-D21AEF72E2BC" value="true"/>
+<item key="2F95CE3A-CB8C-BD28-A553-EDBE7F94003D" value="true"/>
+<item key="D692C862-C9D4-A57D-98F6-C0D7D8DBCCCF" value="true"/>
+<item key="5CF11FB1-F95F-60BC-DA98-ABFECEE7315A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>82B6C192-63EA-742A-23BA-8C02BD32F53A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>BAC24BD5-93CD-9579-119D-83D1FEE3CC48</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>TRNSFR_IMPRMNT_STGS</preferredAbbreviation>
+<changeRequests>
+<requestID>21881-403</requestID>
+</changeRequests>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="75ABECDA-6D1D-FD2E-931E-3D1ACE65CDD4" name="Off-balance sheet item given instrument derived data PK">
+<createdBy>ostarij</createdBy>
+<createdTime>2023-11-08 15:45:58 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="C083FD85-D1B9-E583-74F8-D21AEF72E2BC" value="true"/>
+<item key="2F95CE3A-CB8C-BD28-A553-EDBE7F94003D" value="true"/>
+<item key="D692C862-C9D4-A57D-98F6-C0D7D8DBCCCF" value="true"/>
+<item key="5CF11FB1-F95F-60BC-DA98-ABFECEE7315A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A4DA0C8A-3DDF-014D-3296-5AFCADDA44C8</attributeRef>
+<attributeRef>F57FA95E-5997-DEAE-6AC7-E3FB2A16DB89</attributeRef>
+<attributeRef>4EA629FB-17F5-B50A-4ECE-5FC7C2794C31</attributeRef>
+<attributeRef>FF8AFEA5-8EE0-0BF7-5721-A14E5239C299</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

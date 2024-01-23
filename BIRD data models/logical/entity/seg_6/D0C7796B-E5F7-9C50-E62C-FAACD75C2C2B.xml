@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_6" id="D0C7796B-E5F7-9C50-E62C-FAACD75C2C2B" name="Foreign exchange risk factor for standardised approach">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-06-19 14:42:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[(1)	
+Delta FX: the FX delta risk factors are defined below.
+
+(a)	
+The FX delta risk factors are all the exchange rates between the currency in which an instrument is denominated and the reporting currency. For transactions that reference an exchange rate between a pair of non-reporting currencies, the FX delta risk factors are all the exchange rates between:
+
+(i)	
+the reporting currency; and
+
+(ii)	
+both the currency in which an instrument is denominated and any other currencies referenced by the instrument.7
+
+(b)	
+Subject to supervisory approval, FX risk may alternatively be calculated relative to a base currency instead of the reporting currency. In such case the bank must account for not only:
+
+(i)	
+the FX risk against the base currency; but also
+
+(ii)	
+the FX risk between the reporting currency and the base currency (ie translation risk).
+
+(c)	
+The resulting FX risk calculated relative to the base currency as set out in (b) is converted to the capital requirements in the reporting currency using the spot reporting/base exchange rate reflecting the FX risk between the base currency and the reporting currency.
+
+(d)	
+The FX base currency approach may be allowed under the following conditions:
+
+(i)	
+To use this alternative, a bank may only consider a single currency as its base currency; and
+
+(ii)	
+The bank shall demonstrate to the relevant supervisor that calculating FX risk relative to their proposed base currency provides an appropriate risk representation for their portfolio (for example, by demonstrating that it does not inappropriately reduce capital requirements relative to those that would be calculated without the base currency approach) and that the translation risk between the base currency and the reporting currency is taken into account.
+
+(2)	
+Vega FX: the FX vega risk factors are the implied volatilities of options that reference exchange rates between currency pairs; as defined along one dimension, the maturity of the option. This is defined as the implied volatility of the option as mapped to one or several of the following maturity tenors: 0.5 years, 1 year, 3 years, 5 years and 10 years.
+
+(3)	
+Curvature FX: the FX curvature risk factors are defined below.
+
+(a)	
+The FX curvature risk factors are all the exchange rates between the currency in which an instrument is denominated and the reporting currency. For transactions that reference an exchange rate between a pair of non-reporting currencies, the FX risk factors are all the exchange rates between:
+
+(i)	
+the reporting currency; and
+
+(ii)	
+both the currency in which an instrument is denominated and any other currencies referenced by the instrument.
+
+(b)	
+Where supervisory approval for the base currency approach has been granted for delta risks, FX curvature risks shall also be calculated relative to a base currency instead of the reporting currency, and then converted to the capital requirements in the reporting currency using the spot reporting/base exchange rate.
+
+(4)	
+No distinction is required between onshore and offshore variants of a currency for all FX delta, vega and curvature risk factors.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="false"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="false"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="false"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="false"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="false"/>
+</engineerTo>
+<typeID>1B94F88B-CE04-E04E-DE88-6866B6DBCB24</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>569226D4-0B71-7630-0EE4-00E6F7A871C8</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>FX_RSK_FACTR_SA</preferredAbbreviation>
+<documents usedDucuments="577C6671-054B-63C9-0FA7-48002B03D7C4"/>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Base currency" id="036B657E-AB26-5D39-4099-52A4DD613EB5">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-06-19 14:48:11 UTC</createdTime>
+<comment><![CDATA[The currency code according to ISO4217.]]></comment>
+<generatorID>86B38E13-4CA1-76E8-212B-FF1C1865321A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>4CA512E4-A54A-933E-24C1-3D8E2D31E7C6</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2D4D0542-0954-4C82-9231-4447DC95A6DE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>BS_CRRNCY</preferredAbbreviation>
+</Attribute>
+<Attribute name="Risk currency" id="F1F5285E-F418-0D32-80C5-DDBFA864130C">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-06-19 14:49:03 UTC</createdTime>
+<comment><![CDATA[The currency code according to ISO4217.]]></comment>
+<generatorID>7C5C114A-52ED-A78F-142B-6FE0C740E4DE</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>4CA512E4-A54A-933E-24C1-3D8E2D31E7C6</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2D4D0542-0954-4C82-9231-4447DC95A6DE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>CRRNCY</preferredAbbreviation>
+<changeRequests>
+<requestID>18611-277</requestID>
+</changeRequests>
+</Attribute>
+</attributes>
+</Entity>

@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CCB14854-478F-B901-E522-6EB234FC56A8" name="INSTRMNT_CLLTRL_RCVD_INSTRMNT_ASSGNMNT">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 10:16:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[An Instrument Collateral received instrument assignment is the combination of an Instrument and a Collateral received instrument that indicates which Instrument is protected by which Collateral received instrument.]]></commentInRDBMS>
+<generatorID>1DD8C546-8ABB-E1E3-5242-D51324C3948E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>BA6872F2-94CA-21F5-EE67-2D64E8105B0E</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DT_RFRNC" id="CDBB5361-0E2F-0121-819C-FBAD386C8851">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 10:16:55 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>4FA5D146-F8BE-0BA5-1EAD-290FEF943AAD</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9808D29F-CB08-15A1-9CA9-73E43B88B217" referredColumn="F5D2A327-44F8-4F90-B3F9-98F2A2B85525"/>
+<colAssociation fkAssociation="B8D334CA-F57A-E1F5-A281-09F9C82C28E0" referredColumn="9E30E863-09C8-1FBF-0679-A6299455A567"/>
+</associations>
+</Column>
+<Column name="RPRTNG_AGNT_ID" id="BDD6B4EB-D877-1035-C586-026BAEA1D1D0">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 10:16:55 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>62948566-B4AB-3A5A-C64A-5FAD7DD31885</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9808D29F-CB08-15A1-9CA9-73E43B88B217" referredColumn="BC917C6D-0297-358B-E98A-FA7D8DB4B3C2"/>
+<colAssociation fkAssociation="B8D334CA-F57A-E1F5-A281-09F9C82C28E0" referredColumn="A77A1843-AA4D-80AD-B28E-3B23FAC58C39"/>
+</associations>
+</Column>
+<Column name="INSTRMNT_ID" id="E930513E-78F2-BE45-9C8A-7F3C104F67EF">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 10:16:55 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>872113A9-903A-3FB8-5010-E5305098A222</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9808D29F-CB08-15A1-9CA9-73E43B88B217" referredColumn="30BDBB06-60EB-408E-147B-480B2F6855BC"/>
+<colAssociation fkAssociation="B8D334CA-F57A-E1F5-A281-09F9C82C28E0" referredColumn="FA06CB0F-DC22-9126-3DF6-9A5A27601BC4"/>
+</associations>
+</Column>
+<Column name="TYP_ABSTRCT_INSTRMNT_RL" id="7B60201B-0ED8-B86E-770D-E1844577EB42">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 10:18:41 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2FE09B90-5731-2399-6ECD-339790599DAC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B8D334CA-F57A-E1F5-A281-09F9C82C28E0" referredColumn="44D589AA-BE37-4AA7-3818-AA0DC2AE0F0E"/>
+</associations>
+</Column>
+<Column name="INSTRMNT_CLLTRL_RCVD_INSTRMNT_ASSGNMNT_TYP" id="34AE8FF8-860D-6BE7-10A9-C8ABE28A8AC4">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 10:16:55 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of Instrument Collateral received instrument assignments.]]></comment>
+<generatorID>0336F2F9-7EB1-FDA9-EDE1-97287FE3D1B7</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>3DCA6674-6086-6D44-6F1B-3108A526F259</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRTCTN_ALLCTD_VL" id="F91F53F2-C079-3F7A-BF63-2CD8F7931BB3">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 10:16:55 UTC</createdTime>
+<comment><![CDATA[The maximum amount of the protection value that can be considered as credit protection for the instrument. The amount of the existing third parties or observed agent priority claims against the protection must be excluded in the protection allocated value. For protections that is eligible under Regulation (EU) No 575/2013, this value should be reported in accordance with Part 2 of Annex V to Implementing Regulation (EU) No 680/2014.]]></comment>
+<generatorID>DD2BC74C-34A3-5767-ADE8-4C292B5B9395</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6C3A43D8-1CA2-C9C8-5720-397A23070439" name="INSTRMNT_CLLTRL_RCVD_INSTRMNT_ASSGNMNT__IDX">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 10:17:52 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CDBB5361-0E2F-0121-819C-FBAD386C8851"/>
+<colUsage columnID="BDD6B4EB-D877-1035-C586-026BAEA1D1D0"/>
+<colUsage columnID="E930513E-78F2-BE45-9C8A-7F3C104F67EF"/>
+<colUsage columnID="7B60201B-0ED8-B86E-770D-E1844577EB42"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="386DD296-E8FF-B29F-2A3E-CEF63C53871B" name="INSTRMNT_CLLTRL_RCVD_INSTRMNT_ASSGNMNT_ABSTRCT_INSTRMNT_RL_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 10:16:55 UTC</createdTime>
+<generatorID>1E4380F7-6CCB-B837-CB98-E42E3EC6449D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CDBB5361-0E2F-0121-819C-FBAD386C8851"/>
+<colUsage columnID="BDD6B4EB-D877-1035-C586-026BAEA1D1D0"/>
+<colUsage columnID="E930513E-78F2-BE45-9C8A-7F3C104F67EF"/>
+<colUsage columnID="7B60201B-0ED8-B86E-770D-E1844577EB42"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B53A8A72-32FE-35C5-566C-2320AE2815D2" name="INSTRMNT_CLLTRL_RCVD_INSTRMNT_ASSGNMNT_INSTRMNT_FK">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-01-03 10:16:55 UTC</createdTime>
+<generatorID>E130D57F-8618-A988-4996-D38EF214496E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E930513E-78F2-BE45-9C8A-7F3C104F67EF"/>
+<colUsage columnID="CDBB5361-0E2F-0121-819C-FBAD386C8851"/>
+<colUsage columnID="BDD6B4EB-D877-1035-C586-026BAEA1D1D0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
