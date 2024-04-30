@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DA0A5616-6FB6-DF94-17B0-D7B64401E486" name="Financial_guarantee_instrument_covering_a_Debt_security_Debt_security_assignment">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:22:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Financial guarantee instrument covering a Debt security Debt security assignment is the combination of a Financial guarantee covering a Debt security and a Debt security that indicates which Financial guarantee covering a Debt security is assigned to which Debt security.]]></commentInRDBMS>
+<generatorID>7396EA3F-7D6F-426E-4EF7-9D178B684954</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Security_identifier" id="7F0A5E61-EADC-2E5F-E8C0-6407AB8CD118">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:22:13 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each security.]]></comment>
+<generatorID>8AF06E42-AEE0-FDA3-AC03-1B0755C13369</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E7A6FB86-D9D2-5B8E-5D96-23D1D7607051" referredColumn="FCE8A42C-5FBB-B979-E1D1-157E99AC7C78"/>
+</associations>
+</Column>
+<Column name="Reference_date" id="1ADE40EC-220C-F372-A410-32897D680410">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:22:13 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>16CE3EE6-1E9F-1705-4D70-08D6CEA763F7</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A52D5457-2A3D-91D3-E20C-9A3211A47C0D" referredColumn="118DE557-F746-E81D-244E-B457D435689B"/>
+<colAssociation fkAssociation="E7A6FB86-D9D2-5B8E-5D96-23D1D7607051" referredColumn="2F3C4778-BEA6-FE24-92EC-A5E1322FC084"/>
+</associations>
+</Column>
+<Column name="Reporting_agent_identifier" id="D49FCD5F-A4EB-B070-0418-81DB335992BE">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:22:13 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>B83E7548-2CB6-53DA-0F06-03F2B4179547</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A52D5457-2A3D-91D3-E20C-9A3211A47C0D" referredColumn="DDA24325-D431-92BA-9B97-EEFDC8F99B77"/>
+<colAssociation fkAssociation="E7A6FB86-D9D2-5B8E-5D96-23D1D7607051" referredColumn="75E329A4-05F4-87BC-BB3E-7773E33503C4"/>
+</associations>
+</Column>
+<Column name="Instrument_identifier" id="A1005B93-D1B2-55A4-EF83-DEF193630F4A">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:22:13 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>646D215E-BC57-2AA0-9B89-51E12D33AA0C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A52D5457-2A3D-91D3-E20C-9A3211A47C0D" referredColumn="9A9BC122-A114-74B3-CAF4-517AA3CA839C"/>
+</associations>
+</Column>
+<Column name="Protection_allocated_value" id="68C85928-1229-A365-5DEF-8050A236B61A">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:22:13 UTC</createdTime>
+<comment><![CDATA[The maximum amount of the protection value that can be considered as credit protection for the instrument. The amount of the existing third parties or observed agent priority claims against the protection must be excluded in the protection allocated value. For protections that is eligible under Regulation (EU) No 575/2013, this value should be reported in accordance with Part 2 of Annex V to Implementing Regulation (EU) No 680/2014.]]></comment>
+<generatorID>65784597-9969-5B27-C369-2E8EE50DA024</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="14CE3AAC-4B9E-D385-1EB5-2266AB0F2C4C" name="Financial_guarantee_instrument_covering_a_Debt_security_Debt_security_assignment_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:22:13 UTC</createdTime>
+<generatorID>606494FD-B473-D0A2-9886-7FB99B566608</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7F0A5E61-EADC-2E5F-E8C0-6407AB8CD118"/>
+<colUsage columnID="1ADE40EC-220C-F372-A410-32897D680410"/>
+<colUsage columnID="D49FCD5F-A4EB-B070-0418-81DB335992BE"/>
+<colUsage columnID="A1005B93-D1B2-55A4-EF83-DEF193630F4A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F56698AC-55C5-AD46-6C94-A1B56DA9F0E6" name="Financial_guarantee_instrument_covering_a_Debt_security_Debt_security_assignment_Security_and_exchange_tradable_derivative_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:22:13 UTC</createdTime>
+<generatorID>05BCB0E5-22ED-6F70-8F5B-C518399551C5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7F0A5E61-EADC-2E5F-E8C0-6407AB8CD118"/>
+<colUsage columnID="1ADE40EC-220C-F372-A410-32897D680410"/>
+<colUsage columnID="D49FCD5F-A4EB-B070-0418-81DB335992BE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7F002564-0C94-1438-0F33-4D511C0FA386" name="Financial_guarantee_instrument_covering_a_Debt_security_Debt_security_assignment_Instrument_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:22:14 UTC</createdTime>
+<generatorID>D360FDB5-FC9B-DDCC-535C-B4FD02C398A6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A1005B93-D1B2-55A4-EF83-DEF193630F4A"/>
+<colUsage columnID="1ADE40EC-220C-F372-A410-32897D680410"/>
+<colUsage columnID="D49FCD5F-A4EB-B070-0418-81DB335992BE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -2,15 +2,19 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_4" id="B0811BE3-D363-51F6-D109-9A7C6F7D56DE" name="Financial liability instrument">
 <createdBy>lindomi</createdBy>
 <createdTime>2021-08-23 07:49:55 UTC</createdTime>
-<commentInRDBMS><![CDATA[A Financial liability instrument is an Instrument role where the Instrument acts in the role of a Financial liability (according to the applied accounting standard). Please note that a Financial liability instrument does not necessarily be recognised in the balance sheet.]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[A Financial liability instrument is an Instrument role where the Instrument acts in the role of a Financial liability (according to the applied accounting standard) where the instrument is intended as a liability. 
+
+Please note that a Financial liability instrument does not necessarily be recognised in the balance sheet.
+Please note too that an instrument can be both an Asset and a Liability at the same time. This can happen, for example, when a debtor overpays the fees and/or installments.]]></commentInRDBMS>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="false"/>
-<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="false"/>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="false"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="false"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="false"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="false"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="false"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="false"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="false"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="false"/>
 </engineerTo>
 <typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
 <adequatelyNormalized>NO</adequatelyNormalized>
@@ -23,6 +27,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <preferredAbbreviation>FNNCL_LBLTY_INSTRMNT</preferredAbbreviation>
+<changeRequests>
+<requestID>23610-431</requestID>
+</changeRequests>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="Financial liability instrument type" id="EFC46F87-4E71-3C36-64BE-0B08F0856334">
 <createdBy>lindomi</createdBy>
@@ -30,17 +37,42 @@
 <comment><![CDATA[A discriminator to distinguish between financial liability instruments that are recognised and that are not recognised in the balance sheet.]]></comment>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
 </engineerTo>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <domain>1B5E01C9-7A32-0C4D-A784-BCEF2226280D</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>FNNCL_LBLTY_INSTRMNT_TYP</preferredAbbreviation>
+</Attribute>
+<Attribute name="Subordinated debt indicator" id="7DDE9712-B2E5-9D8A-43D2-E8C068E70BDA">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-03-15 08:50:47 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if an asset is considered as subordinated debt or not.]]></comment>
+<generatorID>058968D4-35FF-4BEB-6E6C-C47D75A043CC</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+</engineerTo>
+<referedAttribute>D3052AD2-E569-1411-5DB7-6B819CB6A6CB</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>FA2F0B8B-27AA-8340-CCE3-031C5FF66E03</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>SBRDNTD_DBT</preferredAbbreviation>
+<changeRequests>
+<requestID>24281-442</requestID>
+</changeRequests>
 </Attribute>
 </attributes>
 </Entity>

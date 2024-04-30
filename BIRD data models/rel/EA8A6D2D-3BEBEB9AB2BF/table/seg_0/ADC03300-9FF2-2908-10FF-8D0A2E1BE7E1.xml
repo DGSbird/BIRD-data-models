@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ADC03300-9FF2-2908-10FF-8D0A2E1BE7E1" name="CLLTRL_RCVD_INSTRMNT_OBTND_TKNG_PSSSSN_DRVD_DT">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[Collateral received instrument obtained by taking possession derived data is additional information for the Collateral received instrument obtained by taking possession that can be derived from other information in the model.]]></commentInRDBMS>
+<generatorID>7948F8F0-FB50-4C0D-2B08-191CFA43BB8A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DT_RFRNC" id="3795C110-CBE3-3C78-95FA-1EC7F08D51AC">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:38 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>225B7747-07A3-D805-A855-1CDCFA6052F3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CB674191-5B68-3EAF-1880-5E9A2FCC117F" referredColumn="55D29084-910F-9961-6D2C-7CEF130C6E06"/>
+</associations>
+</Column>
+<Column name="RPRTNG_AGNT_ID" id="0C07C70A-8683-F4D1-394B-C8A4AD9EE308">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:38 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>79FC80E3-C32F-3709-1409-52E0B99C0A8B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CB674191-5B68-3EAF-1880-5E9A2FCC117F" referredColumn="BA81005C-B99D-F0FC-21F0-CFD59860FA02"/>
+</associations>
+</Column>
+<Column name="INSTRMNT_RL_TYP" id="C88B9B9A-F49C-B107-0AEB-8945E2E89E8B">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:38 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different roles an instrument may act in. Examples are financial asset instrument, financial liability instrument.]]></comment>
+<generatorID>97A13904-FDD6-C953-83D1-C759B2D5001E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>8e78f30b-610e-404e-97c5-60fa855125db</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CB674191-5B68-3EAF-1880-5E9A2FCC117F" referredColumn="B705B68F-23A1-FA00-3F16-9CF3856A8056"/>
+</associations>
+</Column>
+<Column name="INSTRMNT_ID" id="F751B4D5-81BE-ECB2-0038-399E3A243929">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:38 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>8BDE9D89-D7A3-E615-DBDE-1A61B03B670F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CB674191-5B68-3EAF-1880-5E9A2FCC117F" referredColumn="4E5F1082-E3FA-198A-928D-F988C345E7B7"/>
+</associations>
+</Column>
+<Column name="ACCMLTD_CHNG_NGTV" id="CA58D9B3-B7F9-90E2-5122-EC8224ED88A5">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:38 UTC</createdTime>
+<comment><![CDATA[Accumulated negative changes shall be the difference, at the level of the individual collateral item, between the value at initial recognition of the collateral and the carrying amount at the reporting reference date, where that difference is negative. (FINREP Annex V)]]></comment>
+<generatorID>1DF52C0B-2EC0-E95D-9E1B-2BEF41CD9E0D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DEB04D39-80EF-B1E7-7897-EA7F4EDBE34E" name="CLLTRL_RCVD_INSTRMNT_OBTND_TKNG_PSSSSN_DRVD_DT_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:38 UTC</createdTime>
+<generatorID>E332F2B9-6D10-9808-CD4B-85E9938D9065</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C88B9B9A-F49C-B107-0AEB-8945E2E89E8B"/>
+<colUsage columnID="F751B4D5-81BE-ECB2-0038-399E3A243929"/>
+<colUsage columnID="3795C110-CBE3-3C78-95FA-1EC7F08D51AC"/>
+<colUsage columnID="0C07C70A-8683-F4D1-394B-C8A4AD9EE308"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E42942C9-1EA0-2626-C68F-6FF41374CDBE" name="CLLTRL_RCVD_INSTRMNT_OBTND_TKNG_PSSSSN_DRVD_DT_ABSTRCT_INSTRMNT_RL_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:39 UTC</createdTime>
+<generatorID>26E66791-5156-16DA-7CBE-D16079601D51</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C88B9B9A-F49C-B107-0AEB-8945E2E89E8B"/>
+<colUsage columnID="F751B4D5-81BE-ECB2-0038-399E3A243929"/>
+<colUsage columnID="3795C110-CBE3-3C78-95FA-1EC7F08D51AC"/>
+<colUsage columnID="0C07C70A-8683-F4D1-394B-C8A4AD9EE308"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

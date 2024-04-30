@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="32CD9ABD-ACC6-AA3F-971A-BD3B10A40D15" name="Over_the_counter_(OTC)_Derivative_instrument_Synthetic_securitisation_assignment">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Over the counter (OTC) Derivative instrument Synthetic securitisation assignment is the combination of Over the counter (OTC) Derivative instrument and Synthetic securitisation assignment that indicates which Over the counter (OTC) Derivative instrument is assigned to which Synthetic securitisation assignment.]]></commentInRDBMS>
+<generatorID>A2E89941-923C-5ECC-0300-D9EA03F91C87</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<ordsAlias>over_the_counter_otc_derivative_instrument_synthetic_securitisation_assignment</ordsAlias>
+<typeID>A0CBE5B5-15E4-B4F0-F88E-E83729225A42</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Securitisation_identifier" id="88B84DA4-6AA0-FFD7-5486-D883E3984007">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each security.]]></comment>
+<generatorID>B8ECCA9C-D180-7447-349C-83B1DA34EC32</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DBE07352-376F-922F-8CF5-04B3756E177C" referredColumn="61D40183-B7A0-3A5E-178E-9191328B2861"/>
+</associations>
+</Column>
+<Column name="Instrument_identifier" id="97F4ED72-A121-14E2-BC7A-DD02566F92E0">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>F5C5D4EF-4916-996E-A803-A562358C31FF</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3D5175E1-B093-3ECF-EB45-5C42FB02CC1B" referredColumn="E358907D-0B99-E1FA-328E-96D522311919"/>
+</associations>
+</Column>
+<Column name="Reference_date" id="A858E023-D9AE-184B-F2ED-3536C8EAD7B6">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>9B67D331-F905-6920-8252-81F14774B415</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3D5175E1-B093-3ECF-EB45-5C42FB02CC1B" referredColumn="E5694114-4B85-A5AD-8006-E6E2B02C8770"/>
+<colAssociation fkAssociation="DBE07352-376F-922F-8CF5-04B3756E177C" referredColumn="37A41CE6-3918-55DC-2303-0FD3B3D454A2"/>
+</associations>
+</Column>
+<Column name="Reporting_agent_identifier" id="17306812-05D8-F3D6-3471-E43BE19F1E4C">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>94E48331-EABB-4089-CDED-9542B70335A2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3D5175E1-B093-3ECF-EB45-5C42FB02CC1B" referredColumn="63FE7ACE-8606-6CBA-6F08-1AA9FC8BC9DC"/>
+<colAssociation fkAssociation="DBE07352-376F-922F-8CF5-04B3756E177C" referredColumn="461C9F74-5446-87F8-B382-71A7189B8DC5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="27070E6B-A0EE-C1F0-61EC-CDF14269D69D" name="Over_the_counter_(OTC)_Derivative_instrument_Synthetic_securitisation_assignment_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<generatorID>E34D910B-0BCA-82ED-BC56-6582F9CE2111</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88B84DA4-6AA0-FFD7-5486-D883E3984007"/>
+<colUsage columnID="97F4ED72-A121-14E2-BC7A-DD02566F92E0"/>
+<colUsage columnID="A858E023-D9AE-184B-F2ED-3536C8EAD7B6"/>
+<colUsage columnID="17306812-05D8-F3D6-3471-E43BE19F1E4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="53DCA214-1F42-77B1-DCCD-C45AFE971233" name="Over_the_counter_(OTC)_Derivative_instrument_Synthetic_securitisation_assignment_Instrument_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:18 UTC</createdTime>
+<generatorID>4EC43994-59BB-0C1B-D7FB-0602AB5657A8</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="97F4ED72-A121-14E2-BC7A-DD02566F92E0"/>
+<colUsage columnID="A858E023-D9AE-184B-F2ED-3536C8EAD7B6"/>
+<colUsage columnID="17306812-05D8-F3D6-3471-E43BE19F1E4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F0988642-5D3F-DEF7-7C8D-D467ABAF4C13" name="Over_the_counter_(OTC)_Derivative_instrument_Synthetic_securitisation_assignment_Synthetic_securitisation_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:18 UTC</createdTime>
+<generatorID>F51A87BA-8764-5671-E56E-D67FB0F8F6EE</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88B84DA4-6AA0-FFD7-5486-D883E3984007"/>
+<colUsage columnID="A858E023-D9AE-184B-F2ED-3536C8EAD7B6"/>
+<colUsage columnID="17306812-05D8-F3D6-3471-E43BE19F1E4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -6,11 +6,12 @@
 <ownerDesignName>BIRD data models</ownerDesignName>
 <shouldEngineer>false</shouldEngineer>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="false"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="false"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="false"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="false"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="false"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="false"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="false"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="false"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="false"/>
 </engineerTo>
 <typeID>178C245A-208C-578D-F0C5-C390D8542711</typeID>
 <adequatelyNormalized>NO</adequatelyNormalized>
@@ -33,11 +34,12 @@
 <comment><![CDATA[A discriminator to distinguish between debt securities with underlying assets and debt securities without underlying assets.]]></comment>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
 </engineerTo>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
@@ -52,11 +54,12 @@
 <generatorID>161AA3E3-07D5-6E06-FB40-4BA824330E83</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
 </engineerTo>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
@@ -67,17 +70,63 @@
 <requestID>18344-250</requestID>
 </changeRequests>
 </Attribute>
+<Attribute name="Perpetual debt security indicator" id="7032DB78-72C5-E5B1-6105-FBCC476339E4">
+<createdBy>bosarie</createdBy>
+<createdTime>2023-10-13 09:46:52 UTC</createdTime>
+<comment><![CDATA[Perpetual debt security indicator classifies debt security into those that do not have a maturity date and are therefor a Perpetual debt security, and those that do have a maturity date and are thus a Non-perpetual debty security]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>1E07F0F4-F276-5E35-743E-5A366E019807</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>PRPTL_DBT_SCRTY_INDCTR</preferredAbbreviation>
+<changeRequests>
+<requestID>13218-127</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Debt security by accounting standard" id="97862A0D-7DA6-A993-EFBA-D9A8E3FDF139">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-29 13:26:52 UTC</createdTime>
+<comment><![CDATA[Debt security by accounting standard classifies the Debt security according to the specific applicability of its figures for either IFRS or nGAAP.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>C61837BA-EE22-B7C9-5B27-D4963DF3823F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>DBT_SCRTY_ACCNTNG_STNDRD</preferredAbbreviation>
+<changeRequests>
+<requestID>22601-418</requestID>
+</changeRequests>
+</Attribute>
 <Attribute name="Legal final maturity date" id="729FDCE9-0DD7-04C0-37A5-035DD3CE9E33">
 <createdBy>Dominik</createdBy>
 <createdTime>2021-08-04 10:06:19 UTC</createdTime>
 <comment><![CDATA[The contractual maturity date of the asset or liability, taking into account any agreements amending initial contracts.]]></comment>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
 </engineerTo>
 <use>0</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -92,11 +141,12 @@
 <generatorID>E0B9E615-748C-251D-AB4F-3CEB1FC3B309</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
 </engineerTo>
 <referedAttribute>6AC1610D-8324-CA58-A3E8-58663F1B9606</referedAttribute>
 <use>0</use>
@@ -112,11 +162,12 @@
 <generatorID>031CE2C9-93CA-81FD-A21A-98FEDF8719D7</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
 </engineerTo>
 <referedAttribute>1C13EA84-81D4-D03D-98C3-11C90C04E6A2</referedAttribute>
 <use>0</use>
@@ -132,11 +183,12 @@
 <generatorID>C3A69B45-FEC2-50E8-7706-9B906AFA5953</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
 </engineerTo>
 <referedAttribute>5F252AC5-F81E-4CA7-1382-A45890874E9E</referedAttribute>
 <use>0</use>
@@ -151,11 +203,12 @@
 <comment><![CDATA[The date on which the performing status is considered to have been established or changed.]]></comment>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
 </engineerTo>
 <use>0</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -169,11 +222,12 @@
 <comment><![CDATA[The original nominal amount. E.g. for debt securities issued it is the nominal amount at issuance date.]]></comment>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
 </engineerTo>
 <use>0</use>
 <logicalDatatype>LOGDT026</logicalDatatype>
@@ -187,11 +241,12 @@
 <comment><![CDATA[The date on which the asset became past due in accordance with Part 2.48 of Annex V to Implementing Regulation (EU) No 680/2014. This is the latest such date prior to the reporting reference date and it is to be reported if the instrument is past due on the reporting reference date.]]></comment>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <use>0</use>
@@ -207,11 +262,12 @@
 <generatorID>6516F85B-5E3A-ABCE-72D2-E97696ABA483</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
 </engineerTo>
 <referedAttribute>D3052AD2-E569-1411-5DB7-6B819CB6A6CB</referedAttribute>
 <use>0</use>
@@ -227,11 +283,12 @@
 <generatorID>B38E0B6C-4A99-2194-548C-A7E1BC864E55</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
 </engineerTo>
 <referedAttribute>C982D586-D1BC-3174-9FE1-8CD1E6590BCB</referedAttribute>
 <use>0</use>
@@ -241,27 +298,6 @@
 <preferredAbbreviation>MLTPL_FRBRNC_MSRS_INDCTR</preferredAbbreviation>
 <changeRequests>
 <requestID>18851-343</requestID>
-</changeRequests>
-</Attribute>
-<Attribute name="Perpetual debt security indicator" id="7032DB78-72C5-E5B1-6105-FBCC476339E4">
-<createdBy>bosarie</createdBy>
-<createdTime>2023-10-13 09:46:52 UTC</createdTime>
-<comment><![CDATA[Perpetual debt security indicator classifies debt security into those that do not have a maturity date and are therefor a Perpetual debt security, and those that do have a maturity date and are thus a Non-perpetual debty security]]></comment>
-<ownerDesignName>BIRD data models</ownerDesignName>
-<engineerTo>
-<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
-<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
-</engineerTo>
-<use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<domain>1E07F0F4-F276-5E35-743E-5A366E019807</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<preferredAbbreviation>PRPTL_DBT_SCRTY_INDCTR</preferredAbbreviation>
-<changeRequests>
-<requestID>13218-127</requestID>
 </changeRequests>
 </Attribute>
 </attributes>

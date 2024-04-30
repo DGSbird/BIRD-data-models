@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7ACA889C-188B-D18B-B5DF-9853E30557F1" name="ASST_PL">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 10:23:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[An Asset pool (subject to a Securitisation and other credit transfer) is a pool of assets that is subject to a Securitisation or other credit transfer. It may comprise Instruments or (parts of) Security positions that have been removed from the Reporting agents' balance sheet, e.g. in case of a Traditional securitisation using an SSPE, where the Reporting agents acts in the role of a Servicer.]]></commentInRDBMS>
+<generatorID>CF3123E9-C3A5-7650-8DD2-DBE9CABA5872</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>A0CBE5B5-15E4-B4F0-F88E-E83729225A42</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ASST_PL_ID" id="B0938FA9-518A-4FD3-1C78-B96AE287D9A9">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 10:23:38 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each asset pool.]]></comment>
+<generatorID>6EAFCA4A-19AA-1F50-DD36-16F2365205C1</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ASST_PL_RFRNC_DT" id="73D273B0-1FA0-77AD-D850-33C2E4E8032E">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 10:23:38 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>053B57FF-7837-99DA-5042-392AED2A3756</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ASST_PL_RPRTNG_AGNT_ID" id="B7DB40E1-9E81-599A-8B83-2AB6B40AD695">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 10:23:38 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>2CD7E94C-BF27-4403-A0A0-025E848D96E2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ASST_PL_TYP" id="425025D8-1185-3CB8-ECB7-FD98BB926B39">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 10:23:38 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between asset pools for securitisations, covered bond programs and other credit transfers.]]></comment>
+<generatorID>3474D019-DB0F-2F23-C39C-6DE016A47C53</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>74F9D2DC-4D52-4270-111B-7D67212176E7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRMRY_ASST_CLSS_CVR_PL" id="30A7F8CA-89BB-8D3F-6763-E6C0BB51520F">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 10:23:38 UTC</createdTime>
+<comment><![CDATA[Asset class of the underlying asset pool subject to a covered bond according to CRR, Article 129 Exposure in the form of covered bonds.]]></comment>
+<generatorID>AF2BDE63-63A6-6E1E-6F99-EEB4C5698E48</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>251B637B-3B26-1956-1407-FF288B7D6DF6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TRTMNT_TRNSFRRD_ASSTS_BLNC_SHT" id="6096EDF0-BBC9-A516-8701-1290319B7113">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 10:23:38 UTC</createdTime>
+<comment><![CDATA[Specifies the treatment of the underlying assets in the balance sheet, e.g. entirely derecognised.]]></comment>
+<generatorID>D5D0315A-4517-A552-D1A8-653D8B29287F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>3D2C44FB-1786-45C4-A183-DFBB9CC6854F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRRYNG_AMNT" id="D5BB9352-A0C7-729D-0DED-86F4BD817631">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 10:23:38 UTC</createdTime>
+<comment><![CDATA[The carrying amount in accordance with Annex V to Implementing Regulation (EU) No 680/2014.]]></comment>
+<generatorID>76B01A9D-9B12-B7A9-109E-AEA285578231</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CC8697E4-1A1E-6437-85C5-A41C9B7F536A" name="ASST_PL_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 10:23:38 UTC</createdTime>
+<generatorID>FD7C6E1F-7451-2836-19AA-82EF3C7B0B1C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B0938FA9-518A-4FD3-1C78-B96AE287D9A9"/>
+<colUsage columnID="73D273B0-1FA0-77AD-D850-33C2E4E8032E"/>
+<colUsage columnID="B7DB40E1-9E81-599A-8B83-2AB6B40AD695"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

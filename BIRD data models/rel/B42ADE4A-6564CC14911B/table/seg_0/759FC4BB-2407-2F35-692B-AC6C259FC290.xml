@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="759FC4BB-2407-2F35-692B-AC6C259FC290" name="INSTRMNT_CLLTRL_RCVD_INSTRMNT_ASSGNMNT">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="759FC4BB-2407-2F35-692B-AC6C259FC290" name="instrmnt_clltrl_rcvd_instrmnt_assgnmnt">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <commentInRDBMS><![CDATA[An Instrument Collateral received instrument assignment is the combination of an Instrument and a Collateral received instrument that indicates which Instrument is protected by which Collateral received instrument.]]></commentInRDBMS>
@@ -10,7 +10,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="DT_RFRNC" id="92A01798-67EB-D5BE-9FE0-44F89BF81F97">
+<Column name="dt_rfrnc" id="92A01798-67EB-D5BE-9FE0-44F89BF81F97">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[The date the data refers to.]]></comment>
@@ -27,7 +27,7 @@
 <colAssociation fkAssociation="E84C5580-6A1C-D3DD-85FD-FA76FC2E889A" referredColumn="F511491E-C15F-3E1E-E259-22B2AFA91F34"/>
 </associations>
 </Column>
-<Column name="RPRTNG_AGNT_ID" id="A6FDCC70-0AED-1D36-A758-3CCB4E35AC58">
+<Column name="rprtng_agnt_id" id="A6FDCC70-0AED-1D36-A758-3CCB4E35AC58">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[Identifier of the reporting agent.]]></comment>
@@ -44,7 +44,7 @@
 <colAssociation fkAssociation="E84C5580-6A1C-D3DD-85FD-FA76FC2E889A" referredColumn="88FE91F1-6E72-0E16-E41D-E4A8EF97E12D"/>
 </associations>
 </Column>
-<Column name="INSTRMNT_ID" id="C241FB8A-D279-EF69-4607-7ADF4188D9FA">
+<Column name="instrmnt_id" id="C241FB8A-D279-EF69-4607-7ADF4188D9FA">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
@@ -61,7 +61,7 @@
 <colAssociation fkAssociation="E84C5580-6A1C-D3DD-85FD-FA76FC2E889A" referredColumn="F41E7365-496F-A912-0F18-BE314EFF631F"/>
 </associations>
 </Column>
-<Column name="TYP_ABSTRCT_INSTRMNT_RL" id="679FD001-D504-3E22-622A-2811F71B5FA0">
+<Column name="typ_abstrct_instrmnt_rl" id="679FD001-D504-3E22-622A-2811F71B5FA0">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:31:17 UTC</createdTime>
 <ownerDesignName>BIRD data models</ownerDesignName>
@@ -75,7 +75,7 @@
 <colAssociation fkAssociation="A82931F8-2F62-8B60-B56A-44CE4306E130" referredColumn="FD7C9B99-EE3F-631D-EDC5-C1F6E71CF14D"/>
 </associations>
 </Column>
-<Column name="INSTRMNT_CLLTRL_RCVD_INSTRMNT_ASSGNMNT_TYP" id="5BF96189-9F58-E2B5-E819-B24B38863B53">
+<Column name="instrmnt_clltrl_rcvd_instrmnt_assgnmnt_typ" id="5BF96189-9F58-E2B5-E819-B24B38863B53">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[A discriminator to distinguish between different types of Instrument Collateral received instrument assignments.]]></comment>
@@ -87,7 +87,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="PRTCTN_ALLCTD_VL" id="2AB045AE-19EF-20AF-8664-C172CF652ED5">
+<Column name="prtctn_allctd_vl" id="2AB045AE-19EF-20AF-8664-C172CF652ED5">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[The maximum amount of the protection value that can be considered as credit protection for the instrument. The amount of the existing third parties or observed agent priority claims against the protection must be excluded in the protection allocated value. For protections that is eligible under Regulation (EU) No 575/2013, this value should be reported in accordance with Part 2 of Annex V to Implementing Regulation (EU) No 680/2014.]]></comment>
@@ -101,7 +101,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="7B3D98FC-C8CA-599E-F4C6-050DD80A870F" name="INSTRMNT_CLLTRL_RCVD_INSTRMNT_ASSGNMNT__IDX">
+<ind_PK_UK id="7B3D98FC-C8CA-599E-F4C6-050DD80A870F" name="instrmnt_clltrl_rcvd_instrmnt_assgnmnt__idx">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:30:41 UTC</createdTime>
 <ownerDesignName>BIRD data models</ownerDesignName>
@@ -115,7 +115,7 @@
 <colUsage columnID="679FD001-D504-3E22-622A-2811F71B5FA0"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="D8C8FBB8-C8FE-BA28-6DCE-B841E2003ABF" name="INSTRMNT_CLLTRL_RCVD_INSTRMNT_ASSGNMNT_ABSTRCT_INSTRMNT_RL_FK">
+<ind_PK_UK id="D8C8FBB8-C8FE-BA28-6DCE-B841E2003ABF" name="instrmnt_clltrl_rcvd_instrmnt_assgnmnt_abstrct_instrmnt_rl_fk">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <generatorID>1E4380F7-6CCB-B837-CB98-E42E3EC6449D</generatorID>
@@ -129,7 +129,7 @@
 <colUsage columnID="679FD001-D504-3E22-622A-2811F71B5FA0"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="546B2EA4-3625-0E6D-7E0D-1500F87D4A07" name="INSTRMNT_CLLTRL_RCVD_INSTRMNT_ASSGNMNT_INSTRMNT_FK">
+<ind_PK_UK id="546B2EA4-3625-0E6D-7E0D-1500F87D4A07" name="instrmnt_clltrl_rcvd_instrmnt_assgnmnt_instrmnt_fk">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <generatorID>E130D57F-8618-A988-4996-D38EF214496E</generatorID>

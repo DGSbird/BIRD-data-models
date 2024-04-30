@@ -1,0 +1,158 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="CCAEBB1E-9C19-8F81-6274-2CA741E8AD23" name="RPRCHS_AGRMNT_CMPNNT">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 09:42:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Repurchase agreement component is a component of a (Reverse) Repurchase agreement, i.e. either a cash leg or a security leg.]]></commentInRDBMS>
+<generatorID>C231ED66-3962-9C00-AE08-B830072D03A6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="INSTRMNT_RFRNC_DT" id="87E63903-0A41-E65B-D399-9009419E3ACF">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 09:42:43 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>859AB0C7-1422-2BCA-6050-D7138E03A372</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D0A90810-6568-90BC-79EC-4C633D13B8CB" referredColumn="54462C00-250D-E879-C6A1-A8E4446CA384"/>
+</associations>
+</Column>
+<Column name="INSTRMNT_RPRTNG_AGNT_ID" id="0A08F4F4-BBCB-6B5A-E11E-59E3E1D8575D">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 09:42:43 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>814ABDA0-1477-EE36-FCE6-393B2D1E8C25</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D0A90810-6568-90BC-79EC-4C633D13B8CB" referredColumn="99119E73-6F4D-616D-FFF0-D6F34450A0A7"/>
+</associations>
+</Column>
+<Column name="INSTRMNT_ID" id="1AD5C44A-6E69-5968-59ED-1DC9E7584E26">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 09:42:43 UTC</createdTime>
+<comment><![CDATA[The instrument identifier of the involved repurchase agreement.]]></comment>
+<generatorID>4B2BD8B9-0938-780C-E83B-EFB7F7879C3D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D0A90810-6568-90BC-79EC-4C633D13B8CB" referredColumn="2E8563F8-CAB4-BCFB-AAA9-FFF81491B501"/>
+</associations>
+</Column>
+<Column name="RPRCHS_AGRMNT_CMPNNT_TYP" id="495DBCA7-D1BC-A119-E9E4-9710340F2562">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 09:42:43 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between the transferred asset leg and the cash leg.]]></comment>
+<generatorID>27585DB5-6962-A183-079A-C86D83A39F17</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>B4EC1EB6-B4CF-3F87-6349-5C54D23FD2B2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NMNL_AMNT" id="7DE2A3F9-071D-5C28-97FA-F208B8A673F0">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 09:42:43 UTC</createdTime>
+<comment><![CDATA[Holding amount at nominal value]]></comment>
+<generatorID>2399196E-106C-53A1-8347-827DAAE6EE39</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRRNCY" id="89A32A4A-7189-359C-F4E7-A95374B7D0F4">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 09:42:43 UTC</createdTime>
+<comment><![CDATA[The currency code according to ISO4217.]]></comment>
+<generatorID>6BCE7F4C-4AE2-F3CC-DBA2-4C40C502417B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2D4D0542-0954-4C82-9231-4447DC95A6DE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TRNSFRRD_ASST_LG_TYP" id="036B3552-B826-E208-6890-97311917D136">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 09:42:43 UTC</createdTime>
+<comment><![CDATA[Transferred asset leg type distinguishes Transferred asset leg according to the type of asset that is transferred.]]></comment>
+<generatorID>BB3BC7E8-161F-EC21-0721-1AD981AF2D88</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>DE64659E-CDFF-9759-7B17-F81A16C45F19</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TRTMNT_TRNSFRRD_ASSTS_BLNC_SHT" id="F91EC69A-E54A-50C1-7C77-6FC7A8D38C12">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 09:42:43 UTC</createdTime>
+<comment><![CDATA[Specifies the treatment of the underlying assets in the balance sheet, e.g. entirely derecognised.]]></comment>
+<generatorID>05706504-1421-C684-B635-D12F87A97733</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>3D2C44FB-1786-45C4-A183-DFBB9CC6854F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="01630963-F59D-4370-3BA2-405C6DD950AC" name="RPRCHS_AGRMNT_CMPNNT_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 09:42:43 UTC</createdTime>
+<generatorID>2937DCD0-3F46-54CD-05AC-C3C09106D74E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="495DBCA7-D1BC-A119-E9E4-9710340F2562"/>
+<colUsage columnID="1AD5C44A-6E69-5968-59ED-1DC9E7584E26"/>
+<colUsage columnID="87E63903-0A41-E65B-D399-9009419E3ACF"/>
+<colUsage columnID="0A08F4F4-BBCB-6B5A-E11E-59E3E1D8575D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="12398899-3A7A-3B9D-70A9-F9573BADEAEA" name="RPRCHS_AGRMNT_CMPNNT_INSTRMNT_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 09:42:44 UTC</createdTime>
+<generatorID>0AF24D8D-30D3-5418-AA96-7DB617F41B39</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1AD5C44A-6E69-5968-59ED-1DC9E7584E26"/>
+<colUsage columnID="87E63903-0A41-E65B-D399-9009419E3ACF"/>
+<colUsage columnID="0A08F4F4-BBCB-6B5A-E11E-59E3E1D8575D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

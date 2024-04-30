@@ -1,0 +1,214 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1189A53F-C212-3158-54CB-F5F717856384" name="Financial_asset_instrument_derived_data">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Financial asset instrument derived data is additional information about Financial asset instrument.]]></commentInRDBMS>
+<generatorID>6CBCC0E7-4D57-A936-5273-6A99009949C4</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Instrument_identifier" id="C2A9B9D0-2B45-9D41-3198-C05627179EB8">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>0391303D-26DD-7BA3-0EAF-6009A16F8142</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1F83C32F-633B-8E07-C739-9B288FCCF8BA" referredColumn="66A8FAC3-ECA3-51A6-562A-19D545B27559"/>
+</associations>
+</Column>
+<Column name="Instrument_Reference_date" id="E5580ABF-929B-08C8-A8EF-85CF906EAD6A">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>5142C075-34C5-4C8A-78CF-5FC0950784C6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1F83C32F-633B-8E07-C739-9B288FCCF8BA" referredColumn="F12F27C5-6559-8509-E7BB-709910E0BD90"/>
+</associations>
+</Column>
+<Column name="Instrument_Reporting_agent_identifier" id="594DBA8A-CD92-A0F5-54DD-D0CA29CFF380">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>F5F262CC-8CB3-EF39-0BD4-C72AD3E7F9D2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1F83C32F-633B-8E07-C739-9B288FCCF8BA" referredColumn="0F936658-98E4-5DF0-6184-5A988BFCAA45"/>
+</associations>
+</Column>
+<Column name="Type_of_Abstract_instrument_role" id="28F3951A-2CC7-08BC-F435-B85378D3D7E7">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:20:34 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>295E1107-1BD3-8580-6B76-71982E028BBD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1F83C32F-633B-8E07-C739-9B288FCCF8BA" referredColumn="A70A5601-9090-0E83-68CC-6FCD414D19C4"/>
+</associations>
+</Column>
+<Column name="Accumulated_partial_write-offs" id="601C7578-8E60-A92D-49DE-8C6DFE45A18C">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[According to FinRep Annex 5: "the accumulated partial (...) amount as at the reference date of principal and accrued past due interest and fees of any debt instrument that has been de-recognised to date (...) because the institution has no reasonable expectations of recovering the contractual cash flows."]]></comment>
+<generatorID>0881602A-B37E-5693-74A1-2BD4B27B8C6A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Accumulated_total_write-offs" id="52B2A4EB-330B-3B46-67D3-61EAE9CF6FE5">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[According to FinRep Annex 5: "the accumulated (...) total amount as at the reference date of principal and accrued past due interest and fees of any debt instrument that has been de-recognised to date (...) because the institution has no reasonable expectations of recovering the contractual cash flows."
+]]></comment>
+<generatorID>598EB285-29B6-746F-4E6C-C553D6EDA2D7</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Current_loan-to-value_ratio" id="88A0E9BC-5DFE-BF3E-8B07-8BFA135BAF59">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[Current loan-to-value ratio (LTV-C) means the sum of all loans or loan tranches secured by the borrower on a property at the reporting date relative to the current value of the property (ESRB), allocated per Financial asset instrument derived data.]]></comment>
+<generatorID>F39A114A-0C5C-4BB9-A39D-EA9CB998BEF8</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>A602B33C-0004-D05B-A4E1-4A2339C606D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="Derived_default_status" id="0F1EABA9-35B5-A482-7994-914359B3CFCE">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[Derived default status is the default status where all specific statusses of default for the Financial asset instrument have been mapped to either "Default" or "Not in default".]]></comment>
+<generatorID>A3C6840D-DC88-21BD-2AD6-D1DA401F6FF0</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>00FA2D93-66D1-EE2F-3A65-9EE72AB6BAA8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Gross_carrying_amount" id="81F6D6E3-E17A-38A9-A90B-C5460BBCE55A">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[Gross carrying amount as defined in Annex V 5.2.]]></comment>
+<generatorID>EC6E08FF-E07A-87DD-5F40-316B27505FA7</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>8AF63A7D-2245-4118-9583-CEDC4D186D2D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Performing_status" id="A1B7E665-CFC0-8B1B-439B-DE74F01DE0C5">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[Performing status in accordance with Implementing Regulation (EU) No 680/2014.]]></comment>
+<generatorID>03F417CA-6E67-1C15-1ECE-9B9C674CB8BD</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>19a7fc91-04c5-4426-a4f7-d0698d7615c8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Performing_status_reason" id="271DFE3F-913B-4528-499F-EE80524F1411">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[The reason for the choice of Performing status]]></comment>
+<generatorID>EF2BF729-BF25-A858-490E-D9F776E00E09</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>DAD0EBDC-488E-1BB8-0C1D-C0B6C87C30C6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Time_past_due_band" id="22A89BDB-BAEE-89FE-2FCC-90098F5154E3">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[A Time past due band distinguishes Financial asset instruments into time brackets according to how much time passed between the date on which the payment was due and the reference date. ]]></comment>
+<generatorID>2DBB9307-DDCC-3F4B-858E-7D49310EE68C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>52A45C75-DF77-9D1F-D4FA-0C403CFC649C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FF25BEBD-0E5E-E986-624A-7D6889B99DE4" name="Financial_asset_instrument_derived_data_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<generatorID>5AE640B3-DD5B-8D8E-3BF9-DF7ECFC53770</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C2A9B9D0-2B45-9D41-3198-C05627179EB8"/>
+<colUsage columnID="E5580ABF-929B-08C8-A8EF-85CF906EAD6A"/>
+<colUsage columnID="594DBA8A-CD92-A0F5-54DD-D0CA29CFF380"/>
+<colUsage columnID="28F3951A-2CC7-08BC-F435-B85378D3D7E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A38330FC-B6D8-C484-73F6-B5DC303AE2C2" name="Financial_asset_instrument_derived_data_Abstract_instrument_role_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:18 UTC</createdTime>
+<generatorID>8377EA7A-9FED-837C-C6B7-7BBDC347E12E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E5580ABF-929B-08C8-A8EF-85CF906EAD6A"/>
+<colUsage columnID="C2A9B9D0-2B45-9D41-3198-C05627179EB8"/>
+<colUsage columnID="594DBA8A-CD92-A0F5-54DD-D0CA29CFF380"/>
+<colUsage columnID="28F3951A-2CC7-08BC-F435-B85378D3D7E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

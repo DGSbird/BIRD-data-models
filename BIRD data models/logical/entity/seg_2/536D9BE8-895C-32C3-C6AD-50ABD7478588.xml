@@ -20,6 +20,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <preferredAbbreviation>CRDT_FCLTY_RSK_DT</preferredAbbreviation>
+<changeRequests>
+<requestID>18847-341</requestID>
+</changeRequests>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="Credit facility Reference date" id="54A5CEB2-313A-0908-9D32-5D6650457B2A">
 <createdBy>ostarij</createdBy>
@@ -112,25 +115,6 @@
 <domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>DT_DFLT_STTS</preferredAbbreviation>
-</Attribute>
-<Attribute name="Forbearance status" id="099327FB-BA95-3B72-7209-77A2457F83F9">
-<createdBy>ostarij</createdBy>
-<createdTime>2022-08-04 08:31:15 UTC</createdTime>
-<comment><![CDATA[Identification of forborne and renegotiated asset..]]></comment>
-<generatorID>69E5F11A-F596-E6B3-4087-92E57F2C20F7</generatorID>
-<ownerDesignName>BIRD data models</ownerDesignName>
-<engineerTo>
-<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
-<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
-</engineerTo>
-<referedAttribute>41E787A6-F8D7-9602-4E61-00468C76AC15</referedAttribute>
-<use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<domain>C4F21A0E-D961-4428-8927-8C96FCBCB0F6</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<preferredAbbreviation>FRBRNC_STTS</preferredAbbreviation>
 </Attribute>
 <Attribute name="Date of forbearance measure" id="11CA79A3-CF00-335B-88D0-679C7DF1C365">
 <createdBy>Dominik</createdBy>
@@ -337,6 +321,50 @@
 <requestID>18853-345</requestID>
 </changeRequests>
 </Attribute>
+<Attribute name="Forbearance measure type" id="5C962A49-5333-8329-475B-A581252DF7BB">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-02-13 13:15:15 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between refinanced debt, instruments with modified interest rate below market value and other modified terms.]]></comment>
+<generatorID>13073395-DE8E-1860-9AA0-3B0E672345B3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>041D454F-D602-0511-5CA9-74A3F6EB3CD6</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>87EF806E-E453-9C18-75EE-10501A78404B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>FRBRNC_MSR_TYP</preferredAbbreviation>
+<changeRequests>
+<requestID>18847-341</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Performing status reason" id="FC0E2FD9-0667-DD58-EFC5-87B4021DA6BC">
+<createdBy>neil</createdBy>
+<createdTime>2024-03-22 09:12:47 UTC</createdTime>
+<comment><![CDATA[The reason for the choice of Performing status]]></comment>
+<generatorID>20BD7F1E-CD59-C8AC-4921-A6517386FECE</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>F282F3BB-F2A7-8AA9-E9EF-9E7AC2C4AC71</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>DAD0EBDC-488E-1BB8-0C1D-C0B6C87C30C6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>PRFRMNG_STTS_RSN</preferredAbbreviation>
+<changeRequests>
+<requestID>24328-451</requestID>
+</changeRequests>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="62CC9639-4927-9AF3-B487-FDA8A78C4C95" name="Credit facility risk data PK">
@@ -351,9 +379,9 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>1EEF0829-35BB-B3BC-91A8-8C419AD7CA51</attributeRef>
 <attributeRef>54A5CEB2-313A-0908-9D32-5D6650457B2A</attributeRef>
 <attributeRef>9AF23F7D-D597-DB66-FB29-632A646CE74C</attributeRef>
+<attributeRef>1EEF0829-35BB-B3BC-91A8-8C419AD7CA51</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

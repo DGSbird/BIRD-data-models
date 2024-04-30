@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="5C7EFB05-7036-5CA2-CA12-129075BA0A91" name="RNGTTD_FNNCL_ASST_INSTRMNT_FRBRNC_MSR_DRVD_DT">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Renegotiated financial asset instrument with forbearance measure derived data is Renegotiated financial asset instrument with forbearance measure with extra data that is derived from other parts of the model.]]></commentInRDBMS>
+<generatorID>048D458D-00B0-1F3C-D9A5-87EAE9C831CA</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="INSTRMNT_RL_TYP" id="47627662-E0D0-080F-5C3B-B047C962C21E">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:15 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different roles an instrument may act in. Examples are financial asset instrument, financial liability instrument.]]></comment>
+<generatorID>1346F1CE-3B61-381A-F232-1377C9EE312C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="600B8275-973E-CA83-0F44-20F649FD90D2" referredColumn="B228B88F-2F08-38E9-B2D9-BECE8F577449"/>
+</associations>
+</Column>
+<Column name="INSTRMNT_ID" id="C0782711-AF44-B6D8-2E55-6A5803FC009B">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:15 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>AA9B1155-392B-FBFC-258C-A9E709037567</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="600B8275-973E-CA83-0F44-20F649FD90D2" referredColumn="95EFB4C8-E728-6D86-C496-165A2E5F4C8B"/>
+</associations>
+</Column>
+<Column name="INSTRMNT_RPRTNG_AGNT_ID" id="A7AB0AA1-C2D0-85F8-B4D6-D205EC94835E">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:15 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>D89BBA78-C15D-0378-1BF1-D2525CF04D07</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="600B8275-973E-CA83-0F44-20F649FD90D2" referredColumn="5E23B5EE-D0BB-C0AB-A04A-F830D66CEF0A"/>
+</associations>
+</Column>
+<Column name="APPLCTN_FRBRNC_STTS_DT" id="EA5F8286-FBCB-A2CB-70F7-28E4F95CBD8E">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:15 UTC</createdTime>
+<comment><![CDATA[Date / period of application of forbearance measure type classifies if the forbearance measure date is applicable to the current reporting period or not.]]></comment>
+<generatorID>5F0D7F4A-583A-ACFD-EAFF-309C03973577</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>3BC05AAE-55DA-CBD8-38A1-82074F764B78</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="62804F7E-E258-CBFD-865B-A8FB95C2AF23" name="RNGTTD_FNNCL_ASST_INSTRMNT_FRBRNC_MSR_DRVD_DT_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:15 UTC</createdTime>
+<generatorID>8A45A445-727F-29C6-F25B-33319E57EACD</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47627662-E0D0-080F-5C3B-B047C962C21E"/>
+<colUsage columnID="C0782711-AF44-B6D8-2E55-6A5803FC009B"/>
+<colUsage columnID="A7AB0AA1-C2D0-85F8-B4D6-D205EC94835E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="24FD96CA-CC59-8661-C650-12F07D474BA7" name="RNGTTD_FNNCL_ASST_INSTRMNT_FRBRNC_MSR_DRVD_DT_ABSTRCT_INSTRMNT_RL_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:17 UTC</createdTime>
+<generatorID>1B86742D-6BA5-97B6-D891-3224F9FF53E1</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7AB0AA1-C2D0-85F8-B4D6-D205EC94835E"/>
+<colUsage columnID="C0782711-AF44-B6D8-2E55-6A5803FC009B"/>
+<colUsage columnID="47627662-E0D0-080F-5C3B-B047C962C21E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

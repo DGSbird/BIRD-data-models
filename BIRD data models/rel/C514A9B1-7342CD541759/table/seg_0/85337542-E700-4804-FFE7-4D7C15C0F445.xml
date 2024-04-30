@@ -1,0 +1,271 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="85337542-E700-4804-FFE7-4D7C15C0F445" name="FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 12:08:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[A measured risk of an OTC position against a particular risk factor]]></commentInRDBMS>
+<generatorID>53C569B3-159D-54EB-E597-D42F8718538C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>1B94F88B-CE04-E04E-DE88-6866B6DBCB24</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="INSTRMNT_ID" id="AE0E2DB0-9FEB-371E-0D2C-15EE4D9C689C">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 12:08:10 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>457C6D47-6CC8-6C63-8A9E-D9D45BFFBEB5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="29A02CB4-C69B-E5DE-4580-B4EB1C9D3D39" referredColumn="F465A399-365A-9B0D-0486-FF30140B6718"/>
+</associations>
+</Column>
+<Column name="DT_RFRNC" id="53C9678F-B9E8-145E-E61D-EC2926E0A95B">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 12:08:10 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>CFEA6C52-3B10-FE2D-44EA-BA79C2903D1D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="29A02CB4-C69B-E5DE-4580-B4EB1C9D3D39" referredColumn="195D271B-AF92-8159-6B2A-7799DF89BF79"/>
+<colAssociation fkAssociation="134E9CDB-0ADB-C567-FD82-6198E0BA6DDF" referredColumn="D38EB458-A951-DFD3-0C5C-7239D08270D8"/>
+</associations>
+</Column>
+<Column name="RPRTNG_AGNT_ID" id="2EB330A1-3CF6-0F8A-C5D1-F76CF4BB3385">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 12:08:10 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>9283676D-2ECD-200D-CCE4-EB8D72B351C9</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="29A02CB4-C69B-E5DE-4580-B4EB1C9D3D39" referredColumn="B27A50D1-C0C8-C797-DBB0-86A4F486DDF5"/>
+<colAssociation fkAssociation="134E9CDB-0ADB-C567-FD82-6198E0BA6DDF" referredColumn="EAD4B72D-652C-658A-71DE-3642F0D7F1DE"/>
+</associations>
+</Column>
+<Column name="RSK_FCTR_ID" id="6D040869-587B-8AE7-8F2C-254B317C27B2">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 12:08:10 UTC</createdTime>
+<comment><![CDATA[Risk factor identifier is a number that uniquely identifies the Risk factor.]]></comment>
+<generatorID>CB906243-55AA-18FB-4612-B54140199C52</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="134E9CDB-0ADB-C567-FD82-6198E0BA6DDF" referredColumn="570B46A1-7DBC-AF45-E520-58346382770D"/>
+</associations>
+</Column>
+<Column name="CRRNCY_RCRD" id="F58583B4-FDA1-6AE7-793B-3125F53BEF39">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-16 18:30:39 UTC</createdTime>
+<comment><![CDATA[Currency of record is the currency in which the curvature risk is measured.]]></comment>
+<generatorID>E92756AA-3FA8-BF69-7113-4371FB6757B6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>9af1c1d9-7914-4052-866a-ee27f7d5380d</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SHCK_DRCTN" id="320C8002-C231-2167-D922-AE061A1FBF2B">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-16 18:30:39 UTC</createdTime>
+<comment><![CDATA[The direction of the change in uderlying (up or down), for each non-linear position we will have an upshift and a downshift measure recorded.]]></comment>
+<generatorID>7B7E33A9-7832-7A06-AA13-73C50F182976</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>548009F7-2BC0-D536-F5F2-A332B899494E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRVTR_RSK_WGHT" id="625C06CA-DE87-364B-ADCF-B1F3D9AB2337">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-16 18:30:39 UTC</createdTime>
+<comment><![CDATA[The weight associated with the curvature.]]></comment>
+<generatorID>1D0B0EAE-4EB1-338E-4EE5-465CAC456456</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>A602B33C-0004-D05B-A4E1-4A2339C606D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="CRVTR_VLTN_DFFRNC" id="99F78936-FF98-F488-CD91-C699F231E2EA">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-16 18:30:39 UTC</createdTime>
+<comment><![CDATA[Curvature recorded as a difference between the normal valuation and  a revaluation after a small  increase OR decrease in an underyling risk factor, this is an amount interprted in the curency of record, e.g. 100 dollars. We only use carvature for non-linear instruments (e.g. options).]]></comment>
+<generatorID>ED0FAE04-C423-C393-78EA-2F46AFE9C955</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>A602B33C-0004-D05B-A4E1-4A2339C606D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="DLT_SNSTVTY" id="2775EF22-BC63-EB90-B537-66F817F2E108">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-16 18:30:39 UTC</createdTime>
+<comment><![CDATA[An amount interprted in the curency of record, e.g. 100 dollars.]]></comment>
+<generatorID>A1F43D20-D582-122A-A0E0-2409733DEF62</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>A602B33C-0004-D05B-A4E1-4A2339C606D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="OPTN_MTRTY" id="A31C9B6C-D00E-CD2F-C0D3-677715EC25FC">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-16 18:30:39 UTC</createdTime>
+<comment><![CDATA[The option maturity to which this sensitivity relates.]]></comment>
+<generatorID>99D62938-B7D9-17D7-26F3-262D8B28DA07</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>A602B33C-0004-D05B-A4E1-4A2339C606D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="TNR" id="E882B64F-3E27-B9AB-B3BF-377FE70FDBC8">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-16 18:30:39 UTC</createdTime>
+<comment><![CDATA[The tenor point of the related curve if this is a risk to a curve based risk factor.]]></comment>
+<generatorID>E8117BA0-ABBB-F44F-AC44-274A6CC08B85</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>A602B33C-0004-D05B-A4E1-4A2339C606D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="UNDRLYNG_RSDL_MTRTY" id="26171D23-6BC3-3A98-AAFA-CC3334C7D570">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-16 18:30:39 UTC</createdTime>
+<comment><![CDATA[Where required, the underlying residual maturity to which the sensitivity is wwa created. Required when we consider that the sensitivity came from a change in a volatility surface.]]></comment>
+<generatorID>769BE65F-3772-E71C-AB9A-B84E19CA08D3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>A602B33C-0004-D05B-A4E1-4A2339C606D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="VG_SNSTVTY" id="99EA0645-6E9B-AF5F-8EBB-47724866AF32">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-16 18:30:39 UTC</createdTime>
+<comment><![CDATA[The sensitivity, as an amount (e.g. 100 dollars).]]></comment>
+<generatorID>6A23AB24-ABC7-3BC1-0BCC-A8E40E30FD88</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>A602B33C-0004-D05B-A4E1-4A2339C606D8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8ECD0A22-69BA-4194-F0EC-51B3A9D12B66" name="FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 12:08:10 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="53C9678F-B9E8-145E-E61D-EC2926E0A95B"/>
+<colUsage columnID="2EB330A1-3CF6-0F8A-C5D1-F76CF4BB3385"/>
+<colUsage columnID="AE0E2DB0-9FEB-371E-0D2C-15EE4D9C689C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="34BB2FDC-0509-E845-2D2F-F3771FDBB291" name="FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_INSTRMNT_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 12:08:10 UTC</createdTime>
+<generatorID>850EF420-23A9-19F5-F6C0-43EBC06B8A50</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AE0E2DB0-9FEB-371E-0D2C-15EE4D9C689C"/>
+<colUsage columnID="53C9678F-B9E8-145E-E61D-EC2926E0A95B"/>
+<colUsage columnID="2EB330A1-3CF6-0F8A-C5D1-F76CF4BB3385"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A383CB99-EA12-114F-7879-D9DC9831B81A" name="FNDMNTL_RVW_TRDNG_BK_STNDRD_APPRCH_RSK_MSR_OTC_PSTNS_RSK_FAC_SA_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-16 18:31:46 UTC</createdTime>
+<generatorID>7D054294-945A-68F1-39F7-D11CD19B85F5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="53C9678F-B9E8-145E-E61D-EC2926E0A95B"/>
+<colUsage columnID="2EB330A1-3CF6-0F8A-C5D1-F76CF4BB3385"/>
+<colUsage columnID="6D040869-587B-8AE7-8F2C-254B317C27B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

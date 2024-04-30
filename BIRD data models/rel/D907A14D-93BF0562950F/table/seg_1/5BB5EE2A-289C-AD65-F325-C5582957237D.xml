@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="5BB5EE2A-289C-AD65-F325-C5582957237D" name="Party_code">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[A party code is a code (different to the Party identifier) of a Party that identifies the party in systems outside of the bank. It is a combination of a Party and a Party code identifier.]]></commentInRDBMS>
+<generatorID>642848DB-04A6-3CA0-D593-B955695B285F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>7A67499C-0479-82E2-9F82-A693B748701D</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Party_identifier" id="0AF928E1-75EB-B627-3CA3-F6F7121F38BF">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[An identifier that uniquely identifies a party.]]></comment>
+<generatorID>3FA1088E-31ED-E7E3-00EF-47C23052992C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B5A7138D-23CA-CE80-B3E7-A65081AD4203" referredColumn="8D1E57AF-B455-5A17-2DFB-0085D9584EF5"/>
+</associations>
+</Column>
+<Column name="Party_Reference_date" id="5613DA22-26F5-EEFC-BB4A-1F582940E765">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>32EF34A7-838F-67D5-0378-6D5F0FCF93F3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B5A7138D-23CA-CE80-B3E7-A65081AD4203" referredColumn="AE521F79-0513-41CC-FAA6-AAE9DAADDDE7"/>
+</associations>
+</Column>
+<Column name="Party_Reporting_agent_identifier" id="0A19DFA1-D4DC-F360-5A9F-92BAA325CB2E">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>5FFF747D-06A8-041A-0B79-541E3D473BAF</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B5A7138D-23CA-CE80-B3E7-A65081AD4203" referredColumn="0D641F46-92B3-7D60-3B23-1067FA6F978F"/>
+</associations>
+</Column>
+<Column name="Party_code_type" id="B0AEA2B0-E47D-143C-AA3E-7EA301470A32">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of party codes.]]></comment>
+<generatorID>EAC4A840-8E01-3D3A-581B-26FC34669CBB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>9C79DE32-87B5-4B9E-B1DA-B8B54D2DF409</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Legal_entity_identifier" id="2E9569E0-7000-61EC-8B11-4D33415813D7">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[Legal entity identifier, or LEI for short, is a string that uniquely identifies the Party according to the identifier assigned by the Global Legal Entity Identifier Foundation (GLEIF).]]></comment>
+<generatorID>5A5C5769-1AFA-AB83-1404-9642634475F5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RIAD_code" id="18785916-C0EB-2F0F-6073-740FA63E50F4">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[The RIAD code, is a string that uniquely identifies the Party according to the identifier assigned by the Register of Institutions and Affiliates Database (RIAD).]]></comment>
+<generatorID>33B326F1-A93E-3631-62A0-DC3B263C76F9</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3F10E1AC-A670-8A00-D778-9F628648F42F" name="Party_code_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<generatorID>C50414D0-CB1C-8FE5-87F2-A999D378A30E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AF928E1-75EB-B627-3CA3-F6F7121F38BF"/>
+<colUsage columnID="5613DA22-26F5-EEFC-BB4A-1F582940E765"/>
+<colUsage columnID="0A19DFA1-D4DC-F360-5A9F-92BAA325CB2E"/>
+<colUsage columnID="B0AEA2B0-E47D-143C-AA3E-7EA301470A32"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BC9399EC-8181-D9D0-68FE-E4ED86C4870A" name="Party_code_Party_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:18 UTC</createdTime>
+<generatorID>10B5FD6C-8683-6246-144C-FF5D3B6A2357</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AF928E1-75EB-B627-3CA3-F6F7121F38BF"/>
+<colUsage columnID="5613DA22-26F5-EEFC-BB4A-1F582940E765"/>
+<colUsage columnID="0A19DFA1-D4DC-F360-5A9F-92BAA325CB2E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

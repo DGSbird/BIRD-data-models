@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B750FFEB-2F80-12C2-89A0-343193253E39" name="INSTRMNT_PRTCN_ARRNGMNT_ASSGNMNT">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B750FFEB-2F80-12C2-89A0-343193253E39" name="instrmnt_prtcn_arrngmnt_assgnmnt">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <commentInRDBMS><![CDATA[An Instrument Protection arrangement assignment is the combination of an Instrument and a Protection arrangement that indicates which Instrument is related to which Protection arrangement.]]></commentInRDBMS>
@@ -10,7 +10,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="PRTCTN_ID" id="B77AC833-E725-2F58-5E05-E0720FBD8007">
+<Column name="prtctn_id" id="B77AC833-E725-2F58-5E05-E0720FBD8007">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[An identifier to univocally identify each protection arragement.]]></comment>
@@ -26,7 +26,7 @@
 <colAssociation fkAssociation="4A8B6C58-B410-9C0B-A272-272FCC45119A" referredColumn="0164BCDD-F5CA-122A-E95F-7F8E8AD70E6D"/>
 </associations>
 </Column>
-<Column name="INSTRMNT_ID" id="FC0DE968-9E99-9269-0386-94DB71F0CFEC">
+<Column name="instrmnt_id" id="FC0DE968-9E99-9269-0386-94DB71F0CFEC">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
@@ -42,7 +42,7 @@
 <colAssociation fkAssociation="FFA44BDE-692E-91D7-4AAD-A5AF7CC98C7F" referredColumn="F41E7365-496F-A912-0F18-BE314EFF631F"/>
 </associations>
 </Column>
-<Column name="DT_RFRNC" id="79CC53A4-3986-BD9A-4010-D35F60DE8E20">
+<Column name="dt_rfrnc" id="79CC53A4-3986-BD9A-4010-D35F60DE8E20">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[The date the data refers to.]]></comment>
@@ -59,7 +59,7 @@
 <colAssociation fkAssociation="4A8B6C58-B410-9C0B-A272-272FCC45119A" referredColumn="E4B223A6-9585-DA41-72C9-A0CFD40E53B7"/>
 </associations>
 </Column>
-<Column name="RPRTNG_AGNT_ID" id="D8E68286-1315-BFF2-5816-4A2BA44693E9">
+<Column name="rprtng_agnt_id" id="D8E68286-1315-BFF2-5816-4A2BA44693E9">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[Identifier of the reporting agent.]]></comment>
@@ -78,7 +78,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="F8057A77-4C89-DBBE-D034-28806FFF7799" name="INSTRMNT_PRTCN_ARRNGMNT_ASSGNMNT_PK">
+<ind_PK_UK id="F8057A77-4C89-DBBE-D034-28806FFF7799" name="instrmnt_prtcn_arrngmnt_assgnmnt_pk">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <generatorID>BA8B178D-625C-2083-272F-2F0A117E7EB9</generatorID>
@@ -93,7 +93,7 @@
 <colUsage columnID="D8E68286-1315-BFF2-5816-4A2BA44693E9"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="2E6AE395-541C-EDA5-471D-708817441EF8" name="INSTRMNT_PRTCN_ARRNGMNT_ASSGNMNT_INSTRMNT_FK">
+<ind_PK_UK id="2E6AE395-541C-EDA5-471D-708817441EF8" name="instrmnt_prtcn_arrngmnt_assgnmnt_instrmnt_fk">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <generatorID>40254AA0-2E36-DCD5-F031-4473656CCBFF</generatorID>
@@ -106,7 +106,7 @@
 <colUsage columnID="D8E68286-1315-BFF2-5816-4A2BA44693E9"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="3ABB3E3A-B6DC-2141-C2EA-8C9FA356F9EB" name="INSTRMNT_PRTCN_ARRNGMNT_ASSGNMNT_PRTCTN_ARRNGMNT_FK">
+<ind_PK_UK id="3ABB3E3A-B6DC-2141-C2EA-8C9FA356F9EB" name="instrmnt_prtcn_arrngmnt_assgnmnt_prtctn_arrngmnt_fk">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:59 UTC</createdTime>
 <generatorID>64461156-06AA-66A6-3A48-1314EF2A6F7B</generatorID>

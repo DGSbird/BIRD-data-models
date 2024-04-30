@@ -239,26 +239,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>RPRTNG_AGNT_ID</preferredAbbreviation>
 </Attribute>
-<Attribute name="Prudential portfolio type" id="BEFAB0ED-0162-E71B-8238-6AF4E0CE1717">
-<createdBy>ostarij</createdBy>
-<createdTime>2022-12-09 16:53:35 UTC</createdTime>
-<comment><![CDATA[A discriminator to distinguish between trading and banking (or non-trading) book.]]></comment>
-<generatorID>CB3664A0-6595-8A1D-F50C-47122EB584EA</generatorID>
-<ownerDesignName>BIRD data models</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
-<engineerTo>
-<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="false"/>
-<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
-</engineerTo>
-<referedAttribute>BD32B15D-A3DF-CCDA-5E8B-DC701AFFF439</referedAttribute>
-<use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<domain>9ECA7EA5-B456-4AD8-AA91-4AD16E2D4AD7</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<preferredAbbreviation>PRDNTL_PRTFL_TYP</preferredAbbreviation>
-</Attribute>
 <Attribute name="Security position hedged by Over the counter (OTC) derivative type" id="D6338890-EABD-12E2-6129-170FF80DF228">
 <createdBy>ostarij</createdBy>
 <createdTime>2023-03-24 14:24:19 UTC</createdTime>
@@ -277,6 +257,24 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <preferredAbbreviation>SCRTY_PSTN_HDGD_OTC_DRVTV_TYP</preferredAbbreviation>
 </Attribute>
+<Attribute name="Long security position Prudential portfolio type" id="455DDC72-0AA1-D497-947D-2047E2FA9F34">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 16:36:52 UTC</createdTime>
+<generatorID>CB3664A0-6595-8A1D-F50C-47122EB584EA</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>0795B7F8-F50A-31B6-9142-CEF170BBCD51</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>22360725-5409-47DA-F83B-458C1A25FE44</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>LNG_SCRTY_PSTN_PRDNTL_PRTFL_TYP</preferredAbbreviation>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="699A5CA4-85B3-6B70-CF5B-90253C19F1B9" name="Security position hedged by Over the counter (OTC) derivative PK">
@@ -291,10 +289,10 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>04312425-EEE1-8C8F-5169-F1A52229DBB0</attributeRef>
-<attributeRef>359DF663-B903-96E6-A555-D48A45A77062</attributeRef>
 <attributeRef>458ADDE3-6DCB-1201-34AE-88F561E29562</attributeRef>
 <attributeRef>AA9D0895-C062-DA3F-B4EE-E004C9844132</attributeRef>
+<attributeRef>04312425-EEE1-8C8F-5169-F1A52229DBB0</attributeRef>
+<attributeRef>359DF663-B903-96E6-A555-D48A45A77062</attributeRef>
 <attributeRef>12FA3DE9-7C4B-E706-5E0F-1C2A061A22A9</attributeRef>
 <attributeRef>9D8F2B79-8FD6-7CCF-DA1C-04B31BEAAFAF</attributeRef>
 <attributeRef>B38BF1A7-0828-E8E0-3843-A9ED503A1F19</attributeRef>
@@ -302,7 +300,7 @@
 <attributeRef>EB3A73B9-B144-5CAC-628D-BD101C05359B</attributeRef>
 <attributeRef>EF3C7BB1-28AE-244F-C92E-74CBC95AA3AA</attributeRef>
 <attributeRef>397A418E-C3A1-1A96-B68C-0E50CF95C9E5</attributeRef>
-<attributeRef>BEFAB0ED-0162-E71B-8238-6AF4E0CE1717</attributeRef>
+<attributeRef>455DDC72-0AA1-D497-947D-2047E2FA9F34</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

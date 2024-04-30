@@ -1,0 +1,740 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6E4C9B72-A952-D349-A3BB-3BE93F89173B" name="INSTRMNT">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[An Instrument is a product that establishes a financial relationship between a bank and its customer.
+In the context of accounting such a financial relationship may be considered a financial asset or a financial liabilty or an off-balance sheet item.]]></commentInRDBMS>
+<generatorID>54907B80-5ADD-5298-6AE7-54D1AC9CA6F6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DT_RFRNC" id="27DAED9F-4075-0E36-52C8-6B1AEC161E36">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>9ECE8643-3670-4EAE-A455-B5EF4C2CE45A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="405B0B42-F834-63A2-B19B-C67EDD999A3B" referredColumn="FCFD7FDF-1875-A921-E0FD-D1777FCE122E"/>
+</associations>
+</Column>
+<Column name="RPRTNG_AGNT_ID" id="5D516F1C-8A64-2175-1FEC-0E3BEEB423F7">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>BB6D9386-34F3-FCB8-F6D0-4BB43D4EAAA8</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="405B0B42-F834-63A2-B19B-C67EDD999A3B" referredColumn="0B475AE7-017F-4674-2B28-AE148B2C615B"/>
+</associations>
+</Column>
+<Column name="INSTRMNT_ID" id="38545E0A-4D05-0658-4BA8-9DD4800E0A29">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>F7859051-3E5A-9707-1E2B-67B4383135E4</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INSTRMNT_TYP_PRDCT" id="47B7E4E8-0F39-9B72-94C3-3BDE5C594BD0">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish instruments by product. Examles are loans and advances, securities financing transactions, financial guarantees and other commitments or over the counter derivatives.]]></comment>
+<generatorID>A4D61590-A861-618B-C636-A5A511479215</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>91f8c6d1-aeb9-4245-a38d-57f80e30043a</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INSTRMNT_TYP_ORGN" id="2908B723-F7F3-A51A-F840-51CBA982E9D1">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish instrument by their type of origin. For example instruments arising from financial contracts or instruments arising from credit facilities.]]></comment>
+<generatorID>E6F132DD-310E-A45A-B11A-050E795B012C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>18e67227-ff3e-458a-8912-46488d4eb6dc</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BLNC_SHT_NTTNG_ID" id="ADF8545E-D2A8-CAC7-D6FB-A3F164C2C8F1">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each a balance sheet netting.]]></comment>
+<generatorID>315382EF-00C2-733A-48E5-CEC1E5EC069F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="405B0B42-F834-63A2-B19B-C67EDD999A3B" referredColumn="6320FCC2-D190-AC99-A06F-B68C6E5BD7B9"/>
+</associations>
+</Column>
+<Column name="OTC_DRVTV_INSTRMNT_TYP" id="F96C5E4B-7117-3757-86CA-DC97DF51925C">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[The over the counter derivative role.]]></comment>
+<generatorID>5B5E2FD1-A2B3-6071-2BE0-0DCFCD5F1C11</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>D0D31557-00E7-E87D-3EAE-326614E90CFE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SGNFCNT_ASST_CLSS" id="57A32975-62DE-AB85-FBCA-FFDC807BAEA4">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[Classification into specific asset classes, like interest rate, equity, foreign exchange.]]></comment>
+<generatorID>2D87869F-3C07-91FB-ADBA-150761867DB4</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>89975CC9-B22F-2DED-78DD-4E08EB65BDFF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NTNL_AMNT" id="9CC87360-C73F-ADE7-A78B-D0A3351C5261">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[The notional amount on a financial instrument is the nominal or face amount that is used to calculate payments made on that instrument.]]></comment>
+<generatorID>DC8ECD0F-3F93-84FB-B9D1-37F4F55554AB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TYP_RSK" id="711D4C7A-463E-7225-AFE5-5ED867D1410E">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[Type of financial risk Indicates the type of risk arising from exposures or transactions (e.g. credit risk or market risk) for Over the counter (OTC) Derivative instrument.]]></comment>
+<generatorID>3D0B559E-8AAF-56CC-3F75-B60DA4273A4F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>A5DF5921-9313-8761-E316-E39022D169ED</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OTC_OPTN_TYP" id="7CF83D07-5CB7-C5B9-46D1-1D56BE852F28">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of over the counter options.]]></comment>
+<generatorID>BDBFFF59-D393-13A4-49E3-A01CC18A2CA5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2082F27A-5436-5662-2FBA-E3C804568CBC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OTC_SWP_TYP" id="936E59AA-5595-224F-DA27-3D6EA08FAB4B">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of over the counter swaps.]]></comment>
+<generatorID>BEC5C778-D42C-B7C7-1AF8-1FFB204EC619</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>D67C44FC-4B59-50D0-6DD5-F58EADCB586D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LN_AND_ADVNC_TYP" id="2097098B-CA70-8373-BFB7-C9D7968CEA81">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between loans and advances.]]></comment>
+<generatorID>2C22BB91-1D3A-16AB-7F3E-8F84703DB673</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>336C65AC-E62E-2AAB-D901-EE9E00260683</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LTGTN_STTS" id="671C1461-4955-FC29-4B1D-3C6372488160">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[Litigation indicates the status of the litigation that the exposure is in.
+
+Finrep Annex V,  Part 2.321, 322: An exposure shall be ‘in pre-litigation status’ where the debtor has been formally notified that the institution will take legal action against the debtor within a defined time period, unless certain contractual or other payment obligations are met. That shall also include cases where the contract has been terminated by the reporting institution because the debtor is in formal breach of the terms and conditions of the contract and the debtor has been notified accordingly, but no legal action against the debtor has formally been taken by the institution yet. Exposures classified as ‘in pre-litigation status’ can exit this classification if the outstanding amounts are paid or if they enter into litigation status as defined in the following paragraph. 
+An exposure shall be ‘in litigation status’ where legal action against the debtor has formally been taken. This comprises cases where a court of law confirmed that formal judiciary proceedings have occurred or the judiciary system has been notified of the intention to commence legal proceedings.]]></comment>
+<generatorID>0844C601-04A2-692D-3033-A781861E85C8</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>A74017C2-FB85-4C52-0ECE-FD4F2BA2B981</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCNTNG_HDG_INDCTR1" id="D6A21CDD-6A58-0089-5B6E-5D33CD4B3AC6">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if the hedge is considered an accounting hedge or not.]]></comment>
+<generatorID>45F25E4F-C721-AF03-C572-EF16669A5A7A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>67BB8028-D0A7-E1BE-DD13-29EB4D4788D9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LN_TYP" id="E220A39E-99AA-2D09-A8B4-CF66923F1FC8">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of loans. Examples are financial leases, trade receivables, deposits.]]></comment>
+<generatorID>D9DE863F-A1D9-1C32-D20B-B327AC4FC9AB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>800F811F-075B-D6C7-1B0F-FC917B71BFA0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NMNL_AMNT1" id="7F1EFC8D-AAF9-8E20-7A2E-EFA595A38C61">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[Holding amount at nominal value]]></comment>
+<generatorID>3270CD8B-396E-FE90-55AB-DC29B8973028</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRRNCY" id="4C3FC823-5417-6953-C170-0432B205FEB3">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[The currency code according to ISO4217.]]></comment>
+<generatorID>6C6D76CE-F872-363A-8524-E77CAABD7080</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2D4D0542-0954-4C82-9231-4447DC95A6DE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_LGL_FNL_MTRTY1" id="4142BB46-8BD8-E633-F541-950AA67123C1">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[The contractual maturity date of the asset or liability, taking into account any agreements amending initial contracts.]]></comment>
+<generatorID>8517BAA2-05E0-CE9F-C53F-F6CD8C0A76DB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DPST_TYP" id="3914B9A5-E4C6-5147-B9E8-F13D220E185F">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish the overnight and other deposit according to Regulation (EU) 1071/2013, Annex 2, Part 2 Definitions of instrument categories and Regulation (EU) 549/2013, 5.85.]]></comment>
+<generatorID>691206D2-E6FA-34DC-26CF-E14701196FDF</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>8BDB8CC0-B263-4089-77D4-AD28E3DF4EE4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RPYMNT_RGHTS" id="66F06540-C806-42CB-43A5-80AD2A21ECC6">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[Repayment rights, e.g. redeemable at notice.]]></comment>
+<generatorID>717AD0DE-83C0-AA8C-65EA-6E8B6CB1A516</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bbff53b5-19b3-4367-a356-28bb6e4af3c0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FDCRY1" id="507C8829-0042-6C74-287C-403CD5364D6F">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[Identification of instruments in which the observed agent acts in its own name but on behalf of and with the risk borne by a third party.]]></comment>
+<generatorID>1F0B6FA9-73AF-0EDD-9500-FCF8EB065522</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>D9D544B1-1229-4FD5-4C97-06E213CE6217</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OTHR_DPST_TYP" id="734B86B9-BC48-3178-E98A-5164D8146B87">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between deposits redeemable at notice and deposits with agreed maturity.]]></comment>
+<generatorID>E8C4A83A-397A-4315-4348-A87E5ED46C26</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>1CE369B3-67A8-F57D-6541-FC411CC7783D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OVRNGHT_DPST_TYP" id="85C2FCB8-8947-910F-4F25-FE6C4D269C68">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between transferable deposits and other overnight deposits.]]></comment>
+<generatorID>BD7A7924-8E6E-BFE8-91EF-3B7005BAE522</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>0CBDE277-054B-DEC4-FD6A-1E9A4E365DEB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FDCRY" id="713E57C3-A40C-598F-488F-968F6F148D41">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[Identification of instruments in which the observed agent acts in its own name but on behalf of and with the risk borne by a third party.]]></comment>
+<generatorID>7AF89AA1-0855-C979-728C-A5E4CFCB1D0F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>D9D544B1-1229-4FD5-4C97-06E213CE6217</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RVLVNG_LN_INDCTR1" id="838C6F38-C6FE-D49B-2EEB-8F8B2EB9F184">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if an instrument is considered revolving or non-revolving.]]></comment>
+<generatorID>EA53A39E-92A1-71FE-EE4C-2FE3B267F218</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>B44B2A50-A4A4-05AC-804F-7F7003F3F307</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TRD_RCVBL_TYP" id="07BC487C-F404-D083-A0F9-B4020A9C6FD6">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between factoring and other trade receivables.]]></comment>
+<generatorID>EBFD7A45-22DB-6DE6-C628-7125253649F5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>E0EDE52B-099B-04E7-7DF6-40CFBC0CAF66</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RVLVNG_LN_INDCTR" id="18938CD6-5025-4EFE-AEC7-F5771F14132C">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if an instrument is considered revolving or non-revolving.]]></comment>
+<generatorID>9E23B689-D2B1-9A9F-5D9D-F2621FB68DA6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>B44B2A50-A4A4-05AC-804F-7F7003F3F307</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADVNC_TYP" id="61B504BF-E3D0-202B-D8BA-D8946D0EC4E4">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between suspense items, transit items and other advances.]]></comment>
+<generatorID>D2BC75D5-C601-572A-6E7D-98A012504D65</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>044FB171-CDCC-A2E2-75CA-EDB2F7F223A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OFF_BLNC_INSTRMNT_TYP" id="CF0596AE-C56B-6F3A-108E-3BB8F4443672">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between financial guarantees and other commitments (other than credit facilities).]]></comment>
+<generatorID>EDA7300B-A7D1-50DA-CE25-E53224D41824</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>0FCCC46C-A99F-9F3B-113F-B2CB16C0B74E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NMNL_AMNT" id="822A63D1-2CF2-9D1D-314E-C3BCB24020E2">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[Holding amount at nominal value]]></comment>
+<generatorID>0774E28E-1F2A-661C-7C54-6F719181C20F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FNNCL_GRNT_INSTRMNT_TYP" id="609956A7-7EA4-5240-169C-15703D5BB1AA">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between financial guarantees covering debt securities and financial guarantees not covering debt securities.]]></comment>
+<generatorID>A868253F-98EF-8A87-CD9F-5DEEBD493D73</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>25CFDA5B-E5B6-D3C2-B5AD-EAC390FA6906</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TYP_CMMTMNT" id="71D0D818-8BAB-17ED-7714-4B97C4761305">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[Type of commitment.]]></comment>
+<generatorID>D6F4F827-1846-5882-0187-49C37CCCB9C3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>948F41C2-2D1C-D1A6-5555-F7C4988D5F37</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RVCBL_INDCTR" id="3A96F325-1ED8-45D1-19AB-55B59CBA8C9F">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[Revocable indicator is an indicator specifying if the Other commitment is revocable or not]]></comment>
+<generatorID>2104115A-AD2E-E9A1-02AE-75399A55F0D8</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2821B0F3-AE6E-1E7C-57AE-BEB48609CF66</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SFT_TYP" id="F8EF2C7D-B0A4-EFF5-9E14-EDEEC9BFB2E0">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between repurchase agreements and security borrowing and lending transactions.]]></comment>
+<generatorID>349775BB-8543-136E-9A93-DDDA55ABC91C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>C13E13D0-FCEF-E304-B215-EAFFA7EF3B21</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SCRTY_BRRWNG_LNDNG_TRNSCTN_TYP" id="E6DD7F79-3980-9D88-FE8F-0DA2B4CD689B">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of security borrowing and lending transactions, like security against security and security against a fee.]]></comment>
+<generatorID>F1EA73B5-8597-BCF1-3AAA-485D39187554</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>A5F92DFC-3067-4DEB-53AA-624B5CBCB6F2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RPRCHS_AGRMNT_INSTRMNT_TYP" id="B12C01EF-686D-0579-B810-1330CA6E54CB">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between term and open repurchase agreements.]]></comment>
+<generatorID>5C41B20D-19A0-120E-A80B-BB0C89C378F0</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>41a7c1e6-ccd0-4e1c-9775-84378911c419</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_STTLMNT" id="E5EA579C-5C47-DA08-AAD2-B4B352E36245">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[The date on which the conditions specified in the contract are or can be executed for the first time, i.e. the date on which financial instruments are initially exchanged or created.]]></comment>
+<generatorID>8195B95F-F7E2-18D1-5E90-0C9156C05C4D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_INCPTN" id="F5D4321E-25E6-588A-F8F1-A437CF7504D2">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[The date on which the current contractual relationship originated, i.e. the date on which the contract agreement became binding for all parties.]]></comment>
+<generatorID>DDBFAE9B-5420-FA94-78C9-5CA2B7971336</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_LGL_FNL_MTRTY" id="79C2EC0C-639B-9614-327F-A58CDACA4982">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[The contractual maturity date of the asset or liability, taking into account any agreements amending initial contracts.]]></comment>
+<generatorID>C6CB8AFA-83FA-9300-CCBD-11D3B960A45F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DT_RFRNC3" id="26A6CFC8-2140-4D26-1D10-4042324CA795">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>4FD19EB1-7E7C-3E7E-08BF-BBE5520CCB01</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3EE8ECA4-7AB9-426D-2806-3F2FFBB83890" referredColumn="9785E3EB-E678-E202-69E1-32EA3070BD09"/>
+</associations>
+</Column>
+<Column name="RPRTNG_AGNT_ID3" id="EE1A404B-CE02-B631-B864-1BAAF0C102FD">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>616FC119-C355-EFE3-0634-B36CDD2053C5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3EE8ECA4-7AB9-426D-2806-3F2FFBB83890" referredColumn="BC420457-00A3-7658-E6E3-B8D3B68CBEB6"/>
+</associations>
+</Column>
+<Column name="FNNCL_CNTRCT_ID" id="992B6095-9908-12C0-7F2F-2B70A65990DD">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each financial contract.]]></comment>
+<generatorID>1541421C-04EF-E145-CDC6-FF13DC379AE3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3EE8ECA4-7AB9-426D-2806-3F2FFBB83890" referredColumn="536D5704-A4FB-C933-3251-C952F51770BA"/>
+</associations>
+</Column>
+<Column name="OFF_BLNC_SHT_AMNT" id="DA7BB9A3-7AFD-DBFE-3209-0E86148247E3">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[Total nominal amount of off-balance sheet exposures. This includes any commitment to lend before considering conversion factors and credit risk mitigation techniques. It is the amount that best represents the institution's maximum exposure to credit risk without taking into account any protection held or other credit enhancements.]]></comment>
+<generatorID>8CFADA0F-2F11-4159-A6A3-0A55D8A33A5D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRDT_FCLTY_ID" id="F2527002-4C81-0A88-A320-090DB4EE01CE">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each credit facility.]]></comment>
+<generatorID>CB1651E6-1314-F1B1-7A1D-DE986F4855D9</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="51C05532-31C3-6103-F17E-3A7A91E9EA66" referredColumn="5A6ECF26-E5C5-6543-4E07-1BE07D453AE1"/>
+</associations>
+</Column>
+<Column name="DT_RFRNC1" id="6BB0C607-2A1C-CDDB-2CEB-8D81B336D73D">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>66EE1AE9-96C8-8899-0AAD-5623DE74876E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="51C05532-31C3-6103-F17E-3A7A91E9EA66" referredColumn="4EA47504-D3D3-4564-388A-EE16B0157779"/>
+</associations>
+</Column>
+<Column name="RPRTNG_AGNT_ID1" id="516D1021-FFBB-0FF4-C29E-71385775D52A">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>EF30AFA0-7B9A-61A7-1B7F-EC7425E7B11B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="51C05532-31C3-6103-F17E-3A7A91E9EA66" referredColumn="5794B8DB-4998-03A7-27EB-F5D70BF589C0"/>
+</associations>
+</Column>
+<Column name="ACCNTNG_HDG_INDCTR" id="5A3830DD-3811-C96D-B682-32590FF97A96">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if the hedge is considered an accounting hedge or not.]]></comment>
+<generatorID>B18A7A81-90B8-3F1C-E981-73A176B7292C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>67BB8028-D0A7-E1BE-DD13-29EB4D4788D9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="72518A57-BE2A-CFBF-6C0D-9EC26A0FF528" name="INSTRMNT_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<generatorID>5F537373-F972-0198-62B3-B60EA615A290</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="38545E0A-4D05-0658-4BA8-9DD4800E0A29"/>
+<colUsage columnID="27DAED9F-4075-0E36-52C8-6B1AEC161E36"/>
+<colUsage columnID="5D516F1C-8A64-2175-1FEC-0E3BEEB423F7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6B21DACD-5244-CEC5-24FB-E299EA7BE6FC" name="INSTRMNT_BLNC_SHT_NTTNG_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<generatorID>50BFE82A-39E6-628F-C6B8-AEB697E0C5F0</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ADF8545E-D2A8-CAC7-D6FB-A3F164C2C8F1"/>
+<colUsage columnID="27DAED9F-4075-0E36-52C8-6B1AEC161E36"/>
+<colUsage columnID="5D516F1C-8A64-2175-1FEC-0E3BEEB423F7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B11DE958-A5FC-16C4-6CE2-4B99EBAFC824" name="INSTRMNT_CRDT_FCLTY_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<generatorID>7D808783-CCD3-EDAD-B7DB-6994FAB738BE</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F2527002-4C81-0A88-A320-090DB4EE01CE"/>
+<colUsage columnID="6BB0C607-2A1C-CDDB-2CEB-8D81B336D73D"/>
+<colUsage columnID="516D1021-FFBB-0FF4-C29E-71385775D52A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1E255314-061B-3A2E-F09E-D5B22A6EA7FB" name="INSTRMNT_FNNCL_CNTRCT_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:16 UTC</createdTime>
+<generatorID>EB8DC78A-A41B-EF23-EEC3-B768E0BC6505</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="992B6095-9908-12C0-7F2F-2B70A65990DD"/>
+<colUsage columnID="26A6CFC8-2140-4D26-1D10-4042324CA795"/>
+<colUsage columnID="EE1A404B-CE02-B631-B864-1BAAF0C102FD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A1D0F13A-0906-3FED-0959-9E98FFF2DC68" name="KB_PR_BCKT">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 15:53:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[The risk position for bucket b, K(b), must be determined by aggregating the weighted sensitivities to risk factors within the same bucket using the corresponding prescribed correlation ρ(kl)
+
+KB per bucket is a term used in the standardised approach for market risk under FRTB. It is the risk capital requirement for a given bucket of risk factors within a risk class. It is computed as an aggregation of risk positions first at the bucket level, and then across buckets within a risk class defined for the sensitivities-based method.
+
+A bucket is a set of risk factors that are grouped together by common characteristics (eg all tenors of interest rate curves for the same currency), as defined in MAR21.39 to MAR21.892. A risk position is the portion of the risk of an instrument that relates to a risk factor.
+
+(https://www.bis.org/basel_framework/chapter/MAR/21.htm?inforce=20230101&published=20200327)]]></commentInRDBMS>
+<generatorID>66398151-2CB1-A911-4B68-334948A9F8D0</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>1B94F88B-CE04-E04E-DE88-6866B6DBCB24</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="BCKT_ID" id="1A215E58-0767-ADF3-E7A1-DA2DBD349C29">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 15:53:13 UTC</createdTime>
+<comment><![CDATA[The bucket identifier, for example the currency for interest rate risk factors.]]></comment>
+<generatorID>EA2BDDE2-0B7C-966C-7FAF-F1521644DA1F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>04F38763-DBE9-71CA-60CC-8AE479375450</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GIRR_DLTA_RSK_PSTN" id="F2BC3FF4-946A-0C4F-E54D-C68A3C943E83">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 15:53:13 UTC</createdTime>
+<comment><![CDATA[delta related  KB as defined in bcbs d457 21.4 (4)
+
+Within bucket aggregation: the risk position for delta (respectively vega) bucket b, must be determined by aggregating the weighted sensitivities to risk factors within the same bucket using the prescribed correlation set out in the following formula, where the quantity within the square root function is floored at zero
+
+https://www.bis.org/bcbs/publ/d457.pdf]]></comment>
+<generatorID>1B1E2DB9-A1B1-9F44-35C0-91BCCF65C387</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>8AF63A7D-2245-4118-9583-CEDC4D186D2D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FE17BFD5-F4E1-805F-9B19-109EAFE2E244" name="KB_PR_BCKT_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 15:53:13 UTC</createdTime>
+<generatorID>CE1E00B6-CE3E-C36D-A315-1D09F852A3C5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1A215E58-0767-ADF3-E7A1-DA2DBD349C29"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

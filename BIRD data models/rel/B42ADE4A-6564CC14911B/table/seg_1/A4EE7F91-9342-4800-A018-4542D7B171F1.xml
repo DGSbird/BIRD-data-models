@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="A4EE7F91-9342-4800-A018-4542D7B171F1" name="RPRCHS_AGRMNT_CMPNNT">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="A4EE7F91-9342-4800-A018-4542D7B171F1" name="rprchs_agrmnt_cmpnnt">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <commentInRDBMS><![CDATA[A Repurchase agreement component is a component of a (Reverse) Repurchase agreement, i.e. either a cash leg or a security leg.]]></commentInRDBMS>
@@ -10,7 +10,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="RPRCHS_AGRMNT_CMPNNT_TYP" id="67B2321F-E274-F4E4-5546-CF1F503A85CA">
+<Column name="rprchs_agrmnt_cmpnnt_typ" id="67B2321F-E274-F4E4-5546-CF1F503A85CA">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[A discriminator to distinguish between the security and the cash leg.]]></comment>
@@ -22,7 +22,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="RPRCHS_AGRMNT_INSTRMNT_ID" id="FE00EA57-CCA1-B0BD-8632-1800DD6CE9A7">
+<Column name="rprchs_agrmnt_instrmnt_id" id="FE00EA57-CCA1-B0BD-8632-1800DD6CE9A7">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[The instrument identifier of the involved repurchase agreement.]]></comment>
@@ -38,7 +38,7 @@
 <colAssociation fkAssociation="B648A39A-40F8-0959-3E21-82BBB17DC1AB" referredColumn="F41E7365-496F-A912-0F18-BE314EFF631F"/>
 </associations>
 </Column>
-<Column name="RPRCHS_AGRMNT_INSTRMNT_RFRNC_DT" id="D275A722-23E7-ECC5-6E48-0FA1C24BF73D">
+<Column name="rprchs_agrmnt_instrmnt_rfrnc_dt" id="D275A722-23E7-ECC5-6E48-0FA1C24BF73D">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[The date the data refers to.]]></comment>
@@ -54,7 +54,7 @@
 <colAssociation fkAssociation="B648A39A-40F8-0959-3E21-82BBB17DC1AB" referredColumn="F511491E-C15F-3E1E-E259-22B2AFA91F34"/>
 </associations>
 </Column>
-<Column name="RPRCHS_AGRMNT_INSTRMNT_RPRTNG_AGNT_ID" id="E6969B18-7C0C-D125-CDE3-04D2D5AAB56D">
+<Column name="rprchs_agrmnt_instrmnt_rprtng_agnt_id" id="E6969B18-7C0C-D125-CDE3-04D2D5AAB56D">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[Identifier of the reporting agent.]]></comment>
@@ -70,7 +70,7 @@
 <colAssociation fkAssociation="B648A39A-40F8-0959-3E21-82BBB17DC1AB" referredColumn="88FE91F1-6E72-0E16-E41D-E4A8EF97E12D"/>
 </associations>
 </Column>
-<Column name="CRRNCY" id="BAF113FA-6739-E183-7C98-96635BC50B6E">
+<Column name="crrncy" id="BAF113FA-6739-E183-7C98-96635BC50B6E">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[The currency code according to ISO4217.]]></comment>
@@ -83,7 +83,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="NMNL_AMNT" id="FA910B22-2D6E-E8AE-B560-2D598CA9C895">
+<Column name="nmnl_amnt" id="FA910B22-2D6E-E8AE-B560-2D598CA9C895">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[Holding amount at nominal value]]></comment>
@@ -98,7 +98,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="ED1778AF-7DD2-B074-4F19-A3BE271BCA19" name="RPRCHS_AGRMNT_CMPNNT_PK">
+<ind_PK_UK id="ED1778AF-7DD2-B074-4F19-A3BE271BCA19" name="rprchs_agrmnt_cmpnnt_pk">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <generatorID>2937DCD0-3F46-54CD-05AC-C3C09106D74E</generatorID>
@@ -113,7 +113,7 @@
 <colUsage columnID="E6969B18-7C0C-D125-CDE3-04D2D5AAB56D"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="74504CC6-FA51-7461-5275-548D3CED83B3" name="RPRCHS_AGRMNT_CMPNNT_INSTRMNT_FK">
+<ind_PK_UK id="74504CC6-FA51-7461-5275-548D3CED83B3" name="rprchs_agrmnt_cmpnnt_instrmnt_fk">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:59 UTC</createdTime>
 <generatorID>0AF24D8D-30D3-5418-AA96-7DB617F41B39</generatorID>

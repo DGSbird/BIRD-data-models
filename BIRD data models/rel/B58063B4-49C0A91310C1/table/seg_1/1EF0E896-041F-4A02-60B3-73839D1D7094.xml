@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="1EF0E896-041F-4A02-60B3-73839D1D7094" name="RTNG_GRD_CNTRY_ASSGNMNT">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Rating grade country assignment is the combination of a Rating grade for issuer based rating systems for Central government and a Country that indicates which Rating grade for issuer based rating systems for Central government is assigned to which Country.]]></commentInRDBMS>
+<generatorID>E7A44111-ABF5-F2D2-9A53-2B7DA7469520</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>6E05D22A-D6DB-0396-42A2-4B1DB49EB60E</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RTNG_SYSTM_NM1" id="2BF60BE7-868D-E070-2CD0-441679244514">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:15 UTC</createdTime>
+<comment><![CDATA[The rating system's name.]]></comment>
+<generatorID>ED57DB74-394A-D14C-BF42-583757C0A77B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="12F38720-7737-4B89-6FF8-3AB66945C049" referredColumn="6AFAF563-3854-BB67-110D-3884D024CED9"/>
+</associations>
+</Column>
+<Column name="RTNG_AGNCY_NM1" id="1685CCEC-C50F-52A1-CA4D-45A3DF19B371">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:15 UTC</createdTime>
+<comment><![CDATA[The rating agency's name.]]></comment>
+<generatorID>23C8B096-8DB4-7740-DBD8-04A9B076D207</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="12F38720-7737-4B89-6FF8-3AB66945C049" referredColumn="76C4E65C-6378-A726-66D7-526B2A9E08D2"/>
+</associations>
+</Column>
+<Column name="CNTRY_CD" id="E30A9C63-B1DB-52FE-671F-CEA838BD51CF">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:15 UTC</createdTime>
+<comment><![CDATA[The country code according to ISO3166.]]></comment>
+<generatorID>13B3588B-921F-D048-7CD1-7D7EAEBA6FC6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>E832EA39-67C9-4303-AD29-B66510B666C6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RTNG_GRD1" id="6A49CB73-183A-7FB3-ABFF-904399A33A11">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:15 UTC</createdTime>
+<comment><![CDATA[The rating grade, e.g. AAA.]]></comment>
+<generatorID>DC823282-8111-7598-72F8-E54E6310A8BB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="12F38720-7737-4B89-6FF8-3AB66945C049" referredColumn="B63758B3-BAB7-AF9E-1963-7F02BBD8C56F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="025BFB04-C634-A67F-6809-1B4EBD44BE15" name="RTNG_GRD_CNTRY_ASSGNMNT_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:15 UTC</createdTime>
+<generatorID>C2205324-1B42-D671-E62F-A05F9641E767</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2BF60BE7-868D-E070-2CD0-441679244514"/>
+<colUsage columnID="1685CCEC-C50F-52A1-CA4D-45A3DF19B371"/>
+<colUsage columnID="6A49CB73-183A-7FB3-ABFF-904399A33A11"/>
+<colUsage columnID="E30A9C63-B1DB-52FE-671F-CEA838BD51CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5ED9DD3F-F6A5-531D-28CC-C50661788251" name="RTNG_GRD_CNTRY_ASSGNMNT_RTNG_GRD_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:51:17 UTC</createdTime>
+<generatorID>9A768DE9-3AA1-A560-6E82-7F2BC3C5BA9B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2BF60BE7-868D-E070-2CD0-441679244514"/>
+<colUsage columnID="1685CCEC-C50F-52A1-CA4D-45A3DF19B371"/>
+<colUsage columnID="6A49CB73-183A-7FB3-ABFF-904399A33A11"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

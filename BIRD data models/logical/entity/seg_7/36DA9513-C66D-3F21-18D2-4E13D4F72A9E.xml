@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_7" id="36DA9513-C66D-3F21-18D2-4E13D4F72A9E" name="Collateral received instrument obtained by taking possession">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-02-07 17:32:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Collateral received instrument obtained by taking possession is a Collateral received instrument that has been taken into possession (by the reporting agent) as part of collateral recovery.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="false"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="false"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="false"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="false"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+</engineerTo>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>E50F91BD-9CAA-1F59-DEF3-6907A545578F</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>CLLTRL_RCVD_INSTRMNT_OBTND_TKNG_PSSSSN</preferredAbbreviation>
+<changeRequests>
+<requestID>22050-407</requestID>
+<requestID>22051-408</requestID>
+</changeRequests>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Balance sheet recognition date" id="2ADD048F-F7AB-CCC1-D058-8A4FEF9EBEDD">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-02-07 17:33:26 UTC</createdTime>
+<comment><![CDATA[Balance sheet recognition date is a date on which the Equity instrument that is not a security obtained by taking possession was taken into possession and thus recognised on the balance sheet.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>TKN_PSSSSN_DT</preferredAbbreviation>
+<changeRequests>
+<requestID>22030-406</requestID>
+<requestID>22050-407</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Derecognised exposure accumulated impairment" id="06756A75-7B6C-5CF6-2D3D-D07229F7556C">
+<createdBy>ajbos</createdBy>
+<createdTime>2024-03-14 19:42:30 UTC</createdTime>
+<comment><![CDATA[Accumulated impairment is the amount of loss allowances that are held against or are allocated to the derecognised exposure on the reporting reference date for which the Collateral obtained by taking possession has been obtained.
+
+This data attribute applies to assets subject to impairment under the applied accounting standard. Under IFRS, the accumulated impairment relates to the following
+amounts:
+(i) loss allowance at an amount equal to 12-month expected
+credit losses;
+(ii) loss allowance at an amount equal to lifetime expected
+credit losses.
+Under GAAP, the accumulated impairment relates to the following
+amounts:
+(i) loss allowance at an amount equal to general allowances;
+(ii) loss allowance at an amount equal to specific allowances.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ACCMLTD_IMPRMNT</preferredAbbreviation>
+<changeRequests>
+<requestID>22051-408</requestID>
+<requestID>22050-407</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Accumulated fair value changes of the exposure due to credit risk" id="33EF904C-1169-BAA0-BA3F-3D6D00CBA549">
+<createdBy>ajbos</createdBy>
+<createdTime>2024-03-14 19:43:13 UTC</createdTime>
+<comment><![CDATA[Accumulated changes in fair value due to credit risk in accordance with Part 2.46 of Annex V to Implementing Regulation (EU) No 680/2014 of the exposure that is derecognised because of the Collateral obtained by taking possession.
+
+Note: This amount must only be reported when it is negative.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>14C89E8C-F57F-4505-832D-C97676924FD1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ACCMLTD_CHNGS_FV_CR</preferredAbbreviation>
+<changeRequests>
+<requestID>22050-407</requestID>
+<requestID>22051-408</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Derecognised exposure gross carrying amount" id="2E4E0C76-843F-837D-8949-C66EAE9C0C2E">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-28 08:20:36 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>14C89E8C-F57F-4505-832D-C97676924FD1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>GCA_EXPSR_DRCGNSD_EXCHNG_CLLTRL</preferredAbbreviation>
+</Attribute>
+</attributes>
+</Entity>

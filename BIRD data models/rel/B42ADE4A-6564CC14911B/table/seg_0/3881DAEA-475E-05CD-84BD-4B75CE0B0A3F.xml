@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3881DAEA-475E-05CD-84BD-4B75CE0B0A3F" name="CRDT_RSK_MTGTN_ASSGNMNT">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3881DAEA-475E-05CD-84BD-4B75CE0B0A3F" name="crdt_rsk_mtgtn_assgnmnt">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <commentInRDBMS><![CDATA[A credit risk mitigation membership is the combination of a Credit risk mitigation arrangement and a Protection item that indicates which Protection item is comprised in which Credit risk mitigation arrangement. 
@@ -11,7 +11,7 @@ Please note that the many-to-many relationship (established via this entity) is 
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="PRTCTN_ID" id="AB6E12ED-3DD2-1DC9-B6D7-A4D55F620214">
+<Column name="prtctn_id" id="AB6E12ED-3DD2-1DC9-B6D7-A4D55F620214">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[An identifier to univocally identify each protection arragement.]]></comment>
@@ -27,7 +27,7 @@ Please note that the many-to-many relationship (established via this entity) is 
 <colAssociation fkAssociation="3BC9D5CD-19F1-7AA3-6F5E-2E20E4C33BCF" referredColumn="0164BCDD-F5CA-122A-E95F-7F8E8AD70E6D"/>
 </associations>
 </Column>
-<Column name="CLLTRL_ID" id="465BE10A-E672-2D91-1F96-6CF7B4D988CE">
+<Column name="clltrl_id" id="465BE10A-E672-2D91-1F96-6CF7B4D988CE">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[An identifier to uniquely identify each collateral.]]></comment>
@@ -43,7 +43,7 @@ Please note that the many-to-many relationship (established via this entity) is 
 <colAssociation fkAssociation="2BB224D1-0986-7E4F-4AF1-E8583083097A" referredColumn="D98B8D8F-1031-14B1-90DF-A375F8EB8D7B"/>
 </associations>
 </Column>
-<Column name="DT_RFRNC" id="FD4EB46D-5653-2FE9-CD4A-08ADA802E641">
+<Column name="dt_rfrnc" id="FD4EB46D-5653-2FE9-CD4A-08ADA802E641">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[The date the data refers to.]]></comment>
@@ -60,7 +60,7 @@ Please note that the many-to-many relationship (established via this entity) is 
 <colAssociation fkAssociation="3BC9D5CD-19F1-7AA3-6F5E-2E20E4C33BCF" referredColumn="E4B223A6-9585-DA41-72C9-A0CFD40E53B7"/>
 </associations>
 </Column>
-<Column name="RPRTNG_AGNT_ID" id="887657FC-3FF1-B95A-9576-33C1A9978C31">
+<Column name="rprtng_agnt_id" id="887657FC-3FF1-B95A-9576-33C1A9978C31">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <comment><![CDATA[Identifier of the reporting agent.]]></comment>
@@ -79,7 +79,7 @@ Please note that the many-to-many relationship (established via this entity) is 
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="893B400D-1156-676B-9F6A-7B4DA2FC0FE6" name="CRDT_RSK_MTGTN_ASSGNMNT_PK">
+<ind_PK_UK id="893B400D-1156-676B-9F6A-7B4DA2FC0FE6" name="crdt_rsk_mtgtn_assgnmnt_pk">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <generatorID>91354549-80EE-6393-8609-9E6F6F48DB27</generatorID>
@@ -94,7 +94,7 @@ Please note that the many-to-many relationship (established via this entity) is 
 <colUsage columnID="887657FC-3FF1-B95A-9576-33C1A9978C31"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="875E2F0A-DE0B-0616-6E9A-E7156321C9AA" name="CRDT_RSK_MTGTN_ASSGNMNT_CLLTRL_FK">
+<ind_PK_UK id="875E2F0A-DE0B-0616-6E9A-E7156321C9AA" name="crdt_rsk_mtgtn_assgnmnt_clltrl_fk">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:58 UTC</createdTime>
 <generatorID>5A2ADAAE-4B9F-4BD7-5EEE-A1A3DA4DE925</generatorID>
@@ -107,7 +107,7 @@ Please note that the many-to-many relationship (established via this entity) is 
 <colUsage columnID="887657FC-3FF1-B95A-9576-33C1A9978C31"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="365BD231-AB0E-A255-CE46-62E6D257A0AB" name="CRDT_RSK_MTGTN_ASSGNMNT_PRTCTN_ARRNGMNT_FK">
+<ind_PK_UK id="365BD231-AB0E-A255-CE46-62E6D257A0AB" name="crdt_rsk_mtgtn_assgnmnt_prtctn_arrngmnt_fk">
 <createdBy>ostarij</createdBy>
 <createdTime>2024-01-03 08:29:59 UTC</createdTime>
 <generatorID>A4967B88-3EF3-282F-4BED-1279453EB155</generatorID>

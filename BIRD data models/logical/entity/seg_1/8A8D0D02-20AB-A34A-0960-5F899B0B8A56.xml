@@ -2,15 +2,22 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_1" id="8A8D0D02-20AB-A34A-0960-5F899B0B8A56" name="Equity instrument that is not a security">
 <createdBy>Dominik</createdBy>
 <createdTime>2021-07-28 12:41:02 UTC</createdTime>
-<commentInRDBMS><![CDATA[An Equity instrument that is not a security is an Instrument that is an Equity instrument (according to Annex V, Party 2.16) that is not an Equity security.]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[An Equity instrument that is not a security is an Instrument that is an Equity instrument (according to Annex V, Part 2.16) that is not an Equity security.
+
+IFRS 2.16:
+Under IFRS, equity instruments that are financial instruments shall include those contracts under the scope of IAS 32. 
+
+IAS 32:
+An equity instrument is any contract that evidences a residual interest in the assets of an entity after deducting all of its liabilities. ]]></commentInRDBMS>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="false"/>
-<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="false"/>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="false"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="false"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="false"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="false"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="false"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="false"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="false"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="false"/>
 </engineerTo>
 <typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
 <adequatelyNormalized>NO</adequatelyNormalized>
@@ -23,4 +30,27 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <preferredAbbreviation>EQT_INSTRMNT_NT_SCRT</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Accounting hedge indicator" id="B18A7A81-90B8-3F1C-E981-73A176B7292C">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-03-14 13:42:01 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if the hedge is considered an accounting hedge or not.]]></comment>
+<generatorID>D890C458-ECFE-6859-01DC-66EB60228335</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+</engineerTo>
+<referedAttribute>AAF36D56-1761-3296-FE65-4400277E3F66</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>67BB8028-D0A7-E1BE-DD13-29EB4D4788D9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>ACCNTNG_HDG_INDCTR</preferredAbbreviation>
+</Attribute>
+</attributes>
 </Entity>

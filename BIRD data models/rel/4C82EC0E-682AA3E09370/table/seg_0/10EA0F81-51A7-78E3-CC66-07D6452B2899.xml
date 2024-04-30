@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="10EA0F81-51A7-78E3-CC66-07D6452B2899" name="Loan_and_advance_leg_Loan_and_advance_assignment">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[Loan and advance leg Loan and advance assignment is the combination of Loan and advance leg and Loan (excluding repurchase agreement) instrument, that indicates which Loan (that is not a repurchase agreement) and advance is assigned to which Loan and advance leg.]]></commentInRDBMS>
+<generatorID>FC219F27-9E3E-AF00-F34E-5667C5CACF8E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>E3679F77-0ED6-93EB-F366-44CA2F802395</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Reference_date" id="97B5D9C2-D8A1-8CAA-F3BA-3CADE4635FB2">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>4E15A645-A9BB-38E1-C407-C50C8AFDF54F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0C6681BC-D667-D581-FC10-78B2E3094A75" referredColumn="D21947C8-E416-311C-3693-A543E3CD40D8"/>
+<colAssociation fkAssociation="F7510B33-590C-C90E-B837-54CBBAE0E247" referredColumn="177950CE-84E0-D135-BFC9-25E49B0981B6"/>
+</associations>
+</Column>
+<Column name="Reporting_agent_identifier" id="97872322-EDD3-2B6E-D8EF-B36826F15633">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>14BC023E-AD9D-2D99-76C4-17F622B4B223</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0C6681BC-D667-D581-FC10-78B2E3094A75" referredColumn="2958FC62-A082-8F35-BDFF-C2B60AA02868"/>
+<colAssociation fkAssociation="F7510B33-590C-C90E-B837-54CBBAE0E247" referredColumn="084AA0DB-8E09-886D-655D-02EB0092F60A"/>
+</associations>
+</Column>
+<Column name="Instrument_identifier" id="145A5BFF-C5BC-F58F-B6F6-3341612E41EF">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>66F80822-32BE-04BC-134E-C6C74321C706</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0C6681BC-D667-D581-FC10-78B2E3094A75" referredColumn="07583EE6-6510-893D-DA51-6774C8171D2E"/>
+</associations>
+</Column>
+<Column name="Repurchase_agreement_component_Type" id="5DD8D1A2-0CB9-E652-5430-7BF5E8B79A0D">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:36:07 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>DE7709E7-422E-3B08-93F5-F238D8F455F5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F7510B33-590C-C90E-B837-54CBBAE0E247" referredColumn="C413B0C1-A66A-BDBE-7BA3-314AE6C44541"/>
+</associations>
+</Column>
+<Column name="Repurchase_agreement_Instrument_identifier" id="B35A4280-51AE-6A32-BF01-A9B4D2B809B6">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-18 11:27:23 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>66F80822-32BE-04BC-134E-C6C74321C706</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F7510B33-590C-C90E-B837-54CBBAE0E247" referredColumn="119D5DD3-576F-4778-F28C-48E1584563D0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="07E73570-5068-94A0-5B24-F9C7B72B308B" name="Loan_and_advance_leg_Loan_and_advance_assignment_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<generatorID>ED9C942B-4397-1342-71B4-F007F52B5AC8</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="97B5D9C2-D8A1-8CAA-F3BA-3CADE4635FB2"/>
+<colUsage columnID="97872322-EDD3-2B6E-D8EF-B36826F15633"/>
+<colUsage columnID="145A5BFF-C5BC-F58F-B6F6-3341612E41EF"/>
+<colUsage columnID="5DD8D1A2-0CB9-E652-5430-7BF5E8B79A0D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CF4F0F1E-A0F4-8D5B-E00B-81E4E953E684" name="Loan_and_advance_leg_Loan_and_advance_assignment_Instrument_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:52 UTC</createdTime>
+<generatorID>B63A4B01-0B54-F5E5-241D-4283C645160C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="145A5BFF-C5BC-F58F-B6F6-3341612E41EF"/>
+<colUsage columnID="97B5D9C2-D8A1-8CAA-F3BA-3CADE4635FB2"/>
+<colUsage columnID="97872322-EDD3-2B6E-D8EF-B36826F15633"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C2A42BC4-87C5-3B99-89B4-8C10CA901530" name="Loan_and_advance_leg_Loan_and_advance_assignment_Repurchase_agreement_component_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:52 UTC</createdTime>
+<generatorID>1DB0EC15-6E2D-4017-9A47-AB13A6FDF893</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="97B5D9C2-D8A1-8CAA-F3BA-3CADE4635FB2"/>
+<colUsage columnID="97872322-EDD3-2B6E-D8EF-B36826F15633"/>
+<colUsage columnID="B35A4280-51AE-6A32-BF01-A9B4D2B809B6"/>
+<colUsage columnID="5DD8D1A2-0CB9-E652-5430-7BF5E8B79A0D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

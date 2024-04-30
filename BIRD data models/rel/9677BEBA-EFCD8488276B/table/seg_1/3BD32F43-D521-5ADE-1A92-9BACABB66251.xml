@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="3BD32F43-D521-5ADE-1A92-9BACABB66251" name="RTNG_SYSTM">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:14:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[A (Credit) Rating system is a system that evaluates the the creditworthiness of a borrower in general terms or with respect to a particular debt or financial obligation [based on https://www.investopedia.com/terms/c/creditrating.asp].]]></commentInRDBMS>
+<generatorID>70FB289D-B03F-3183-2133-75789F14C663</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>6E05D22A-D6DB-0396-42A2-4B1DB49EB60E</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RTNG_AGNCY_NM" id="76044C01-5B70-C37E-9372-61638D7338E0">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:14:59 UTC</createdTime>
+<comment><![CDATA[The rating agency's name.]]></comment>
+<generatorID>2DF56884-6689-48F6-12A4-A3655E39122C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BE4CC28B-3D69-6DE8-7741-D3C0EDEA3B8C" referredColumn="42CE9BBD-BAFC-6F4C-E9FA-EB19A0062B7A"/>
+</associations>
+</Column>
+<Column name="RTNG_SYSTM_NM" id="B7F1065C-8CA7-446F-5B1A-A7D6EE8EEFEB">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:14:59 UTC</createdTime>
+<comment><![CDATA[The rating system's name.]]></comment>
+<generatorID>F63C3864-115A-97D4-FC33-9977C667E63A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RTNG_SYSTM_TYP_BY_NTR" id="EF51AD9A-25A7-91EA-7AD9-C78D6F720982">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:14:59 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different rating systems by nature, like grade based or numeric rating systems.]]></comment>
+<generatorID>C316C895-3941-AEAD-53DC-F0E4989A106F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>1FA07E1E-D9B6-848D-3994-82C9E3284E5A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RTNG_SYSTM_TYP_BY_TRGT" id="87B9099D-3E36-9C6A-702E-06638284BC9F">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:14:59 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different rating systems by target type, like issue-based or issuer-based rating systems.]]></comment>
+<generatorID>394D323E-C516-53BA-E142-F8081C57494D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>436AFE26-8093-AB5E-9934-2AED0E5C8233</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SHRT_TRM_CRDT_ASSSSMNT_INDCTR" id="B9E7670C-4A8A-3ECA-8D6A-4B6C46054EB3">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:14:59 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if a rating system is a short term credit assessment or not.]]></comment>
+<generatorID>9A68AF17-764D-C1B0-794D-8A92B7802B41</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>54301F61-3AE9-86F6-4FB8-4FC82C8B44B8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ISSR_BSD_RTNG_SYSTM_TYP" id="0AA87C58-575D-0F5E-6A89-E9199C2224B0">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:14:59 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between central government and non-central government (issuer) based rating systems.]]></comment>
+<generatorID>64A59CF9-B4F4-D1F1-919E-605BC1247D1E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>AF5B8332-8B45-A6D4-16F5-4C9820A84C0B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EDDC6E9C-1910-E69C-8719-1E906F227F43" name="RTNG_SYSTM_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:14:59 UTC</createdTime>
+<generatorID>82D96B0F-72FC-D603-0126-B14E364B13F1</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7F1065C-8CA7-446F-5B1A-A7D6EE8EEFEB"/>
+<colUsage columnID="76044C01-5B70-C37E-9372-61638D7338E0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9970184A-4BAF-F632-8438-DE855EC7C24A" name="RTNG_SYSTM_RTNG_AGNCY_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 15:15:00 UTC</createdTime>
+<generatorID>F4E1D496-F2F8-9756-7B84-DED95D53BF71</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="76044C01-5B70-C37E-9372-61638D7338E0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

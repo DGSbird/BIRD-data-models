@@ -1,0 +1,79 @@
+# docker image as well as python packages are installed from SOFA mirrors of public repositories
+image: "artifactory.sofa.dev/docker-local/ubi8/micromamba-dev" # Requires you to install python 
+
+variables:
+    PYPI_REMOTE: https://artifactory.sofa.dev/artifactory/api/pypi/pypi-remote/simple
+    PYPI_LOCAL: https://artifactory.sofa.dev/artifactory/api/pypi/pypi-local/simple
+    DEPLOY_PYPI: https://artifactory.sofa.dev/artifactory/api/pypi/pypi-local
+    ARTIFACTORY_URL: https://artifactory.sofa.dev/artifactory
+    ARTIFACTORY_REPO_PATH: sdd-bird-team-pypi-local
+    ADDITIONAL_PATH: sqldmlib/1.0.1
+    GIT_VERSION: v2.30.1
+    USE_BRANCH: "develop"
+    LOCAL_MODEL_PATH: "/builds/sdd-bird-team/bird-logical-data-model/$CI_COMMIT_SHA"
+    ADD_FILE: "bird-logical-data-model"
+
+stages:
+  - deploy
+  - test
+
+deploy:
+  stage: deploy
+  only:
+    - schedules
+  after_script:
+    # Go to the new directory
+    - cd "${CI_COMMIT_SHA}"
+
+    # Add all generated files to Git
+    - git add .
+    - git rm -f sqldmlib-1.0.1-py2.py3-none-any.whl
+
+    - |-
+      # Check if we have modifications to commit
+      CHANGES=$(git status --porcelain | wc -l)
+
+      if [ "$CHANGES" -gt "0" ]; then
+        # Show the status of files that are about to be created, updated or deleted
+        git status
+
+        # Commit all changes
+        git commit -m "${COMMIT_MESSAGE}"
+
+        # Update the repository and make sure to skip the pipeline create for this commit
+        git push origin "${USE_BRANCH}" -o ci.skip
+      fi
+  before_script:
+    # Clone the repository via HTTPS inside a new directory
+    - git clone "https://${GITLAB_USERNAME}:${GITLAB_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git" "${CI_COMMIT_SHA}"
+
+    # Set the displayed user with the commits that are about to be made
+    - git config --global user.email "${GIT_USER_EMAIL:-$GITLAB_USER_EMAIL}"
+    - git config --global user.name "${GIT_USER_NAME:-$GITLAB_USER_NAME}"
+    - cd "${CI_COMMIT_SHA}"
+    - git checkout $USE_BRANCH
+  script:
+    - echo "Installing dependencies"
+    - micromamba install -y -f conda_buildenv.yml
+    - echo "Installed dependencies"
+    - echo "Installing sqldmlib"
+    - curl -u"$ARTIFACTORY_USER":$ARTIFACTORY_PASS -o sqldmlib-1.0.1-py2.py3-none-any.whl "$ARTIFACTORY_URL/$ARTIFACTORY_REPO_PATH/$ADDITIONAL_PATH/sqldmlib-1.0.1-py2.py3-none-any.whl"
+    - echo "Installed sqldmlib, importing as module"
+    - pip install sqldmlib-1.0.1-py2.py3-none-any.whl
+    - echo "Installed sqldmlib"
+    - echo $LOCAL_MODEL_PATH
+    - pip install lxml
+    - python update_requests_script.py
+    - echo "Ran script"
+
+test:
+  stage: test
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "develop"'
+  script:
+    - echo "Installing dependencies"
+    - micromamba install -y -f conda_buildenv.yml
+    - echo "Installed dependencies"
+    - echo "Running check on pushed changes..."
+    - python check_pushed_changes_script.py
+    - echo "Finished check"

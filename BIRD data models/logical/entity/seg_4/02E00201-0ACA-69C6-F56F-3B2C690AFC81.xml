@@ -2,18 +2,24 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_4" id="02E00201-0ACA-69C6-F56F-3B2C690AFC81" name="Investment property">
 <createdBy>Dominik</createdBy>
 <createdTime>2021-08-12 20:42:20 UTC</createdTime>
-<commentInRDBMS><![CDATA[https://www.investopedia.com/terms/i/investment-property.asp:
+<commentInRDBMS><![CDATA[Investment property is property (land or a building—or part of a building— or both) held (by the owner or by the lessee as a right-of-use asset) to earn rentals or for capital appreciation or both, rather than for:
+(a) use in the production or supply of goods or services or for administrative purposes; or
+(b) sale in the ordinary course of business.
+As defined by IAS 40.5
+
+https://www.investopedia.com/terms/i/investment-property.asp:
 An investment property is real estate property purchased with the intention of earning a return on the investment either through rental income, the future resale of the property, or both. The property may be held by an individual investor, a group of investors, or a corporation.
 An investment property can be a long-term endeavor or a short-term investment. With the latter, investors will often engage in flipping, where real estate is bought, remodeled or renovated, and sold at a profit within a short time frame.
 The term investment property may also be used to describe other assets an investor purchases for the sake of future appreciation such as art, securities, land, or other collectibles.]]></commentInRDBMS>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="false"/>
-<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="false"/>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="false"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="false"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="false"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="false"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="false"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="false"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="false"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="false"/>
 </engineerTo>
 <typeID>33380944-8442-174B-069A-88F99EEEC3DC</typeID>
 <adequatelyNormalized>NO</adequatelyNormalized>
@@ -27,23 +33,145 @@ The term investment property may also be used to describe other assets an invest
 <normalForm>Third</normalForm>
 <preferredAbbreviation>INVSTMNT_PRPRTY</preferredAbbreviation>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Investment property type" id="D1DFD18A-79B5-270B-336D-1044F71762BB">
-<createdBy>lindomi</createdBy>
-<createdTime>2021-11-02 20:51:33 UTC</createdTime>
-<comment><![CDATA[A discriminator to distinguish between investment property that has been and that has not been taken into possession.]]></comment>
+<Attribute name="Reference date" id="DBB3BC68-35D5-C740-84FF-F429BC55A64A">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-02-27 09:30:30 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>F96E42BA-2962-2404-071F-7BFC5718B062</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="2645D0C0-9F11-9865-F814-950392342B80" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
 </engineerTo>
+<referedAttribute>90FBD27B-EE6E-D877-F9E7-447D604CC0ED</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>DT_RFRNC</preferredAbbreviation>
+<changeRequests>
+<requestID>22050-407</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Reporting agent identifier" id="E9C802B5-E287-336F-B366-D5B1F4F19AF8">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-02-27 09:30:30 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>F96E42BA-2962-2404-071F-7BFC5718B062</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+</engineerTo>
+<referedAttribute>29F5BBD5-6DF1-9F07-524A-463A45C7E70C</referedAttribute>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<domain>28ECFA9F-E1D9-5856-5A9A-173AB0106B8A</domain>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
-<preferredAbbreviation>INVSTMNT_PRPRTY_TYP</preferredAbbreviation>
+<preferredAbbreviation>RPRTNG_AGNT_ID</preferredAbbreviation>
+<changeRequests>
+<requestID>22050-407</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Held for sale indicator" id="73DBAB8D-02E1-9840-F8F1-E4B59B616945">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-02-27 09:37:35 UTC</createdTime>
+<comment><![CDATA[Held for sale  indicates the Non-current assets and instruments in disposal groups classified as held for sale in accordance with IFRS5. Is not applicable under national GAAP based on BAD.]]></comment>
+<generatorID>81701E26-B664-15E7-E7AF-0A6346D373F1</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+</engineerTo>
+<referedAttribute>B1D47A64-B5A7-8732-096A-941FB25ABD75</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>9FC05F6E-0558-F79E-96CA-F05753F58262</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>HLD_SL_INDCTR</preferredAbbreviation>
+</Attribute>
+<Attribute name="Measurement method" id="3E412581-4363-29C4-A6C1-D36816EDD3F3">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-02-27 09:41:21 UTC</createdTime>
+<comment><![CDATA[Measurement method identifies the type of measurement method according to IAS (See IAS 16.30, 16.31 and IAS 40.33-55, 76). It distinguishes into their cost or revaluation model. ]]></comment>
+<generatorID>DF990FDC-09E5-B7EC-116E-4B24C74D6375</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+</engineerTo>
+<referedAttribute>135DFD71-005E-0823-DAAF-629373E330D7</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>083379C8-A6D7-41B4-9339-C36EA435CA5F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>MSRMNT_MTHD</preferredAbbreviation>
+<changeRequests>
+<requestID>22050-407</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Subject to operating lease indicator" id="C727B8F5-3D26-E8CC-69C8-1330D17D3A04">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-02-27 09:45:45 UTC</createdTime>
+<comment><![CDATA[An indicator to specify if an object is subject to operating lease or not.]]></comment>
+<generatorID>FC667D59-96E4-69D1-B9A2-CFEF559EFAFB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+</engineerTo>
+<referedAttribute>70683986-699B-C256-74AC-CE829EB320EB</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>FD894261-69B0-ADD1-BFE7-688EE053F7E1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>SBJCT_OPRTNG_LS_INDCTR</preferredAbbreviation>
+<changeRequests>
+<requestID>22050-407</requestID>
+</changeRequests>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2079F3FA-0B68-9997-75F5-FDC8A86233A2" name="Investment property PK">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-02-27 09:30:30 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DBB3BC68-35D5-C740-84FF-F429BC55A64A</attributeRef>
+<attributeRef>E9C802B5-E287-336F-B366-D5B1F4F19AF8</attributeRef>
+<attributeRef>73DBAB8D-02E1-9840-F8F1-E4B59B616945</attributeRef>
+<attributeRef>3E412581-4363-29C4-A6C1-D36816EDD3F3</attributeRef>
+<attributeRef>C727B8F5-3D26-E8CC-69C8-1330D17D3A04</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5D844A1B-8010-6F66-5DA5-F0BF557ACC9F" name="Covered_bond_programme">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[A covered bond programme is a form of credit transfer that involves the sale of a package of loans to a another financial institution for resale.]]></commentInRDBMS>
+<generatorID>459D3125-2F68-477E-EAC2-635498AA4DB0</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>A0CBE5B5-15E4-B4F0-F88E-E83729225A42</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Reference_date" id="F27AD6D6-3DDC-C5F3-9CCB-432640E4DDE6">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>C159171E-CEA3-2566-14A6-6B232C7BB391</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="185FE1C8-3A45-5A98-76FD-AB27F0BD442E" referredColumn="99881225-BE3B-274E-A623-6DE60DCE6F18"/>
+</associations>
+</Column>
+<Column name="Reporting_agent_identifier" id="4CE5BC99-DD1A-8997-F7DB-24D405572853">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>B2CDDBBB-7809-5CAD-4447-DA4858405959</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="185FE1C8-3A45-5A98-76FD-AB27F0BD442E" referredColumn="97CA39C3-D883-4390-C558-5C68D0356B06"/>
+</associations>
+</Column>
+<Column name="Covered_bond_programme_identifier" id="44EDB4D8-09CB-D15D-8CD6-A292B52DD18A">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each covered bond program.]]></comment>
+<generatorID>CB456C6D-4C3F-D525-3CA7-BBBD8C81D133</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Asset_pool_identifier" id="2F8AC91E-4EDE-6EDE-7F0F-A36F1401F830">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each asset pool.]]></comment>
+<generatorID>07108045-95B8-F08A-5571-3158A45D9B21</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="185FE1C8-3A45-5A98-76FD-AB27F0BD442E" referredColumn="E0DD5C7D-5B0E-59C8-1874-75E4E0FBDDDA"/>
+</associations>
+</Column>
+<Column name="Securitisation_and_other_credit_transfer_type" id="12743850-4E91-76B5-9A31-FAD999E88F1E">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of securitisations and other credit transfer, like securitisation and covered bond programs.]]></comment>
+<generatorID>3C408DB4-16B3-AC5F-6B25-5D6CEA4FB459</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>40F9B794-48DF-E81D-AC04-11D1F47355F1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C9AF2F60-E87D-F02D-37CE-9A3BDD97A3E4" name="Covered_bond_programme_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<generatorID>C6FD723B-9943-DC93-4D1D-7D3745E2813A</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F27AD6D6-3DDC-C5F3-9CCB-432640E4DDE6"/>
+<colUsage columnID="4CE5BC99-DD1A-8997-F7DB-24D405572853"/>
+<colUsage columnID="44EDB4D8-09CB-D15D-8CD6-A292B52DD18A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A5B1354A-8FE4-E068-41F1-CC1CBA1728DF" name="Covered_bond_programme_Asset_pool_(subject_to_a_Securitisation_and_other_credit_transfer)_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<generatorID>FC908221-5CA4-BD10-BEC1-D35BB69B26E8</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F8AC91E-4EDE-6EDE-7F0F-A36F1401F830"/>
+<colUsage columnID="F27AD6D6-3DDC-C5F3-9CCB-432640E4DDE6"/>
+<colUsage columnID="4CE5BC99-DD1A-8997-F7DB-24D405572853"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

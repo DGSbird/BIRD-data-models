@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2EAD3900-8B63-BE5F-1DDF-ECA499267C8A" name="OFF_BLNC_INSTRMNT_CLLTRL_ASSGNMNT">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 12:32:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Off balance instrument Collateral assignment is the combination of an Off-balance instrument and a Collateral that indicates which Off-balance instrument is protected by which Collateral.]]></commentInRDBMS>
+<generatorID>FEF00C66-CC8A-B061-1495-16AA9FB628D7</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>BA6872F2-94CA-21F5-EE67-2D64E8105B0E</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="INSTRMNT_ID" id="19FAA35B-AC36-C9F8-778C-B2EBAB5D9078">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 12:32:56 UTC</createdTime>
+<comment><![CDATA[An identifier applied by the reporting agent to uniquely identify each instrument under a single contract. Each instrument must have one instrument identifier. This value will not change over time and cannot be used as the instrument identifier for any other instrument under the same contract.]]></comment>
+<generatorID>125587D9-2B91-1D81-2823-ED5A5BE6F5FF</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="66F04DB9-B60F-607E-D659-F33203A57D06" referredColumn="9286DCB0-9902-62AA-7CFF-CBF8AC1ECD51"/>
+</associations>
+</Column>
+<Column name="DT_RFRNC" id="6CDD0D64-D63D-6D79-AC62-68CB00213EC3">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 12:32:56 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>E07EC6B5-7832-09E0-1AAA-27545C0976A1</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="14838EE6-3E9D-84F9-28E1-F0EA215C3D45" referredColumn="8632FFAC-6CF0-8A61-50E0-A6FAA528EE02"/>
+<colAssociation fkAssociation="66F04DB9-B60F-607E-D659-F33203A57D06" referredColumn="4ECA5453-273E-90F5-2E83-BA3CC06AEAE8"/>
+</associations>
+</Column>
+<Column name="RPRTNG_AGNT_ID" id="0096DA9A-8CDC-E419-BA75-58A3C83ABA9F">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 12:32:56 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>04F7FE34-268B-41C6-8786-FF8DAD584B3E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="14838EE6-3E9D-84F9-28E1-F0EA215C3D45" referredColumn="F3414FC4-69A0-C831-1AFE-5F82B60B7BE6"/>
+<colAssociation fkAssociation="66F04DB9-B60F-607E-D659-F33203A57D06" referredColumn="6485A76F-50AF-A19E-2C99-16FB425C9CD7"/>
+</associations>
+</Column>
+<Column name="CLLTRL_ID" id="68F31D83-969F-7AF3-9790-B6546C6D4F60">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 12:32:56 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each collateral.]]></comment>
+<generatorID>59EAEC16-48B0-B523-6277-F2453C8AD78E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="14838EE6-3E9D-84F9-28E1-F0EA215C3D45" referredColumn="827E18D6-6E39-E7AD-019A-26B0F6EAD06B"/>
+</associations>
+</Column>
+<Column name="PRTCTN_ALLCTD_VL" id="6D9FFE82-844C-7D63-4EEF-3E20075466FB">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 12:32:56 UTC</createdTime>
+<comment><![CDATA[The maximum amount of the protection value that can be considered as credit protection for the instrument. The amount of the existing third parties or observed agent priority claims against the protection must be excluded in the protection allocated value. For protections that is eligible under Regulation (EU) No 575/2013, this value should be reported in accordance with Part 2 of Annex V to Implementing Regulation (EU) No 680/2014.]]></comment>
+<generatorID>604ED3F2-09BC-1010-7471-470551DFEAA5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="28D96575-1EA9-F70B-3836-65F37D893FF6" name="OFF_BLNC_INSTRMNT_CLLTRL_ASSGNMNT_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 12:32:56 UTC</createdTime>
+<generatorID>7553E254-515C-90ED-BFAB-590F8460A814</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19FAA35B-AC36-C9F8-778C-B2EBAB5D9078"/>
+<colUsage columnID="6CDD0D64-D63D-6D79-AC62-68CB00213EC3"/>
+<colUsage columnID="0096DA9A-8CDC-E419-BA75-58A3C83ABA9F"/>
+<colUsage columnID="68F31D83-969F-7AF3-9790-B6546C6D4F60"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9EA63B63-9D72-10A9-63F9-BE4311B40BDC" name="OFF_BLNC_INSTRMNT_CLLTRL_ASSGNMNT_CLLTRL_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 12:32:57 UTC</createdTime>
+<generatorID>0ED9BECE-EC2C-64B6-C7F4-39884848824C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="68F31D83-969F-7AF3-9790-B6546C6D4F60"/>
+<colUsage columnID="6CDD0D64-D63D-6D79-AC62-68CB00213EC3"/>
+<colUsage columnID="0096DA9A-8CDC-E419-BA75-58A3C83ABA9F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7D9AC9FD-6D50-B28A-38D9-B67142313C15" name="OFF_BLNC_INSTRMNT_CLLTRL_ASSGNMNT_INSTRMNT_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 12:32:57 UTC</createdTime>
+<generatorID>4170FC3D-E925-8D3C-9667-3F56D91CA6EA</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19FAA35B-AC36-C9F8-778C-B2EBAB5D9078"/>
+<colUsage columnID="6CDD0D64-D63D-6D79-AC62-68CB00213EC3"/>
+<colUsage columnID="0096DA9A-8CDC-E419-BA75-58A3C83ABA9F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

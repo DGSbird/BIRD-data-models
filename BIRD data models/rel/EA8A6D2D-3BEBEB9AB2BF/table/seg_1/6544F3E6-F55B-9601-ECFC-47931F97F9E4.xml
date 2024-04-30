@@ -1,0 +1,214 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="6544F3E6-F55B-9601-ECFC-47931F97F9E4" name="TRNCH_SYNTHTC_SCRTSTN_WTHT_SSPE_DPST">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Tranche in a synthetic securitisation without securitisation special purpose entity (SSPE) being a Deposit is a Tranche in a synthetic securitisation without securitisation special purpose entity (SSPE) that is a Deposit (acting as a collateral).]]></commentInRDBMS>
+<generatorID>3816F7B6-FE7A-DDAD-3E37-FFD4314F896E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>A0CBE5B5-15E4-B4F0-F88E-E83729225A42</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TRNCH_ID" id="FC1FC146-CBA7-56EB-1207-D09F8DA4C669">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:39 UTC</createdTime>
+<comment><![CDATA[Tranche identifier is a number that uniquely identifies the Tranche.]]></comment>
+<generatorID>628C8622-C067-9861-6AC5-EC7D6C30FE1F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="16D00D71-E993-86FB-AEDA-85560BDB0A34" referredColumn="42CC54C7-AE7E-479A-242A-9E3226EC9BF2"/>
+</associations>
+</Column>
+<Column name="TRNCH_NM" id="A6B66414-892F-51F3-BE10-E3C32CAC2CB0">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:39 UTC</createdTime>
+<comment><![CDATA[Tranche name is a free-format text that identifies how the tranche is colloquially known. ]]></comment>
+<generatorID>0AB6B31C-5D5E-34C1-BDD8-4FCEEDA489F1</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SCRTSTN_TRNCH_TYP" id="B96EB762-C5DA-6CC0-AE1D-11950F09CB28">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:39 UTC</createdTime>
+<comment><![CDATA[Type of securitisation tranche distinguishes Securitisation tranche according to the type of securitisation that is used to tranche the pool.]]></comment>
+<generatorID>3483E7B7-263A-D807-C0F1-F15ECDCF4026</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>1E7B8C9D-ED5F-063E-3CFA-EFEE110DA453</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TRNCH_SYNTHTC_SCRTSTN_TYP" id="1FB6808F-2254-2122-F565-B5EA51F2AAD2">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:39 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of Tranche in a synthetic securitisations.]]></comment>
+<generatorID>0019CFAA-C09B-51FB-95D6-BD55230A0E37</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>33A0F2CF-E58B-9798-2B59-A99DE3C24189</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TRNCH_SYNTHTC_SCRTSTN_WTHT_SSPE_TYP" id="AD94A49D-0DE6-D2F0-AE20-E3865B1F2E5F">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:39 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different tranches in a synthetic securitisation, specifically between financial guarantees and deposits.]]></comment>
+<generatorID>EC179D54-690C-6ADB-731A-F41269B2F56F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>B9FFCE33-6A57-04E7-5388-7ED9EEB508B7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SCRTSTN_ID" id="AA48D5C8-F351-7151-C28C-A9713DD01C54">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:39 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each security.]]></comment>
+<generatorID>27A1D498-8DE4-F25B-2781-2B258C3CDD01</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="16D00D71-E993-86FB-AEDA-85560BDB0A34" referredColumn="D929958F-4F64-1652-E9A6-EEFEA10D1814"/>
+</associations>
+</Column>
+<Column name="RPRTNG_AGNT_ID" id="70BF6C19-7CB7-F1FA-3FCE-C0DFA67753BA">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:39 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>582C9140-E8DB-B3B6-7F04-98660EE4A02F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3CADF5D9-67E3-E342-E920-4D17F55302AF" referredColumn="51AF623A-70D3-841E-8F4F-AC2F3AF9EDE0"/>
+</associations>
+</Column>
+<Column name="DT_RFRNC" id="53CC03E1-6802-14D8-9CC5-A93FCB9563C4">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:39 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>A5C64BE2-7786-31D8-E966-621BA0D5F595</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3CADF5D9-67E3-E342-E920-4D17F55302AF" referredColumn="E2CF0700-FE15-301A-6E0F-18ADA3FCDC92"/>
+<colAssociation fkAssociation="16D00D71-E993-86FB-AEDA-85560BDB0A34" referredColumn="E1D9DF10-50A0-FE2A-FDBE-1AA84E756F3A"/>
+</associations>
+</Column>
+<Column name="INSTRMNT_ID" id="A66406D4-9856-7F4D-80B8-28A0EF28DD22">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:39 UTC</createdTime>
+<comment><![CDATA[The instrument identifier of the involved deposit.]]></comment>
+<generatorID>F350306B-E545-E586-FC0F-8C1753F9426F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3CADF5D9-67E3-E342-E920-4D17F55302AF" referredColumn="DE10BC46-B454-61D7-7288-CED102E74DE0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C496770F-219B-BA93-CD37-16B478F75E9E" name="TRNCH_SYNTHTC_SCRTSTN_WTHT_SSPE_DPST_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:39 UTC</createdTime>
+<generatorID>12A2DB55-2AAB-E827-D22D-2DAFE5AB1DAE</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA48D5C8-F351-7151-C28C-A9713DD01C54"/>
+<colUsage columnID="A66406D4-9856-7F4D-80B8-28A0EF28DD22"/>
+<colUsage columnID="53CC03E1-6802-14D8-9CC5-A93FCB9563C4"/>
+<colUsage columnID="70BF6C19-7CB7-F1FA-3FCE-C0DFA67753BA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DBF3EC47-9E6C-D035-22B8-BF984C86E502" name="TRNCH_SYNTHTC_SCRTSTN_WTHT_SSPE_DPST_SCRTSTN_ID_DPST_INSTRMNT_RPRTNG_AGNT_ID_DPST_INSTRMNT_RFRNC_DT_DPST_INSTRMNT_ID_UN">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:39 UTC</createdTime>
+<generatorID>17AB6E3D-E87C-4B9D-9887-6C603B72E79E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA48D5C8-F351-7151-C28C-A9713DD01C54"/>
+<colUsage columnID="70BF6C19-7CB7-F1FA-3FCE-C0DFA67753BA"/>
+<colUsage columnID="53CC03E1-6802-14D8-9CC5-A93FCB9563C4"/>
+<colUsage columnID="A66406D4-9856-7F4D-80B8-28A0EF28DD22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C8317828-467F-207E-E2B3-ED75B7802A26" name="TRNCH_SYNTHTC_SCRTSTN_WTHT_SSPE_DPST__IDX">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:39 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>8C0F374F-AB55-7C9D-0BC8-95A3E8570D36</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="A66406D4-9856-7F4D-80B8-28A0EF28DD22"/>
+<colUsage columnID="53CC03E1-6802-14D8-9CC5-A93FCB9563C4"/>
+<colUsage columnID="70BF6C19-7CB7-F1FA-3FCE-C0DFA67753BA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FA394761-931A-FB4B-D569-18D4F4B317F9" name="TRNCH_SYNTHTC_SCRTSTN_WTHT_SSPE_DPST_INSTRMNT_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:39 UTC</createdTime>
+<generatorID>8C0F374F-AB55-7C9D-0BC8-95A3E8570D36</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A66406D4-9856-7F4D-80B8-28A0EF28DD22"/>
+<colUsage columnID="53CC03E1-6802-14D8-9CC5-A93FCB9563C4"/>
+<colUsage columnID="70BF6C19-7CB7-F1FA-3FCE-C0DFA67753BA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1472C36E-C3AE-3BD3-4074-E43323EF4ECD" name="TRNCH_SYNTHTC_SCRTSTN_WTHT_SSPE_DPST_SNTHTC_SCRTSTN_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-26 14:26:40 UTC</createdTime>
+<generatorID>83FD2842-82E2-69EE-BDF1-70B65CD27EE2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA48D5C8-F351-7151-C28C-A9713DD01C54"/>
+<colUsage columnID="53CC03E1-6802-14D8-9CC5-A93FCB9563C4"/>
+<colUsage columnID="FC1FC146-CBA7-56EB-1207-D09F8DA4C669"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

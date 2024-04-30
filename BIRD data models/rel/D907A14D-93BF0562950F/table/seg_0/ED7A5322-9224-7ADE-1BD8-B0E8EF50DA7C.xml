@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ED7A5322-9224-7ADE-1BD8-B0E8EF50DA7C" name="Asset_pool_(subject_to_a_Securitisation_and_other_credit_transfer)">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[An Asset pool (subject to a Securitisation and other credit transfer) is a pool of assets that is subject to a Securitisation or other credit transfer. It may comprise Instruments or (parts of) Security positions that have been removed from the Reporting agents' balance sheet, e.g. in case of a Traditional securitisation using an SSPE, where the Reporting agents acts in the role of a Servicer.]]></commentInRDBMS>
+<generatorID>CF3123E9-C3A5-7650-8DD2-DBE9CABA5872</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>A0CBE5B5-15E4-B4F0-F88E-E83729225A42</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Asset_pool_identifier" id="8BB1DBAE-E1F2-C400-94F8-921224A9800B">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each asset pool.]]></comment>
+<generatorID>6EAFCA4A-19AA-1F50-DD36-16F2365205C1</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Asset_pool_Reference_date" id="227926B2-3B70-C414-82F8-958ADA4E6946">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>053B57FF-7837-99DA-5042-392AED2A3756</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Asset_pool_Reporting_agent_identifier" id="39C0D3E5-EC53-004E-1A4C-3CD67D6979B6">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>2CD7E94C-BF27-4403-A0A0-025E848D96E2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Asset_class_according_to_CRR,_Article_" id="62282608-1782-40ED-E0AE-F65CC7E8EB3C">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[Asset class of the underlying asset pool subject to a covered bond according to CRR, Article 129 Exposure in the form of covered bonds.]]></comment>
+<generatorID>AF2BDE63-63A6-6E1E-6F99-EEB4C5698E48</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>251B637B-3B26-1956-1407-FF288B7D6DF6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Asset_pool_(subject_to_securitisation_and_other_credit_transfer)_type" id="27586BE9-B455-5111-3828-F276425C6053">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between asset pools for securitisations, covered bond programs and other credit transfers.]]></comment>
+<generatorID>3474D019-DB0F-2F23-C39C-6DE016A47C53</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>74F9D2DC-4D52-4270-111B-7D67212176E7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Treatment_of_securitised_/_transferred_assets_in_balance_sheet" id="0D8D318E-032B-D082-CBA5-2352EBFBA41D">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[Specifies the treatment of the underlying assets in the balance sheet, e.g. entirely derecognised.]]></comment>
+<generatorID>D5D0315A-4517-A552-D1A8-653D8B29287F</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>3D2C44FB-1786-45C4-A183-DFBB9CC6854F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Carrying_amount" id="2CFB35D3-0B7C-EA0C-7C32-0D2676A60467">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<comment><![CDATA[The carrying amount in accordance with Annex V to Implementing Regulation (EU) No 680/2014.]]></comment>
+<generatorID>76B01A9D-9B12-B7A9-109E-AEA285578231</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>FAA20A39-31D6-458E-8297-A7FD01A6501F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="76F54B2D-DA31-915D-803B-034116EAA785" name="Asset_pool_(subject_to_a_Securitisation_and_other_credit_transfer)_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 14:03:17 UTC</createdTime>
+<generatorID>FD7C6E1F-7451-2836-19AA-82EF3C7B0B1C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8BB1DBAE-E1F2-C400-94F8-921224A9800B"/>
+<colUsage columnID="227926B2-3B70-C414-82F8-958ADA4E6946"/>
+<colUsage columnID="39C0D3E5-EC53-004E-1A4C-3CD67D6979B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

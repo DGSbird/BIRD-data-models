@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E91BB58C-6B10-CDD4-8408-90104BA1CF7E" name="CRDT_FCLTY_CLLTRL_ASSGNMNT">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 15:53:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Credit facility Collateral assignment is the combination of a Credit facility and a Collateral that indicates which Credit facility is assigned to which Collateral.]]></commentInRDBMS>
+<generatorID>5E02F623-CC8D-9A20-AB10-A47E24CCF5C2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>8901219F-AB49-127E-838D-9EE79906B11E</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CRDT_FCLTY_ID" id="5066DF04-4556-922F-D074-467855833F50">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 15:53:13 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each credit facility.]]></comment>
+<generatorID>CB11BBE1-B9E5-53A1-CAE8-C3B917098B48</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E82970FC-7B4B-C916-2E3A-AEAA338FCF09" referredColumn="84748761-746C-C9B9-F48A-9E6A52EC847D"/>
+</associations>
+</Column>
+<Column name="DT_RFRNC" id="251B60C5-7109-2698-3DCA-3A51B363AF35">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 15:53:13 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>F6F1EF7F-76A7-D528-E02B-F72B2C33EB1E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="34BDEDAD-6AF2-A27D-EF28-9CF1515571BB" referredColumn="C4050AC5-04BA-1048-1212-70B66FF9798C"/>
+<colAssociation fkAssociation="E82970FC-7B4B-C916-2E3A-AEAA338FCF09" referredColumn="4AAAF193-DA12-682C-D9A3-151CB52128B7"/>
+</associations>
+</Column>
+<Column name="RPRTNG_AGNT_ID" id="80C2DDF1-76F4-F28B-BCAB-CE22E1C56678">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 15:53:13 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>4491E758-C1CB-81EB-FF56-FCA1389567FB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="34BDEDAD-6AF2-A27D-EF28-9CF1515571BB" referredColumn="EF907710-371C-434C-D390-6ACE388D2174"/>
+<colAssociation fkAssociation="E82970FC-7B4B-C916-2E3A-AEAA338FCF09" referredColumn="DCA3CD8A-9A40-5C94-B647-9C313B12CA6A"/>
+</associations>
+</Column>
+<Column name="CLLTRL_ID" id="87CCE46B-3B25-802D-7A37-DFD22E34E147">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 15:53:13 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each collateral.]]></comment>
+<generatorID>C67F38BF-39AC-272E-9AF1-C6EFBFCC0ACA</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="34BDEDAD-6AF2-A27D-EF28-9CF1515571BB" referredColumn="AB1D6FCC-5232-FCCD-DF0D-8E36427A293D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F94CCC24-0824-F8D3-3158-5FA17A573D08" name="CRDT_FCLTY_CLLTRL_ASSGNMNT_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 15:53:13 UTC</createdTime>
+<generatorID>B0A1FD04-85AF-6E78-6D93-10206C34226E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5066DF04-4556-922F-D074-467855833F50"/>
+<colUsage columnID="251B60C5-7109-2698-3DCA-3A51B363AF35"/>
+<colUsage columnID="80C2DDF1-76F4-F28B-BCAB-CE22E1C56678"/>
+<colUsage columnID="87CCE46B-3B25-802D-7A37-DFD22E34E147"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="08D73FE7-A86F-7B66-649B-63DCF7732B84" name="CRDT_FCLTY_CLLTRL_ASSGNMNT_CLLTRL_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 15:53:13 UTC</createdTime>
+<generatorID>36A77B2A-25CA-B675-C958-2A3FDFD3E97E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="87CCE46B-3B25-802D-7A37-DFD22E34E147"/>
+<colUsage columnID="251B60C5-7109-2698-3DCA-3A51B363AF35"/>
+<colUsage columnID="80C2DDF1-76F4-F28B-BCAB-CE22E1C56678"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DC932736-8D65-FB05-FF42-651828A2CC30" name="CRDT_FCLTY_CLLTRL_ASSGNMNT_CRDT_FCLTY_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-08 15:53:13 UTC</createdTime>
+<generatorID>FDA0ABE6-7F31-2A9A-4A4E-A6B9489A251B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5066DF04-4556-922F-D074-467855833F50"/>
+<colUsage columnID="251B60C5-7109-2698-3DCA-3A51B363AF35"/>
+<colUsage columnID="80C2DDF1-76F4-F28B-BCAB-CE22E1C56678"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

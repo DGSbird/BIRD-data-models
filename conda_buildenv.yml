@@ -1,0 +1,23 @@
+name: cienv
+channels:
+  - https://artifactory.sofa.dev/artifactory/api/conda/conda-forge
+dependencies:
+  - Python~=3.8
+  - wheel=0.37.1
+  - setuptools=62.1.0
+  - sphinx=4.5.0
+  - tox=3.25.0
+  - coverage=6.3.2
+  - black=22.3.0
+  - pytest=7.1.2
+  - bandit=1.7.4
+  - pylint=2.13.7
+  - pep8=1.7.1
+  - mccabe=0.6.1
+  - mypy=0.942
+  - prospector[with_everything]=1.7.7
+  - python-gitlab=3.4.0
+  - pip:
+    - -i https://artifactory.sofa.dev/artifactory/api/pypi/pypi-remote/simple 
+    - --extra-index-url https://artifactory.sofa.dev/artifactory/api/pypi-local/simple
+    - sphinx-autodoc-typehints==1.18.1

@@ -1,0 +1,528 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_7" id="D9629432-8D04-BBF6-99F1-614B21EDC17C" name="Security position hedged by Exchange tradable derivative position">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:15:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Security position hedged by Exchange tradable derivative position is the combination of a Long security position Prudential portfolio assignment and an Exchange tradable derivative position as a hedge that indicates which (portion of a) Security position is hedged by which Exchange tradable derivative position as a hedge.]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+</engineerTo>
+<typeID>6B4999C9-9ED0-E7FF-EF12-F2895351A157</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>SCRTY_HDGD_EXCHNG_TRDBL_DRVTV</preferredAbbreviation>
+<foldedAttributesMap>
+<item key="175AFFB6-1300-BEDC-9593-9921A56690A2" value="3F006180-2AFB-4ED7-FC4B-81BA6428D041"/>
+<item key="91413F64-CF2B-6608-62CC-4D72F8D5D3B7" value="1728E9CC-D799-8D43-3BA2-6ED6A2D02113"/>
+<item key="B2AEA127-7682-8293-93A0-555B59CE73F7" value="3F006180-2AFB-4ED7-FC4B-81BA6428D041"/>
+</foldedAttributesMap>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Exchange tradable derivative position role type" id="E0D5EF1E-1E92-BD3C-D0BF-D07398E8E0D4">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:28:52 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of Exchange tradable derivative position roles.]]></comment>
+<generatorID>8442152C-F267-8AA9-DA6B-20A80489A552</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>46E17DC4-F374-6CAE-5E62-EA68E570695E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>D26FC9AC-7DFB-0149-3341-DDD8E24AF729</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>EXCHNG_TRDBL_DRVTV_PSTN_RL_TYP</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Exchange tradable derivative position Seller Party identifier" id="9BDBC805-6A8E-3800-A63B-F411077A0476">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:28:52 UTC</createdTime>
+<comment><![CDATA[The party identifier of the involved seller.]]></comment>
+<generatorID>8442152C-F267-8AA9-DA6B-20A80489A552</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>4023A690-2C5B-2A4A-09F6-72778B08DC48</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>EXCHNG_TRDBL_DRVTV_PSTN_SLLR_PRTY_ID</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Exchange tradable derivative position Seller Party role type" id="C1EDCC1A-EF04-44A8-B3F7-7261A344ED6B">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:28:52 UTC</createdTime>
+<comment><![CDATA[The seller role.]]></comment>
+<generatorID>8442152C-F267-8AA9-DA6B-20A80489A552</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>57CA4730-6907-DC5A-18E5-D95ABF02181A</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>D0551245-E927-3180-FE42-C9D973931F73</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>EXCHNG_TRDBL_DRVTV_PSTN_SLLR_PRTY_RL_TYP</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Exchange tradable derivative position Seller Party Reference date" id="EAF51091-674A-7083-BBD6-751EDEE01E41">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:28:52 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>8442152C-F267-8AA9-DA6B-20A80489A552</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="false"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>8F0A6A1C-D97A-9270-AE5E-0E54F3BA0D67</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>EXCHNG_TRDBL_DRVTV_PSTN_SLLR_PRTY_RFRNC_DT</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Exchange tradable derivative position Seller Party Reporting agent identifier" id="B89CDD09-AD12-3CF9-261E-E5097D916AA0">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:28:52 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>8442152C-F267-8AA9-DA6B-20A80489A552</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="false"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>599AF5AB-47A5-9BF0-C4C7-469C7099595F</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>EXCHNG_TRDBL_DRVTV_PSTN_SLLR_PRTY_RPRTNG_AGNT_ID</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Exchange tradable derivative position Buyer Party Reference date" id="871DC2E2-7370-388E-1235-EACD2EEACC7C">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:28:52 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>8442152C-F267-8AA9-DA6B-20A80489A552</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>7A3D2C06-EEC8-27B6-4AA1-8A88480A6A70</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>EXCHNG_TRDBL_DRVTV_PSTN_BYR_PRTY_RFRNC_DT</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Exchange tradable derivative position Buyer Party Reporting agent identifier" id="175AFFB6-1300-BEDC-9593-9921A56690A2">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:28:52 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>8442152C-F267-8AA9-DA6B-20A80489A552</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>347CB144-9420-1968-27A8-94D6A02E9AB8</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>EXCHNG_TRDBL_DRVTV_PSTN_BYR_PRTY_RPRTNG_AGNT_ID</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Exchange tradable derivative position Buyer Party identifier" id="9B3EF7F5-5967-EB88-CABD-6322124E9717">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:28:52 UTC</createdTime>
+<comment><![CDATA[The party identifier of the involved buyer.]]></comment>
+<generatorID>8442152C-F267-8AA9-DA6B-20A80489A552</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>418833DB-D13C-3540-59CE-D1B56D4EAD2A</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>EXCHNG_TRDBL_DRVTV_PSTN_BYR_PRTY_ID</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Exchange tradable derivative position Buyer Party role type" id="A5198D25-24B9-213A-F967-C022DC38296B">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:28:52 UTC</createdTime>
+<comment><![CDATA[The buyer party role.]]></comment>
+<generatorID>8442152C-F267-8AA9-DA6B-20A80489A552</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>7C874101-A59E-71B3-A4E3-7269A22FE9D6</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>D0551245-E927-3180-FE42-C9D973931F73</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>EXCHNG_TRDBL_DRVTV_PSTN_BYR_PRTY_RL_TYP</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Exchange tradable derivative position Security identifier" id="EAC7B3D7-9A9F-D122-6629-67F4F994C228">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:28:52 UTC</createdTime>
+<comment><![CDATA[The security identifier of the exchange tradable derivative.]]></comment>
+<generatorID>8442152C-F267-8AA9-DA6B-20A80489A552</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+</engineerTo>
+<referedAttribute>A3491B60-B403-77F0-7209-6022ADB3040E</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>EXCHNG_TRDBL_DRVTV_PSTN_SCRTY_ID</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Exchange tradable derivative position Security Reference date" id="91413F64-CF2B-6608-62CC-4D72F8D5D3B7">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:28:52 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>8442152C-F267-8AA9-DA6B-20A80489A552</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>32EB67C2-BAD4-F5C5-884F-647D3F0D165F</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>EXCHNG_TRDBL_DRVTV_PSTN_SCRTY_RFRNC_DT</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Exchange tradable derivative position Security Reporting agent identifier" id="B2AEA127-7682-8293-93A0-555B59CE73F7">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:28:52 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>8442152C-F267-8AA9-DA6B-20A80489A552</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>2CC4896B-8DB1-6133-19B6-037D0878FF1F</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>EXCHNG_TRDBL_DRVTV_PSTN_SCRTY_RPRTNG_AGNT_ID</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Long security position Prudential portfolio Security identifier" id="16646525-1240-C8A4-4BB6-7D7F669EC3F6">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:39:04 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each security.]]></comment>
+<generatorID>599C0CB8-2672-8ED1-D4AA-17D4FB26C9ED</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+</engineerTo>
+<referedAttribute>A73E5CAA-6B35-CDB1-BE0A-FD118888C056</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>LNG_SCRTY_PSTN_PRDNTL_PRTFL_SCRTY__ID</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Long security position Prudential portfolio Investor Party role type" id="10507783-9287-50CA-4CF0-5D83FEC20CD8">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:39:04 UTC</createdTime>
+<comment><![CDATA[The investor role.]]></comment>
+<generatorID>599C0CB8-2672-8ED1-D4AA-17D4FB26C9ED</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>C8E9B405-C94F-6E8F-5DBE-464CB85C76BD</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>D0551245-E927-3180-FE42-C9D973931F73</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>LNG_SCRTY_PSTN_PRDNTL_PRTFL_INVSTR_PRTY_RL_TYP</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Long security position Prudential portfolio Investor Party identifier" id="E404A2DB-AD5F-8A80-5166-D5B32BFEECBB">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:39:04 UTC</createdTime>
+<comment><![CDATA[The party identifier of the involved investor.]]></comment>
+<generatorID>599C0CB8-2672-8ED1-D4AA-17D4FB26C9ED</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>437168AE-6239-C93C-4403-089A9B1A446C</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>LNG_SCRTY_PSTN_PRDNTL_PRTFL_INVSTR_PRTY_ID</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Long security position Prudential portfolio Investor Party Reference date" id="1728E9CC-D799-8D43-3BA2-6ED6A2D02113">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:39:04 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>599C0CB8-2672-8ED1-D4AA-17D4FB26C9ED</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>51FE834C-E541-D16F-6BD0-86E9CA7BE63F</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>LNG_SCRTY_PSTN_PRDNTL_PRTFL_INVSTR_PRTY_RFRNC_DT</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Long security position Prudential portfolio Security Reference date" id="8AA3DC9B-F528-E9C9-D323-88A7DF4D43DF">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:39:04 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>599C0CB8-2672-8ED1-D4AA-17D4FB26C9ED</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>1F5FBF4E-A1C8-92A5-AA61-49245A86215F</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>LNG_SCRTY_PSTN_PRDNTL_PRTFL_SCRTY_RFRNC_DT</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Long security position Prudential portfolio Investor Party Reporting agent identifier" id="3F006180-2AFB-4ED7-FC4B-81BA6428D041">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:39:04 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>599C0CB8-2672-8ED1-D4AA-17D4FB26C9ED</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>0D4F1F0A-85A7-949D-9DDE-F9AAC45AE384</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>LNG_SCRTY_PSTN_PRDNTL_PRTFL_INVSTR_PRTY_RPRTNG_AGNT_ID</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Long security position Prudential portfolio Security Reporting agent identifier" id="4C02E7EE-B039-B405-312B-97C04BC534ED">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:39:04 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>599C0CB8-2672-8ED1-D4AA-17D4FB26C9ED</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>E373051A-6023-F379-C88E-6E70D4E71973</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>LNG_SCRTY_PSTN_PRDNTL_PRTFL_SCRTY_RPRTNG_AGNT_ID</preferredAbbreviation>
+<changeRequests>
+<requestID>18843-337</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Long security position Prudential portfolio type" id="69D49491-E3BB-BE31-8E97-3339AD9427DD">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 16:36:52 UTC</createdTime>
+<generatorID>599C0CB8-2672-8ED1-D4AA-17D4FB26C9ED</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>0795B7F8-F50A-31B6-9142-CEF170BBCD51</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>22360725-5409-47DA-F83B-458C1A25FE44</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>LNG_SCRTY_PSTN_PRDNTL_PRTFL_TYP</preferredAbbreviation>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="966417F6-733E-67E2-EE67-5FD9FCFB8807" name="Security position hedged by Over the counter (OTC) derivative PK">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-01-30 15:15:40 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E0D5EF1E-1E92-BD3C-D0BF-D07398E8E0D4</attributeRef>
+<attributeRef>9BDBC805-6A8E-3800-A63B-F411077A0476</attributeRef>
+<attributeRef>C1EDCC1A-EF04-44A8-B3F7-7261A344ED6B</attributeRef>
+<attributeRef>EAF51091-674A-7083-BBD6-751EDEE01E41</attributeRef>
+<attributeRef>B89CDD09-AD12-3CF9-261E-E5097D916AA0</attributeRef>
+<attributeRef>871DC2E2-7370-388E-1235-EACD2EEACC7C</attributeRef>
+<attributeRef>175AFFB6-1300-BEDC-9593-9921A56690A2</attributeRef>
+<attributeRef>9B3EF7F5-5967-EB88-CABD-6322124E9717</attributeRef>
+<attributeRef>A5198D25-24B9-213A-F967-C022DC38296B</attributeRef>
+<attributeRef>EAC7B3D7-9A9F-D122-6629-67F4F994C228</attributeRef>
+<attributeRef>91413F64-CF2B-6608-62CC-4D72F8D5D3B7</attributeRef>
+<attributeRef>B2AEA127-7682-8293-93A0-555B59CE73F7</attributeRef>
+<attributeRef>16646525-1240-C8A4-4BB6-7D7F669EC3F6</attributeRef>
+<attributeRef>10507783-9287-50CA-4CF0-5D83FEC20CD8</attributeRef>
+<attributeRef>E404A2DB-AD5F-8A80-5166-D5B32BFEECBB</attributeRef>
+<attributeRef>1728E9CC-D799-8D43-3BA2-6ED6A2D02113</attributeRef>
+<attributeRef>8AA3DC9B-F528-E9C9-D323-88A7DF4D43DF</attributeRef>
+<attributeRef>3F006180-2AFB-4ED7-FC4B-81BA6428D041</attributeRef>
+<attributeRef>4C02E7EE-B039-B405-312B-97C04BC534ED</attributeRef>
+<attributeRef>69D49491-E3BB-BE31-8E97-3339AD9427DD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

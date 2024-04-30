@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="DFEEF402-26BA-2596-00D2-CC46056DC1C4" name="Rating_grade">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 13:38:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[A Rating grade is a grade representing the probability of default of a Party, Instrument or Debt security.]]></commentInRDBMS>
+<generatorID>A56EF320-739A-39EA-5F24-6DEB2915BAB3</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>6E05D22A-D6DB-0396-42A2-4B1DB49EB60E</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Rating_grade_type" id="59F57A02-3F28-B186-FC8E-22BE20084510">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 13:38:23 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of rating grades.]]></comment>
+<generatorID>916115E5-3DC1-F7D6-B467-86837CB1C824</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>70AA36A8-80B3-A8BA-3E96-1CF3482AE5FC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Rating_grade_credit_quality" id="80B060EE-7CE4-BA1B-100A-F8C0AAE470E3">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 13:38:23 UTC</createdTime>
+<comment><![CDATA[Rating grade credit quality distinguishes Central bank and private sector company according to the credit quality of their investment grade.]]></comment>
+<generatorID>514ACE30-8C2A-8069-CFFB-AFF43BAC3CEC</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>F2695C17-41C3-AFA6-53A1-BA53E3B7900C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Rating_grade_for_issuer_based_rating_system_type" id="E7E24DB5-F919-7B3A-F077-01C70017D5FA">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 13:38:23 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different rating grades for issuer based rating systems.]]></comment>
+<generatorID>699D9764-35E1-828B-7B3E-E55A38C3D7A6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>03DAE4FB-D0DC-54E4-5413-8081B5A983A1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Rating_system_name" id="38492881-F489-4A1F-22C5-C1D4CCC07AAA">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 13:38:23 UTC</createdTime>
+<comment><![CDATA[The rating system's name.]]></comment>
+<generatorID>B88E7EE2-D8A6-FFD7-9CFB-02900B634D7D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4C844D52-388E-7D17-3C1F-108AEBC55A98" referredColumn="E355F443-811C-688A-A525-918073F41B90"/>
+</associations>
+</Column>
+<Column name="Rating_agency_name" id="B2EB49C6-5CA6-3573-FE71-14996158A0DC">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 13:38:23 UTC</createdTime>
+<comment><![CDATA[The rating agency's name.]]></comment>
+<generatorID>8F0A4ED0-39FA-1430-1505-3329FE469132</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4C844D52-388E-7D17-3C1F-108AEBC55A98" referredColumn="720C5064-84AE-AE89-3267-F74D47768966"/>
+</associations>
+</Column>
+<Column name="Rating_grade" id="95232FA6-85A6-9171-C05A-4690405EF350">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 13:38:23 UTC</createdTime>
+<comment><![CDATA[The rating grade, e.g. AAA.]]></comment>
+<generatorID>2446ECCB-B322-BEAE-068C-6334F3CE17B6</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>633575D7-6D71-0889-6C6B-F95EFD65004D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C4E52C11-3A08-56F4-DCC0-327AD4527A97" name="Rating_grade__IDX">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 13:41:41 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95232FA6-85A6-9171-C05A-4690405EF350"/>
+<colUsage columnID="38492881-F489-4A1F-22C5-C1D4CCC07AAA"/>
+<colUsage columnID="B2EB49C6-5CA6-3573-FE71-14996158A0DC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C5195AD2-0F8C-A08B-60EF-4EBFDEA73168" name="Rating_grade_Rating_system_name_Rating_agency_name_Rating_grade_UN">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 13:38:23 UTC</createdTime>
+<generatorID>B36B6C14-C8BC-A927-657B-15787A18311D</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="38492881-F489-4A1F-22C5-C1D4CCC07AAA"/>
+<colUsage columnID="B2EB49C6-5CA6-3573-FE71-14996158A0DC"/>
+<colUsage columnID="95232FA6-85A6-9171-C05A-4690405EF350"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="240F1774-837D-BB16-B93D-6AE80703C362" name="Rating_grade_Rating_system_FKv2">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-11 13:38:23 UTC</createdTime>
+<generatorID>ACE2BB86-7E3C-7497-0D61-11E8C7FB254B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="38492881-F489-4A1F-22C5-C1D4CCC07AAA"/>
+<colUsage columnID="B2EB49C6-5CA6-3573-FE71-14996158A0DC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

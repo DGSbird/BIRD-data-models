@@ -1,0 +1,161 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_8" id="6492E8D9-FD91-6B31-CE87-B8CF6C5292F6" name="Interest rate risk hedge portfolio">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-03-14 14:00:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[Interest rate risk hedge portfolio are the portfolio of instruments whose hedged postions need to be reported as one with the rows called 'Fair value changes of the hedged items in portfolio hedge of interest rate risk'.
+
+See https://www.ifrs.org/content/dam/ifrs/meetings/2010/september/iasb/vbfi0910b14bobs.pdf]]></commentInRDBMS>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+</engineerTo>
+<typeID>33380944-8442-174B-069A-88F99EEEC3DC</typeID>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>INTRST_RT_RSK_HDG_PRTFL</preferredAbbreviation>
+<changeRequests>
+<requestID>24054-439</requestID>
+<requestID>24045-438</requestID>
+</changeRequests>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Reference date" id="00CAEA22-F905-AEF4-A9FA-68F176120296">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-05 16:08:40 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>AF6346FD-47AA-8801-61C5-99AED31BE240</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>90FBD27B-EE6E-D877-F9E7-447D604CC0ED</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>DT_RFRNC</preferredAbbreviation>
+</Attribute>
+<Attribute name="Reporting agent identifier" id="1A15BB0E-BF90-6B27-C108-A932A692C78C">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-05 16:08:40 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>AF6346FD-47AA-8801-61C5-99AED31BE240</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<referedAttribute>29F5BBD5-6DF1-9F07-524A-463A45C7E70C</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>RPRTNG_AGNT_ID</preferredAbbreviation>
+</Attribute>
+<Attribute name="Domestic activities indicator" id="F6521C85-6D25-8921-AFA0-4A4B30C18965">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-03-14 14:32:35 UTC</createdTime>
+<comment><![CDATA[Domestic activities indicator distinguishes the Interest rate risk hedge portfolio between domestic and non-domestic activities from the perspective of the reporting agent.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>0F4AEE41-2C04-1243-46F9-4EEE91ED64A1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>DMSTC_ACTVT_INDCTR</preferredAbbreviation>
+<changeRequests>
+<requestID>24054-439</requestID>
+<requestID>24045-438</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Hedged portfolio asset or liability indicator" id="E8FF6C2C-2170-7729-48D4-F5B4D3130A13">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-03-14 14:35:22 UTC</createdTime>
+<comment><![CDATA[Hedged portfolio  asset or liability indicator classifies  the Interest rate risk hedge portfolio  into assets or liabilities.]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>2ACF47DC-3D82-40B2-BD17-1A2C391133E3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>HDGD_PRTFL_ASST_LBLTY_INDCTR</preferredAbbreviation>
+<changeRequests>
+<requestID>24054-439</requestID>
+<requestID>24045-438</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Hedged items fair value changes" id="6DA28979-C228-900B-EE23-776FDCC0619F">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-03-14 14:47:03 UTC</createdTime>
+<comment><![CDATA[Fair value changes of the hedged items in portfolio hedge of interest rate risk]]></comment>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>14C89E8C-F57F-4505-832D-C97676924FD1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>HDGD_ITMS_FV_CHNGS</preferredAbbreviation>
+<changeRequests>
+<requestID>24054-439</requestID>
+<requestID>24045-438</requestID>
+</changeRequests>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C2B875AD-142C-FF8E-7244-76413B1F509B" name="Interest rate risk hedge portfolio PK">
+<createdBy>bosarie</createdBy>
+<createdTime>2024-03-14 14:45:30 UTC</createdTime>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
+<item key="13461579-0592-AFA3-CC29-0D49D3B5B3A0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>00CAEA22-F905-AEF4-A9FA-68F176120296,1A15BB0E-BF90-6B27-C108-A932A692C78C,F6521C85-6D25-8921-AFA0-4A4B30C18965,E8FF6C2C-2170-7729-48D4-F5B4D3130A13</newElementsIDs>
+<usedAttributes>
+<attributeRef>00CAEA22-F905-AEF4-A9FA-68F176120296</attributeRef>
+<attributeRef>1A15BB0E-BF90-6B27-C108-A932A692C78C</attributeRef>
+<attributeRef>F6521C85-6D25-8921-AFA0-4A4B30C18965</attributeRef>
+<attributeRef>E8FF6C2C-2170-7729-48D4-F5B4D3130A13</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

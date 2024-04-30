@@ -6,10 +6,12 @@
 <ownerDesignName>BIRD data models</ownerDesignName>
 <shouldEngineer>false</shouldEngineer>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="false"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="false"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="false"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="false"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="false"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="false"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="false"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="false"/>
 </engineerTo>
 <typeID>6B4999C9-9ED0-E7FF-EF12-F2895351A157</typeID>
 <adequatelyNormalized>NO</adequatelyNormalized>
@@ -24,6 +26,7 @@
 <preferredAbbreviation>LNG_SBT_SCRTY_PSTN</preferredAbbreviation>
 <changeRequests>
 <requestID>17764-185</requestID>
+<requestID>21505-368</requestID>
 </changeRequests>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="Nominal amount" id="7799A832-256C-2196-D0E0-B21899B6BD4E">
@@ -32,10 +35,12 @@
 <comment><![CDATA[Holding amount at nominal value]]></comment>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
 </engineerTo>
 <use>0</use>
 <logicalDatatype>LOGDT026</logicalDatatype>
@@ -51,18 +56,45 @@ An exposure shall be ‘in litigation status’ where legal action against the d
 <generatorID>5A09BFA2-3C30-D109-9090-D3B44AA9C8EF</generatorID>
 <ownerDesignName>BIRD data models</ownerDesignName>
 <engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
 <item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
-<item key="B42ADE4A-843C-623F-DCC2-6564CC14911B" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
 <item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
-<item key="01C5A953-D94A-0242-8A62-621EE8A11729" value="true"/>
 </engineerTo>
 <referedAttribute>49410185-3141-AF7F-640F-00985E3472B5</referedAttribute>
 <use>0</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <domain>A74017C2-FB85-4C52-0ECE-FD4F2BA2B981</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>LTGTN_STTS</preferredAbbreviation>
 <changeRequests>
 <requestID>17764-185</requestID>
+</changeRequests>
+</Attribute>
+<Attribute name="Default status" id="87A58CFB-F8DC-5883-B95A-21AD3940A2E9">
+<createdBy>ostarij</createdBy>
+<createdTime>2024-02-08 15:39:15 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between default because unlikely to pay, 90/180 days past due or both according to Regulation (EU) 575/2013, Article 178.]]></comment>
+<generatorID>65B664C5-6127-179A-B742-AB95F9E12D4C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<engineerTo>
+<item key="DAAC984B-B2E8-C145-BF34-9BFB502D9CBB" value="true"/>
+<item key="0C783F40-7D13-738D-9D50-1050885C3D99" value="true"/>
+<item key="4C82EC0E-87DF-70E2-243C-682AA3E09370" value="true"/>
+<item key="83B1704A-A97A-C0A9-3158-32D1A66BF66B" value="true"/>
+<item key="C514A9B1-F2A2-7294-2C10-7342CD541759" value="true"/>
+<item key="49397F4F-33A8-CA4A-E717-66F5DB449882" value="true"/>
+</engineerTo>
+<referedAttribute>1FA8495C-8DCD-5F83-2863-2A24D63B110F</referedAttribute>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>E143E0AF-BEFA-97C8-5132-46D919C36AC4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<preferredAbbreviation>DFLT_STTS</preferredAbbreviation>
+<changeRequests>
+<requestID>21505-368</requestID>
 </changeRequests>
 </Attribute>
 </attributes>

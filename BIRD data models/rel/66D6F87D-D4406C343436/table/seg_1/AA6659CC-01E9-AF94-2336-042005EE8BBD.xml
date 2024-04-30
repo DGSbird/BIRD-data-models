@@ -1,0 +1,261 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="AA6659CC-01E9-AF94-2336-042005EE8BBD" name="SNTHTC_SCRTSTN">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[Regulation (EU) 2402/2017, Article 2(10):
+‘Synthetic securitisation’ means a securitisation where the transfer of risk is achieved by the use of credit derivatives or guarantees, and the exposures being securitised remain exposures of the originator.]]></commentInRDBMS>
+<generatorID>6F6AF604-488B-E625-A891-E2C2BF2AE925</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>A0CBE5B5-15E4-B4F0-F88E-E83729225A42</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SCRTSN_OTHR_CRDT_TRNSFR_TYP" id="B3BD3399-2C99-C380-7EEF-8F3978D061F9">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of securitisations and other credit transfer, like securitisation and covered bond programs.]]></comment>
+<generatorID>3C408DB4-16B3-AC5F-6B25-5D6CEA4FB459</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>40F9B794-48DF-E81D-AC04-11D1F47355F1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SCRTSTN_RFRNC_DT" id="FCCF50B8-EBA7-507A-FE37-9B341FA5B318">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>6BD853B6-970D-3348-DBCF-6F98D1A25EEB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7DB7E819-C056-73E4-334A-CB4AA58F49B8" referredColumn="A31269BF-7888-1BA9-767E-2B741A9A7865"/>
+</associations>
+</Column>
+<Column name="SCRTSTN_RPRTNG_AGNT_ID" id="2245D2B2-637F-3541-191B-7C687381DB00">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>930CD809-46CA-1D40-B158-3785FF329F62</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7DB7E819-C056-73E4-334A-CB4AA58F49B8" referredColumn="BE2AB362-F8BA-F858-4092-5DC8B0A456BE"/>
+</associations>
+</Column>
+<Column name="SCRTSTN_ID" id="B819E368-465C-26B5-87E3-7F1EA027BE28">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each security.]]></comment>
+<generatorID>8C46B590-97C8-C3A8-8009-8F3DBF6024D8</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SCRTSN_TYP" id="A7991E58-A398-69E9-25F0-1B3B5695626D">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between different types of securitisations like traditional and sysnthetic securitisation.]]></comment>
+<generatorID>B662C206-DD11-5854-9F3E-A5E2A3D63AED</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>61F98428-90E3-144D-C92C-865F42E50ED6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SGNFCNT_RSK_TRNSFR_INDCTR" id="1BF2391D-3BE6-7AD1-38B9-F16AC7ABDE68">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if a securitisation establishes a significant risk transfer according to Regulation (EU) 575/2013, Article 243 (2) and Article 244 (2).]]></comment>
+<generatorID>EB7D1AB9-FC94-7F11-08FF-23E5B44BDD43</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>55FBA3A8-C904-8727-39A7-858A5EB36415</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STS_SCRTSTN_INDCTR" id="4AD36FB9-A88D-3AB5-9001-7DE034E595F0">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if a securitisation is considered a simple, transparent and standardised (STS) securitisation acccording to Regulation (EU) 2402/2017, Article 19.]]></comment>
+<generatorID>37E50036-E07A-CB5A-07E4-239FC23AC55E</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>DEB58F5D-C9E0-6C46-2D5F-9955421AF67E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RSCRTSTN_INDCTR" id="3341652B-3C4E-278D-E6E9-3671DF029DE5">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<comment><![CDATA[An indicator specifying if a securitisation is considered a re-securitisation.]]></comment>
+<generatorID>A829D29D-9B6C-39E3-2B84-7F4534E7383B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>E8DB2E40-B5D7-323B-18D4-4DDB76A9172F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRCNTG_RTND" id="DC43640C-AAF2-FC02-87A8-0D802946EC22">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<comment><![CDATA[The percentage that has been retained.]]></comment>
+<generatorID>4D5A4553-5CED-59F0-02FD-D23377C941FB</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>8100266E-F750-48D0-B98A-821400187560</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+<endValue>1</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="ASST_PL_ID" id="E03247E7-2300-BF72-D510-C23D66EFDA00">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each asset pool.]]></comment>
+<generatorID>F3E61288-E1BF-C062-3784-EFB9725A61E8</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7DB7E819-C056-73E4-334A-CB4AA58F49B8" referredColumn="15917646-82A3-5271-52E0-A12D05D5A9D8"/>
+</associations>
+</Column>
+<Column name="SNTHTC_SCRTSTN_TYP" id="ED3B145F-CEBF-CD35-7A8F-393E70BEB51C">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<comment><![CDATA[A discriminator to distinguish between synthetic securitisations with and without involvement of securitisation special purpose entities (SSPEs).]]></comment>
+<generatorID>FC35DEFB-9526-CE25-0170-7B483693B686</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>FB51828D-7144-6FF9-D5B5-CFF45AE431C6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SCRTSTN_ID1" id="040444AC-F715-B389-325F-AAF639EF71C4">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each security.]]></comment>
+<generatorID>225B215E-67EE-B4D5-54F9-35B9070EC2A4</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SCRTSTN_RFRNC_DT1" id="D6519CA1-0371-F265-1B77-3154AC383B86">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>AF372B70-1900-1A57-AE00-4DDC638A4C52</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SCRTSTN_RPRTNG_AGNT_ID1" id="A0D39982-B0EE-CC66-92A9-8A8703FC4E9A">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>1D980C5A-AF20-B303-C4FF-39BB30E8E4E5</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AMNT_DRCGNSD_CPTL_PRPS" id="D3B7BC39-45F0-3ED7-32C7-6AF58EF33690">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<comment><![CDATA[Capital purposes derecognition amount is an amount for significant risk transfer securitisation that shall include the carrying amount of the financial assets recognised for accounting purposes but de-recognised for prudential purposes because the institution is treating them as securitisation positions for capital purposes in accordance with Articles 109, 243 and 244 CRR.
+
+It can be used to report the amount derecognised for capital purposes in FINREP.]]></comment>
+<generatorID>2C72709F-EDC0-8666-ED68-670FCC7D373B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>14C89E8C-F57F-4505-832D-C97676924FD1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F7E8C668-773E-4832-3071-648D113F8CBA" name="SNTHTC_SCRTSTN_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<generatorID>CCD7497F-44AA-7E0C-2B1D-9EAD605A4908</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B819E368-465C-26B5-87E3-7F1EA027BE28"/>
+<colUsage columnID="FCCF50B8-EBA7-507A-FE37-9B341FA5B318"/>
+<colUsage columnID="2245D2B2-637F-3541-191B-7C687381DB00"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="77D355D5-D01F-E0C8-D23C-7D6A5E029A96" name="SNTHTC_SCRTSTN_ASST_PL_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-03-27 14:25:05 UTC</createdTime>
+<generatorID>79FF3391-A97C-97DA-35A0-C8EDE78D1D42</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E03247E7-2300-BF72-D510-C23D66EFDA00"/>
+<colUsage columnID="FCCF50B8-EBA7-507A-FE37-9B341FA5B318"/>
+<colUsage columnID="2245D2B2-637F-3541-191B-7C687381DB00"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

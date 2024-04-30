@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B0C5F764-BFE4-1D58-465B-668E9CB5C157" name="Credit_risk_mitigation_assignment">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[A credit risk mitigation membership is the combination of a Credit risk mitigation arrangement and a Protection item that indicates which Protection item is comprised in which Credit risk mitigation arrangement. 
+Please note that the many-to-many relationship (established via this entity) is only applicable to Registered protection (and saving accounts where there exists a physical document (i.e. Sparbuch)), for all other Protection items the relationship between the Credit risk mitigation arrangement and the Protection item is of type one-to-many.]]></commentInRDBMS>
+<generatorID>FBAF417B-1A11-B3D5-9C5F-16BCF562A7E2</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<typeID>9233E877-99B3-25CB-0DCC-48B7E03DC1DD</typeID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Protection_arrangement_identifier" id="E372AB0F-1EB3-83F5-BE77-454A0ADBF6D0">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<comment><![CDATA[An identifier to univocally identify each protection arragement.]]></comment>
+<generatorID>71808C04-BB73-280C-4006-78971AD92E2B</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>bedac99c-65df-4709-835b-fbf0381d048e</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="69AB6CF8-B76C-2D25-05D8-E6299FF38E22" referredColumn="CA8E87C2-3C7E-5632-3FB0-67CD2AA7D060"/>
+</associations>
+</Column>
+<Column name="Reference_date" id="56E19B0E-9A27-72D3-A67D-902E33AA35E8">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<comment><![CDATA[The date the data refers to.]]></comment>
+<generatorID>977FCF8B-D0A5-4603-D025-3BDD8242B49C</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2BB0BC4F-2625-4B6E-BFB9-85C466713314</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CFB89A09-0BF9-71FF-E7E9-E34B68EEF5F6" referredColumn="ED5A3FB0-FCB1-B9B0-02D8-4DC4C1D1BB07"/>
+<colAssociation fkAssociation="69AB6CF8-B76C-2D25-05D8-E6299FF38E22" referredColumn="F1F50E41-E2C4-C49E-EC5D-8951CC4FA94F"/>
+</associations>
+</Column>
+<Column name="Reporting_agent_identifier" id="DD33564C-CD1A-AF48-6B96-59285F26B72F">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<comment><![CDATA[Identifier of the reporting agent.]]></comment>
+<generatorID>889B2D51-BEB4-A0CA-F7AE-C2E46CDAFF09</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CFB89A09-0BF9-71FF-E7E9-E34B68EEF5F6" referredColumn="BB6F3AEE-AD5A-EBA0-8364-E0B367AFE1F1"/>
+<colAssociation fkAssociation="69AB6CF8-B76C-2D25-05D8-E6299FF38E22" referredColumn="94982BAD-FA5E-5E54-7966-33877CA4888B"/>
+</associations>
+</Column>
+<Column name="Collateral_identifier" id="53E7E3BA-EA64-D14D-0160-83B33984AD19">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<comment><![CDATA[An identifier to uniquely identify each collateral.]]></comment>
+<generatorID>288FF4F1-202C-CF3A-9E53-01DF2CA1E687</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>12DFCE00-085A-4E8C-BE55-52350D849DA7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CFB89A09-0BF9-71FF-E7E9-E34B68EEF5F6" referredColumn="A391C7F7-2A40-8DDC-D714-86C31934316F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E7BDAD29-9DB6-89ED-D57C-4B206ACDFB53" name="Credit_risk_mitigation_assignment_PK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<generatorID>91354549-80EE-6393-8609-9E6F6F48DB27</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E372AB0F-1EB3-83F5-BE77-454A0ADBF6D0"/>
+<colUsage columnID="56E19B0E-9A27-72D3-A67D-902E33AA35E8"/>
+<colUsage columnID="DD33564C-CD1A-AF48-6B96-59285F26B72F"/>
+<colUsage columnID="53E7E3BA-EA64-D14D-0160-83B33984AD19"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8C7F5B17-0ABE-3787-A761-A8E1EF730117" name="Credit_risk_mitigation_assignment_Collateral_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:51 UTC</createdTime>
+<generatorID>5A2ADAAE-4B9F-4BD7-5EEE-A1A3DA4DE925</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="53E7E3BA-EA64-D14D-0160-83B33984AD19"/>
+<colUsage columnID="56E19B0E-9A27-72D3-A67D-902E33AA35E8"/>
+<colUsage columnID="DD33564C-CD1A-AF48-6B96-59285F26B72F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FF095957-7FE4-CE96-231A-82CA18CC0584" name="Credit_risk_mitigation_assignment_Protection_arrangement_FK">
+<createdBy>nuvolia</createdBy>
+<createdTime>2024-04-17 18:28:52 UTC</createdTime>
+<generatorID>A4967B88-3EF3-282F-4BED-1279453EB155</generatorID>
+<ownerDesignName>BIRD data models</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E372AB0F-1EB3-83F5-BE77-454A0ADBF6D0"/>
+<colUsage columnID="56E19B0E-9A27-72D3-A67D-902E33AA35E8"/>
+<colUsage columnID="DD33564C-CD1A-AF48-6B96-59285F26B72F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
